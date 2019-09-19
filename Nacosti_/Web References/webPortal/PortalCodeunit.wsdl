@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="FnLogin">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="password" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnLogin_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateDirectorPayslip">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="director" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="payperiod" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateDirectorPayslip_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ForgotPass">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="registrationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ForgotPass_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ChangePassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ChangePassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetItemImage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="custNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetItemImage_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegisterBoard">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegisterBoard_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnMeetingsToday">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="directorNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnMeetingsToday_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertComment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="directorNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="commentText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertComment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateMeetingResolutions">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateMeetingResolutions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="FnLogin">
+    <part name="parameters" element="tns:FnLogin" />
+  </message>
+  <message name="FnLogin_Result">
+    <part name="parameters" element="tns:FnLogin_Result" />
+  </message>
+  <message name="GenerateDirectorPayslip">
+    <part name="parameters" element="tns:GenerateDirectorPayslip" />
+  </message>
+  <message name="GenerateDirectorPayslip_Result">
+    <part name="parameters" element="tns:GenerateDirectorPayslip_Result" />
+  </message>
+  <message name="ForgotPass">
+    <part name="parameters" element="tns:ForgotPass" />
+  </message>
+  <message name="ForgotPass_Result">
+    <part name="parameters" element="tns:ForgotPass_Result" />
+  </message>
+  <message name="ChangePassword">
+    <part name="parameters" element="tns:ChangePassword" />
+  </message>
+  <message name="ChangePassword_Result">
+    <part name="parameters" element="tns:ChangePassword_Result" />
+  </message>
+  <message name="GetItemImage">
+    <part name="parameters" element="tns:GetItemImage" />
+  </message>
+  <message name="GetItemImage_Result">
+    <part name="parameters" element="tns:GetItemImage_Result" />
+  </message>
+  <message name="FnRegisterBoard">
+    <part name="parameters" element="tns:FnRegisterBoard" />
+  </message>
+  <message name="FnRegisterBoard_Result">
+    <part name="parameters" element="tns:FnRegisterBoard_Result" />
+  </message>
+  <message name="FnMeetingsToday">
+    <part name="parameters" element="tns:FnMeetingsToday" />
+  </message>
+  <message name="FnMeetingsToday_Result">
+    <part name="parameters" element="tns:FnMeetingsToday_Result" />
+  </message>
+  <message name="FnInsertComment">
+    <part name="parameters" element="tns:FnInsertComment" />
+  </message>
+  <message name="FnInsertComment_Result">
+    <part name="parameters" element="tns:FnInsertComment_Result" />
+  </message>
+  <message name="GenerateMeetingResolutions">
+    <part name="parameters" element="tns:GenerateMeetingResolutions" />
+  </message>
+  <message name="GenerateMeetingResolutions_Result">
+    <part name="parameters" element="tns:GenerateMeetingResolutions_Result" />
+  </message>
+  <portType name="PortalCodeunit_Port">
+    <operation name="FnLogin">
+      <input name="FnLogin" message="tns:FnLogin" />
+      <output name="FnLogin_Result" message="tns:FnLogin_Result" />
+    </operation>
+    <operation name="GenerateDirectorPayslip">
+      <input name="GenerateDirectorPayslip" message="tns:GenerateDirectorPayslip" />
+      <output name="GenerateDirectorPayslip_Result" message="tns:GenerateDirectorPayslip_Result" />
+    </operation>
+    <operation name="ForgotPass">
+      <input name="ForgotPass" message="tns:ForgotPass" />
+      <output name="ForgotPass_Result" message="tns:ForgotPass_Result" />
+    </operation>
+    <operation name="ChangePassword">
+      <input name="ChangePassword" message="tns:ChangePassword" />
+      <output name="ChangePassword_Result" message="tns:ChangePassword_Result" />
+    </operation>
+    <operation name="GetItemImage">
+      <input name="GetItemImage" message="tns:GetItemImage" />
+      <output name="GetItemImage_Result" message="tns:GetItemImage_Result" />
+    </operation>
+    <operation name="FnRegisterBoard">
+      <input name="FnRegisterBoard" message="tns:FnRegisterBoard" />
+      <output name="FnRegisterBoard_Result" message="tns:FnRegisterBoard_Result" />
+    </operation>
+    <operation name="FnMeetingsToday">
+      <input name="FnMeetingsToday" message="tns:FnMeetingsToday" />
+      <output name="FnMeetingsToday_Result" message="tns:FnMeetingsToday_Result" />
+    </operation>
+    <operation name="FnInsertComment">
+      <input name="FnInsertComment" message="tns:FnInsertComment" />
+      <output name="FnInsertComment_Result" message="tns:FnInsertComment_Result" />
+    </operation>
+    <operation name="GenerateMeetingResolutions">
+      <input name="GenerateMeetingResolutions" message="tns:GenerateMeetingResolutions" />
+      <output name="GenerateMeetingResolutions_Result" message="tns:GenerateMeetingResolutions_Result" />
+    </operation>
+  </portType>
+  <binding name="PortalCodeunit_Binding" type="tns:PortalCodeunit_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="FnLogin">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnLogin" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnLogin">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnLogin_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GenerateDirectorPayslip">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GenerateDirectorPayslip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GenerateDirectorPayslip">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GenerateDirectorPayslip_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ForgotPass">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ForgotPass" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ForgotPass">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ForgotPass_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ChangePassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ChangePassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ChangePassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetItemImage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GetItemImage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetItemImage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetItemImage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnRegisterBoard">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnRegisterBoard" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnRegisterBoard">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnRegisterBoard_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnMeetingsToday">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnMeetingsToday" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnMeetingsToday">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnMeetingsToday_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertComment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnInsertComment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertComment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertComment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GenerateMeetingResolutions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GenerateMeetingResolutions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GenerateMeetingResolutions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GenerateMeetingResolutions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PortalCodeunit">
+    <port name="PortalCodeunit_Port" binding="tns:PortalCodeunit_Binding">
+      <address location="http://41.89.63.250:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

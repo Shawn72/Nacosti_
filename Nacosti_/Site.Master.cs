@@ -55,6 +55,12 @@ namespace Nacosti_
                 // Set Anti-XSRF token
                 ViewState[AntiXsrfTokenKey] = Page.ViewStateUserKey;
                 ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+
+                if (string.IsNullOrEmpty(Session["name"].ToString()) &&
+                    string.IsNullOrEmpty(Session["directorNo"].ToString()))
+                {
+                   Response.Redirect("Login.aspx");
+                }
             }
             else
             {
