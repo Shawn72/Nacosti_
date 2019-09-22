@@ -47,6 +47,14 @@ namespace Nacosti_.webPortal {
         
         private System.Threading.SendOrPostCallback GenerateMeetingResolutionsOperationCompleted;
         
+        private System.Threading.SendOrPostCallback FnGenerateP9OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GenerateCommitteeResolutionsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnInsertBlogOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnInsertBlogReplyOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -111,6 +119,18 @@ namespace Nacosti_.webPortal {
         
         /// <remarks/>
         public event GenerateMeetingResolutionsCompletedEventHandler GenerateMeetingResolutionsCompleted;
+        
+        /// <remarks/>
+        public event FnGenerateP9CompletedEventHandler FnGenerateP9Completed;
+        
+        /// <remarks/>
+        public event GenerateCommitteeResolutionsCompletedEventHandler GenerateCommitteeResolutionsCompleted;
+        
+        /// <remarks/>
+        public event FnInsertBlogCompletedEventHandler FnInsertBlogCompleted;
+        
+        /// <remarks/>
+        public event FnInsertBlogReplyCompletedEventHandler FnInsertBlogReplyCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnLogin", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnLogin_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -398,6 +418,143 @@ namespace Nacosti_.webPortal {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnGenerateP9", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnGenerateP9_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGenerateP9(string dirNumber, [System.Xml.Serialization.XmlElementAttribute(DataType="date")] System.DateTime startDate, [System.Xml.Serialization.XmlElementAttribute(DataType="date")] System.DateTime endDate) {
+            object[] results = this.Invoke("FnGenerateP9", new object[] {
+                        dirNumber,
+                        startDate,
+                        endDate});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGenerateP9Async(string dirNumber, System.DateTime startDate, System.DateTime endDate) {
+            this.FnGenerateP9Async(dirNumber, startDate, endDate, null);
+        }
+        
+        /// <remarks/>
+        public void FnGenerateP9Async(string dirNumber, System.DateTime startDate, System.DateTime endDate, object userState) {
+            if ((this.FnGenerateP9OperationCompleted == null)) {
+                this.FnGenerateP9OperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGenerateP9OperationCompleted);
+            }
+            this.InvokeAsync("FnGenerateP9", new object[] {
+                        dirNumber,
+                        startDate,
+                        endDate}, this.FnGenerateP9OperationCompleted, userState);
+        }
+        
+        private void OnFnGenerateP9OperationCompleted(object arg) {
+            if ((this.FnGenerateP9Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGenerateP9Completed(this, new FnGenerateP9CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GenerateCommitteeResolutio" +
+            "ns", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="GenerateCommitteeResolutions_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string GenerateCommitteeResolutions(string meetingCode) {
+            object[] results = this.Invoke("GenerateCommitteeResolutions", new object[] {
+                        meetingCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GenerateCommitteeResolutionsAsync(string meetingCode) {
+            this.GenerateCommitteeResolutionsAsync(meetingCode, null);
+        }
+        
+        /// <remarks/>
+        public void GenerateCommitteeResolutionsAsync(string meetingCode, object userState) {
+            if ((this.GenerateCommitteeResolutionsOperationCompleted == null)) {
+                this.GenerateCommitteeResolutionsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGenerateCommitteeResolutionsOperationCompleted);
+            }
+            this.InvokeAsync("GenerateCommitteeResolutions", new object[] {
+                        meetingCode}, this.GenerateCommitteeResolutionsOperationCompleted, userState);
+        }
+        
+        private void OnGenerateCommitteeResolutionsOperationCompleted(object arg) {
+            if ((this.GenerateCommitteeResolutionsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GenerateCommitteeResolutionsCompleted(this, new GenerateCommitteeResolutionsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnInsertBlog", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnInsertBlog_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnInsertBlog(string blogTitle, string blogBody, string dirNo, string dirName) {
+            object[] results = this.Invoke("FnInsertBlog", new object[] {
+                        blogTitle,
+                        blogBody,
+                        dirNo,
+                        dirName});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnInsertBlogAsync(string blogTitle, string blogBody, string dirNo, string dirName) {
+            this.FnInsertBlogAsync(blogTitle, blogBody, dirNo, dirName, null);
+        }
+        
+        /// <remarks/>
+        public void FnInsertBlogAsync(string blogTitle, string blogBody, string dirNo, string dirName, object userState) {
+            if ((this.FnInsertBlogOperationCompleted == null)) {
+                this.FnInsertBlogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnInsertBlogOperationCompleted);
+            }
+            this.InvokeAsync("FnInsertBlog", new object[] {
+                        blogTitle,
+                        blogBody,
+                        dirNo,
+                        dirName}, this.FnInsertBlogOperationCompleted, userState);
+        }
+        
+        private void OnFnInsertBlogOperationCompleted(object arg) {
+            if ((this.FnInsertBlogCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnInsertBlogCompleted(this, new FnInsertBlogCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnInsertBlogReply", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnInsertBlogReply_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnInsertBlogReply(string blogReply, string dirNo, string dirName, int blogId) {
+            object[] results = this.Invoke("FnInsertBlogReply", new object[] {
+                        blogReply,
+                        dirNo,
+                        dirName,
+                        blogId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnInsertBlogReplyAsync(string blogReply, string dirNo, string dirName, int blogId) {
+            this.FnInsertBlogReplyAsync(blogReply, dirNo, dirName, blogId, null);
+        }
+        
+        /// <remarks/>
+        public void FnInsertBlogReplyAsync(string blogReply, string dirNo, string dirName, int blogId, object userState) {
+            if ((this.FnInsertBlogReplyOperationCompleted == null)) {
+                this.FnInsertBlogReplyOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnInsertBlogReplyOperationCompleted);
+            }
+            this.InvokeAsync("FnInsertBlogReply", new object[] {
+                        blogReply,
+                        dirNo,
+                        dirName,
+                        blogId}, this.FnInsertBlogReplyOperationCompleted, userState);
+        }
+        
+        private void OnFnInsertBlogReplyOperationCompleted(object arg) {
+            if ((this.FnInsertBlogReplyCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnInsertBlogReplyCompleted(this, new FnInsertBlogReplyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -637,6 +794,110 @@ namespace Nacosti_.webPortal {
         private object[] results;
         
         internal GenerateMeetingResolutionsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnGenerateP9CompletedEventHandler(object sender, FnGenerateP9CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGenerateP9CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGenerateP9CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void GenerateCommitteeResolutionsCompletedEventHandler(object sender, GenerateCommitteeResolutionsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GenerateCommitteeResolutionsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GenerateCommitteeResolutionsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnInsertBlogCompletedEventHandler(object sender, FnInsertBlogCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnInsertBlogCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnInsertBlogCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnInsertBlogReplyCompletedEventHandler(object sender, FnInsertBlogReplyCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnInsertBlogReplyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnInsertBlogReplyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

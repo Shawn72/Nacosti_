@@ -849,8 +849,10 @@ table.dataTable {
 	color: #ff9b44;
 }
 .sidebar-menu li.active a {
-	color: #333;
-	background-color: rgba(0, 0, 0, 0.2);
+	/*color: #333;
+	background-color: rgba(0, 0, 0, 0.2);*/
+    color: #f6e6e6;
+    background-color: #5ad586;
 }
 .menu-title {
 	color: #ff9b44;

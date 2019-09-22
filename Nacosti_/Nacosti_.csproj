@@ -255,6 +255,8 @@
     <Content Include="assets\plugins\raphael\raphael-min.js" />
     <Content Include="assets\plugins\summernote\dist\summernote.css" />
     <Content Include="assets\plugins\summernote\dist\summernote.min.js" />
+    <Content Include="Blog_Forum.aspx" />
+    <Content Include="Blog_Replies.aspx" />
     <Content Include="Board_Meetings.aspx" />
     <Content Include="Board_Papers.aspx" />
     <Content Include="Board_Resolutions.aspx" />
@@ -321,6 +323,7 @@
     <Content Include="Payslip.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="registerBoard.aspx" />
+    <Content Include="Resolutions_Pdf.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -396,6 +399,20 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Blog_Forum.aspx.cs">
+      <DependentUpon>Blog_Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog_Forum.aspx.designer.cs">
+      <DependentUpon>Blog_Forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog_Replies.aspx.cs">
+      <DependentUpon>Blog_Replies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog_Replies.aspx.designer.cs">
+      <DependentUpon>Blog_Replies.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Board_Meetings.aspx.cs">
       <DependentUpon>Board_Meetings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -567,6 +584,13 @@
     <Compile Include="registerBoard.aspx.designer.cs">
       <DependentUpon>registerBoard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Resolutions_Pdf.aspx.cs">
+      <DependentUpon>Resolutions_Pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resolutions_Pdf.aspx.designer.cs">
+      <DependentUpon>Resolutions_Pdf.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Service References\oData\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -619,7 +643,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="BoardPapers\2019DirTest\" />
     <Folder Include="Documents\" />
-    <Folder Include="Downloads\" />
+    <Folder Include="Downloads\P9\" />
     <Folder Include="images\" />
     <Folder Include="MeetingsDocs\NACOSTI\Board Meeting Card\" />
     <Folder Include="MeetingsDocs\NACOSTI\Committee Meeting Card\" />

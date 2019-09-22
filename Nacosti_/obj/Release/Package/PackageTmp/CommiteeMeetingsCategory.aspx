@@ -35,7 +35,7 @@
                         %>
                             <tr>
                                 <td><% =meetingcount %></td>
-                                <td><a href="Meeting_Committee.aspx?meeting=<%=meeting.No %>"><%=meeting.Title %></a></td>
+                                <td><a href="Meeting_Committee.aspx?meeting=<%=meeting.No %>"><%=meeting.No %></a></td>
                                 <td><%=Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy") %></td>
                                 <td><%=Convert.ToDateTime(meeting.End_Date).ToString("dd/MM/yyyy") %></td>
                                 <td><%=meeting.Venue_Location %></td>

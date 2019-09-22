@@ -3,7 +3,7 @@
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
 <div class="page-wrapper">
     <div class="content container-fluid">
-    <h1>Meetings Schedule</h1>
+    <h1>Scheduled Meetings </h1>
     <div class="row">
 		<div class="col-xs-12">
 			<h4 class="page-title">Board Meetings Schedule</h4>

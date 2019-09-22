@@ -135,6 +135,70 @@
           </sequence>
         </complexType>
       </element>
+      <element name="FnGenerateP9">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="dirNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="endDate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGenerateP9_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateCommitteeResolutions">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateCommitteeResolutions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBlog">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blogTitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="blogBody" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBlog_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBlogReply">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blogReply" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="blogId" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBlogReply_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
     </schema>
   </types>
   <message name="FnLogin">
@@ -191,6 +255,30 @@
   <message name="GenerateMeetingResolutions_Result">
     <part name="parameters" element="tns:GenerateMeetingResolutions_Result" />
   </message>
+  <message name="FnGenerateP9">
+    <part name="parameters" element="tns:FnGenerateP9" />
+  </message>
+  <message name="FnGenerateP9_Result">
+    <part name="parameters" element="tns:FnGenerateP9_Result" />
+  </message>
+  <message name="GenerateCommitteeResolutions">
+    <part name="parameters" element="tns:GenerateCommitteeResolutions" />
+  </message>
+  <message name="GenerateCommitteeResolutions_Result">
+    <part name="parameters" element="tns:GenerateCommitteeResolutions_Result" />
+  </message>
+  <message name="FnInsertBlog">
+    <part name="parameters" element="tns:FnInsertBlog" />
+  </message>
+  <message name="FnInsertBlog_Result">
+    <part name="parameters" element="tns:FnInsertBlog_Result" />
+  </message>
+  <message name="FnInsertBlogReply">
+    <part name="parameters" element="tns:FnInsertBlogReply" />
+  </message>
+  <message name="FnInsertBlogReply_Result">
+    <part name="parameters" element="tns:FnInsertBlogReply_Result" />
+  </message>
   <portType name="PortalCodeunit_Port">
     <operation name="FnLogin">
       <input name="FnLogin" message="tns:FnLogin" />
@@ -227,6 +315,22 @@
     <operation name="GenerateMeetingResolutions">
       <input name="GenerateMeetingResolutions" message="tns:GenerateMeetingResolutions" />
       <output name="GenerateMeetingResolutions_Result" message="tns:GenerateMeetingResolutions_Result" />
+    </operation>
+    <operation name="FnGenerateP9">
+      <input name="FnGenerateP9" message="tns:FnGenerateP9" />
+      <output name="FnGenerateP9_Result" message="tns:FnGenerateP9_Result" />
+    </operation>
+    <operation name="GenerateCommitteeResolutions">
+      <input name="GenerateCommitteeResolutions" message="tns:GenerateCommitteeResolutions" />
+      <output name="GenerateCommitteeResolutions_Result" message="tns:GenerateCommitteeResolutions_Result" />
+    </operation>
+    <operation name="FnInsertBlog">
+      <input name="FnInsertBlog" message="tns:FnInsertBlog" />
+      <output name="FnInsertBlog_Result" message="tns:FnInsertBlog_Result" />
+    </operation>
+    <operation name="FnInsertBlogReply">
+      <input name="FnInsertBlogReply" message="tns:FnInsertBlogReply" />
+      <output name="FnInsertBlogReply_Result" message="tns:FnInsertBlogReply_Result" />
     </operation>
   </portType>
   <binding name="PortalCodeunit_Binding" type="tns:PortalCodeunit_Port">
@@ -309,6 +413,42 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="GenerateMeetingResolutions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGenerateP9">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnGenerateP9" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGenerateP9">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGenerateP9_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GenerateCommitteeResolutions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GenerateCommitteeResolutions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GenerateCommitteeResolutions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GenerateCommitteeResolutions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertBlog">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnInsertBlog" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertBlog">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertBlog_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertBlogReply">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnInsertBlogReply" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertBlogReply">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertBlogReply_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

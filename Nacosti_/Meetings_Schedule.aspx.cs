@@ -44,7 +44,7 @@ namespace Nacosti_
                             "<td>{0}</td>" +
                             "<td><a href = 'Meeting_Board.aspx?meeting={1}'>{2}</a></td>" +
                             "<td>{3:dd/MM/yyyy}</td>" + "<td>{4}</td>" + "<td >{5:dd/MM/yyyy}</td>" + "<td>{6}</td >" + "<td>{7}</td >" + "<td>{8}</td>"+
-                            "</tr> ", count, meeting.No, meeting.Title, Convert.ToDateTime(meeting.Start_date), meeting.Start_time, Convert.ToDateTime(meeting.End_Date), meeting.End_time, meeting.Venue_Location, meeting.Parking_Arrangement);
+                            "</tr> ", count, meeting.No, meeting.No, Convert.ToDateTime(meeting.Start_date), meeting.Start_time, Convert.ToDateTime(meeting.End_Date), meeting.End_time, meeting.Venue_Location, meeting.Parking_Arrangement);
                     }
                 }
             }

@@ -12,7 +12,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Committee Name</th>
+                                <th>Board Name</th>
                             </tr>
                         </thead>
                          <%

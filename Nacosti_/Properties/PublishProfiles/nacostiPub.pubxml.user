@@ -88,7 +88,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2019 09:57:04</publishTime>
     </File>
     <File Include="assets/css/style.css">
-      <publishTime>08/28/2019 12:50:56</publishTime>
+      <publishTime>09/20/2019 11:48:31</publishTime>
     </File>
     <File Include="assets/fileTree/connectors/jqueryFileTree.asp">
       <publishTime>11/15/2011 21:12:00</publishTime>
@@ -484,13 +484,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2012 11:08:46</publishTime>
     </File>
     <File Include="bin/Nacosti_.dll">
-      <publishTime>09/19/2019 13:21:50</publishTime>
+      <publishTime>09/23/2019 00:04:36</publishTime>
     </File>
     <File Include="bin/Nacosti_.pdb">
       <publishTime>09/09/2019 18:12:24</publishTime>
     </File>
     <File Include="bin/Nacosti_.XmlSerializers.dll">
-      <publishTime>09/19/2019 13:21:51</publishTime>
+      <publishTime>09/23/2019 00:04:37</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2014 20:33:56</publishTime>
@@ -582,20 +582,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/zh-Hant/System.Spatial.resources.dll">
       <publishTime>03/26/2015 01:42:02</publishTime>
     </File>
+    <File Include="Blog_Forum.aspx">
+      <publishTime>09/23/2019 00:27:36</publishTime>
+    </File>
+    <File Include="Blog_Replies.aspx">
+      <publishTime>09/23/2019 00:39:04</publishTime>
+    </File>
     <File Include="Board.aspx">
-      <publishTime>09/13/2019 15:51:00</publishTime>
+      <publishTime>09/23/2019 00:10:26</publishTime>
     </File>
     <File Include="Board_Commitees.aspx">
       <publishTime>09/06/2019 19:15:30</publishTime>
     </File>
     <File Include="Board_Meetings.aspx">
-      <publishTime>09/17/2019 14:46:49</publishTime>
+      <publishTime>09/23/2019 00:53:47</publishTime>
     </File>
     <File Include="Board_Papers.aspx">
       <publishTime>09/19/2019 10:14:50</publishTime>
     </File>
     <File Include="Board_Resolutions.aspx">
-      <publishTime>09/17/2019 15:20:48</publishTime>
+      <publishTime>09/23/2019 00:50:21</publishTime>
     </File>
     <File Include="Bundle.config">
       <publishTime>07/03/2019 15:05:33</publishTime>
@@ -604,10 +610,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2019 16:44:36</publishTime>
     </File>
     <File Include="CommiteeMeetingsCategory.aspx">
-      <publishTime>09/13/2019 17:23:47</publishTime>
+      <publishTime>09/23/2019 00:57:51</publishTime>
     </File>
     <File Include="Commitees.aspx">
-      <publishTime>09/17/2019 11:42:15</publishTime>
+      <publishTime>09/22/2019 23:17:24</publishTime>
     </File>
     <File Include="Commitee_Meetings.aspx">
       <publishTime>09/17/2019 14:48:34</publishTime>
@@ -628,7 +634,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2019 15:06:09</publishTime>
     </File>
     <File Include="Dashboard.aspx">
-      <publishTime>09/17/2019 11:54:51</publishTime>
+      <publishTime>09/22/2019 23:57:55</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>07/03/2019 15:05:33</publishTime>
@@ -679,16 +685,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/16/2019 15:55:22</publishTime>
     </File>
     <File Include="Meetings_Schedule.aspx">
-      <publishTime>09/19/2019 10:57:51</publishTime>
+      <publishTime>09/23/2019 00:54:41</publishTime>
     </File>
     <File Include="Meetings_Today.aspx">
-      <publishTime>09/17/2019 11:40:30</publishTime>
+      <publishTime>09/22/2019 23:59:39</publishTime>
     </File>
     <File Include="Meetings_Upcoming.aspx">
-      <publishTime>09/17/2019 12:03:32</publishTime>
+      <publishTime>09/23/2019 01:01:05</publishTime>
     </File>
     <File Include="Meeting_Board.aspx">
-      <publishTime>09/19/2019 12:53:06</publishTime>
+      <publishTime>09/22/2019 13:25:30</publishTime>
     </File>
     <File Include="Meeting_Committee.aspx">
       <publishTime>09/19/2019 12:54:39</publishTime>
@@ -703,10 +709,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/09/2019 15:44:10</publishTime>
     </File>
     <File Include="Profile.aspx">
-      <publishTime>09/10/2019 18:29:50</publishTime>
+      <publishTime>09/22/2019 14:43:13</publishTime>
     </File>
     <File Include="registerBoard.aspx">
       <publishTime>09/10/2019 18:53:48</publishTime>
+    </File>
+    <File Include="Resolutions_Pdf.aspx">
+      <publishTime>09/20/2019 20:30:26</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>07/03/2019 15:06:46</publishTime>
@@ -811,7 +820,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2019 15:23:57</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>09/19/2019 13:22:50</publishTime>
+      <publishTime>09/22/2019 17:26:39</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>07/03/2019 15:06:06</publishTime>

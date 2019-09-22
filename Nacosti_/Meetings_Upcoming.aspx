@@ -7,7 +7,7 @@
     <h1></h1>
     <div class="row">
 		<div class="col-xs-12">
-			<h4 class="page-title">Upcoming Meetings</h4>
+			<h4 class="page-title">Upcoming Board Meetings</h4>
 		</div>
 	</div>
 	<div class="row">
@@ -40,7 +40,7 @@
 			                          counter1++; %>
                                     <tr>
                                         <td><%=counter1 %></td>
-                                        <td><a href="Meeting_Board.aspx?meeting=<% = meeting.No %>"><% = meeting.Title %></a></td>
+                                        <td><a href="Meeting_Board.aspx?meeting=<% = meeting.No %>"><% = meeting.No %></a></td>
                                         <td><% = Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy") %></td>
                                         <td><% = meeting.Start_time %></td>
                                         <td><% = Convert.ToDateTime(meeting.End_Date).ToString("dd/MM/yyyy") %></td>
@@ -105,7 +105,7 @@
                                   count++; %>
                                 <tr>
                                     <td><%=count %></td>
-                                    <td><a href="Meeting_Committee.aspx?meeting=<% = meeting.No %>"><% = meeting.Title %></a></td>
+                                    <td><a href="Meeting_Committee.aspx?meeting=<% = meeting.No %>"><% = meeting.No %></a></td>
                                     <td><% = Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy") %></td>
                                     <td><% = meeting.Start_time %></td>
                                     <td><% = Convert.ToDateTime(meeting.End_Date).ToString("dd/MM/yyyy") %></td>

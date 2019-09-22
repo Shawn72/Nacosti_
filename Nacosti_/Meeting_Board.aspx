@@ -216,8 +216,6 @@
 					
     </div>
 </div>
- 
- 
     
 <script>
 function CheckTextArea(textArea, maxLength) {

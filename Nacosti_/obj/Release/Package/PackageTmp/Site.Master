@@ -41,7 +41,7 @@
 				<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
 				<ul class="nav navbar-nav navbar-right user-menu pull-right">
 					<li class="dropdown">
-						<a href="profile.html" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
+						<a href="Profile.aspx" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
 							<span class="user-img"><img class="img-circle" src="assets/img/avatar.png" width="40" alt="Admin">
 							<span class="status online"></span></span>
 							<span><%=Session["name"].ToString().ToUpper()%> </span>
@@ -67,7 +67,7 @@
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
-							<li class="active"><a href="Dashboard.aspx"><i class="la la-dashboard"></i> <span>Dashboard</span></a></li>
+							<li class="active"><a href="Dashboard.aspx"><i class="glyphicon glyphicon-home"></i> <span>Dashboard</span></a></li>
 						    <li><a href="Board.aspx"><i class="fas fa-scroll"></i>&nbsp;<span>Board</span></a></li>
 						    <li><a href="Commitees.aspx"><i class="fas fa-scroll"></i>&nbsp;<span>Committee</span></a></li>
                             <li><a href="Meetings_Schedule.aspx"><i class="fas fa-calendar"></i>&nbsp;<span>Scheduled Meetings</span></a></li>
@@ -75,8 +75,9 @@
                             <li><a href="Meetings_Today.aspx"><i class="fas fa-calendar"></i>&nbsp;<span>Meetings Today</span> <%--<span class="badge bg-primary pull-right"><%= Convert.ToInt32(wsconnection.FnMeetingsToday(Session["directorNo"].ToString())) %></span>--%> </a></li>
 							<li><a href="Meetings_Upcoming.aspx"><i class="fas fa-business-time"></i>&nbsp;<span>Upcoming Meetings</span></a></li>
 							<li><a href="Meetings_Past.aspx"><i class="fas fa-history"></i>&nbsp;<span>Past Meetings</span> </a></li>
-						    <li><a href="Board_Papers.aspx"><i class="fas fa-file-pdf-o"></i>&nbsp;<span>Board Papers</span> </a></li>
+						    <li><a href="Board_Papers.aspx"><i class="fas fa-file-pdf-o"></i>&nbsp;<span>Board Documents</span> </a></li>
 						    <li><a href="Board_Resolutions.aspx"><i class="fas fa-gavel"></i>&nbsp;<span>Board Resolutions</span></a></li>
+						    <li><a href="Blog_Forum.aspx"><i class="fas fa-comments"></i>&nbsp;<span>Board Forums</span> </a></li>
 						    <li><a href="#"><i class="fas fa-receipt"></i>&nbsp;<span>P9 Report</span> </a></li>
 						</ul>
 					</div>

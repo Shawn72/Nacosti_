@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 19-Sep-19 12:02:58
+// Generation date: 22-Sep-19 17:46:43
 namespace Nacosti_.oData
 {
     
@@ -162,6 +162,40 @@ namespace Nacosti_.oData
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ApprovalEntries> _ApprovalEntries;
+        /// <summary>
+        /// There are no comments for blogReplies in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<blogReplies> blogReplies
+        {
+            get
+            {
+                if ((this._blogReplies == null))
+                {
+                    this._blogReplies = base.CreateQuery<blogReplies>("blogReplies");
+                }
+                return this._blogReplies;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<blogReplies> _blogReplies;
+        /// <summary>
+        /// There are no comments for boardBlog in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<boardBlog> boardBlog
+        {
+            get
+            {
+                if ((this._boardBlog == null))
+                {
+                    this._boardBlog = base.CreateQuery<boardBlog>("boardBlog");
+                }
+                return this._boardBlog;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<boardBlog> _boardBlog;
         /// <summary>
         /// There are no comments for BoardComments in the schema.
         /// </summary>
@@ -1486,6 +1520,22 @@ namespace Nacosti_.oData
             base.AddObject("ApprovalEntries", approvalEntries);
         }
         /// <summary>
+        /// There are no comments for blogReplies in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToblogReplies(blogReplies blogReplies)
+        {
+            base.AddObject("blogReplies", blogReplies);
+        }
+        /// <summary>
+        /// There are no comments for boardBlog in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToboardBlog(boardBlog boardBlog)
+        {
+            base.AddObject("boardBlog", boardBlog);
+        }
+        /// <summary>
         /// There are no comments for BoardComments in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2164,2009 +2214,2028 @@ namespace Nacosti_.oData
                 "lean\" /><Property Name=\"Pending_Approvals\" Type=\"Edm.Int32\" /><Property Name=\"Nu" +
                 "mber_of_Approved_Requests\" Type=\"Edm.Int32\" /><Property Name=\"Number_of_Rejected" +
                 "_Requests\" Type=\"Edm.Int32\" /><Property Name=\"Related_to_Change\" Type=\"Edm.Boole" +
-                "an\" /></EntityType><EntityType Name=\"BoardComments\"><Key><PropertyRef Name=\"Entr" +
-                "yNo\" /></Key><Property Name=\"EntryNo\" Type=\"Edm.Int32\" Nullable=\"false\" /><Prope" +
-                "rty Name=\"Meeting_Code\" Type=\"Edm.String\" /><Property Name=\"Member_No\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Comment\" Type=\"Edm.String\" /><Property Name=\"Date_Cre" +
-                "ated\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Created\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Comment_Reply\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"" +
-                "boardMeetingAttendance\"><Key><PropertyRef Name=\"Meeting_Code\" /><PropertyRef Nam" +
-                "e=\"Member_No\" /></Key><Property Name=\"Meeting_Code\" Type=\"Edm.String\" Nullable=\"" +
-                "false\" /><Property Name=\"Member_No\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
-                "ty Name=\"Commitee_No\" Type=\"Edm.String\" /><Property Name=\"Meeting_Name\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Member_Name\" Type=\"Edm.String\" /><Property Name=\"Com" +
-                "mittee_Name\" Type=\"Edm.String\" /><Property Name=\"Meeting_Date\" Type=\"Edm.DateTim" +
-                "e\" /><Property Name=\"Venue\" Type=\"Edm.String\" /><Property Name=\"Attendance\" Type" +
-                "=\"Edm.String\" /></EntityType><EntityType Name=\"boardMeetings\"><Key><PropertyRef " +
-                "Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Prop" +
-                "erty Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Start_date\" Type=\"Edm.Date" +
-                "Time\" /><Property Name=\"Start_time\" Type=\"Edm.String\" /><Property Name=\"End_Date" +
-                "\" Type=\"Edm.DateTime\" /><Property Name=\"End_time\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Venue_Location\" Type=\"Edm.String\" /><Property Name=\"Convened_by\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Contact_Tel_No\" Type=\"Edm.String\" /><Property Name=\"C" +
-                "ontact_Email\" Type=\"Edm.String\" /><Property Name=\"Descripti";
+                "an\" /></EntityType><EntityType Name=\"blogReplies\"><Key><PropertyRef Name=\"Blog_I" +
+                "d\" /><PropertyRef Name=\"Entry_Id\" /></Key><Property Name=\"Entry_Id\" Type=\"Edm.In" +
+                "t32\" Nullable=\"false\" /><Property Name=\"Blog_Reply\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Replier_Name\" Type=\"Edm.String\" /><Property Name=\"Replier_DirNo\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Date_Replied\" Type=\"Edm.DateTime\" /><Property Name=" +
+                "\"Time_Replied\" Type=\"Edm.String\" /><Property Name=\"BlogIdCode\" Type=\"Edm.Int32\" " +
+                "/><Property Name=\"Blog_Body\" Type=\"Edm.String\" /><Property Name=\"Blog_Title\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Blog_Id\" Type=\"Edm.Int32\" Nullable=\"false\" /></" +
+                "EntityType><EntityType Name=\"boardBlog\"><Key><PropertyRef Name=\"Blog_Id\" /></Key" +
+                "><Property Name=\"Blog_Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Bl" +
+                "og_Title\" Type=\"Edm.String\" /><Property Name=\"Blog_Body\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Created_ByDirNo\" Type=\"Edm.String\" /><Property Name=\"Date_Created\" " +
+                "Type=\"Edm.DateTime\" /><Property Name=\"Created_ByDirName\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Time_Created\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"Bo" +
+                "ardComments\"><Key><PropertyRef Name=\"EntryNo\" /></Key><Property Name=\"EntryNo\" T" +
+                "ype=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Meeting_Code\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Member_No\" Type=\"Edm.String\" /><Property Name=\"Comment\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Date_Created\" Type=\"Edm.DateTime\" /><Property N" +
+                "ame=\"Time_Created\" Type=\"Edm.String\" /><Property Name=\"Comment_Reply\" Type=\"Edm." +
+                "String\" /></EntityType><EntityType Name=\"boardMeetingAttendance\"><Key><PropertyR" +
+                "ef Name=\"Meeting_Code\" /><PropertyRef Name=\"Member_No\" /></";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "on\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Published\" Type=\"Edm.Boolean\" /><Property Name=\"Meeting_group_Code\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Meeting_group\" Type=\"Edm.String\" /><Property Name=\"Co" +
-                "nference_Venue\" Type=\"Edm.String\" /><Property Name=\"Parking_Arrangement\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Access_requirement\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Board_Meeting_Category_Code\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Board_Meeting_Category\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Meeting_Status\" Type=\"Edm.String\" /><Property Name=\"Published_B" +
-                "y\" Type=\"Edm.String\" /><Property Name=\"Date_Published\" Type=\"Edm.DateTime\" /><Pr" +
-                "operty Name=\"Time_Published\" Type=\"Edm.String\" /><Property Name=\"Cancelled_By\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Date_Cancelled\" Type=\"Edm.DateTime\" /><Proper" +
-                "ty Name=\"Time_Cancelled\" Type=\"Edm.String\" /><Property Name=\"Completed_By\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Date_Completed\" Type=\"Edm.DateTime\" /><Property N" +
-                "ame=\"Time_Completed\" Type=\"Edm.String\" /><Property Name=\"Meeting_Type\" Type=\"Edm" +
-                ".String\" /></EntityType><EntityType Name=\"Casuals\"><Key><PropertyRef Name=\"Impre" +
-                "st_Memo_No\" /><PropertyRef Name=\"No\" /><PropertyRef Name=\"ResourceNo\" /><Propert" +
-                "yRef Name=\"Resource_No\" /><PropertyRef Name=\"Type\" /></Key><Property Name=\"Impre" +
-                "st_Memo_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm" +
-                ".String\" Nullable=\"false\" /><Property Name=\"No_Required\" Type=\"Edm.Int32\" /><Pro" +
-                "perty Name=\"Work_Type\" Type=\"Edm.String\" /><Property Name=\"No_of_Days\" Type=\"Edm" +
-                ".Decimal\" /><Property Name=\"Rate\" Type=\"Edm.Decimal\" /><Property Name=\"Amount\" T" +
-                "ype=\"Edm.Decimal\" /><Property Name=\"Activity\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Resource_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Posted\" Type" +
-                "=\"Edm.Boolean\" /><Property Name=\"Linked\" Type=\"Edm.Boolean\" /><Property Name=\"Ta" +
-                "sk_No\" Type=\"Edm.String\" /><Property Name=\"Actual_No_of_Days\" Type=\"Edm.Decimal\"" +
-                " /><Property Name=\"Surrendered\" Type=\"Edm.Boolean\" /><Property Name=\"Job_Task_De" +
-                "scription\" Type=\"Edm.String\" /><Property Name=\"Actual_Rate\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Actual_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Project\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Prop" +
-                "erty Name=\"Requestor\" Type=\"Edm.String\" /><Property Name=\"ResourceNo\" Type=\"Edm." +
-                "String\" Nullable=\"false\" /><Property Name=\"ResourceName\" Type=\"Edm.String\" /></E" +
-                "ntityType><EntityType Name=\"CommitteeBoardMembers\"><Key><PropertyRef Name=\"Code\"" +
-                " /><PropertyRef Name=\"Committee\" /></Key><Property Name=\"Committee\" Type=\"Edm.St" +
-                "ring\" Nullable=\"false\" /><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" /><Property Name=\"Names\" Type=\"Edm.String\" /><Property Name=\"Designation\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Remarks\" Type=\"Edm.String\" /><Property Name=\"Rol" +
-                "e\" Type=\"Edm.String\" /><Property Name=\"Director_No\" Type=\"Edm.String\" /></Entity" +
-                "Type><EntityType Name=\"committeeMeetings\"><Key><PropertyRef Name=\"No\" /></Key><P" +
-                "roperty Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Title\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Start_date\" Type=\"Edm.DateTime\" /><Property Na" +
-                "me=\"Start_time\" Type=\"Edm.String\" /><Property Name=\"End_Date\" Type=\"Edm.DateTime" +
-                "\" /><Property Name=\"End_time\" Type=\"Edm.String\" /><Property Name=\"Venue_Location" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Convened_by\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Contact_Tel_No\" Type=\"Edm.String\" /><Property Name=\"Contact_Email\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"S" +
-                "tatus\" Type=\"Edm.String\" /><Property Name=\"Published\" Type=\"Edm.Boolean\" /><Prop" +
-                "erty Name=\"Meeting_group_Code\" Type=\"Edm.String\" /><Property Name=\"Meeting_group" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Conference_Venue\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Parking_Arrangement\" Type=\"Edm.String\" /><Property Name=\"Access_requ" +
-                "irement\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Board_Meeting_Category_Code\" Type=\"Edm.String\" /><Property Name=\"Boa" +
-                "rd_Meeting_Category\" Type=\"Edm.String\" /><Property Name=\"Meeting_Status\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Published_By\" Type=\"Edm.String\" /><Property Name=\"D" +
-                "ate_Published\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Published\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Cancelled_By\" Type=\"Edm.String\" /><Property Name=\"Date_" +
-                "Cancelled\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Cancelled\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Completed_By\" Type=\"Edm.String\" /><Property Name=\"Date_Comp" +
-                "leted\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Completed\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Meeting_Type\" Type=\"Edm.String\" /></EntityType><EntityType Name" +
-                "=\"Committees\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"" +
-                "Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Comments\" Type=\"Edm.String\" /><Property Name=\"Start_Date\" Type=\"" +
-                "Edm.DateTime\" /><Property Name=\"End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"" +
-                "Status\" Type=\"Edm.String\" /><Property Name=\"Mandate\" Type=\"Edm.String\" /></Entit" +
-                "yType><EntityType Name=\"contacts\"><Key><PropertyRef Name=\"No\" /></Key><Property " +
-                "Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"password\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"KRA_PIN\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Tax_Compliance_Certificate_No\" Type=\"Edm.String\" /><Property Name=\"Director_1_Na" +
-                "me\" Type=\"Edm.String\" /><Property Name=\"Director_2_Name\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Director_3_Name\" Type=\"Edm.String\" /></EntityType><EntityType Name=" +
-                "\"Copyright_Files\"><Key><PropertyRef Name=\"fileId\" /><PropertyRef Name=\"No\" /></K" +
-                "ey><Property Name=\"fileId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"C" +
-                "opyrightNo\" Type=\"Edm.String\" /><Property Name=\"fileName\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"dateUploaded\" Type=\"Edm.DateTime\" /><Property Name=\"Applicant_Acco" +
-                "unt\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "/></EntityType><EntityType Name=\"CopyrightCategories\"><Key><PropertyRef Name=\"Co" +
-                "de\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property" +
-                " Name=\"Description\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"copyright" +
-                "setups\"><Key><PropertyRef Name=\"Primary_Key\" /></Key><Property Name=\"Primary_Key" +
-                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Applicant_Nos\" Type=\"Edm." +
-                "String\" /><Property Name=\"Complains_Nos\" Type=\"Edm.String\" /><Property Name=\"Cas" +
-                "e_Nos\" Type=\"Edm.String\" /><Property Name=\"Court_Attendance_Nos\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Case_File_Movement_Nos\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Document_Registration_Nos\" Type=\"Edm.String\" /><Property Name=\"Copyright_Regist" +
-                "ration_Nos\" Type=\"Edm.String\" /><Property Name=\"APSD_Minimum_Quantity\" Type=\"Edm" +
-                ".Decimal\" /><Property Name=\"APSD_Default_Unit_Price\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Default_APSD_Item\" Type=\"Edm.String\" /><Property Name=\"Authentication_" +
-                "Nos\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"copyrightsubcategories\">" +
-                "<Key><PropertyRef Name=\"Category_Code\" /><PropertyRef Name=\"Code\" /></Key><Prope" +
-                "rty Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Category_Co" +
-                "de\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm." +
-                "String\" /></EntityType><EntityType Name=\"CopyrightWorkCategories\"><Key><Property" +
-                "Ref Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.Str";
+            private const string ModelPart1 = "Key><Property Name=\"Meeting_Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"Member_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Commitee_N" +
+                "o\" Type=\"Edm.String\" /><Property Name=\"Meeting_Name\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Member_Name\" Type=\"Edm.String\" /><Property Name=\"Committee_Name\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Meeting_Date\" Type=\"Edm.DateTime\" /><Property Name" +
+                "=\"Venue\" Type=\"Edm.String\" /><Property Name=\"Attendance\" Type=\"Edm.String\" /></E" +
+                "ntityType><EntityType Name=\"boardMeetings\"><Key><PropertyRef Name=\"No\" /></Key><" +
+                "Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Title\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Start_date\" Type=\"Edm.DateTime\" /><Property N" +
+                "ame=\"Start_time\" Type=\"Edm.String\" /><Property Name=\"End_Date\" Type=\"Edm.DateTim" +
+                "e\" /><Property Name=\"End_time\" Type=\"Edm.String\" /><Property Name=\"Venue_Locatio" +
+                "n\" Type=\"Edm.String\" /><Property Name=\"Convened_by\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Contact_Tel_No\" Type=\"Edm.String\" /><Property Name=\"Contact_Email\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Status\" Type=\"Edm.String\" /><Property Name=\"Published\" Type=\"Edm.Boolean\" /><Pro" +
+                "perty Name=\"Meeting_group_Code\" Type=\"Edm.String\" /><Property Name=\"Meeting_grou" +
+                "p\" Type=\"Edm.String\" /><Property Name=\"Conference_Venue\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Parking_Arrangement\" Type=\"Edm.String\" /><Property Name=\"Access_req" +
+                "uirement\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Board_Meeting_Category_Code\" Type=\"Edm.String\" /><Property Name=\"Bo" +
+                "ard_Meeting_Category\" Type=\"Edm.String\" /><Property Name=\"Meeting_Status\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Published_By\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Date_Published\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Published\" Type=\"Edm." +
+                "String\" /><Property Name=\"Cancelled_By\" Type=\"Edm.String\" /><Property Name=\"Date" +
+                "_Cancelled\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Cancelled\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Completed_By\" Type=\"Edm.String\" /><Property Name=\"Date_Com" +
+                "pleted\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Completed\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Meeting_Type\" Type=\"Edm.String\" /></EntityType><EntityType Nam" +
+                "e=\"Casuals\"><Key><PropertyRef Name=\"Imprest_Memo_No\" /><PropertyRef Name=\"No\" />" +
+                "<PropertyRef Name=\"ResourceNo\" /><PropertyRef Name=\"Resource_No\" /><PropertyRef " +
+                "Name=\"Type\" /></Key><Property Name=\"Imprest_Memo_No\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property N" +
+                "ame=\"No_Required\" Type=\"Edm.Int32\" /><Property Name=\"Work_Type\" Type=\"Edm.String" +
+                "\" /><Property Name=\"No_of_Days\" Type=\"Edm.Decimal\" /><Property Name=\"Rate\" Type=" +
+                "\"Edm.Decimal\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Act" +
+                "ivity\" Type=\"Edm.String\" /><Property Name=\"Resource_No\" Type=\"Edm.String\" Nullab" +
+                "le=\"false\" /><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Linked" +
+                "\" Type=\"Edm.Boolean\" /><Property Name=\"Task_No\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Actual_No_of_Days\" Type=\"Edm.Decimal\" /><Property Name=\"Surrendered\" Type=\"E" +
+                "dm.Boolean\" /><Property Name=\"Job_Task_Description\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Actual_Rate\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Amount\" Type=\"E" +
+                "dm.Decimal\" /><Property Name=\"Project\" Type=\"Edm.String\" /><Property Name=\"No\" T" +
+                "ype=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Requestor\" Type=\"Edm.String\"" +
+                " /><Property Name=\"ResourceNo\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"ResourceName\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"CommitteeBo" +
+                "ardMembers\"><Key><PropertyRef Name=\"Code\" /><PropertyRef Name=\"Committee\" /></Ke" +
+                "y><Property Name=\"Committee\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
+                "=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Names\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Designation\" Type=\"Edm.String\" /><Property Name=\"Remarks" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Role\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Director_No\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"committeeMeeting" +
+                "s\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nul" +
+                "lable=\"false\" /><Property Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Start" +
+                "_date\" Type=\"Edm.DateTime\" /><Property Name=\"Start_time\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"End_time\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Venue_Location\" Type=\"Edm.String\" /><Property Name=\"C" +
+                "onvened_by\" Type=\"Edm.String\" /><Property Name=\"Contact_Tel_No\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Contact_Email\" Type=\"Edm.String\" /><Property Name=\"Descripti" +
+                "on\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Published\" Type=\"Edm.Boolean\" /><Property Name=\"Meeting_group_Code\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Meeting_group\" Type=\"Edm.String\" /><Property Name=\"C" +
+                "onference_Venue\" Type=\"Edm.String\" /><Property Name=\"Parking_Arrangement\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Access_requirement\" Type=\"Edm.String\" /><Property " +
+                "Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Board_Meeting_Category_Code" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Board_Meeting_Category\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Meeting_Status\" Type=\"Edm.String\" /><Property Name=\"Published_" +
+                "By\" Type=\"Edm.String\" /><Property Name=\"Date_Published\" Type=\"Edm.DateTime\" /><P" +
+                "roperty Name=\"Time_Published\" Type=\"Edm.String\" /><Property Name=\"Cancelled_By\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Date_Cancelled\" Type=\"Edm.DateTime\" /><Prope" +
+                "rty Name=\"Time_Cancelled\" Type=\"Edm.String\" /><Property Name=\"Completed_By\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Date_Completed\" Type=\"Edm.DateTime\" /><Property " +
+                "Name=\"Time_Completed\" Type=\"Edm.String\" /><Property Name=\"Meeting_Type\" Type=\"Ed" +
+                "m.String\" /></EntityType><EntityType Name=\"Committees\"><Key><PropertyRef Name=\"C" +
+                "ode\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
+                "y Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Comments\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Start_Date\" Type=\"Edm.DateTime\" /><Property Name=\"End_Dat" +
+                "e\" Type=\"Edm.DateTime\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Mandate\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"contacts\"><Key>" +
+                "<PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"" +
+                "Edm.String\" /><Property Name=\"password\" Type=\"Edm.String\" /><Property Name=\"KRA_" +
+                "PIN\" Type=\"Edm.String\" /><Property Name=\"Tax_Compliance_Certificate_No\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Director_1_Name\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Director_2_Name\" Type=\"Edm.String\" /><Property Name=\"Director_3_Name\" Type=\"Edm" +
+                ".String\" /></EntityType><EntityType Name=\"Copyright_Files\"><Key><PropertyRef Nam" +
+                "e=\"fileId\" /><PropertyRef Name=\"No\" /></Key><Property Name=\"fileId\" Type=\"Edm.In" +
+                "t32\" Nullable=\"false\" /><Property Name=\"CopyrightNo\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"fileName\" Type=\"Edm.String\" /><Property Name=\"dateUploaded\" Type=\"Edm.D" +
+                "ateTime\" /><Property Name=\"Applicant_Account\" Type=\"Edm.String\" /><Property Name" +
+                "=\"No\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"Copyri" +
+                "ghtCategories\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=" +
+                "\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /" +
+                "></EntityType><EntityType Name=\"copyrightsetups\"><Key><PropertyRef Name=\"Primary" +
+                "_Key\" /></Key><Property Name=\"Primary_Key\" Type=\"Edm.String";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart2 = "ing\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /></Entity" +
-                "Type><EntityType Name=\"CopyrightWorks\"><Key><PropertyRef Name=\"No\" /></Key><Prop" +
-                "erty Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"N" +
-                "ame_2\" Type=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Address_2\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Telex_No\" Type=\"Edm.String\" /><Property Name=\"Custom" +
-                "er_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Country_Region_Code\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Gen_Bus_Posting_Group\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type" +
-                "=\"Edm.String\" /><Property Name=\"VAT_Bus_Posting_Group\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"Customer_Category\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Customer_Type\" Type=\"Edm.String\" /><Property Name=\"C" +
-                "ompany_Reg_No\" Type=\"Edm.String\" /><Property Name=\"ID_No\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"P_I_N\" Type=\"Edm.String\" /><Property Name=\"Title\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Captured_by\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Invoiced\" Type=\"Edm.Boolean\" /><Property Name=\"" +
-                "Registration_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Created_By\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Copyright_Title\" Type=\"Edm.String\" /><Property Name=\"Co" +
-                "pyright_Work_Category\" Type=\"Edm.String\" /><Property Name=\"Copyright_Work_SubCat" +
-                "egory\" Type=\"Edm.String\" /><Property Name=\"Copyright_Category_Description\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Copyright_SubCategory_Desc\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Date_of_Fixation_Reduction\" Type=\"Edm.DateTime\" /><Property Name=" +
-                "\"Language\" Type=\"Edm.String\" /><Property Name=\"Agent_First_Name\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Agent_Surname\" Type=\"Edm.String\" /><Property Name=\"Agent_Mi" +
-                "ddle_Name\" Type=\"Edm.String\" /><Property Name=\"Agent_Address\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Agent_Address_2\" Type=\"Edm.String\" /><Property Name=\"Agent_Cit" +
-                "y\" Type=\"Edm.String\" /><Property Name=\"Agent_Contact\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Agent_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Agent_ID_No\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Agent_P_I_N\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Agent_Email\" Type=\"Edm.String\" /><Property Name=\"Agent_Post_Code\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Author_Surname\" Type=\"Edm.String\" /><Property Name=\"Author" +
-                "_First_Name\" Type=\"Edm.String\" /><Property Name=\"Author_Middle_Name\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"authorPostCode\" Type=\"Edm.String\" /><Property Name=\"Aut" +
-                "hor_City\" Type=\"Edm.String\" /><Property Name=\"Author_Contact\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Author_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Author_ID" +
-                "_No\" Type=\"Edm.String\" /><Property Name=\"Author_P_I_N\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Author_Stage_Name\" Type=\"Edm.String\" /><Property Name=\"Author_Email\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Author_Postal_Address\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Author_Physical_Address\" Type=\"Edm.String\" /><Property Name=\"Prod" +
-                "_Pub_Name\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_ID_No_Company_Reg_No\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Prod_Pub_P_I_N\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Assignment_License_Date\" Type=\"Edm.DateTime\" /><Property Name=\"V1st_Countr" +
-                "y_of_Production\" Type=\"Edm.String\" /><Property Name=\"ISBN\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Production_Category\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub" +
-                "_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_Email\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Applicant_Account\" Type=\"Edm.String\" /><Property Name=\"Receip" +
-                "t_No\" Type=\"Edm.String\" /><Property Name=\"Receipt_Amount\" Type=\"Edm.Decimal\" /><" +
-                "Property Name=\"Payemnt_Reference_No\" Type=\"Edm.String\" /><Property Name=\"Draft\" " +
-                "Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"Countries\"><Key><PropertyRef" +
-                " Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" />" +
-                "<Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"EU_Country_Region_Code" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Intrastat_Code\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Address_Format\" Type=\"Edm.String\" /><Property Name=\"Contact_Address_Fo" +
-                "rmat\" Type=\"Edm.String\" /><Property Name=\"VAT_Scheme\" Type=\"Edm.String\" /></Enti" +
-                "tyType><EntityType Name=\"Customers\"><Key><PropertyRef Name=\"customer_No\" /><Prop" +
-                "ertyRef Name=\"No\" /><PropertyRef Name=\"user\" /></Key><Property Name=\"No\" Type=\"E" +
-                "dm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"Name_2\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"P_I_N\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=" +
-                "\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"Addre" +
-                "ss\" Type=\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm.String\" /><Property" +
-                " Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Contact\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=\"Telex_No\" Type=\"Edm." +
-                "String\" /><Property Name=\"ID_No\" Type=\"Edm.String\" /><Property Name=\"customer_No" +
-                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Password\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Last_Login\" Type=\"Edm.DateTime\" /><Property Name=\"status\" T" +
-                "ype=\"Edm.Int32\" /><Property Name=\"changedPassword\" Type=\"Edm.Int32\" /><Property " +
-                "Name=\"usertype\" Type=\"Edm.Int32\" /><Property Name=\"validated\" Type=\"Edm.Boolean\"" +
-                " /><Property Name=\"user\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"key" +
-                "\" Type=\"Edm.String\" /><Property Name=\"generatedAt\" Type=\"Edm.String\" /><Property" +
-                " Name=\"used\" Type=\"Edm.DateTime\" /></EntityType><EntityType Name=\"emailvalidatio" +
-                "ns\"><Key><PropertyRef Name=\"id\" /></Key><Property Name=\"id\" Type=\"Edm.Int32\" Nul" +
-                "lable=\"false\" /><Property Name=\"user\" Type=\"Edm.String\" /><Property Name=\"key\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"generatedAt\" Type=\"Edm.DateTime\" /><Property " +
-                "Name=\"used\" Type=\"Edm.Boolean\" /><Property Name=\"Email\" Type=\"Edm.String\" /></En" +
-                "tityType><EntityType Name=\"Employees\"><Key><PropertyRef Name=\"No\" /></Key><Prope" +
-                "rty Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"First_Name\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Middle_Name\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Last_Name\" Type=\"Edm.String\" /><Property Name=\"Initials\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"Address\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm.String\" /><Property Name=\"Ci" +
-                "ty\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property" +
-                " Name=\"County\" Type=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Mobile_Phone_No\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"ID_Number\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Company_E_Mail\" Type=\"Edm.String\" /><Property Name=\"Study_Leave_Acc\" Type=\"Edm." +
-                "Decimal\" /><Property Name=\"Claim_Limit\" Type=\"Edm.Decimal\" /><Property Name=\"Job" +
-                "_Title\" Type=\"Edm.String\" /><Property Name=\"Total_Leave_Days\" Type=\"Edm.Decimal\"" +
-                " /><Property Name=\"Total_Leave_Taken\" Type=\"Edm.Decimal\" /><Property Name=\"Reimb" +
-                "ursed_Leave_Days\" Type=\"Edm.Decimal\" /><Property Name=\"Allocated_Leave_Days\" Typ" +
-                "e=\"Edm.Decimal\" /><Property Name=\"Annual_Leave_Account\" Typ";
+            private const string ModelPart2 = "\" Nullable=\"false\" /><Property Name=\"Applicant_Nos\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Complains_Nos\" Type=\"Edm.String\" /><Property Name=\"Case_Nos\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Court_Attendance_Nos\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Case_File_Movement_Nos\" Type=\"Edm.String\" /><Property Name=\"Document_Registrat" +
+                "ion_Nos\" Type=\"Edm.String\" /><Property Name=\"Copyright_Registration_Nos\" Type=\"E" +
+                "dm.String\" /><Property Name=\"APSD_Minimum_Quantity\" Type=\"Edm.Decimal\" /><Proper" +
+                "ty Name=\"APSD_Default_Unit_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Default_A" +
+                "PSD_Item\" Type=\"Edm.String\" /><Property Name=\"Authentication_Nos\" Type=\"Edm.Stri" +
+                "ng\" /></EntityType><EntityType Name=\"copyrightsubcategories\"><Key><PropertyRef N" +
+                "ame=\"Category_Code\" /><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Typ" +
+                "e=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Category_Code\" Type=\"Edm.Strin" +
+                "g\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /></EntityT" +
+                "ype><EntityType Name=\"CopyrightWorkCategories\"><Key><PropertyRef Name=\"Code\" /><" +
+                "/Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
+                "Description\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"CopyrightWorks\">" +
+                "<Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullab" +
+                "le=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Search_Na" +
+                "me\" Type=\"Edm.String\" /><Property Name=\"Name_2\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Address\" Type=\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm.String\" />" +
+                "<Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Contact\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=\"Telex_No\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Customer_Posting_Group\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Gen_Bus_" +
+                "Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" " +
+                "/><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm." +
+                "String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"VAT_Bus" +
+                "_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Customer_Category\" Type=\"Edm.String\" /><Property Name=\"Customer_Ty" +
+                "pe\" Type=\"Edm.String\" /><Property Name=\"Company_Reg_No\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"ID_No\" Type=\"Edm.String\" /><Property Name=\"P_I_N\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Captured_by\" Type=\"Edm.String\" /><Property Name=\"Invoic" +
+                "ed\" Type=\"Edm.Boolean\" /><Property Name=\"Registration_Date\" Type=\"Edm.DateTime\" " +
+                "/><Property Name=\"Created_By\" Type=\"Edm.String\" /><Property Name=\"Copyright_Titl" +
+                "e\" Type=\"Edm.String\" /><Property Name=\"Copyright_Work_Category\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Copyright_Work_SubCategory\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Copyright_Category_Description\" Type=\"Edm.String\" /><Property Name=\"Copyrigh" +
+                "t_SubCategory_Desc\" Type=\"Edm.String\" /><Property Name=\"Date_of_Fixation_Reducti" +
+                "on\" Type=\"Edm.DateTime\" /><Property Name=\"Language\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Agent_First_Name\" Type=\"Edm.String\" /><Property Name=\"Agent_Surname\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Agent_Middle_Name\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Agent_Address\" Type=\"Edm.String\" /><Property Name=\"Agent_Address_2\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Agent_City\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Agent_Contact\" Type=\"Edm.String\" /><Property Name=\"Agent_Phone_No\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Agent_ID_No\" Type=\"Edm.String\" /><Property Name=\"Agent_P_" +
+                "I_N\" Type=\"Edm.String\" /><Property Name=\"Agent_Email\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Agent_Post_Code\" Type=\"Edm.String\" /><Property Name=\"Author_Surname\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Author_First_Name\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Author_Middle_Name\" Type=\"Edm.String\" /><Property Name=\"authorPostCode" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Author_City\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Author_Contact\" Type=\"Edm.String\" /><Property Name=\"Author_Phone_No\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Author_ID_No\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Author_P_I_N\" Type=\"Edm.String\" /><Property Name=\"Author_Stage_Name\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Author_Email\" Type=\"Edm.String\" /><Property Name=\"Aut" +
+                "hor_Postal_Address\" Type=\"Edm.String\" /><Property Name=\"Author_Physical_Address\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Prod_Pub_Name\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Prod_Pub_ID_No_Company_Reg_No\" Type=\"Edm.String\" /><Property Name=\"Prod_" +
+                "Pub_P_I_N\" Type=\"Edm.String\" /><Property Name=\"Assignment_License_Date\" Type=\"Ed" +
+                "m.DateTime\" /><Property Name=\"V1st_Country_of_Production\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"ISBN\" Type=\"Edm.String\" /><Property Name=\"Production_Category\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Prod_Pub_Phone_No\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Prod_Pub_Email\" Type=\"Edm.String\" /><Property Name=\"Applicant_Account\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Receipt_No\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Receipt_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Payemnt_Reference_No\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Draft\" Type=\"Edm.Boolean\" /></EntityType><Enti" +
+                "tyType Name=\"Countries\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Co" +
+                "de\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\"" +
+                " /><Property Name=\"EU_Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"I" +
+                "ntrastat_Code\" Type=\"Edm.String\" /><Property Name=\"Address_Format\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Contact_Address_Format\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"VAT_Scheme\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"Customers\"><Ke" +
+                "y><PropertyRef Name=\"customer_No\" /><PropertyRef Name=\"No\" /><PropertyRef Name=\"" +
+                "user\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property" +
+                " Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Search_Name\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Name_2\" Type=\"Edm.String\" /><Property Name=\"P_I_N\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Address_2\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Telex_No\" Type=\"Edm.String\" /><Property Name=\"ID_No\" Type=\"" +
+                "Edm.String\" /><Property Name=\"customer_No\" Type=\"Edm.String\" Nullable=\"false\" />" +
+                "<Property Name=\"Password\" Type=\"Edm.String\" /><Property Name=\"Last_Login\" Type=\"" +
+                "Edm.DateTime\" /><Property Name=\"status\" Type=\"Edm.Int32\" /><Property Name=\"chang" +
+                "edPassword\" Type=\"Edm.Int32\" /><Property Name=\"usertype\" Type=\"Edm.Int32\" /><Pro" +
+                "perty Name=\"validated\" Type=\"Edm.Boolean\" /><Property Name=\"user\" Type=\"Edm.Int3" +
+                "2\" Nullable=\"false\" /><Property Name=\"key\" Type=\"Edm.String\" /><Property Name=\"g" +
+                "eneratedAt\" Type=\"Edm.String\" /><Property Name=\"used\" Type=\"Edm.DateTime\" /></En" +
+                "tityType><EntityType Name=\"emailvalidations\"><Key><PropertyRef Name=\"id\" /></Key" +
+                "><Property Name=\"id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"user\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"key\" Type=\"Edm.String\" /><Property Name=\"gene" +
+                "ratedAt\" Type=\"Edm.DateTime\" /><Property Name=\"used\" Type=\"Edm.Boolean\" /><Prope" +
+                "rty Name=\"Email\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"Employees\"><" +
+                "Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullabl" +
+                "e=\"false\" /><Property Name=\"First_Name\" Type=\"Edm.String\" /";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart3 = "e=\"Edm.Decimal\" /><Property Name=\"Compassionate_Leave_Acc\" Type=\"Edm.Decimal\" /><" +
-                "Property Name=\"Maternity_Leave_Acc\" Type=\"Edm.Decimal\" /><Property Name=\"Paterni" +
-                "ty_Leave_Acc\" Type=\"Edm.Decimal\" /><Property Name=\"Sick_Leave_Acc\" Type=\"Edm.Dec" +
-                "imal\" /><Property Name=\"Leave_Outstanding_Bal\" Type=\"Edm.Decimal\" /></EntityType" +
-                "><EntityType Name=\"FundCode\"><Key><PropertyRef Name=\"Code\" /><PropertyRef Name=\"" +
-                "Dimension_Code\" /></Key><Property Name=\"Dimension_Code\" Type=\"Edm.String\" Nullab" +
-                "le=\"false\" /><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
-                "y Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Dimension_Value_Type\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Totaling\" Type=\"Edm.String\" /><Property Name=\"Blocke" +
-                "d\" Type=\"Edm.Boolean\" /><Property Name=\"Consolidation_Code\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Indentation\" Type=\"Edm.Int32\" /><Property Name=\"Global_Dimension" +
-                "_No\" Type=\"Edm.Int32\" /><Property Name=\"Map_to_IC_Dimension_Code\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Map_to_IC_Dimension_Value_Code\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Dimension_Value_ID\" Type=\"Edm.Int32\" /><Property Name=\"Id\" Type=\"Edm.G" +
-                "uid\" /><Property Name=\"Last_Modified_Date_Time\" Type=\"Edm.DateTime\" /></EntityTy" +
-                "pe><EntityType Name=\"HrJobApplicants\"><Key><PropertyRef Name=\"ID_Number\" /></Key" +
-                "><Property Name=\"Application_No\" Type=\"Edm.String\" /><Property Name=\"First_Name\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Middle_Name\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Last_Name\" Type=\"Edm.String\" /><Property Name=\"Initials\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"Postal_Addre" +
-                "ss\" Type=\"Edm.String\" /><Property Name=\"Residential_Address\" Type=\"Edm.String\" /" +
-                "><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm." +
-                "String\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=\"Home_Phone" +
-                "_Number\" Type=\"Edm.String\" /><Property Name=\"Cell_Phone_Number\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Work_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Ext\" " +
-                "Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"" +
-                "ID_Number\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Gender\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Country_Code\" Type=\"Edm.String\" /><Property Name=\"St" +
-                "atus\" Type=\"Edm.String\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Propert" +
-                "y Name=\"Fax_Number\" Type=\"Edm.String\" /><Property Name=\"Marital_Status\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Ethnic_Origin\" Type=\"Edm.String\" /><Property Name=\"F" +
-                "irst_Language_R_W_S\" Type=\"Edm.String\" /><Property Name=\"Driving_Licence\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Disabled\" Type=\"Edm.String\" /><Property Name=\"Heal" +
-                "th_Assesment\" Type=\"Edm.Boolean\" /><Property Name=\"Health_Assesment_Date\" Type=\"" +
-                "Edm.DateTime\" /><Property Name=\"Date_Of_Birth\" Type=\"Edm.DateTime\" /><Property N" +
-                "ame=\"Age\" Type=\"Edm.String\" /><Property Name=\"Second_Language_R_W_S\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Additional_Language\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Primary_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"Level\" Type=\"Edm." +
-                "String\" /><Property Name=\"Termination_Category\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Postal_Address2\" Type=\"Edm.String\" /><Property Name=\"Postal_Address3\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Residential_Address2\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Residential_Address3\" Type=\"Edm.String\" /><Property Name=\"Post_Code2\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Citizenship\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Disabling_Details\" Type=\"Edm.String\" /><Property Name=\"Disability_Grade\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Passport_Number\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"V2nd_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"V3rd_Skills_Categ" +
-                "ory\" Type=\"Edm.String\" /><Property Name=\"Region\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"First_Language_Read\" Type=\"Edm.Boolean\" /><Property Name=\"First_Language_Wr" +
-                "ite\" Type=\"Edm.Boolean\" /><Property Name=\"First_Language_Speak\" Type=\"Edm.Boolea" +
-                "n\" /><Property Name=\"Second_Language_Read\" Type=\"Edm.Boolean\" /><Property Name=\"" +
-                "Second_Language_Write\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Spea" +
-                "k\" Type=\"Edm.Boolean\" /><Property Name=\"PIN_Number\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Job_Applied_For\" Type=\"Edm.String\" /><Property Name=\"Employee_Requisitio" +
-                "n_No\" Type=\"Edm.String\" /><Property Name=\"Total_Score\" Type=\"Edm.Decimal\" /><Pro" +
-                "perty Name=\"Shortlist\" Type=\"Edm.Boolean\" /><Property Name=\"Qualified\" Type=\"Edm" +
-                ".Boolean\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Emplo" +
-                "yee_No\" Type=\"Edm.String\" /><Property Name=\"Applicant_Type\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Interview_Invitation_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"" +
-                "Date_Applied\" Type=\"Edm.DateTime\" /><Property Name=\"Citizenship_Details\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Expatriate\" Type=\"Edm.Boolean\" /><Property Name=\"Pa" +
-                "ssword\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"HRJobApplicants\"><Key" +
-                "><PropertyRef Name=\"ID_Number\" /></Key><Property Name=\"ID_Number\" Type=\"Edm.Stri" +
-                "ng\" Nullable=\"false\" /><Property Name=\"First_Name\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Last_Name\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Initials\" Type=\"Edm.String\" /><Property Name=\"Search_Name" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Postal_Address\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Residential_Address\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"Coun" +
-                "ty\" Type=\"Edm.String\" /><Property Name=\"Home_Phone_Number\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Cell_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Work_Phone" +
-                "_Number\" Type=\"Edm.String\" /><Property Name=\"Ext\" Type=\"Edm.String\" /><Property " +
-                "Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"Gender\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Country_Code\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Property Name=\"Fax_Nu" +
-                "mber\" Type=\"Edm.String\" /><Property Name=\"Marital_Status\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Ethnic_Origin\" Type=\"Edm.String\" /><Property Name=\"First_Language_" +
-                "R_W_S\" Type=\"Edm.String\" /><Property Name=\"Driving_Licence\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Disabled\" Type=\"Edm.String\" /><Property Name=\"Health_Assesment\" " +
-                "Type=\"Edm.Boolean\" /><Property Name=\"Health_Assesment_Date\" Type=\"Edm.DateTime\" " +
-                "/><Property Name=\"Date_Of_Birth\" Type=\"Edm.DateTime\" /><Property Name=\"Age\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Second_Language_R_W_S\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Additional_Language\" Type=\"Edm.String\" /><Property Name=\"Primary_Skil" +
-                "ls_Category\" Type=\"Edm.String\" /><Property Name=\"Level\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Termination_Category\" Type=\"Edm.String\" /><Property Name=\"Postal_Add" +
-                "ress2\" Type=\"Edm.String\" /><Property Name=\"Postal_Address3\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Residential_Address2\" Type=\"Edm.String\" /><Property Name=\"Reside" +
-                "ntial_Address3\" Type=\"Edm.String\" /><Property Name=\"Post_Code2\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Citizenship\" Type=\"Edm.String\" /><Property Name=\"Disabling_D" +
-                "etails\" Type=\"Edm.String\" /><Property Name=\"Disability_Grade\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Passport_Number\" Type=\"Edm.String\" /><Property Name=\"V2nd_Skil" +
-                "ls_Category\" Type=\"Edm.String\" /><Property Name=\"V3rd_Skills_Category\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Region\" Type=\"Edm.String\" /><Property Name=\"First_Lan" +
-                "guage_Read\" Type=\"Edm.Boolean\" /><Property Name=\"First_Language_Write\" Type=\"Edm" +
-                ".Boolean\" /><Property Name=\"First_Language_Speak\" Type=\"Edm";
+            private const string ModelPart3 = "><Property Name=\"Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Last_Name\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Initials\" Type=\"Edm.String\" /><Property Name=\"Se" +
+                "arch_Name\" Type=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Address_2\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=\"Mo" +
+                "bile_Phone_No\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><" +
+                "Property Name=\"ID_Number\" Type=\"Edm.String\" /><Property Name=\"Company_E_Mail\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Study_Leave_Acc\" Type=\"Edm.Decimal\" /><Propert" +
+                "y Name=\"Claim_Limit\" Type=\"Edm.Decimal\" /><Property Name=\"Job_Title\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Total_Leave_Days\" Type=\"Edm.Decimal\" /><Property Name=\"" +
+                "Total_Leave_Taken\" Type=\"Edm.Decimal\" /><Property Name=\"Reimbursed_Leave_Days\" T" +
+                "ype=\"Edm.Decimal\" /><Property Name=\"Allocated_Leave_Days\" Type=\"Edm.Decimal\" /><" +
+                "Property Name=\"Annual_Leave_Account\" Type=\"Edm.Decimal\" /><Property Name=\"Compas" +
+                "sionate_Leave_Acc\" Type=\"Edm.Decimal\" /><Property Name=\"Maternity_Leave_Acc\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Paternity_Leave_Acc\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Sick_Leave_Acc\" Type=\"Edm.Decimal\" /><Property Name=\"Leave_Outstandi" +
+                "ng_Bal\" Type=\"Edm.Decimal\" /></EntityType><EntityType Name=\"FundCode\"><Key><Prop" +
+                "ertyRef Name=\"Code\" /><PropertyRef Name=\"Dimension_Code\" /></Key><Property Name=" +
+                "\"Dimension_Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Code\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Dimension_Value_Type\" Type=\"Edm.String\" /><Property Name=\"Totaling\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Blocked\" Type=\"Edm.Boolean\" /><Property Name=" +
+                "\"Consolidation_Code\" Type=\"Edm.String\" /><Property Name=\"Indentation\" Type=\"Edm." +
+                "Int32\" /><Property Name=\"Global_Dimension_No\" Type=\"Edm.Int32\" /><Property Name=" +
+                "\"Map_to_IC_Dimension_Code\" Type=\"Edm.String\" /><Property Name=\"Map_to_IC_Dimensi" +
+                "on_Value_Code\" Type=\"Edm.String\" /><Property Name=\"Dimension_Value_ID\" Type=\"Edm" +
+                ".Int32\" /><Property Name=\"Id\" Type=\"Edm.Guid\" /><Property Name=\"Last_Modified_Da" +
+                "te_Time\" Type=\"Edm.DateTime\" /></EntityType><EntityType Name=\"HrJobApplicants\"><" +
+                "Key><PropertyRef Name=\"ID_Number\" /></Key><Property Name=\"Application_No\" Type=\"" +
+                "Edm.String\" /><Property Name=\"First_Name\" Type=\"Edm.String\" /><Property Name=\"Mi" +
+                "ddle_Name\" Type=\"Edm.String\" /><Property Name=\"Last_Name\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Initials\" Type=\"Edm.String\" /><Property Name=\"Search_Name\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Postal_Address\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Residential_Address\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Home_Phone_Number\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Cell_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Work_Phone_Number\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Ext\" Type=\"Edm.String\" /><Property Name=\"E_M" +
+                "ail\" Type=\"Edm.String\" /><Property Name=\"ID_Number\" Type=\"Edm.String\" Nullable=\"" +
+                "false\" /><Property Name=\"Gender\" Type=\"Edm.String\" /><Property Name=\"Country_Cod" +
+                "e\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Comment\" Type=\"Edm.Boolean\" /><Property Name=\"Fax_Number\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Marital_Status\" Type=\"Edm.String\" /><Property Name=\"Ethnic_Orig" +
+                "in\" Type=\"Edm.String\" /><Property Name=\"First_Language_R_W_S\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Driving_Licence\" Type=\"Edm.String\" /><Property Name=\"Disabled\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Health_Assesment\" Type=\"Edm.Boolean\" /><Pro" +
+                "perty Name=\"Health_Assesment_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Date_Of" +
+                "_Birth\" Type=\"Edm.DateTime\" /><Property Name=\"Age\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Second_Language_R_W_S\" Type=\"Edm.String\" /><Property Name=\"Additional_Lan" +
+                "guage\" Type=\"Edm.String\" /><Property Name=\"Primary_Skills_Category\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Level\" Type=\"Edm.String\" /><Property Name=\"Termination_C" +
+                "ategory\" Type=\"Edm.String\" /><Property Name=\"Postal_Address2\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Postal_Address3\" Type=\"Edm.String\" /><Property Name=\"Residenti" +
+                "al_Address2\" Type=\"Edm.String\" /><Property Name=\"Residential_Address3\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Post_Code2\" Type=\"Edm.String\" /><Property Name=\"Citiz" +
+                "enship\" Type=\"Edm.String\" /><Property Name=\"Disabling_Details\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Disability_Grade\" Type=\"Edm.String\" /><Property Name=\"Passpor" +
+                "t_Number\" Type=\"Edm.String\" /><Property Name=\"V2nd_Skills_Category\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"V3rd_Skills_Category\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Region\" Type=\"Edm.String\" /><Property Name=\"First_Language_Read\" Type=\"Edm.Boo" +
+                "lean\" /><Property Name=\"First_Language_Write\" Type=\"Edm.Boolean\" /><Property Nam" +
+                "e=\"First_Language_Speak\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Re" +
+                "ad\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Write\" Type=\"Edm.Boolea" +
+                "n\" /><Property Name=\"Second_Language_Speak\" Type=\"Edm.Boolean\" /><Property Name=" +
+                "\"PIN_Number\" Type=\"Edm.String\" /><Property Name=\"Job_Applied_For\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Employee_Requisition_No\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Total_Score\" Type=\"Edm.Decimal\" /><Property Name=\"Shortlist\" Type=\"Edm.Boolea" +
+                "n\" /><Property Name=\"Qualified\" Type=\"Edm.Boolean\" /><Property Name=\"No_Series\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Employee_No\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Applicant_Type\" Type=\"Edm.String\" /><Property Name=\"Interview_Invitation_Se" +
+                "nt\" Type=\"Edm.Boolean\" /><Property Name=\"Date_Applied\" Type=\"Edm.DateTime\" /><Pr" +
+                "operty Name=\"Citizenship_Details\" Type=\"Edm.String\" /><Property Name=\"Expatriate" +
+                "\" Type=\"Edm.Boolean\" /><Property Name=\"Password\" Type=\"Edm.String\" /></EntityTyp" +
+                "e><EntityType Name=\"HRJobApplicants\"><Key><PropertyRef Name=\"ID_Number\" /></Key>" +
+                "<Property Name=\"ID_Number\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
+                "First_Name\" Type=\"Edm.String\" /><Property Name=\"Middle_Name\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Last_Name\" Type=\"Edm.String\" /><Property Name=\"Initials\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"P" +
+                "ostal_Address\" Type=\"Edm.String\" /><Property Name=\"Residential_Address\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Post_Code\"" +
+                " Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Home_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Cell_Phone_Number\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Work_Phone_Number\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Ext\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Gender\" Type=\"Edm.String\" /><Property Name=\"Country_Code\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Comment\" Ty" +
+                "pe=\"Edm.Boolean\" /><Property Name=\"Fax_Number\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Marital_Status\" Type=\"Edm.String\" /><Property Name=\"Ethnic_Origin\" Type=\"Edm." +
+                "String\" /><Property Name=\"First_Language_R_W_S\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Driving_Licence\" Type=\"Edm.String\" /><Property Name=\"Disabled\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Health_Assesment\" Type=\"Edm.Boolean\" /><Property Name=\"He" +
+                "alth_Assesment_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Date_Of_Birth\" Type=\"" +
+                "Edm.DateTime\" /><Property Name=\"Age\" Type=\"Edm.String\" /><P";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart4 = ".Boolean\" /><Property Name=\"Second_Language_Read\" Type=\"Edm.Boolean\" /><Property " +
-                "Name=\"Second_Language_Write\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Languag" +
-                "e_Speak\" Type=\"Edm.Boolean\" /><Property Name=\"PIN_Number\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Job_Applied_For\" Type=\"Edm.String\" /><Property Name=\"Employee_Requ" +
-                "isition_No\" Type=\"Edm.String\" /><Property Name=\"Total_Score\" Type=\"Edm.Decimal\" " +
-                "/><Property Name=\"Shortlist\" Type=\"Edm.Boolean\" /><Property Name=\"Qualified\" Typ" +
-                "e=\"Edm.Boolean\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"Applicant_Type\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Interview_Invitation_Sent\" Type=\"Edm.Boolean\" /><Property " +
-                "Name=\"Date_Applied\" Type=\"Edm.DateTime\" /><Property Name=\"Citizenship_Details\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Expatriate\" Type=\"Edm.Boolean\" /><Property Na" +
-                "me=\"Password\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"HRPortalUsers\">" +
-                "<Key><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"code\" /><PropertyR" +
-                "ef Name=\"id\" /></Key><Property Name=\"code\" Type=\"Edm.Int32\" Nullable=\"false\" /><" +
-                "Property Name=\"employeeNo\" Type=\"Edm.String\" /><Property Name=\"IdNo\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"password\" Type=\"Edm.String\" /><Property Name=\"changedPa" +
-                "ssword\" Type=\"Edm.Boolean\" /><Property Name=\"First_Name\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Last_Name\" Type=\"E" +
-                "dm.String\" /><Property Name=\"ID_Number\" Type=\"Edm.String\" /><Property Name=\"fNam" +
-                "e\" Type=\"Edm.String\" /><Property Name=\"mName\" Type=\"Edm.String\" /><Property Name" +
-                "=\"lName\" Type=\"Edm.String\" /><Property Name=\"id\" Type=\"Edm.String\" Nullable=\"fal" +
-                "se\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></En" +
-                "tityType><EntityType Name=\"ImprestLines\"><Key><PropertyRef Name=\"Line_No\" /><Pro" +
-                "pertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=" +
-                "\"Account_Type\" Type=\"Edm.String\" /><Property Name=\"Account_No\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Account_Name\" Type=\"Edm.String\" /><Property Name=\"Description" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"Applies_to_Doc_No\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_1_Cod" +
-                "e\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_2_Code\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Actual_Spent\" Type=\"Edm.Decimal\" /><Property Name=\"Remaining" +
-                "_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Committed\" Type=\"Edm.Boolean\" /><P" +
-                "roperty Name=\"Advance_Type\" Type=\"Edm.String\" /><Property Name=\"Currency_Code\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Currency_Factor\" Type=\"Edm.Decimal\" /><Proper" +
-                "ty Name=\"Amount_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Expense_Type\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Work_Type\" Type=\"Edm.String\" /><Property Name=\"Resou" +
-                "rce_No\" Type=\"Edm.String\" /><Property Name=\"Task_No\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Due_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Imprest_Holder\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Purpose\" Type=\"Edm.String\" /><Property Name=\"Budget" +
-                "ary_Control_A_C\" Type=\"Edm.Boolean\" /><Property Name=\"Destination\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Daily_Rate\" Type=\"Edm.Decimal\" /><Property Name=\"No_of_Da" +
-                "ys\" Type=\"Edm.Int32\" /><Property Name=\"Subsistence\" Type=\"Edm.Boolean\" /><Proper" +
-                "ty Name=\"Cash_Receipt_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Receipt_No\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Fully_Allocated\" Type=\"Edm.Boolean\" /><Proper" +
-                "ty Name=\"Job_Task_No\" Type=\"Edm.String\" /><Property Name=\"Job_Quantity\" Type=\"Ed" +
-                "m.Decimal\" /><Property Name=\"Job_Task_Description\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Project\" Type=\"Edm.String\" /><Property Name=\"Job_No\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Payment_Type\" Type=\"" +
-                "Edm.String\" /></EntityType><EntityType Name=\"ImprestMemo\"><Key><PropertyRef Name" +
-                "=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property" +
-                " Name=\"Requestor\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Imprest_Naration\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Start_Date\" Type=\"Edm.DateTime\" /><Property" +
-                " Name=\"No_of_days\" Type=\"Edm.Decimal\" /><Property Name=\"Job\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Job_Task\" Type=\"Edm.String\" /><Property Name=\"Subject\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Shortcut_Dimension_2_Code\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Total_Subsistence_Allowance\" Type=\"Edm.Decimal\" /><Property Name=\"Tot" +
-                "al_Casuals_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Other_Costs\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Total_Fuel_Costs\" Type=\"Edm.Decimal\" /><Property N" +
-                "ame=\"Total_Maintenance_Costs\" Type=\"Edm.Decimal\" /></EntityType><EntityType Name" +
-                "=\"InventoryPostingGroups\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"" +
-                "Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Ed" +
-                "m.String\" /></EntityType><EntityType Name=\"ItemCategories\"><Key><PropertyRef Nam" +
-                "e=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
-                "perty Name=\"Parent_Category\" Type=\"Edm.String\" /><Property Name=\"Description\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Indentation\" Type=\"Edm.Int32\" /><Property Name" +
-                "=\"Presentation_Order\" Type=\"Edm.Int32\" /><Property Name=\"Has_Children\" Type=\"Edm" +
-                ".Boolean\" /><Property Name=\"Last_Modified_Date_Time\" Type=\"Edm.DateTime\" /><Prop" +
-                "erty Name=\"Id\" Type=\"Edm.Guid\" /></EntityType><EntityType Name=\"Items\"><Key><Pro" +
-                "pertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" /><Property Name=\"No_2\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Search_Description\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Description_2\" Type=\"Edm.String\" /><Property Name=\"Base_Unit_of_Measure\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Price_Unit_Conversion\" Type=\"Edm.Int32\" /><P" +
-                "roperty Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"Inventory_Posting_Group\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Shelf_No\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Item_Disc_Group\" Type=\"Edm.String\" /><Property Name=\"Allow_Invoice_Disc\" Type" +
-                "=\"Edm.Boolean\" /><Property Name=\"Statistics_Group\" Type=\"Edm.Int32\" /><Property " +
-                "Name=\"Commission_Group\" Type=\"Edm.Int32\" /><Property Name=\"Unit_Price\" Type=\"Edm" +
-                ".Decimal\" /><Property Name=\"Price_Profit_Calculation\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Profit\" Type=\"Edm.Decimal\" /><Property Name=\"Costing_Method\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Stand" +
-                "ard_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Last_Direct_Cost\" Type=\"Edm.Decim" +
-                "al\" /><Property Name=\"Indirect_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_i" +
-                "s_Adjusted\" Type=\"Edm.Boolean\" /><Property Name=\"Allow_Online_Adjustment\" Type=\"" +
-                "Edm.Boolean\" /><Property Name=\"Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Ve" +
-                "ndor_Item_No\" Type=\"Edm.String\" /><Property Name=\"Lead_Time_Calculation\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Reorder_Point\" Type=\"Edm.Decimal\" /><Property Name=" +
-                "\"Maximum_Inventory\" Type=\"Edm.Decimal\" /><Property Name=\"Reorder_Quantity\" Type=" +
-                "\"Edm.Decimal\" /><Property Name=\"Alternative_Item_No\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Unit_List_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Duty_Due\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Duty_Code\" Type=\"Edm.String\" /><Property Name=\"Gro" +
-                "ss_Weight\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Weight\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Units_per_Parcel\" Type=\"Edm.Decimal\" /><Pr";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart5 = "operty Name=\"Unit_Volume\" Type=\"Edm.Decimal\" /><Property Name=\"Durability\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Freight_Type\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Tariff_No\" Type=\"Edm.String\" /><Property Name=\"Duty_Unit_Conversion\" Type=\"Edm.D" +
-                "ecimal\" /><Property Name=\"Country_Region_Purchased_Code\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Budget_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Budgeted_Amou" +
-                "nt\" Type=\"Edm.Decimal\" /><Property Name=\"Budget_Profit\" Type=\"Edm.Decimal\" /><Pr" +
-                "operty Name=\"Blocked\" Type=\"Edm.Boolean\" /><Property Name=\"Block_Reason\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Last_DateTime_Modified\" Type=\"Edm.DateTime\" /><Prop" +
-                "erty Name=\"Last_Date_Modified\" Type=\"Edm.DateTime\" /><Property Name=\"Last_Time_M" +
-                "odified\" Type=\"Edm.String\" /><Property Name=\"Price_Includes_VAT\" Type=\"Edm.Boole" +
-                "an\" /><Property Name=\"VAT_Bus_Posting_Gr_Price\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Gen_Prod_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Country_Region_o" +
-                "f_Origin_Code\" Type=\"Edm.String\" /><Property Name=\"Automatic_Ext_Texts\" Type=\"Ed" +
-                "m.Boolean\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Tax_" +
-                "Group_Code\" Type=\"Edm.String\" /><Property Name=\"VAT_Prod_Posting_Group\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Reserve\" Type=\"Edm.String\" /><Property Name=\"Global_" +
-                "Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_2_Code\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Stockout_Warning\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Prevent_Negative_Inventory\" Type=\"Edm.String\" /><Property Name=\"Applica" +
-                "tion_Wksh_User_ID\" Type=\"Edm.String\" /><Property Name=\"Assembly_Policy\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"GTIN\" Type=\"Edm.String\" /><Property Name=\"Default_De" +
-                "ferral_Template_Code\" Type=\"Edm.String\" /><Property Name=\"Low_Level_Code\" Type=\"" +
-                "Edm.Int32\" /><Property Name=\"Lot_Size\" Type=\"Edm.Decimal\" /><Property Name=\"Seri" +
-                "al_Nos\" Type=\"Edm.String\" /><Property Name=\"Last_Unit_Cost_Calc_Date\" Type=\"Edm." +
-                "DateTime\" /><Property Name=\"Rolled_up_Material_Cost\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Rolled_up_Capacity_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Scrap\" T" +
-                "ype=\"Edm.Decimal\" /><Property Name=\"Inventory_Value_Zero\" Type=\"Edm.Boolean\" /><" +
-                "Property Name=\"Discrete_Order_Quantity\" Type=\"Edm.Int32\" /><Property Name=\"Minim" +
-                "um_Order_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Maximum_Order_Quantity\" " +
-                "Type=\"Edm.Decimal\" /><Property Name=\"Safety_Stock_Quantity\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Order_Multiple\" Type=\"Edm.Decimal\" /><Property Name=\"Safety_Lea" +
-                "d_Time\" Type=\"Edm.String\" /><Property Name=\"Flushing_Method\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Replenishment_System\" Type=\"Edm.String\" /><Property Name=\"Round" +
-                "ing_Precision\" Type=\"Edm.Decimal\" /><Property Name=\"Item_Category_Code\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Assembly_BOM\" Type=\"Edm.Boolean\" /><Property Name=\"C" +
-                "omment\" Type=\"Edm.Boolean\" /><Property Name=\"Cost_is_Posted_to_G_L\" Type=\"Edm.Bo" +
-                "olean\" /><Property Name=\"Inventory\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Inv" +
-                "oiced_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Change\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Purchases_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_Qty\" " +
-                "Type=\"Edm.Decimal\" /><Property Name=\"Positive_Adjmt_Qty\" Type=\"Edm.Decimal\" /><P" +
-                "roperty Name=\"Negative_Adjmt_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Purchases" +
-                "_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_LCY\" Type=\"Edm.Decimal\" /><Prop" +
-                "erty Name=\"Positive_Adjmt_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Negative_Adj" +
-                "mt_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"COGS_LCY\" Type=\"Edm.Decimal\" /><Pro" +
-                "perty Name=\"Qty_on_Purch_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_on_Sale" +
-                "s_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Transferred_Qty\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Transferred_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Reserv" +
-                "ed_Qty_on_Inventory\" Type=\"Edm.Decimal\" /><Property Name=\"Reserved_Qty_on_Purch_" +
-                "Orders\" Type=\"Edm.Decimal\" /><Property Name=\"Reserved_Qty_on_Sales_Orders\" Type=" +
-                "\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Outbound_Transfer\" Type=\"Edm.Decimal\"" +
-                " /><Property Name=\"Res_Qty_on_Inbound_Transfer\" Type=\"Edm.Decimal\" /><Property N" +
-                "ame=\"Res_Qty_on_Sales_Returns\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_P" +
-                "urch_Returns\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_of_Open_Production_Order" +
-                "s\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Assembly_Order\" Type=\"Edm.Dec" +
-                "imal\" /><Property Name=\"Res_Qty_on_Asm_Comp\" Type=\"Edm.Decimal\" /><Property Name" +
-                "=\"Qty_on_Assembly_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_on_Asm_Compone" +
-                "nt\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_on_Job_Order\" Type=\"Edm.Decimal\" />" +
-                "<Property Name=\"Res_Qty_on_Job_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Sched" +
-                "uled_Receipt_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Scheduled_Need_Qty\" Type=" +
-                "\"Edm.Decimal\" /></EntityType><EntityType Name=\"ItemSalesAndProfit\"><Key><Propert" +
-                "yRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"No\" /></Key><Property Name=\"No\"" +
-                " Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Gen_Prod_Posting_Group\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Item_Disc_Group\" Type=\"Edm.String\" /><Property Name=\"Item_Tracking_Code\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Profit\" Type=\"Edm.Decimal\" /><Property Name=\"Scr" +
-                "ap\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_Unit_of_Measure\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Standard_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Cos" +
-                "t\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Price\" Type=\"Edm.Decimal\" /><Proper" +
-                "ty Name=\"Unit_Volume\" Type=\"Edm.Decimal\" /><Property Name=\"Vendor_No\" Type=\"Edm." +
-                "String\" /><Property Name=\"Purch_Unit_of_Measure\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"COGS_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Inventory\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Net_Change\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Invoice" +
-                "d_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Purchases_LCY\" Type=\"Edm.Decimal\" />" +
-                "<Property Name=\"Purchases_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_LCY\" T" +
-                "ype=\"Edm.Decimal\" /><Property Name=\"Sales_Qty\" Type=\"Edm.Decimal\" /><Property Na" +
-                "me=\"VendorName\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.S" +
-                "tring\" Nullable=\"false\" /></EntityType><EntityType Name=\"ItemSalesByCustomer\"><K" +
-                "ey><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"CustomerNo\" /><Prope" +
-                "rtyRef Name=\"Entry_No\" /></Key><Property Name=\"Entry_No\" Type=\"Edm.Int32\" Nullab" +
-                "le=\"false\" /><Property Name=\"Document_No\" Type=\"Edm.String\" /><Property Name=\"Po" +
-                "sting_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Item_No\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Item_Ledger_Entry_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"" +
-                "Dimension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"CustomerNo\" Type=\"Edm.Strin" +
-                "g\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Description\" Type=\"Edm.String\" /><Property Name=\"Gen_Prod_Posting_Group\" Type=\"E" +
-                "dm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\"" +
-                " /></EntityType><EntityType Name=\"JobApplicantHobies\"><Key><PropertyRef Name=\"Au" +
-                "xiliaryIndex1\" /></Key><Property Name=\"Id_No\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Hobby\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.Int32\" N" +
-                "ullable=\"false\" /></EntityType><EntityType Name=\"JobApplicantQualifications\"><Ke" +
-                "y><PropertyRef Name=\"AuxiliaryIndex1\" /></Key><Property Name=\"Id_No\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"Qualif" +
-                "ication_Description\" Type=\"Edm.String\" /><Property Name=\"From_Date\" Type=\"Edm.Da" +
-                "teTime\" /><Property Name=\"To_Date\" Type=\"Edm.DateTime\" /><P";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart6 = "roperty Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"Institution_Company\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Course_Grade\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Employee_Status\" Type=\"Edm.String\" /><Property Name=\"Expiration_Da" +
-                "te\" Type=\"Edm.DateTime\" /><Property Name=\"Qualification_Type\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Qualification_Code\" Type=\"Edm.String\" /><Property Name=\"Score_" +
-                "ID\" Type=\"Edm.Decimal\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.Int32\" Nulla" +
-                "ble=\"false\" /></EntityType><EntityType Name=\"JobApplicantReferees\"><Key><Propert" +
-                "yRef Name=\"AuxiliaryIndex1\" /></Key><Property Name=\"Id_Number\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Names\" Type=\"Edm.String\" /><Property Name=\"Designation\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Institution\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Address\" Type=\"Edm.String\" /><Property Name=\"Telephone_No\" Type=\"Edm.String\" /><" +
-                "Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"Employee_No\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
-                "></EntityType><EntityType Name=\"JobRequirements\"><Key><PropertyRef Name=\"Job_Id\"" +
-                " /><PropertyRef Name=\"Qualification_Code\" /><PropertyRef Name=\"Qualification_Typ" +
-                "e\" /></Key><Property Name=\"Job_Id\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
-                "y Name=\"Qualification_Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
-                "\"Qualification_Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Qualif" +
-                "ication\" Type=\"Edm.String\" /><Property Name=\"Job_Requirements\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Priority\" Type=\"Edm.String\" /><Property Name=\"Job_Specificati" +
-                "on\" Type=\"Edm.String\" /><Property Name=\"Score_ID\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Need_code\" Type=\"Edm.String\" /><Property Name=\"Stage_Code\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Mandatory\" Type=\"Edm.Boolean\" /><Property Name=\"Desired_Sc" +
-                "ore\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Stage_Desired_Score\" Type=\"Edm.D" +
-                "ecimal\" /><Property Name=\"Qualification_Description\" Type=\"Edm.String\" /></Entit" +
-                "yType><EntityType Name=\"JobResponsibilities\"><Key><PropertyRef Name=\"Job_ID\" /><" +
-                "PropertyRef Name=\"Responsibility\" /></Key><Property Name=\"Job_ID\" Type=\"Edm.Stri" +
-                "ng\" Nullable=\"false\" /><Property Name=\"Responsibility\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Remarks\" Type=\"Edm.String\" /><Property Name=\"Entry_N" +
-                "o\" Type=\"Edm.Int32\" /></EntityType><EntityType Name=\"jobs\"><Key><PropertyRef Nam" +
-                "e=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
-                "y Name=\"Description\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"JobTask\"" +
-                "><Key><PropertyRef Name=\"Job_No\" /><PropertyRef Name=\"Job_Task_No\" /></Key><Prop" +
-                "erty Name=\"Job_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Job_Task" +
-                "_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm" +
-                ".String\" /></EntityType><EntityType Name=\"JobWorkingRelationships\"><Key><Propert" +
-                "yRef Name=\"Job_ID\" /><PropertyRef Name=\"Relationship\" /><PropertyRef Name=\"Type\"" +
-                " /></Key><Property Name=\"Job_ID\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
-                "Name=\"Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Relationship\" T" +
-                "ype=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Remarks\" Type=\"Edm.String\" /" +
-                "></EntityType><EntityType Name=\"languages\"><Key><PropertyRef Name=\"Code\" /></Key" +
-                "><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name" +
-                "\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"LeaveApplications\"><Key><Pr" +
-                "opertyRef Name=\"Application_Code\" /></Key><Property Name=\"Application_Code\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Leave_Type\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Days_Applied\" Type=\"Edm.Decimal\" /><Property Name=\"Start_Date\" " +
-                "Type=\"Edm.DateTime\" /><Property Name=\"Return_Date\" Type=\"Edm.DateTime\" /><Proper" +
-                "ty Name=\"Application_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Status\" Type=\"E" +
-                "dm.String\" /><Property Name=\"test\" Type=\"Edm.String\" /><Property Name=\"Applicant" +
-                "_Comments\" Type=\"Edm.String\" /><Property Name=\"No_series\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Selected\" Type=\"Edm.Boolean\" /><Property Name=\"tes\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Total_Take" +
-                "n\" Type=\"Edm.Decimal\" /><Property Name=\"E_mail_Address\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Entry_No\" Type=\"Edm.Int32\" /><Property Name=\"Cell_Phone_Number\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Request_Leave_Allowance\" Type=\"Edm.Boolean\" /><P" +
-                "roperty Name=\"Names\" Type=\"Edm.String\" /><Property Name=\"Leave_Allowance_Entittl" +
-                "ement\" Type=\"Edm.Boolean\" /><Property Name=\"Leave_Allowance_Amount\" Type=\"Edm.De" +
-                "cimal\" /><Property Name=\"Details_of_Examination\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Date_of_Exam\" Type=\"Edm.DateTime\" /><Property Name=\"Reliever\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Reliever_Name\" Type=\"Edm.String\" /><Property Name=\"Descri" +
-                "ption\" Type=\"Edm.String\" /><Property Name=\"Supervisor_Email\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Number_of_Previous_Attempts\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Job_Tittle\" Type=\"Edm.String\" /><Property Name=\"User_ID\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"Supervisor\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Approved_days\" Type=\"Edm.Int32\" /><Property Name=\"Emergency\" Type=\"Ed" +
-                "m.Boolean\" /><Property Name=\"Approver_Comments\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Grade\" Type=\"Edm.String\" /><Property Name=\"Reason\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Department\" Type=\"Edm.String\" /><Property Name=\"Posted\" Type=\"Edm.Boo" +
-                "lean\" /><Property Name=\"Resumption_Date\" Type=\"Edm.DateTime\" /><Property Name=\"C" +
-                "urrent_Balance\" Type=\"Edm.Decimal\" /><Property Name=\"Attachments\" Type=\"Edm.Int3" +
-                "2\" /><Property Name=\"RelieverAddress\" Type=\"Edm.String\" /><Property Name=\"Employ" +
-                "ee_Name\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"LeaveTypes\"><Key><Pr" +
-                "opertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"" +
-                "false\" /><Property Name=\"Description\" Type=\"Edm.String\" /></EntityType><EntityTy" +
-                "pe Name=\"Locations\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" " +
-                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Default_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"Name_2\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Property Name=\"Ad" +
-                "dress_2\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=\"Phone_No_2\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Telex_No\" Type=\"Edm.String\" /><Property Name=\"Fax_No\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Post" +
-                "_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property" +
-                " Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"Home_Page\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Use_A" +
-                "s_In_Transit\" Type=\"Edm.Boolean\" /><Property Name=\"Require_Put_away\" Type=\"Edm.B" +
-                "oolean\" /><Property Name=\"Require_Pick\" Type=\"Edm.Boolean\" /><Property Name=\"Cro" +
-                "ss_Dock_Due_Date_Calc\" Type=\"Edm.String\" /><Property Name=\"Use_Cross_Docking\" Ty" +
-                "pe=\"Edm.Boolean\" /><Property Name=\"Require_Receive\" Type=\"Edm.Boolean\" /><Proper" +
-                "ty Name=\"Require_Shipment\" Type=\"Edm.Boolean\" /><Property Name=\"Bin_Mandatory\" T" +
-                "ype=\"Edm.Boolean\" /><Property Name=\"Directed_Put_away_and_Pick\" Type=\"Edm.Boolea" +
-                "n\" /><Property Name=\"Default_Bin_Selection\" Type=\"Edm.Strin";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart7 = "g\" /><Property Name=\"Outbound_Whse_Handling_Time\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Inbound_Whse_Handling_Time\" Type=\"Edm.String\" /><Property Name=\"Put_away_Te" +
-                "mplate_Code\" Type=\"Edm.String\" /><Property Name=\"Use_Put_away_Worksheet\" Type=\"E" +
-                "dm.Boolean\" /><Property Name=\"Pick_According_to_FEFO\" Type=\"Edm.Boolean\" /><Prop" +
-                "erty Name=\"Allow_Breakbulk\" Type=\"Edm.Boolean\" /><Property Name=\"Bin_Capacity_Po" +
-                "licy\" Type=\"Edm.String\" /><Property Name=\"Open_Shop_Floor_Bin_Code\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"To_Production_Bin_Code\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"From_Production_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"Adjustment_Bin" +
-                "_Code\" Type=\"Edm.String\" /><Property Name=\"Always_Create_Put_away_Line\" Type=\"Ed" +
-                "m.Boolean\" /><Property Name=\"Always_Create_Pick_Line\" Type=\"Edm.Boolean\" /><Prop" +
-                "erty Name=\"Special_Equipment\" Type=\"Edm.String\" /><Property Name=\"Receipt_Bin_Co" +
-                "de\" Type=\"Edm.String\" /><Property Name=\"Shipment_Bin_Code\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Cross_Dock_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"To_Assem" +
-                "bly_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"From_Assembly_Bin_Code\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Asm_to_Order_Shpt_Bin_Code\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Base_Calendar_Code\" Type=\"Edm.String\" /><Property Name=\"Use_ADCS\" " +
-                "Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"MeetingAgenda\"><Key><Propert" +
-                "yRef Name=\"Agenda_code\" /></Key><Property Name=\"Agenda_code\" Type=\"Edm.String\" N" +
-                "ullable=\"false\" /><Property Name=\"Meeting_Code\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Description\" Type=\"Edm.String\" /><Property Name=\"Person_responsiblee\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Scheduled_time\" Type=\"Edm.String\" /></EntityType><" +
-                "EntityType Name=\"My_Meetings\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><Proper" +
-                "tyRef Name=\"Committee\" /><PropertyRef Name=\"MeetingNo\" /><PropertyRef Name=\"No\" " +
-                "/></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
-                "\"Committee\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"MeetingNo\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Title\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Start_date\" Type=\"Edm.DateTime\" /><Property Name=\"Start_time\" Type=\"" +
-                "Edm.String\" /><Property Name=\"End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"En" +
-                "d_time\" Type=\"Edm.String\" /><Property Name=\"Venue_Location\" Type=\"Edm.String\" />" +
-                "<Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></EntityTy" +
-                "pe><EntityType Name=\"myCommitee\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><Pro" +
-                "pertyRef Name=\"Code\" /><PropertyRef Name=\"Committee\" /></Key><Property Name=\"Com" +
-                "mittee\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Code\" Type=\"Edm.Str" +
-                "ing\" Nullable=\"false\" /><Property Name=\"Names\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Designation\" Type=\"Edm.String\" /><Property Name=\"Remarks\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Role\" Type=\"Edm.String\" /><Property Name=\"Director_No\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Com" +
-                "ments\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property" +
-                " Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><Entit" +
-                "yType Name=\"MyJobApplications\"><Key><PropertyRef Name=\"Application_No\" /></Key><" +
-                "Property Name=\"Application_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
-                "me=\"First_Name\" Type=\"Edm.String\" /><Property Name=\"Middle_Name\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Last_Name\" Type=\"Edm.String\" /><Property Name=\"Initials\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Postal_Address\" Type=\"Edm.String\" /><Property Name=\"Residential_Address\" Type" +
-                "=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Post_C" +
-                "ode\" Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Home_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Cell_Phone_Number\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Work_Phone_Number\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Ext\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><" +
-                "Property Name=\"ID_Number\" Type=\"Edm.String\" /><Property Name=\"Gender\" Type=\"Edm." +
-                "String\" /><Property Name=\"Country_Code\" Type=\"Edm.String\" /><Property Name=\"Stat" +
-                "us\" Type=\"Edm.String\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Property " +
-                "Name=\"Fax_Number\" Type=\"Edm.String\" /><Property Name=\"Marital_Status\" Type=\"Edm." +
-                "String\" /><Property Name=\"Ethnic_Origin\" Type=\"Edm.String\" /><Property Name=\"Fir" +
-                "st_Language_R_W_S\" Type=\"Edm.String\" /><Property Name=\"Driving_Licence\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Disabled\" Type=\"Edm.String\" /><Property Name=\"Health" +
-                "_Assesment\" Type=\"Edm.Boolean\" /><Property Name=\"Health_Assesment_Date\" Type=\"Ed" +
-                "m.DateTime\" /><Property Name=\"Date_Of_Birth\" Type=\"Edm.DateTime\" /><Property Nam" +
-                "e=\"Age\" Type=\"Edm.String\" /><Property Name=\"Second_Language_R_W_S\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Additional_Language\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Primary_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"Level\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"Termination_Category\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Postal_Address2\" Type=\"Edm.String\" /><Property Name=\"Postal_Address3\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Residential_Address2\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Residential_Address3\" Type=\"Edm.String\" /><Property Name=\"Post_Code2\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Citizenship\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Disabling_Details\" Type=\"Edm.String\" /><Property Name=\"Disability_Grade\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Passport_Number\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"V2nd_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"V3rd_Skills_Categor" +
-                "y\" Type=\"Edm.String\" /><Property Name=\"Region\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"First_Language_Read\" Type=\"Edm.Boolean\" /><Property Name=\"First_Language_Writ" +
-                "e\" Type=\"Edm.Boolean\" /><Property Name=\"First_Language_Speak\" Type=\"Edm.Boolean\"" +
-                " /><Property Name=\"Second_Language_Read\" Type=\"Edm.Boolean\" /><Property Name=\"Se" +
-                "cond_Language_Write\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Speak\"" +
-                " Type=\"Edm.Boolean\" /><Property Name=\"PIN_Number\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Job_Applied_For\" Type=\"Edm.String\" /><Property Name=\"Employee_Requisition_" +
-                "No\" Type=\"Edm.String\" /><Property Name=\"Total_Score\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Shortlist\" Type=\"Edm.Boolean\" /><Property Name=\"Qualified\" Type=\"Edm.B" +
-                "oolean\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Employe" +
-                "e_No\" Type=\"Edm.String\" /><Property Name=\"Applicant_Type\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Interview_Invitation_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"Da" +
-                "te_Applied\" Type=\"Edm.DateTime\" /><Property Name=\"Citizenship_Details\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Expatriate\" Type=\"Edm.Boolean\" /></EntityType><Entity" +
-                "Type Name=\"OtherCosts\"><Key><PropertyRef Name=\"Imprest_Memo_No\" /><PropertyRef N" +
-                "ame=\"Line_No\" /><PropertyRef Name=\"memoNo\" /></Key><Property Name=\"Imprest_Memo_" +
-                "No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=\"Edm.Int3" +
-                "2\" Nullable=\"false\" /><Property Name=\"Quantity_Required\" Type=\"Edm.Decimal\" /><P" +
-                "roperty Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Required_For\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Line_Amount\" Type=\"Edm.Decimal\" /><Property Name" +
-                "=\"Work_Type\" Type=\"Edm.String\" /><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><P" +
-                "roperty Name=\"Linked\" Type=\"Edm.Boolean\" /><Property Name=\"Type\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Task_No\" Type=\"Edm.String\" /><Property Name=\"Actual_Unit_Co" +
-                "st\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Line_Amount";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart8 = "\" Type=\"Edm.Decimal\" /><Property Name=\"Surrendered\" Type=\"Edm.Boolean\" /><Propert" +
-                "y Name=\"No_of_Days\" Type=\"Edm.Decimal\" /><Property Name=\"Vote_Item\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"Actual_to_Date\" Type=\"Edm.Decimal\" /><Property Name=\"Com" +
-                "mitments\" Type=\"Edm.Decimal\" /><Property Name=\"Available_Funds\" Type=\"Edm.Decima" +
-                "l\" /><Property Name=\"Job_Task_Description\" Type=\"Edm.String\" /><Property Name=\"Q" +
-                "uantity_Used\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Unit_Costs\" Type=\"Edm." +
-                "Decimal\" /><Property Name=\"Type_of_Expense\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Currency_Code\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String" +
-                "\" /><Property Name=\"No\" Type=\"Edm.String\" /><Property Name=\"Project\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Vote_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Vote_" +
-                "Item_Desc\" Type=\"Edm.String\" /><Property Name=\"memoNo\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Requestor\" Type=\"Edm.String\" /></EntityType><EntityT" +
-                "ype Name=\"Payments\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Date\" Type=\"Edm.DateTime\" /><Pr" +
-                "operty Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"Pay_Mode\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Cheque_No\" Type=\"Edm.String\" /><Property Name=\"Cheque_Date\"" +
-                " Type=\"Edm.DateTime\" /><Property Name=\"Bank_Code\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Payee\" Type=\"Edm.String\" /><Property Name=\"On_behalf_of\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Created_By\" Type=\"Edm.String\" /><Property Name=\"Posted\" Type=" +
-                "\"Edm.Boolean\" /><Property Name=\"Posted_By\" Type=\"Edm.String\" /><Property Name=\"P" +
-                "osted_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Shortcut_Dimension_1_Code\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_2_Code\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Time_Posted\" Type=\"Edm.String\" /><Property Name=\"Paying_Bank_Acc" +
-                "ount\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Payment_Type\" Type=\"Edm.String\" /><Property Name=\"Currency\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Account_Typ" +
-                "e\" Type=\"Edm.String\" /><Property Name=\"Account_No\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Account_Name\" Type=\"Edm.String\" /><Property Name=\"Surrendered\" Type=\"Edm." +
-                "Boolean\" /><Property Name=\"Applies_To_Doc_No\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Original_Document\" Type=\"Edm.String\" /><Property Name=\"PV_Creation_DateTime\" T" +
-                "ype=\"Edm.DateTime\" /><Property Name=\"PV_Creator_ID\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Receipt_Created\" Type=\"Edm.Boolean\" /><Property Name=\"Imprest_Deadline\" " +
-                "Type=\"Edm.DateTime\" /><Property Name=\"Surrender_Date\" Type=\"Edm.DateTime\" /><Pro" +
-                "perty Name=\"Imprest_Type\" Type=\"Edm.String\" /><Property Name=\"Project\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Travel_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Ca" +
-                "shier\" Type=\"Edm.String\" /><Property Name=\"Function_Name\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Budget_Center_Name\" Type=\"Edm.String\" /><Property Name=\"Payment_Re" +
-                "lease_Date\" Type=\"Edm.DateTime\" /><Property Name=\"No_Printed\" Type=\"Edm.Int32\" /" +
-                "><Property Name=\"Document_Type\" Type=\"Edm.String\" /><Property Name=\"Surrender_St" +
-                "atus\" Type=\"Edm.String\" /><Property Name=\"Departure_Date\" Type=\"Edm.DateTime\" />" +
-                "<Property Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Property Name=\"Chequ" +
-                "e_Type\" Type=\"Edm.String\" /><Property Name=\"Payment_Narration\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Shortcut_Dimension_3_Code\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Posting_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Job_Task_No\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Shortcut_Dimension_4_Code\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Date_of_Reporting\" Type=" +
-                "\"Edm.DateTime\" /><Property Name=\"Imprest_Issue_Date\" Type=\"Edm.DateTime\" /><Prop" +
-                "erty Name=\"Imprest_Issue_Doc_No\" Type=\"Edm.String\" /><Property Name=\"Date_Surren" +
-                "dered\" Type=\"Edm.DateTime\" /><Property Name=\"Surrendered_By\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Shortcut_Dimension_5_Code\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Imprest_Memo_Surrender_No\" Type=\"Edm.String\" /><Property Name=\"Dimension_Set_ID\"" +
-                " Type=\"Edm.Int32\" /><Property Name=\"Project_Budget\" Type=\"Edm.Decimal\" /><Proper" +
-                "ty Name=\"Actual_Project_Costs\" Type=\"Edm.Decimal\" /><Property Name=\"PO_Commitmen" +
-                "ts\" Type=\"Edm.Decimal\" /><Property Name=\"PRN_Commitments\" Type=\"Edm.Decimal\" /><" +
-                "Property Name=\"Store_Requisition_Commitments\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"Imprest_Application_Commitment\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Bu" +
-                "dget_Commitments\" Type=\"Edm.Decimal\" /><Property Name=\"Available_Funds\" Type=\"Ed" +
-                "m.Decimal\" /><Property Name=\"Notification_Sent\" Type=\"Edm.Boolean\" /><Property N" +
-                "ame=\"DateTime_Sent\" Type=\"Edm.DateTime\" /><Property Name=\"Imprest_Memo_No\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Job_Group\" Type=\"Edm.String\" /><Property Name=\"Im" +
-                "prest_Bank_Account_Number\" Type=\"Edm.String\" /><Property Name=\"Imprest_Bank_Name" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Imprest_Bank_Branch_Name\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Vendor_Bank\" Type=\"Edm.String\" /><Property Name=\"Vendor_Bank" +
-                "_Branch\" Type=\"Edm.String\" /><Property Name=\"Test\" Type=\"Edm.Decimal\" /><Propert" +
-                "y Name=\"Used_Claim\" Type=\"Edm.Boolean\" /><Property Name=\"Part_Payment\" Type=\"Edm" +
-                ".Boolean\" /><Property Name=\"Reasons_to_Reopen\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Payment_processed\" Type=\"Edm.Boolean\" /><Property Name=\"Imprest_Created\" Type" +
-                "=\"Edm.Boolean\" /><Property Name=\"Imprest\" Type=\"Edm.Int32\" /><Property Name=\"Con" +
-                "verted_By\" Type=\"Edm.String\" /><Property Name=\"Date_converted\" Type=\"Edm.DateTim" +
-                "e\" /><Property Name=\"Time_converted\" Type=\"Edm.String\" /><Property Name=\"Vote_It" +
-                "em\" Type=\"Edm.String\" /><Property Name=\"Vote_Amount\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Commitments\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Amount\" Type=" +
-                "\"Edm.Decimal\" /><Property Name=\"Available_Amount\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Reference_No\" Type=\"Edm.String\" /><Property Name=\"Selected\" Type=\"Edm.Boo" +
-                "lean\" /><Property Name=\"Job\" Type=\"Edm.String\" /><Property Name=\"JobTaskNo\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Job_Name\" Type=\"Edm.String\" /><Property Name=\"Se" +
-                "nd_for_Posting\" Type=\"Edm.Boolean\" /><Property Name=\"Standing_Imprest_Type\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Total_Amount\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"Imprest_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Petty_Cash_Amount\" Type=" +
+            private const string ModelPart4 = "roperty Name=\"Second_Language_R_W_S\" Type=\"Edm.String\" /><Property Name=\"Addition" +
+                "al_Language\" Type=\"Edm.String\" /><Property Name=\"Primary_Skills_Category\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Level\" Type=\"Edm.String\" /><Property Name=\"Termina" +
+                "tion_Category\" Type=\"Edm.String\" /><Property Name=\"Postal_Address2\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Postal_Address3\" Type=\"Edm.String\" /><Property Name=\"Res" +
+                "idential_Address2\" Type=\"Edm.String\" /><Property Name=\"Residential_Address3\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Post_Code2\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Citizenship\" Type=\"Edm.String\" /><Property Name=\"Disabling_Details\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Disability_Grade\" Type=\"Edm.String\" /><Property Name=\"P" +
+                "assport_Number\" Type=\"Edm.String\" /><Property Name=\"V2nd_Skills_Category\" Type=\"" +
+                "Edm.String\" /><Property Name=\"V3rd_Skills_Category\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Region\" Type=\"Edm.String\" /><Property Name=\"First_Language_Read\" Type=\"E" +
+                "dm.Boolean\" /><Property Name=\"First_Language_Write\" Type=\"Edm.Boolean\" /><Proper" +
+                "ty Name=\"First_Language_Speak\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Langu" +
+                "age_Read\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Write\" Type=\"Edm." +
+                "Boolean\" /><Property Name=\"Second_Language_Speak\" Type=\"Edm.Boolean\" /><Property" +
+                " Name=\"PIN_Number\" Type=\"Edm.String\" /><Property Name=\"Job_Applied_For\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Employee_Requisition_No\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Total_Score\" Type=\"Edm.Decimal\" /><Property Name=\"Shortlist\" Type=\"Edm." +
+                "Boolean\" /><Property Name=\"Qualified\" Type=\"Edm.Boolean\" /><Property Name=\"No_Se" +
+                "ries\" Type=\"Edm.String\" /><Property Name=\"Employee_No\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Applicant_Type\" Type=\"Edm.String\" /><Property Name=\"Interview_Invitat" +
+                "ion_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"Date_Applied\" Type=\"Edm.DateTime\"" +
+                " /><Property Name=\"Citizenship_Details\" Type=\"Edm.String\" /><Property Name=\"Expa" +
+                "triate\" Type=\"Edm.Boolean\" /><Property Name=\"Password\" Type=\"Edm.String\" /></Ent" +
+                "ityType><EntityType Name=\"HRPortalUsers\"><Key><PropertyRef Name=\"AuxiliaryIndex1" +
+                "\" /><PropertyRef Name=\"code\" /><PropertyRef Name=\"id\" /></Key><Property Name=\"co" +
+                "de\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"employeeNo\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"IdNo\" Type=\"Edm.String\" /><Property Name=\"password\" Type" +
+                "=\"Edm.String\" /><Property Name=\"changedPassword\" Type=\"Edm.Boolean\" /><Property " +
+                "Name=\"First_Name\" Type=\"Edm.String\" /><Property Name=\"Middle_Name\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Last_Name\" Type=\"Edm.String\" /><Property Name=\"ID_Number\"" +
+                " Type=\"Edm.String\" /><Property Name=\"fName\" Type=\"Edm.String\" /><Property Name=\"" +
+                "mName\" Type=\"Edm.String\" /><Property Name=\"lName\" Type=\"Edm.String\" /><Property " +
+                "Name=\"id\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex1\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"ImprestLines" +
+                "\"><Key><PropertyRef Name=\"Line_No\" /><PropertyRef Name=\"No\" /></Key><Property Na" +
+                "me=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=\"Edm." +
+                "Int32\" Nullable=\"false\" /><Property Name=\"Account_Type\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Account_No\" Type=\"Edm.String\" /><Property Name=\"Account_Name\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"A" +
+                "mount\" Type=\"Edm.Decimal\" /><Property Name=\"Applies_to_Doc_No\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Global_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Global_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Actual_Spent\" Type=" +
                 "\"Edm.Decimal\" /><Property Name=\"Remaining_Amount\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Project_Description\" Type=\"Edm.String\" /><Property Name=\"Total_VAT_Amount" +
-                "\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Witholding_Tax_Amount\" Type=\"Edm.De" +
-                "cimal\" /><Property Name=\"Total_Net_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"" +
-                "Total_Payment_Amount_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Retention_A" +
-                "mount\" Type=\"Edm.Decimal\" /><Property Name=\"Job_Task_Name\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Actual_Amount_Spent\" Type=\"Edm.Decimal\" /><Property Name=\"Cash_Re" +
-                "ceipt_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Petty_Cash_Amount_Spen" +
-                "t\" Type=\"Edm.Decimal\" /><Property Name=\"Remaining_Petty_Cash_Amount\" Type=\"Edm.D" +
-                "ecimal\" /><Property Name=\"Receipted_Petty_Cash_Amount\" Type=\"Edm.Decimal\" /><Pro" +
-                "perty Name=\"VAT_Wthheld_six\" Type=\"Edm.Decimal\" /><Property Name=\"Bank_Name\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Department_Name\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Project_Name\" Type=\"Edm.String\" /><Property Name=\"Unit_Name\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Division_Name\" Type=\"Edm.String\" /><Property Name=\"Destin" +
-                "ation_Name\" Type=\"Edm.String\" /><Property Name=\"Vendor_Bank";
+                " Name=\"Committed\" Type=\"Edm.Boolean\" /><Property Name=\"Advance_Type\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Currency_Code\" Type=\"Edm.String\" /><Property Name=\"Curr" +
+                "ency_Factor\" Type=\"Edm.Decimal\" /><Property Name=\"Amount_LCY\" Type=\"Edm.Decimal\"" +
+                " /><Property Name=\"Expense_Type\" Type=\"Edm.String\" /><Property Name=\"Work_Type\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Resource_No\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Task_No\" Type=\"Edm.String\" /><Property Name=\"Due_Date\" Type=\"Edm.DateTime\" " +
+                "/><Property Name=\"Imprest_Holder\" Type=\"Edm.String\" /><Property Name=\"Purpose\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Budgetary_Control_A_C\" Type=\"Edm.Boolean\" /><" +
+                "Property Name=\"Destination\" Type=\"Edm.String\" /><Property Name=\"Daily_Rate\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"No_of_Days\" Type=\"Edm.Int32\" /><Property Name=\"" +
+                "Subsistence\" Type=\"Edm.Boolean\" /><Property Name=\"Cash_Receipt_Amount\" Type=\"Edm" +
+                ".Decimal\" /><Property Name=\"Receipt_No\" Type=\"Edm.String\" /><Property Name=\"Full" +
+                "y_Allocated\" Type=\"Edm.Boolean\" /><Property Name=\"Job_Task_No\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Job_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Job_Task_D" +
+                "escription\" Type=\"Edm.String\" /><Property Name=\"Project\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Job_No\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Payment_Type\" Type=\"Edm.String\" /></EntityType><EntityType " +
+                "Name=\"ImprestMemo\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=" +
+                "\"Edm.String\" Nullable=\"false\" /><Property Name=\"Requestor\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Posted\" Type=\"Edm.Boo" +
+                "lean\" /><Property Name=\"Imprest_Naration\" Type=\"Edm.String\" /><Property Name=\"St" +
+                "art_Date\" Type=\"Edm.DateTime\" /><Property Name=\"No_of_days\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Job\" Type=\"Edm.String\" /><Property Name=\"Job_Task\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Subject\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Di" +
+                "mension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Total_Subsistence_Allowance\"" +
+                " Type=\"Edm.Decimal\" /><Property Name=\"Total_Casuals_Cost\" Type=\"Edm.Decimal\" /><" +
+                "Property Name=\"Total_Other_Costs\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Fue" +
+                "l_Costs\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Maintenance_Costs\" Type=\"Edm" +
+                ".Decimal\" /></EntityType><EntityType Name=\"InventoryPostingGroups\"><Key><Propert" +
+                "yRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Description\" Type=\"Edm.String\" /></EntityType><EntityType Na" +
+                "me=\"ItemCategories\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Parent_Category\" Type=\"Edm." +
+                "String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Inden" +
+                "tation\" Type=\"Edm.Int32\" /><Property Name=\"Presentation_Order\" Type=\"Edm.Int32\" " +
+                "/><Property Name=\"Has_Children\" Type=\"Edm.Boolean\" /><Property Name=\"Last_Modifi" +
+                "ed_Date_Time\" Type=\"Edm.DateTime\" /><Property Name=\"Id\" Type=\"Edm.Guid\" /></Enti" +
+                "tyType><EntityType Name=\"Items\"><Key><PropertyRef Name=\"No\" /></Key><Property Na" +
+                "me=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"No_2\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Search_D" +
+                "escription\" Type=\"Edm.String\" /><Property Name=\"Description_2\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Base_Unit_of_Measure\" Type=\"Edm.String\" /><Property Name=\"Pri" +
+                "ce_Unit_Conversion\" Type=\"Edm.Int32\" /><Property Name=\"Type\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Inventory_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Sh" +
+                "elf_No\" Type=\"Edm.String\" /><Property Name=\"Item_Disc_Group\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Allow_Invoice_Disc\" Type=\"Edm.Boolean\" /><Property Name=\"Statis" +
+                "tics_Group\" Type=\"Edm.Int32\" /><Property Name=\"Commission_Group\" Type=\"Edm.Int32" +
+                "\" /><Property Name=\"Unit_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Price_Profi" +
+                "t_Calculation\" Type=\"Edm.String\" /><Property Name=\"Profit\" ";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart9 = "_Account\" Type=\"Edm.String\" /><Property Name=\"Advance_Recovery\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Total_Net_Pay\" Type=\"Edm.Decimal\" /><Property Name=\"Amount_P" +
-                "aid\" Type=\"Edm.Decimal\" /><Property Name=\"PV_Remaining_Amount\" Type=\"Edm.Decimal" +
-                "\" /></EntityType><EntityType Name=\"payperiods\"><Key><PropertyRef Name=\"Starting_" +
-                "Date\" /></Key><Property Name=\"Starting_Date\" Type=\"Edm.DateTime\" Nullable=\"false" +
-                "\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"New_Fiscal_Year\" T" +
-                "ype=\"Edm.Boolean\" /><Property Name=\"Closed\" Type=\"Edm.Boolean\" /><Property Name=" +
-                "\"Date_Locked\" Type=\"Edm.Boolean\" /><Property Name=\"Pay_Date\" Type=\"Edm.DateTime\"" +
-                " /><Property Name=\"Close_Pay\" Type=\"Edm.Boolean\" /><Property Name=\"Market_Intere" +
-                "st_Rate\" Type=\"Edm.Decimal\" /><Property Name=\"CMS_Starting_Date\" Type=\"Edm.DateT" +
-                "ime\" /><Property Name=\"CMS_End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Job_B" +
-                "ook_Lock_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Job_Book_Locked\" Type=\"Edm." +
-                "Boolean\" /><Property Name=\"Job_Book_Start_Date\" Type=\"Edm.DateTime\" /><Property " +
-                "Name=\"Job_Book_End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Status\" Type=\"Edm" +
-                ".String\" /><Property Name=\"P_A_Y_E\" Type=\"Edm.Decimal\" /><Property Name=\"Basic_P" +
-                "ay\" Type=\"Edm.Decimal\" /></EntityType><EntityType Name=\"PortalUsers\"><Key><Prope" +
-                "rtyRef Name=\"customer_No\" /></Key><Property Name=\"customer_No\" Type=\"Edm.String\"" +
-                " Nullable=\"false\" /><Property Name=\"Password\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Last_Login\" Type=\"Edm.DateTime\" /><Property Name=\"status\" Type=\"Edm.Int32\" /><" +
-                "Property Name=\"changedPassword\" Type=\"Edm.Int32\" /><Property Name=\"validated\" Ty" +
-                "pe=\"Edm.Boolean\" /><Property Name=\"usertype\" Type=\"Edm.Int32\" /></EntityType><En" +
-                "tityType Name=\"PositionsSupervised\"><Key><PropertyRef Name=\"Job_ID\" /><PropertyR" +
-                "ef Name=\"Position_Supervised\" /></Key><Property Name=\"Job_ID\" Type=\"Edm.String\" " +
-                "Nullable=\"false\" /><Property Name=\"Position_Supervised\" Type=\"Edm.String\" Nullab" +
-                "le=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Re" +
-                "marks\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"postcodes\"><Key><Prope" +
-                "rtyRef Name=\"City\" /><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"City\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Search_City\" Type=\"Edm.String\" /><Property Name=\"Cou" +
-                "ntry_Region_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.String\" " +
-                "/></EntityType><EntityType Name=\"PrequalifiedSuppliers\"><Key><PropertyRef Name=\"" +
-                "AuxiliaryIndex1\" /><PropertyRef Name=\"Category\" /><PropertyRef Name=\"Contact_No\"" +
-                " /><PropertyRef Name=\"Fiscal_Year\" /><PropertyRef Name=\"Name\" /><PropertyRef Nam" +
-                "e=\"Vendor_No\" /></Key><Property Name=\"Ref_No\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Physical_Address\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Postal_Address\" Type=\"Edm.String\" /><Property" +
-                " Name=\"City\" Type=\"Edm.String\" /><Property Name=\"E_mail\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Telephone_No\" Type=\"Edm.String\" /><Property Name=\"Mobile_No\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Contact_Person\" Type=\"Edm.String\" /><Property Name" +
-                "=\"KBA_Bank_Code\" Type=\"Edm.String\" /><Property Name=\"KBA_Branch_Code\" Type=\"Edm." +
-                "String\" /><Property Name=\"Bank_account_No\" Type=\"Edm.String\" /><Property Name=\"C" +
-                "ategory\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Fiscal_Year\" Type=" +
-                "\"Edm.String\" Nullable=\"false\" /><Property Name=\"Selected\" Type=\"Edm.Boolean\" /><" +
-                "Property Name=\"Pre_Qualified\" Type=\"Edm.Boolean\" /><Property Name=\"Fax_No\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Category_Name\" Type=\"Edm.String\" /><Property Name" +
-                "=\"VAT_Registration_No\" Type=\"Edm.String\" /><Property Name=\"Company_PIN_No\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Vendor_No\" Type=\"Edm.String\" Nullable=\"false\" /><" +
-                "Property Name=\"Vendor_Type\" Type=\"Edm.String\" /><Property Name=\"Blacklisted\" Typ" +
-                "e=\"Edm.Boolean\" /><Property Name=\"Default_Payment_Mode\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Maximum_Order_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Minimum" +
-                "_Order_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Maximum_Order_Amount\" Type" +
-                "=\"Edm.Decimal\" /><Property Name=\"Minimum_Order_Amount\" Type=\"Edm.Decimal\" /><Pro" +
-                "perty Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Contact_No\" Type=\"Edm.St" +
-                "ring\" Nullable=\"false\" /><Property Name=\"Supplier_Type\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Director_1_Name\" Type=\"Edm.String\" /><Property Name=\"Director_2_Name" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Director_3_Name\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Line_No\" Type=\"Edm.Int32\" /><Property Name=\"Description\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></" +
-                "EntityType><EntityType Name=\"ProcurementHeader\"><Key><PropertyRef Name=\"No\" /></" +
-                "Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Sta" +
-                "rt_Date\" Type=\"Edm.DateTime\" /><Property Name=\"End_Date\" Type=\"Edm.DateTime\" /><" +
-                "Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Created_By\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Date_Created\" Type=\"Edm.DateTime\" /><Property Na" +
-                "me=\"Time_Created\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Budget_Type\" Type=\"Edm.String\" /><Property Name=\"Select\" Type=" +
-                "\"Edm.Boolean\" /><Property Name=\"Budget_Plan_Posted\" Type=\"Edm.Boolean\" /><Proper" +
-                "ty Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Echequer_Job_ID\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Financial_Year_Code\" Type=\"Edm.String\" /></EntityTy" +
-                "pe><EntityType Name=\"ProcurementPlan\"><Key><PropertyRef Name=\"Department_Code\" /" +
-                "><PropertyRef Name=\"Plan_Item_No\" /><PropertyRef Name=\"Plan_Year\" /></Key><Prope" +
-                "rty Name=\"Plan_Year\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Plan_I" +
-                "tem_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Procurement_Type\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Unit_of_Measure\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Procurement_Method\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Source_of_Funds\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Estimated_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Advertisement_Date\" Ty" +
-                "pe=\"Edm.DateTime\" /><Property Name=\"Bid_Quotation_Opening_Date\" Type=\"Edm.DateTi" +
-                "me\" /><Property Name=\"Proposal_Evaluation_date\" Type=\"Edm.DateTime\" /><Property " +
-                "Name=\"Financial_Opening_date\" Type=\"Edm.DateTime\" /><Property Name=\"Negotiation_" +
-                "date\" Type=\"Edm.DateTime\" /><Property Name=\"Notification_of_award_date\" Type=\"Ed" +
-                "m.DateTime\" /><Property Name=\"Contract_Date\" Type=\"Edm.DateTime\" /><Property Nam" +
-                "e=\"Contract_End_Date_Planned\" Type=\"Edm.DateTime\" /><Property Name=\"Department_C" +
-                "ode\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"TOR_Technical_specs_du" +
-                "e_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Item_Description\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Category\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Process_Type\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Plan_Status\" Type=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"No\" Type=\"Edm.String\" /><Property Name=\"Test\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Funding_Source_Code\" Type=\"Edm.String\" /><Property Name=\"Output_" +
-                "Code\" Type=\"Edm.String\" /><Property Name=\"Objective_Code\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Outcome_Code\" Type=\"Edm.String\" /><Property Name=\"Target_Groups\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Margin_of_preference_for_Local\" Type=\"Edm.Dec" +
-                "imal\" /><Property Name=\"Quarter_1_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Q" +
-                "uarter_2_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Quart";
+            private const string ModelPart5 = "Type=\"Edm.Decimal\" /><Property Name=\"Costing_Method\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Standard_Cost\" Type=\"Edm" +
+                ".Decimal\" /><Property Name=\"Last_Direct_Cost\" Type=\"Edm.Decimal\" /><Property Nam" +
+                "e=\"Indirect_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_is_Adjusted\" Type=\"E" +
+                "dm.Boolean\" /><Property Name=\"Allow_Online_Adjustment\" Type=\"Edm.Boolean\" /><Pro" +
+                "perty Name=\"Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Vendor_Item_No\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Lead_Time_Calculation\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Reorder_Point\" Type=\"Edm.Decimal\" /><Property Name=\"Maximum_Inventory\"" +
+                " Type=\"Edm.Decimal\" /><Property Name=\"Reorder_Quantity\" Type=\"Edm.Decimal\" /><Pr" +
+                "operty Name=\"Alternative_Item_No\" Type=\"Edm.String\" /><Property Name=\"Unit_List_" +
+                "Price\" Type=\"Edm.Decimal\" /><Property Name=\"Duty_Due\" Type=\"Edm.Decimal\" /><Prop" +
+                "erty Name=\"Duty_Code\" Type=\"Edm.String\" /><Property Name=\"Gross_Weight\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Net_Weight\" Type=\"Edm.Decimal\" /><Property Name=\"Un" +
+                "its_per_Parcel\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Volume\" Type=\"Edm.Deci" +
+                "mal\" /><Property Name=\"Durability\" Type=\"Edm.String\" /><Property Name=\"Freight_T" +
+                "ype\" Type=\"Edm.String\" /><Property Name=\"Tariff_No\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Duty_Unit_Conversion\" Type=\"Edm.Decimal\" /><Property Name=\"Country_Regio" +
+                "n_Purchased_Code\" Type=\"Edm.String\" /><Property Name=\"Budget_Quantity\" Type=\"Edm" +
+                ".Decimal\" /><Property Name=\"Budgeted_Amount\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"Budget_Profit\" Type=\"Edm.Decimal\" /><Property Name=\"Blocked\" Type=\"Edm.Boolean" +
+                "\" /><Property Name=\"Block_Reason\" Type=\"Edm.String\" /><Property Name=\"Last_DateT" +
+                "ime_Modified\" Type=\"Edm.DateTime\" /><Property Name=\"Last_Date_Modified\" Type=\"Ed" +
+                "m.DateTime\" /><Property Name=\"Last_Time_Modified\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Price_Includes_VAT\" Type=\"Edm.Boolean\" /><Property Name=\"VAT_Bus_Posting_G" +
+                "r_Price\" Type=\"Edm.String\" /><Property Name=\"Gen_Prod_Posting_Group\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Country_Region_of_Origin_Code\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Automatic_Ext_Texts\" Type=\"Edm.Boolean\" /><Property Name=\"No_Series\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Tax_Group_Code\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"VAT_Prod_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Reserve\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Global_Dimension_1_Code\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Global_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Stoc" +
+                "kout_Warning\" Type=\"Edm.String\" /><Property Name=\"Prevent_Negative_Inventory\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Application_Wksh_User_ID\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Assembly_Policy\" Type=\"Edm.String\" /><Property Name=\"GTIN\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Default_Deferral_Template_Code\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Low_Level_Code\" Type=\"Edm.Int32\" /><Property Name=\"Lot_Size\" " +
+                "Type=\"Edm.Decimal\" /><Property Name=\"Serial_Nos\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Last_Unit_Cost_Calc_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Rolled_up_M" +
+                "aterial_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Rolled_up_Capacity_Cost\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"Scrap\" Type=\"Edm.Decimal\" /><Property Name=\"Inv" +
+                "entory_Value_Zero\" Type=\"Edm.Boolean\" /><Property Name=\"Discrete_Order_Quantity\"" +
+                " Type=\"Edm.Int32\" /><Property Name=\"Minimum_Order_Quantity\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Maximum_Order_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Sa" +
+                "fety_Stock_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Order_Multiple\" Type=\"" +
+                "Edm.Decimal\" /><Property Name=\"Safety_Lead_Time\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Flushing_Method\" Type=\"Edm.String\" /><Property Name=\"Replenishment_System\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Rounding_Precision\" Type=\"Edm.Decimal\" /><Pr" +
+                "operty Name=\"Item_Category_Code\" Type=\"Edm.String\" /><Property Name=\"Assembly_BO" +
+                "M\" Type=\"Edm.Boolean\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Property " +
+                "Name=\"Cost_is_Posted_to_G_L\" Type=\"Edm.Boolean\" /><Property Name=\"Inventory\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Net_Invoiced_Qty\" Type=\"Edm.Decimal\" /><Proper" +
+                "ty Name=\"Net_Change\" Type=\"Edm.Decimal\" /><Property Name=\"Purchases_Qty\" Type=\"E" +
+                "dm.Decimal\" /><Property Name=\"Sales_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Po" +
+                "sitive_Adjmt_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Negative_Adjmt_Qty\" Type=" +
+                "\"Edm.Decimal\" /><Property Name=\"Purchases_LCY\" Type=\"Edm.Decimal\" /><Property Na" +
+                "me=\"Sales_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Positive_Adjmt_LCY\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Negative_Adjmt_LCY\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"COGS_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_on_Purch_Order\" Type=\"E" +
+                "dm.Decimal\" /><Property Name=\"Qty_on_Sales_Order\" Type=\"Edm.Decimal\" /><Property" +
+                " Name=\"Transferred_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Transferred_LCY\" Ty" +
+                "pe=\"Edm.Decimal\" /><Property Name=\"Reserved_Qty_on_Inventory\" Type=\"Edm.Decimal\"" +
+                " /><Property Name=\"Reserved_Qty_on_Purch_Orders\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"Reserved_Qty_on_Sales_Orders\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty" +
+                "_on_Outbound_Transfer\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Inbound_T" +
+                "ransfer\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Sales_Returns\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Res_Qty_on_Purch_Returns\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Cost_of_Open_Production_Orders\" Type=\"Edm.Decimal\" /><Property Name=" +
+                "\"Res_Qty_on_Assembly_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Asm_" +
+                "Comp\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_on_Assembly_Order\" Type=\"Edm.Deci" +
+                "mal\" /><Property Name=\"Qty_on_Asm_Component\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"Qty_on_Job_Order\" Type=\"Edm.Decimal\" /><Property Name=\"Res_Qty_on_Job_Order\" T" +
+                "ype=\"Edm.Decimal\" /><Property Name=\"Scheduled_Receipt_Qty\" Type=\"Edm.Decimal\" />" +
+                "<Property Name=\"Scheduled_Need_Qty\" Type=\"Edm.Decimal\" /></EntityType><EntityTyp" +
+                "e Name=\"ItemSalesAndProfit\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><Property" +
+                "Ref Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><" +
+                "Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Gen_Prod_Posting" +
+                "_Group\" Type=\"Edm.String\" /><Property Name=\"Item_Disc_Group\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Item_Tracking_Code\" Type=\"Edm.String\" /><Property Name=\"Profit\"" +
+                " Type=\"Edm.Decimal\" /><Property Name=\"Scrap\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"Sales_Unit_of_Measure\" Type=\"Edm.String\" /><Property Name=\"Standard_Cost\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=" +
+                "\"Unit_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Volume\" Type=\"Edm.Decimal" +
+                "\" /><Property Name=\"Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Purch_Unit_of" +
+                "_Measure\" Type=\"Edm.String\" /><Property Name=\"COGS_LCY\" Type=\"Edm.Decimal\" /><Pr" +
+                "operty Name=\"Inventory\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Change\" Type=\"E" +
+                "dm.Decimal\" /><Property Name=\"Net_Invoiced_Qty\" Type=\"Edm.Decimal\" /><Property N" +
+                "ame=\"Purchases_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Purchases_Qty\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Sales_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Sal" +
+                "es_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"VendorName\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType>" +
+                "<EntityType Name=\"ItemSalesByCustomer\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" " +
+                "/><PropertyRef Name=\"CustomerNo\" /><PropertyRef Name=\"Entry_No\" /></Key><Propert" +
+                "y Name=\"Entry_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Document_N" +
+                "o\" Type=\"Edm.String\" /><Property Name=\"Posting_Date\" Type=\"";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart10 = "er_3_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Quarter_4_Amount\" Type=\"Edm.Dec" +
-                "imal\" /><Property Name=\"Quarter_1_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Quar" +
-                "ter_2_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Quarter_3_Qty\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Quarter_4_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Youth\" T" +
-                "ype=\"Edm.Boolean\" /><Property Name=\"Women\" Type=\"Edm.Boolean\" /><Property Name=\"" +
-                "PWD\" Type=\"Edm.Boolean\" /><Property Name=\"Citizen_Contractors\" Type=\"Edm.Boolean" +
-                "\" /><Property Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Property Name=\"J" +
-                "ob_ID\" Type=\"Edm.String\" /><Property Name=\"Job_Task_No\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Directorate_Code\" Type=\"Edm.String\" /><Property Name=\"Division\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Approved_Budget\" Type=\"Edm.Decimal\" /><Property " +
-                "Name=\"Actual\" Type=\"Edm.Decimal\" /><Property Name=\"Commitment\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Requisition_Items\" Type=\"Edm.Decimal\" /></EntityType><Entity" +
-                "Type Name=\"ProcurementRequest\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><Prope" +
-                "rtyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "/><Property Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Requisition_No\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Procurement_Plan_No\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Creation_Date\" Type=\"Edm.DateTime\" /><Property Name=\"User_ID\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Procurement_Method\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Process_Type\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Procurement_Plan_Item\" Type=\"Edm.Int32\" /><Property Name=\"G" +
-                "lobal_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_2_C" +
-                "ode\" Type=\"Edm.String\" /><Property Name=\"Tender_Opening_Date\" Type=\"Edm.DateTime" +
-                "\" /><Property Name=\"Tender_Status\" Type=\"Edm.String\" /><Property Name=\"Tender_Cl" +
-                "osing_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Addedum\" Type=\"Edm.String\" /><" +
-                "Property Name=\"SiteView\" Type=\"Edm.DateTime\" /><Property Name=\"Status\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Return_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Re" +
-                "turn_Time\" Type=\"Edm.String\" /><Property Name=\"Tender_Type\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Document_No\" Type=\"Edm.String\" /><Property Name=\"Extended_Date\" " +
-                "Type=\"Edm.DateTime\" /><Property Name=\"Currency_Code\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Tender_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Validity_Period\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Issued_Date\" Type=\"Edm.DateTime\" /><Property N" +
-                "ame=\"Closed\" Type=\"Edm.Boolean\" /><Property Name=\"RFQ_Sent\" Type=\"Edm.Boolean\" /" +
-                "><Property Name=\"Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Generate_Multipl" +
-                "e_LPO\" Type=\"Edm.Boolean\" /><Property Name=\"Tender_Committee\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Minutes_Path\" Type=\"Edm.String\" /><Property Name=\"Evaluation_S" +
-                "tarted\" Type=\"Edm.Boolean\" /><Property Name=\"Technical_started\" Type=\"Edm.Boolea" +
-                "n\" /><Property Name=\"Financial_Started\" Type=\"Edm.Boolean\" /><Property Name=\"Tec" +
-                "hnical_Score\" Type=\"Edm.Int32\" /><Property Name=\"Financial_Score\" Type=\"Edm.Int3" +
-                "2\" /><Property Name=\"Award_Started\" Type=\"Edm.Boolean\" /><Property Name=\"minutes" +
-                "beforeproceedtoaward\" Type=\"Edm.String\" /><Property Name=\"minutesafterproceedtoa" +
-                "ward\" Type=\"Edm.String\" /><Property Name=\"Awarded\" Type=\"Edm.Boolean\" /><Propert" +
-                "y Name=\"Select_Bidder_Vendor_No\" Type=\"Edm.String\" /><Property Name=\"NoSeries\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Evaluation_Admin\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Mandatory_started\" Type=\"Edm.Boolean\" /><Property Name=\"Mandatory_in_pr" +
-                "ogress\" Type=\"Edm.Boolean\" /><Property Name=\"Technical_in_Progress\" Type=\"Edm.Bo" +
-                "olean\" /><Property Name=\"Financial_in_Progress\" Type=\"Edm.Boolean\" /><Property N" +
-                "ame=\"Awarding_in_Progress\" Type=\"Edm.Boolean\" /><Property Name=\"LPO_Generated\" T" +
-                "ype=\"Edm.Boolean\" /><Property Name=\"Current_Budget\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"TOR_Attached\" Type=\"Edm.Boolean\" /><Property Name=\"TOR_File_Name\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Quotation_Pending_Opening\" Type=\"Edm.Boolean\" /><P" +
-                "roperty Name=\"Opening_Person_1\" Type=\"Edm.String\" /><Property Name=\"Opening_Pers" +
-                "on_2\" Type=\"Edm.String\" /><Property Name=\"Opening_Person_3\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Asigned_User\" Type=\"Edm.String\" /><Property Name=\"Quotation_Eval" +
-                "uation\" Type=\"Edm.Boolean\" /><Property Name=\"In_Financial\" Type=\"Edm.Boolean\" />" +
-                "<Property Name=\"In_Technical\" Type=\"Edm.Boolean\" /><Property Name=\"In_Award\" Typ" +
-                "e=\"Edm.Boolean\" /><Property Name=\"Pending_LPO\" Type=\"Edm.Boolean\" /><Property Na" +
-                "me=\"Minutes_File\" Type=\"Edm.String\" /><Property Name=\"Quotation_Finished\" Type=\"" +
-                "Edm.Boolean\" /><Property Name=\"Technical_Minutes\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Does_Not_Require_TOR\" Type=\"Edm.Boolean\" /><Property Name=\"Justification_M" +
-                "emo\" Type=\"Edm.String\" /><Property Name=\"Direct\" Type=\"Edm.Boolean\" /><Property " +
-                "Name=\"No_of_Tender_Documents\" Type=\"Edm.Int32\" /><Property Name=\"Procurement_Amo" +
-                "unt\" Type=\"Edm.Decimal\" /><Property Name=\"Approval_Status\" Type=\"Edm.Int32\" /><P" +
-                "roperty Name=\"Successful_Bidder\" Type=\"Edm.String\" /><Property Name=\"Selected_Bi" +
-                "dder_Name\" Type=\"Edm.String\" /><Property Name=\"Approval_Path\" Type=\"Edm.Int32\" /" +
-                "><Property Name=\"SupplierCategory\" Type=\"Edm.String\" /><Property Name=\"Auxiliary" +
-                "Index1\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"Proc" +
-                "urementRequestLines\"><Key><PropertyRef Name=\"Line_No\" /><PropertyRef Name=\"Requi" +
-                "sition_No\" /></Key><Property Name=\"Requisition_No\" Type=\"Edm.String\" Nullable=\"f" +
-                "alse\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property N" +
-                "ame=\"Type\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Deci" +
-                "mal\" /><Property Name=\"Unit_of_Measure\" Type=\"Edm.String\" /><Property Name=\"Unit" +
-                "_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Procurement_Plan\" Type=\"Edm.String\" /><Property Name=\"Procurement_Plan" +
-                "_Item\" Type=\"Edm.String\" /><Property Name=\"Budget_Line\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Global_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"Amount_" +
-                "LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Select\" Type=\"Edm.Boolean\" /><Property" +
-                " Name=\"Request_Generated\" Type=\"Edm.Boolean\" /><Property Name=\"Supplier_Category" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Vendor_No\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Ordered\" Type=\"Edm.Boolean\" /><Property Name=\"Order_Date\" Type=\"Edm.DateTim" +
-                "e\" /><Property Name=\"Activity_Type\" Type=\"Edm.String\" /><Property Name=\"Current_" +
-                "Budget\" Type=\"Edm.String\" /><Property Name=\"Activity\" Type=\"Edm.String\" /></Enti" +
-                "tyType><EntityType Name=\"ProjectMembers\"><Key><PropertyRef Name=\"ImprestNo\" /><P" +
-                "ropertyRef Name=\"Imprest_Memo_No\" /><PropertyRef Name=\"No\" /><PropertyRef Name=\"" +
-                "Work_Type\" /></Key><Property Name=\"Type_of_Expense\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Time_Period\" Type=\"Edm.Decimal\" /><Property Name=\"Imprest_Memo_No\" Type=" +
-                "\"Edm.String\" Nullable=\"false\" /><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"" +
-                "false\" /><Property Name=\"Work_Type\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
-                "ty Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Direct_Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Entitl" +
-                "ement\" Type=\"Edm.Decimal\" /><Property Name=\"ImprestNo\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Requestor\" Type=\"Edm.String\" /></EntityType><EntityT" +
-                "ype Name=\"PurchaseHeader\"><Key><PropertyRef Name=\"Document_Type\" /><PropertyRef " +
-                "Name=\"No\" /></Key><Property Name=\"Document_Type\" Type=\"Edm.";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart11 = "String\" Nullable=\"false\" /><Property Name=\"Buy_from_Vendor_No\" Type=\"Edm.String\" " +
-                "/><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Pay_t" +
-                "o_Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Name\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Pay_to_Name_2\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Addr" +
-                "ess\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Address_2\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Pay_to_City\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Contact\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Your_Reference\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Ship_to_Code\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Name\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Ship_to_Name_2\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Ship_to_Address\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Address_2\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Ship_to_City\" Type=\"Edm.String\" /><Property Name=\"Sh" +
-                "ip_to_Contact\" Type=\"Edm.String\" /><Property Name=\"Order_Date\" Type=\"Edm.DateTim" +
-                "e\" /><Property Name=\"Posting_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Expecte" +
-                "d_Receipt_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Posting_Description\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Payment_Terms_Code\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Due_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Procurement_Type\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Contract_Number\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Date_received\" Type=\"Edm.DateTime\" /><Property Name=\"Order_types\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"Reason_to_reopen\" Type=\"Edm.String\" /><Property Name=\"Re" +
-                "ason_to_Cancel\" Type=\"Edm.String\" /><Property Name=\"Order_Number\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Committed\" Type=\"Edm.Boolean\" /><Property Name=\"CommittedB" +
-                "y\" Type=\"Edm.String\" /><Property Name=\"Procurement_Plan\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Procurement_Plan_Item\" Type=\"Edm.String\" /><Property Name=\"Request_" +
-                "Ref_No\" Type=\"Edm.String\" /><Property Name=\"Supplier_Type\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Process_Type\" Type=\"Edm.String\" /><Property Name=\"Purchase_Type\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Requisition_No\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Ordered\" Type=\"Edm.Boolean\" /><Property Name=\"Test\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Request_By_No\" Type=\"Edm.String\" /><Property Name=\"Location_Code" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property" +
-                " Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Division\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Directorate_Code\" Type=\"Edm.String\" /><Property Name=\"Departmen" +
-                "t_Code\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_1_Code\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Shortcut_Dimension_2_Code\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Job\" Type=\"Edm.String\" /><Property Name=\"Job_Task_No\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Approved_Requisition_Amount\" Type=\"Edm.Decimal\" /></EntityTy" +
-                "pe><EntityType Name=\"PurchaseLines\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><" +
-                "PropertyRef Name=\"AuxiliaryIndex2\" /><PropertyRef Name=\"AuxiliaryIndex3\" /><Prop" +
-                "ertyRef Name=\"AuxiliaryIndex4\" /><PropertyRef Name=\"Document_No\" /><PropertyRef " +
-                "Name=\"Document_Type\" /><PropertyRef Name=\"Line_No\" /></Key><Property Name=\"Docum" +
-                "ent_Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Buy_from_Vendor_N" +
-                "o\" Type=\"Edm.String\" /><Property Name=\"Document_No\" Type=\"Edm.String\" Nullable=\"" +
-                "false\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property " +
-                "Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Location_Code\" Type=\"Edm.String\" /><Property Name=\"Posting_Group\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Expected_Receipt_Date\" Type=\"Edm.DateTime\" /><Prop" +
-                "erty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Description_2\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Unit_of_Measure\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Outstanding_Quantity\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Qty_to_Invoice\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"Qty_to_Receive\" Type=\"Edm.Decimal\" /><Property Name=\"Direct_Unit_Cost\" Type=\"" +
-                "Edm.Decimal\" /><Property Name=\"Unit_Cost_LCY\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"VAT\" Type=\"Edm.Decimal\" /><Property Name=\"Line_Discount\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Line_Discount_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Amou" +
-                "nt\" Type=\"Edm.Decimal\" /><Property Name=\"Amount_Including_VAT\" Type=\"Edm.Decimal" +
-                "\" /><Property Name=\"Unit_Price_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_Req" +
-                "uested\" Type=\"Edm.Decimal\" /><Property Name=\"Item_Category\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Item_Category_Code\" Type=\"Edm.String\" /><Property Name=\"Procurem" +
-                "ent_Plan\" Type=\"Edm.String\" /><Property Name=\"Procurement_Plan_Item\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Line_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Budge" +
-                "tDescription\" Type=\"Edm.String\" /><Property Name=\"ProcurementPlanDescription\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"f" +
-                "alse\" /><Property Name=\"AuxiliaryIndex2\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
-                "roperty Name=\"AuxiliaryIndex3\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
-                "me=\"AuxiliaryIndex4\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityTy" +
-                "pe Name=\"ReceiptAndPaymentTypes\"><Key><PropertyRef Name=\"Code\" /></Key><Property" +
+            private const string ModelPart6 = "Edm.DateTime\" /><Property Name=\"Item_No\" Type=\"Edm.String\" /><Property Name=\"Item" +
+                "_Ledger_Entry_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Dimension_Set_ID\" T" +
+                "ype=\"Edm.Int32\" /><Property Name=\"CustomerNo\" Type=\"Edm.String\" Nullable=\"false\"" +
+                " /><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Gen_Prod_Posting_Group\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><En" +
+                "tityType Name=\"JobApplicantHobies\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /></" +
+                "Key><Property Name=\"Id_No\" Type=\"Edm.String\" /><Property Name=\"Hobby\" Type=\"Edm." +
+                "String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.Int32\" Nullable=\"false\" /><" +
+                "/EntityType><EntityType Name=\"JobApplicantQualifications\"><Key><PropertyRef Name" +
+                "=\"AuxiliaryIndex1\" /></Key><Property Name=\"Id_No\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"Qualification_Description" +
+                "\" Type=\"Edm.String\" /><Property Name=\"From_Date\" Type=\"Edm.DateTime\" /><Property" +
+                " Name=\"To_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Type\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Institution_Com" +
+                "pany\" Type=\"Edm.String\" /><Property Name=\"Cost\" Type=\"Edm.Decimal\" /><Property N" +
+                "ame=\"Course_Grade\" Type=\"Edm.String\" /><Property Name=\"Employee_Status\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Expiration_Date\" Type=\"Edm.DateTime\" /><Property Nam" +
+                "e=\"Qualification_Type\" Type=\"Edm.String\" /><Property Name=\"Qualification_Code\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Score_ID\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"AuxiliaryIndex1\" Type=\"Edm.Int32\" Nullable=\"false\" /></EntityType><EntityType " +
+                "Name=\"JobApplicantReferees\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /></Key><Pr" +
+                "operty Name=\"Id_Number\" Type=\"Edm.String\" /><Property Name=\"Names\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Designation\" Type=\"Edm.String\" /><Property Name=\"Institut" +
+                "ion\" Type=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Telephone_No\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIn" +
+                "dex1\" Type=\"Edm.Int32\" Nullable=\"false\" /></EntityType><EntityType Name=\"JobRequ" +
+                "irements\"><Key><PropertyRef Name=\"Job_Id\" /><PropertyRef Name=\"Qualification_Cod" +
+                "e\" /><PropertyRef Name=\"Qualification_Type\" /></Key><Property Name=\"Job_Id\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Qualification_Type\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"Qualification_Code\" Type=\"Edm.String\" " +
+                "Nullable=\"false\" /><Property Name=\"Qualification\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Job_Requirements\" Type=\"Edm.String\" /><Property Name=\"Priority\" Type=\"Edm." +
+                "String\" /><Property Name=\"Job_Specification\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Score_ID\" Type=\"Edm.Decimal\" /><Property Name=\"Need_code\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Stage_Code\" Type=\"Edm.String\" /><Property Name=\"Mandatory\" Type=\"" +
+                "Edm.Boolean\" /><Property Name=\"Desired_Score\" Type=\"Edm.Decimal\" /><Property Nam" +
+                "e=\"Total_Stage_Desired_Score\" Type=\"Edm.Decimal\" /><Property Name=\"Qualification" +
+                "_Description\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"JobResponsibili" +
+                "ties\"><Key><PropertyRef Name=\"Job_ID\" /><PropertyRef Name=\"Responsibility\" /></K" +
+                "ey><Property Name=\"Job_ID\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
+                "Responsibility\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Remarks\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Entry_No\" Type=\"Edm.Int32\" /></EntityType><Ent" +
+                "ityType Name=\"jobs\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" " +
+                "/></EntityType><EntityType Name=\"JobTask\"><Key><PropertyRef Name=\"Job_No\" /><Pro" +
+                "pertyRef Name=\"Job_Task_No\" /></Key><Property Name=\"Job_No\" Type=\"Edm.String\" Nu" +
+                "llable=\"false\" /><Property Name=\"Job_Task_No\" Type=\"Edm.String\" Nullable=\"false\"" +
+                " /><Property Name=\"Description\" Type=\"Edm.String\" /></EntityType><EntityType Nam" +
+                "e=\"JobWorkingRelationships\"><Key><PropertyRef Name=\"Job_ID\" /><PropertyRef Name=" +
+                "\"Relationship\" /><PropertyRef Name=\"Type\" /></Key><Property Name=\"Job_ID\" Type=\"" +
+                "Edm.String\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" /><Property Name=\"Relationship\" Type=\"Edm.String\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"Remarks\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"languag" +
+                "es\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" /></EntityType><Ent" +
+                "ityType Name=\"LeaveApplications\"><Key><PropertyRef Name=\"Application_Code\" /></K" +
+                "ey><Property Name=\"Application_Code\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Leave_Type\" Type=\"Edm.String\" /><Property Name=\"Days_Applied\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Start_Date\" Type=\"Edm.DateTime\" /><Property Name=\"R" +
+                "eturn_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Application_Date\" Type=\"Edm.Da" +
+                "teTime\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"test\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Applicant_Comments\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"No_series\" Type=\"Edm.String\" /><Property Name=\"Selected\" Type=\"Edm.Boole" +
+                "an\" /><Property Name=\"tes\" Type=\"Edm.String\" /><Property Name=\"End_Date\" Type=\"E" +
+                "dm.DateTime\" /><Property Name=\"Total_Taken\" Type=\"Edm.Decimal\" /><Property Name=" +
+                "\"E_mail_Address\" Type=\"Edm.String\" /><Property Name=\"Entry_No\" Type=\"Edm.Int32\" " +
+                "/><Property Name=\"Cell_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Request" +
+                "_Leave_Allowance\" Type=\"Edm.Boolean\" /><Property Name=\"Names\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Leave_Allowance_Entittlement\" Type=\"Edm.Boolean\" /><Property N" +
+                "ame=\"Leave_Allowance_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Details_of_Exa" +
+                "mination\" Type=\"Edm.String\" /><Property Name=\"Date_of_Exam\" Type=\"Edm.DateTime\" " +
+                "/><Property Name=\"Reliever\" Type=\"Edm.String\" /><Property Name=\"Reliever_Name\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Supervisor_Email\" Type=\"Edm.String\" /><Property Name=\"Number_of_Previous_Att" +
+                "empts\" Type=\"Edm.String\" /><Property Name=\"Job_Tittle\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"User_ID\" Type=\"Edm.String\" /><Property Name=\"Employee_No\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Supervisor\" Type=\"Edm.String\" /><Property Name=\"Respons" +
+                "ibility_Center\" Type=\"Edm.String\" /><Property Name=\"Approved_days\" Type=\"Edm.Int" +
+                "32\" /><Property Name=\"Emergency\" Type=\"Edm.Boolean\" /><Property Name=\"Approver_C" +
+                "omments\" Type=\"Edm.String\" /><Property Name=\"Grade\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Reason\" Type=\"Edm.String\" /><Property Name=\"Department\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Resumption_Date" +
+                "\" Type=\"Edm.DateTime\" /><Property Name=\"Current_Balance\" Type=\"Edm.Decimal\" /><P" +
+                "roperty Name=\"Attachments\" Type=\"Edm.Int32\" /><Property Name=\"RelieverAddress\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Employee_Name\" Type=\"Edm.String\" /></EntityTy" +
+                "pe><EntityType Name=\"LeaveTypes\"><Key><PropertyRef Name=\"Code\" /></Key><Property" +
                 " Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Appear_on_Imprest\" Type=\"Edm.Boolean\" /></Ent" +
-                "ityType><EntityType Name=\"receipts\"><Key><PropertyRef Name=\"No\" /></Key><Propert" +
-                "y Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Date\" Type=\"Edm" +
-                ".DateTime\" /><Property Name=\"Pay_Mode\" Type=\"Edm.String\" /><Property Name=\"Chequ" +
-                "e_No\" Type=\"Edm.String\" /><Property Name=\"Cheque_Date\" Type=\"Edm.DateTime\" /><Pr" +
-                "operty Name=\"Amount_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Bank_Code\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Received_From\" Type=\"Edm.String\" /><Property Name=\"" +
-                "On_Behalf_Of\" Type=\"Edm.String\" /><Property Name=\"Cashier\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Posted_Date\" Type=\"E" +
-                "dm.DateTime\" /><Property Name=\"Posted_Time\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Posted_By\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Currency_Code\" Type=\"Edm.String\" /><Property Name=\"Global_Dimensio" +
-                "n_1_Code\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_2_Code\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Depot_Nam" +
-                "e\" Type=\"Edm.String\" /><Property Name=\"Department_Name\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Being_Payment_of\" Type=\"Edm.String\" /><Property Name=\"Payment_Refere" +
-                "nce\" Type=\"Edm.String\" /><Property Name=\"ID\" Type=\"Edm.String\" /><Property Name=" +
-                "\"Tel_No\" Type=\"Edm.String\" /><Property Name=\"Document_Type\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Dimension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"Posting_Dat" +
-                "e\" Type=\"Edm.DateTime\" /><Property Name=\"Reason_for_Reversing\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Reversed\" Type=\"Edm.Boolean\" /><Property Name=\"Reversed_By\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Date_Reversed\" Type=\"Edm.DateTime\" /><Propert" +
-                "y Name=\"Time_Reversed\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_1_" +
-                "Code\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_2_Code\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Fully_Allo" +
-                "cated\" Type=\"Edm.Boolean\" /><Property Name=\"Allocated_Amount\" Type=\"Edm.Decimal\"" +
-                " /><Property Name=\"Fully_Allocated_Imprest\" Type=\"Edm.Boolean\" /></EntityType><E" +
-                "ntityType Name=\"Resources\"><Key><PropertyRef Name=\"No\" /></";
+                "ype=\"Edm.String\" /></EntityType><EntityType Name=\"Locations\"><Key><PropertyRef N" +
+                "ame=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
+                "roperty Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Default_Bin_Code\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Name_2\" Type=\"Edm.String\" /><Property Name=\"Addres" +
+                "s\" Type=\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart12 = "Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Type" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Name\" Type=\"Edm.String\" /></EntityType><En" +
-                "tityType Name=\"SalesDashboard\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><Prope" +
-                "rtyRef Name=\"AuxiliaryIndex2\" /><PropertyRef Name=\"AuxiliaryIndex3\" /><PropertyR" +
-                "ef Name=\"AuxiliaryIndex4\" /><PropertyRef Name=\"Entry_No\" /></Key><Property Name=" +
-                "\"Entry_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Document_No\" Type" +
-                "=\"Edm.String\" /><Property Name=\"Posting_Date\" Type=\"Edm.DateTime\" /><Property Na" +
-                "me=\"Entry_Type\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Decimal\"" +
-                " /><Property Name=\"Dimension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"Sales_Am" +
-                "ount_Actual\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_Amount_Expected\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Cost_Amount_Actual\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Cost_Amount_Expected\" Type=\"Edm.Decimal\" /><Property Name=\"CountryRegionN" +
-                "ame\" Type=\"Edm.String\" /><Property Name=\"CustomerName\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Customer_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Customer_" +
-                "Disc_Group\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"SalesPersonName\" Type" +
+            private const string ModelPart7 = ".String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Phone_No\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Phone_No_2\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Telex_No\" Type=\"Edm.String\" /><Property Name=\"Fax_No\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Home_Page\" Type=\"Edm.String\" /><Property Name=\"C" +
+                "ountry_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Use_As_In_Transit\" Type=" +
+                "\"Edm.Boolean\" /><Property Name=\"Require_Put_away\" Type=\"Edm.Boolean\" /><Property" +
+                " Name=\"Require_Pick\" Type=\"Edm.Boolean\" /><Property Name=\"Cross_Dock_Due_Date_Ca" +
+                "lc\" Type=\"Edm.String\" /><Property Name=\"Use_Cross_Docking\" Type=\"Edm.Boolean\" />" +
+                "<Property Name=\"Require_Receive\" Type=\"Edm.Boolean\" /><Property Name=\"Require_Sh" +
+                "ipment\" Type=\"Edm.Boolean\" /><Property Name=\"Bin_Mandatory\" Type=\"Edm.Boolean\" /" +
+                "><Property Name=\"Directed_Put_away_and_Pick\" Type=\"Edm.Boolean\" /><Property Name" +
+                "=\"Default_Bin_Selection\" Type=\"Edm.String\" /><Property Name=\"Outbound_Whse_Handl" +
+                "ing_Time\" Type=\"Edm.String\" /><Property Name=\"Inbound_Whse_Handling_Time\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Put_away_Template_Code\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Use_Put_away_Worksheet\" Type=\"Edm.Boolean\" /><Property Name=\"Pick_Acco" +
+                "rding_to_FEFO\" Type=\"Edm.Boolean\" /><Property Name=\"Allow_Breakbulk\" Type=\"Edm.B" +
+                "oolean\" /><Property Name=\"Bin_Capacity_Policy\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Open_Shop_Floor_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"To_Production_B" +
+                "in_Code\" Type=\"Edm.String\" /><Property Name=\"From_Production_Bin_Code\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Adjustment_Bin_Code\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Always_Create_Put_away_Line\" Type=\"Edm.Boolean\" /><Property Name=\"Always_Cre" +
+                "ate_Pick_Line\" Type=\"Edm.Boolean\" /><Property Name=\"Special_Equipment\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Receipt_Bin_Code\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Shipment_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"Cross_Dock_Bin_Code\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"To_Assembly_Bin_Code\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"From_Assembly_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"Asm_to_Or" +
+                "der_Shpt_Bin_Code\" Type=\"Edm.String\" /><Property Name=\"Base_Calendar_Code\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Use_ADCS\" Type=\"Edm.Boolean\" /></EntityType><Enti" +
+                "tyType Name=\"MeetingAgenda\"><Key><PropertyRef Name=\"Agenda_code\" /></Key><Proper" +
+                "ty Name=\"Agenda_code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Meeti" +
+                "ng_Code\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Person_responsiblee\" Type=\"Edm.String\" /><Property Name=\"Scheduled" +
+                "_time\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"My_Meetings\"><Key><Pro" +
+                "pertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"Committee\" /><PropertyRef N" +
+                "ame=\"MeetingNo\" /><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"Committee\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" /><Property Name=\"MeetingNo\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Start_date\" Type=\"Edm.DateT" +
+                "ime\" /><Property Name=\"Start_time\" Type=\"Edm.String\" /><Property Name=\"End_Date\"" +
+                " Type=\"Edm.DateTime\" /><Property Name=\"End_time\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Venue_Location\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"" +
+                "Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"myCommitee\"><Key><" +
+                "PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"Code\" /><PropertyRef Nam" +
+                "e=\"Committee\" /></Key><Property Name=\"Committee\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
+                "\"Names\" Type=\"Edm.String\" /><Property Name=\"Designation\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Remarks\" Type=\"Edm.String\" /><Property Name=\"Role\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Director_No\" Type=\"Edm.String\" /><Property Name=\"Description" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Comments\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Status\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.Strin" +
+                "g\" Nullable=\"false\" /></EntityType><EntityType Name=\"MyJobApplications\"><Key><Pr" +
+                "opertyRef Name=\"Application_No\" /></Key><Property Name=\"Application_No\" Type=\"Ed" +
+                "m.String\" Nullable=\"false\" /><Property Name=\"First_Name\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Last_Name\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Initials\" Type=\"Edm.String\" /><Property Name=\"Searc" +
+                "h_Name\" Type=\"Edm.String\" /><Property Name=\"Postal_Address\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Residential_Address\" Type=\"Edm.String\" /><Property Name=\"City\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name" +
+                "=\"County\" Type=\"Edm.String\" /><Property Name=\"Home_Phone_Number\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Cell_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Work" +
+                "_Phone_Number\" Type=\"Edm.String\" /><Property Name=\"Ext\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"ID_Number\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Gender\" Type=\"Edm.String\" /><Property Name=\"Country_Code\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Comment\" Type=\"Edm.Boolean\" /><Property Name=\"Fax_Number\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Marital_Status\" Type=\"Edm.String\" /><Property Name=\"Ethnic_Origin" +
+                "\" Type=\"Edm.String\" /><Property Name=\"First_Language_R_W_S\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Driving_Licence\" Type=\"Edm.String\" /><Property Name=\"Disabled\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Health_Assesment\" Type=\"Edm.Boolean\" /><Prope" +
+                "rty Name=\"Health_Assesment_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Date_Of_B" +
+                "irth\" Type=\"Edm.DateTime\" /><Property Name=\"Age\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Second_Language_R_W_S\" Type=\"Edm.String\" /><Property Name=\"Additional_Langu" +
+                "age\" Type=\"Edm.String\" /><Property Name=\"Primary_Skills_Category\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Level\" Type=\"Edm.String\" /><Property Name=\"Termination_Cat" +
+                "egory\" Type=\"Edm.String\" /><Property Name=\"Postal_Address2\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Postal_Address3\" Type=\"Edm.String\" /><Property Name=\"Residential" +
+                "_Address2\" Type=\"Edm.String\" /><Property Name=\"Residential_Address3\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Post_Code2\" Type=\"Edm.String\" /><Property Name=\"Citizen" +
+                "ship\" Type=\"Edm.String\" /><Property Name=\"Disabling_Details\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Disability_Grade\" Type=\"Edm.String\" /><Property Name=\"Passport_" +
+                "Number\" Type=\"Edm.String\" /><Property Name=\"V2nd_Skills_Category\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"V3rd_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Region\" Type=\"Edm.String\" /><Property Name=\"First_Language_Read\" Type=\"Edm.Boole" +
+                "an\" /><Property Name=\"First_Language_Write\" Type=\"Edm.Boolean\" /><Property Name=" +
+                "\"First_Language_Speak\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Read" +
+                "\" Type=\"Edm.Boolean\" /><Property Name=\"Second_Language_Write\" Type=\"Edm.Boolean\"" +
+                " /><Property Name=\"Second_Language_Speak\" Type=\"Edm.Boolean\" /><Property Name=\"P" +
+                "IN_Number\" Type=\"Edm.String\" /><Property Name=\"Job_Applied_For\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Employee_Requisition_No\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Total_Score\" Type=\"Edm.Decimal\" /><Property Name=\"Shortlist\" Type=\"Edm.Boolean\"" +
+                " /><Property Name=\"Qualified\" Type=\"Edm.Boolean\" /><Property Name=\"No_Series\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Employee_No\" Type=\"Edm.St";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart8 = "ring\" /><Property Name=\"Applicant_Type\" Type=\"Edm.String\" /><Property Name=\"Inter" +
+                "view_Invitation_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"Date_Applied\" Type=\"E" +
+                "dm.DateTime\" /><Property Name=\"Citizenship_Details\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Expatriate\" Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"OtherCos" +
+                "ts\"><Key><PropertyRef Name=\"Imprest_Memo_No\" /><PropertyRef Name=\"Line_No\" /><Pr" +
+                "opertyRef Name=\"memoNo\" /></Key><Property Name=\"Imprest_Memo_No\" Type=\"Edm.Strin" +
+                "g\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\"" +
+                " /><Property Name=\"Quantity_Required\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_" +
+                "Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Required_For\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Line_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Work_Type\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Linke" +
+                "d\" Type=\"Edm.Boolean\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Task_No\" Type=\"Edm.String\" /><Property Name=\"Actual_Unit_Cost\" Type=\"Edm.Decim" +
+                "al\" /><Property Name=\"Actual_Line_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"S" +
+                "urrendered\" Type=\"Edm.Boolean\" /><Property Name=\"No_of_Days\" Type=\"Edm.Decimal\" " +
+                "/><Property Name=\"Vote_Item\" Type=\"Edm.String\" /><Property Name=\"Actual_to_Date\"" +
+                " Type=\"Edm.Decimal\" /><Property Name=\"Commitments\" Type=\"Edm.Decimal\" /><Propert" +
+                "y Name=\"Available_Funds\" Type=\"Edm.Decimal\" /><Property Name=\"Job_Task_Descripti" +
+                "on\" Type=\"Edm.String\" /><Property Name=\"Quantity_Used\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Actual_Unit_Costs\" Type=\"Edm.Decimal\" /><Property Name=\"Type_of_Expe" +
+                "nse\" Type=\"Edm.String\" /><Property Name=\"Currency_Code\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Project\" Type=\"Edm.String\" /><Property Name=\"Vote_Amount\" T" +
+                "ype=\"Edm.Decimal\" /><Property Name=\"Vote_Item_Desc\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"memoNo\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Requestor\" " +
+                "Type=\"Edm.String\" /></EntityType><EntityType Name=\"Payments\"><Key><PropertyRef N" +
+                "ame=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Date\" Type=\"Edm.DateTime\" /><Property Name=\"Type\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Pay_Mode\" Type=\"Edm.String\" /><Property Name=\"Cheque_No\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Cheque_Date\" Type=\"Edm.DateTime\" /><Property Name=\"" +
+                "Bank_Code\" Type=\"Edm.String\" /><Property Name=\"Payee\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"On_behalf_of\" Type=\"Edm.String\" /><Property Name=\"Created_By\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Posted\" Type=\"Edm.Boolean\" /><Property Name=\"Posted_" +
+                "By\" Type=\"Edm.String\" /><Property Name=\"Posted_Date\" Type=\"Edm.DateTime\" /><Prop" +
+                "erty Name=\"Shortcut_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"Shortc" +
+                "ut_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Time_Posted\" Type=\"Edm." +
+                "String\" /><Property Name=\"Paying_Bank_Account\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Status\" Type=\"Edm.String\" /><Property Name=\"Payment_Type\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Currency\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Account_Type\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Account_No\" Type=\"Edm.String\" /><Property Name=\"Account_Name\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Surrendered\" Type=\"Edm.Boolean\" /><Property Name=\"Applies_To_D" +
+                "oc_No\" Type=\"Edm.String\" /><Property Name=\"Original_Document\" Type=\"Edm.String\" " +
+                "/><Property Name=\"PV_Creation_DateTime\" Type=\"Edm.DateTime\" /><Property Name=\"PV" +
+                "_Creator_ID\" Type=\"Edm.String\" /><Property Name=\"Receipt_Created\" Type=\"Edm.Bool" +
+                "ean\" /><Property Name=\"Imprest_Deadline\" Type=\"Edm.DateTime\" /><Property Name=\"S" +
+                "urrender_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Imprest_Type\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Project\" Type=\"Edm.String\" /><Property Name=\"Travel_Date\"" +
+                " Type=\"Edm.DateTime\" /><Property Name=\"Cashier\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Function_Name\" Type=\"Edm.String\" /><Property Name=\"Budget_Center_Name\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Payment_Release_Date\" Type=\"Edm.DateTime\" /><Prop" +
+                "erty Name=\"No_Printed\" Type=\"Edm.Int32\" /><Property Name=\"Document_Type\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Surrender_Status\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Departure_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Responsibility_Center\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Cheque_Type\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Payment_Narration\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_3" +
+                "_Code\" Type=\"Edm.String\" /><Property Name=\"Posting_Date\" Type=\"Edm.DateTime\" /><" +
+                "Property Name=\"Job_Task_No\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimensi" +
+                "on_4_Code\" Type=\"Edm.String\" /><Property Name=\"Phone_Number\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Date_of_Reporting\" Type=\"Edm.DateTime\" /><Property Name=\"Impres" +
+                "t_Issue_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Imprest_Issue_Doc_No\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Date_Surrendered\" Type=\"Edm.DateTime\" /><Property " +
+                "Name=\"Surrendered_By\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_5_C" +
+                "ode\" Type=\"Edm.String\" /><Property Name=\"Imprest_Memo_Surrender_No\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Dimension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"Pro" +
+                "ject_Budget\" Type=\"Edm.Decimal\" /><Property Name=\"Actual_Project_Costs\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"PO_Commitments\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"PRN_Commitments\" Type=\"Edm.Decimal\" /><Property Name=\"Store_Requisition_Commit" +
+                "ments\" Type=\"Edm.Decimal\" /><Property Name=\"Imprest_Application_Commitment\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"Total_Budget_Commitments\" Type=\"Edm.Decimal\" />" +
+                "<Property Name=\"Available_Funds\" Type=\"Edm.Decimal\" /><Property Name=\"Notificati" +
+                "on_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"DateTime_Sent\" Type=\"Edm.DateTime\"" +
+                " /><Property Name=\"Imprest_Memo_No\" Type=\"Edm.String\" /><Property Name=\"Job_Grou" +
+                "p\" Type=\"Edm.String\" /><Property Name=\"Imprest_Bank_Account_Number\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Imprest_Bank_Name\" Type=\"Edm.String\" /><Property Name=\"I" +
+                "mprest_Bank_Branch_Name\" Type=\"Edm.String\" /><Property Name=\"Vendor_Bank\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Vendor_Bank_Branch\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Test\" Type=\"Edm.Decimal\" /><Property Name=\"Used_Claim\" Type=\"Edm.Boolean\" " +
+                "/><Property Name=\"Part_Payment\" Type=\"Edm.Boolean\" /><Property Name=\"Reasons_to_" +
+                "Reopen\" Type=\"Edm.String\" /><Property Name=\"Payment_processed\" Type=\"Edm.Boolean" +
+                "\" /><Property Name=\"Imprest_Created\" Type=\"Edm.Boolean\" /><Property Name=\"Impres" +
+                "t\" Type=\"Edm.Int32\" /><Property Name=\"Converted_By\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Date_converted\" Type=\"Edm.DateTime\" /><Property Name=\"Time_converted\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Vote_Item\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Vote_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Commitments\" Type=\"Edm.Decima" +
+                "l\" /><Property Name=\"Actual_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Availab" +
+                "le_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Reference_No\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Selected\" Type=\"Edm.Boolean\" /><Property Name=\"Job\" Type=\"Edm." +
+                "String\" /><Property Name=\"JobTaskNo\" Type=\"Edm.String\" /><Property Name=\"Job_Nam" +
+                "e\" Type=\"Edm.String\" /><Property Name=\"Send_for_Posting\" Type=\"Edm.Boolean\" /><P" +
+                "roperty Name=\"Standing_Imprest_Type\" Type=\"Edm.String\" /><Property Name=\"Total_A" +
+                "mount\" Type=\"Edm.Decimal\" /><Property Name=\"Imprest_Amount\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Petty_Cash_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Remaini" +
+                "ng_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Project_Des";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart9 = "cription\" Type=\"Edm.String\" /><Property Name=\"Total_VAT_Amount\" Type=\"Edm.Decimal" +
+                "\" /><Property Name=\"Total_Witholding_Tax_Amount\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"Total_Net_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Payment_Amoun" +
+                "t_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Retention_Amount\" Type=\"Edm.De" +
+                "cimal\" /><Property Name=\"Job_Task_Name\" Type=\"Edm.String\" /><Property Name=\"Actu" +
+                "al_Amount_Spent\" Type=\"Edm.Decimal\" /><Property Name=\"Cash_Receipt_Amount\" Type=" +
+                "\"Edm.Decimal\" /><Property Name=\"Actual_Petty_Cash_Amount_Spent\" Type=\"Edm.Decima" +
+                "l\" /><Property Name=\"Remaining_Petty_Cash_Amount\" Type=\"Edm.Decimal\" /><Property" +
+                " Name=\"Receipted_Petty_Cash_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"VAT_Wth" +
+                "held_six\" Type=\"Edm.Decimal\" /><Property Name=\"Bank_Name\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Department_Name\" Type=\"Edm.String\" /><Property Name=\"Project_Name\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Unit_Name\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Division_Name\" Type=\"Edm.String\" /><Property Name=\"Destination_Name\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Vendor_Bank_Account\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Advance_Recovery\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Net_Pay\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"Amount_Paid\" Type=\"Edm.Decimal\" /><Property Nam" +
+                "e=\"PV_Remaining_Amount\" Type=\"Edm.Decimal\" /></EntityType><EntityType Name=\"payp" +
+                "eriods\"><Key><PropertyRef Name=\"Starting_Date\" /></Key><Property Name=\"Starting_" +
+                "Date\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"New_Fiscal_Year\" Type=\"Edm.Boolean\" /><Property Name=\"Clo" +
+                "sed\" Type=\"Edm.Boolean\" /><Property Name=\"Date_Locked\" Type=\"Edm.Boolean\" /><Pro" +
+                "perty Name=\"Pay_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Close_Pay\" Type=\"Edm" +
+                ".Boolean\" /><Property Name=\"Market_Interest_Rate\" Type=\"Edm.Decimal\" /><Property" +
+                " Name=\"CMS_Starting_Date\" Type=\"Edm.DateTime\" /><Property Name=\"CMS_End_Date\" Ty" +
+                "pe=\"Edm.DateTime\" /><Property Name=\"Job_Book_Lock_Date\" Type=\"Edm.DateTime\" /><P" +
+                "roperty Name=\"Job_Book_Locked\" Type=\"Edm.Boolean\" /><Property Name=\"Job_Book_Sta" +
+                "rt_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Job_Book_End_Date\" Type=\"Edm.Date" +
+                "Time\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"P_A_Y_E\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Basic_Pay\" Type=\"Edm.Decimal\" /></EntityType><" +
+                "EntityType Name=\"PortalUsers\"><Key><PropertyRef Name=\"customer_No\" /></Key><Prop" +
+                "erty Name=\"customer_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Pas" +
+                "sword\" Type=\"Edm.String\" /><Property Name=\"Last_Login\" Type=\"Edm.DateTime\" /><Pr" +
+                "operty Name=\"status\" Type=\"Edm.Int32\" /><Property Name=\"changedPassword\" Type=\"E" +
+                "dm.Int32\" /><Property Name=\"validated\" Type=\"Edm.Boolean\" /><Property Name=\"user" +
+                "type\" Type=\"Edm.Int32\" /></EntityType><EntityType Name=\"PositionsSupervised\"><Ke" +
+                "y><PropertyRef Name=\"Job_ID\" /><PropertyRef Name=\"Position_Supervised\" /></Key><" +
+                "Property Name=\"Job_ID\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Posi" +
+                "tion_Supervised\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Descriptio" +
+                "n\" Type=\"Edm.String\" /><Property Name=\"Remarks\" Type=\"Edm.String\" /></EntityType" +
+                "><EntityType Name=\"postcodes\"><Key><PropertyRef Name=\"City\" /><PropertyRef Name=" +
+                "\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"City\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Search_City" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Country_Region_Code\" Type=\"Edm.String\" /><" +
+                "Property Name=\"County\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"Prequa" +
+                "lifiedSuppliers\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"C" +
+                "ategory\" /><PropertyRef Name=\"Contact_No\" /><PropertyRef Name=\"Fiscal_Year\" /><P" +
+                "ropertyRef Name=\"Name\" /><PropertyRef Name=\"Vendor_No\" /></Key><Property Name=\"R" +
+                "ef_No\" Type=\"Edm.String\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Physical_Address\" Type=\"Edm.String\" /><Property Name=\"Post" +
+                "al_Address\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"E_mail\" Type=\"Edm.String\" /><Property Name=\"Telephone_No\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Mobile_No\" Type=\"Edm.String\" /><Property Name=\"Contact_P" +
+                "erson\" Type=\"Edm.String\" /><Property Name=\"KBA_Bank_Code\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"KBA_Branch_Code\" Type=\"Edm.String\" /><Property Name=\"Bank_account_" +
+                "No\" Type=\"Edm.String\" /><Property Name=\"Category\" Type=\"Edm.String\" Nullable=\"fa" +
+                "lse\" /><Property Name=\"Fiscal_Year\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Selected\" Type=\"Edm.Boolean\" /><Property Name=\"Pre_Qualified\" Type=\"Edm" +
+                ".Boolean\" /><Property Name=\"Fax_No\" Type=\"Edm.String\" /><Property Name=\"Category" +
+                "_Name\" Type=\"Edm.String\" /><Property Name=\"VAT_Registration_No\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Company_PIN_No\" Type=\"Edm.String\" /><Property Name=\"Vendor_N" +
+                "o\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Vendor_Type\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Blacklisted\" Type=\"Edm.Boolean\" /><Property Name=\"Defau" +
+                "lt_Payment_Mode\" Type=\"Edm.String\" /><Property Name=\"Maximum_Order_Quantity\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Minimum_Order_Quantity\" Type=\"Edm.Decimal\" /><" +
+                "Property Name=\"Maximum_Order_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Minimu" +
+                "m_Order_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Status\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Contact_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
+                "=\"Supplier_Type\" Type=\"Edm.String\" /><Property Name=\"Director_1_Name\" Type=\"Edm." +
+                "String\" /><Property Name=\"Director_2_Name\" Type=\"Edm.String\" /><Property Name=\"D" +
+                "irector_3_Name\" Type=\"Edm.String\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" />" +
+                "<Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"Procuremen" +
+                "tHeader\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.Strin" +
+                "g\" Nullable=\"false\" /><Property Name=\"Start_Date\" Type=\"Edm.DateTime\" /><Propert" +
+                "y Name=\"End_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Description\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Created_By\" Type=\"Edm.String\" /><Property Name=\"Date_Cr" +
+                "eated\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Created\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Budget_Type\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Select\" Type=\"Edm.Boolean\" /><Property Name=\"Budget_" +
+                "Plan_Posted\" Type=\"Edm.Boolean\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Echequer_Job_ID\" Type=\"Edm.String\" /><Property Name=\"Financial_" +
+                "Year_Code\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"ProcurementPlan\"><" +
+                "Key><PropertyRef Name=\"Department_Code\" /><PropertyRef Name=\"Plan_Item_No\" /><Pr" +
+                "opertyRef Name=\"Plan_Year\" /></Key><Property Name=\"Plan_Year\" Type=\"Edm.String\" " +
+                "Nullable=\"false\" /><Property Name=\"Plan_Item_No\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Procurement_Type\" Type=\"Edm.String\" /><Property Name=\"Unit" +
+                "_of_Measure\" Type=\"Edm.String\" /><Property Name=\"Unit_Cost\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Procurement_Method\" Type=\"Edm.String\" /><Property Name=\"Source_" +
+                "of_Funds\" Type=\"Edm.String\" /><Property Name=\"Estimated_Cost\" Type=\"Edm.Decimal\"" +
+                " /><Property Name=\"Advertisement_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Bid" +
+                "_Quotation_Opening_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Proposal_Evaluati" +
+                "on_date\" Type=\"Edm.DateTime\" /><Property Name=\"Financial_Opening_date\" Type=\"Edm" +
+                ".DateTime\" /><Property Name=\"Negotiation_date\" Type=\"Edm.DateTime\" /><Property N" +
+                "ame=\"Notification_of_award_date\" Type=\"Edm.DateTime\" /><Pro";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart10 = "perty Name=\"Contract_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Contract_End_Dat" +
+                "e_Planned\" Type=\"Edm.DateTime\" /><Property Name=\"Department_Code\" Type=\"Edm.Stri" +
+                "ng\" Nullable=\"false\" /><Property Name=\"TOR_Technical_specs_due_Date\" Type=\"Edm.D" +
+                "ateTime\" /><Property Name=\"Item_Description\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Category\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Process_Type\" Type=\"Edm.String\" /><Property Name=\"Plan_Status\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"No\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Test\" Type=\"Edm.String\" /><Property Name=\"Fun" +
+                "ding_Source_Code\" Type=\"Edm.String\" /><Property Name=\"Output_Code\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Objective_Code\" Type=\"Edm.String\" /><Property Name=\"Outco" +
+                "me_Code\" Type=\"Edm.String\" /><Property Name=\"Target_Groups\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Margin_of_preference_for_Local\" Type=\"Edm.Decimal\" /><Property N" +
+                "ame=\"Quarter_1_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Quarter_2_Amount\" Ty" +
+                "pe=\"Edm.Decimal\" /><Property Name=\"Quarter_3_Amount\" Type=\"Edm.Decimal\" /><Prope" +
+                "rty Name=\"Quarter_4_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Quarter_1_Qty\" " +
+                "Type=\"Edm.Decimal\" /><Property Name=\"Quarter_2_Qty\" Type=\"Edm.Decimal\" /><Proper" +
+                "ty Name=\"Quarter_3_Qty\" Type=\"Edm.Decimal\" /><Property Name=\"Quarter_4_Qty\" Type" +
+                "=\"Edm.Decimal\" /><Property Name=\"Youth\" Type=\"Edm.Boolean\" /><Property Name=\"Wom" +
+                "en\" Type=\"Edm.Boolean\" /><Property Name=\"PWD\" Type=\"Edm.Boolean\" /><Property Nam" +
+                "e=\"Citizen_Contractors\" Type=\"Edm.Boolean\" /><Property Name=\"Responsibility_Cent" +
+                "er\" Type=\"Edm.String\" /><Property Name=\"Job_ID\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Job_Task_No\" Type=\"Edm.String\" /><Property Name=\"Directorate_Code\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Division\" Type=\"Edm.String\" /><Property Name=\"Approve" +
+                "d_Budget\" Type=\"Edm.Decimal\" /><Property Name=\"Actual\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Commitment\" Type=\"Edm.Decimal\" /><Property Name=\"Requisition_Items\" " +
+                "Type=\"Edm.Decimal\" /></EntityType><EntityType Name=\"ProcurementRequest\"><Key><Pr" +
+                "opertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"No\" /></Key><Property Name" +
+                "=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Title\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Requisition_No\" Type=\"Edm.String\" /><Property Name=\"Procur" +
+                "ement_Plan_No\" Type=\"Edm.String\" /><Property Name=\"Creation_Date\" Type=\"Edm.Date" +
+                "Time\" /><Property Name=\"User_ID\" Type=\"Edm.String\" /><Property Name=\"Procurement" +
+                "_Method\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Process_Type\" Type=\"Edm.String\" /><Property Name=\"Procurement_Plan_I" +
+                "tem\" Type=\"Edm.Int32\" /><Property Name=\"Global_Dimension_1_Code\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Global_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Tender_Opening_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Tender_Status\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Tender_Closing_Date\" Type=\"Edm.DateTime\" /><Prop" +
+                "erty Name=\"Addedum\" Type=\"Edm.String\" /><Property Name=\"SiteView\" Type=\"Edm.Date" +
+                "Time\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Return_Date\"" +
+                " Type=\"Edm.DateTime\" /><Property Name=\"Return_Time\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Tender_Type\" Type=\"Edm.String\" /><Property Name=\"Document_No\" Type=\"Edm." +
+                "String\" /><Property Name=\"Extended_Date\" Type=\"Edm.DateTime\" /><Property Name=\"C" +
+                "urrency_Code\" Type=\"Edm.String\" /><Property Name=\"Tender_Amount\" Type=\"Edm.Decim" +
+                "al\" /><Property Name=\"Validity_Period\" Type=\"Edm.String\" /><Property Name=\"Issue" +
+                "d_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Closed\" Type=\"Edm.Boolean\" /><Prop" +
+                "erty Name=\"RFQ_Sent\" Type=\"Edm.Boolean\" /><Property Name=\"Vendor_No\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Generate_Multiple_LPO\" Type=\"Edm.Boolean\" /><Property N" +
+                "ame=\"Tender_Committee\" Type=\"Edm.String\" /><Property Name=\"Minutes_Path\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Evaluation_Started\" Type=\"Edm.Boolean\" /><Property " +
+                "Name=\"Technical_started\" Type=\"Edm.Boolean\" /><Property Name=\"Financial_Started\"" +
+                " Type=\"Edm.Boolean\" /><Property Name=\"Technical_Score\" Type=\"Edm.Int32\" /><Prope" +
+                "rty Name=\"Financial_Score\" Type=\"Edm.Int32\" /><Property Name=\"Award_Started\" Typ" +
+                "e=\"Edm.Boolean\" /><Property Name=\"minutesbeforeproceedtoaward\" Type=\"Edm.String\"" +
+                " /><Property Name=\"minutesafterproceedtoaward\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Awarded\" Type=\"Edm.Boolean\" /><Property Name=\"Select_Bidder_Vendor_No\" Type=\"" +
+                "Edm.String\" /><Property Name=\"NoSeries\" Type=\"Edm.String\" /><Property Name=\"Eval" +
+                "uation_Admin\" Type=\"Edm.String\" /><Property Name=\"Mandatory_started\" Type=\"Edm.B" +
+                "oolean\" /><Property Name=\"Mandatory_in_progress\" Type=\"Edm.Boolean\" /><Property " +
+                "Name=\"Technical_in_Progress\" Type=\"Edm.Boolean\" /><Property Name=\"Financial_in_P" +
+                "rogress\" Type=\"Edm.Boolean\" /><Property Name=\"Awarding_in_Progress\" Type=\"Edm.Bo" +
+                "olean\" /><Property Name=\"LPO_Generated\" Type=\"Edm.Boolean\" /><Property Name=\"Cur" +
+                "rent_Budget\" Type=\"Edm.String\" /><Property Name=\"TOR_Attached\" Type=\"Edm.Boolean" +
+                "\" /><Property Name=\"TOR_File_Name\" Type=\"Edm.String\" /><Property Name=\"Quotation" +
+                "_Pending_Opening\" Type=\"Edm.Boolean\" /><Property Name=\"Opening_Person_1\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Opening_Person_2\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Opening_Person_3\" Type=\"Edm.String\" /><Property Name=\"Asigned_User\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Quotation_Evaluation\" Type=\"Edm.Boolean\" /><Property " +
+                "Name=\"In_Financial\" Type=\"Edm.Boolean\" /><Property Name=\"In_Technical\" Type=\"Edm" +
+                ".Boolean\" /><Property Name=\"In_Award\" Type=\"Edm.Boolean\" /><Property Name=\"Pendi" +
+                "ng_LPO\" Type=\"Edm.Boolean\" /><Property Name=\"Minutes_File\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Quotation_Finished\" Type=\"Edm.Boolean\" /><Property Name=\"Technica" +
+                "l_Minutes\" Type=\"Edm.String\" /><Property Name=\"Does_Not_Require_TOR\" Type=\"Edm.B" +
+                "oolean\" /><Property Name=\"Justification_Memo\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Direct\" Type=\"Edm.Boolean\" /><Property Name=\"No_of_Tender_Documents\" Type=\"Edm" +
+                ".Int32\" /><Property Name=\"Procurement_Amount\" Type=\"Edm.Decimal\" /><Property Nam" +
+                "e=\"Approval_Status\" Type=\"Edm.Int32\" /><Property Name=\"Successful_Bidder\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Selected_Bidder_Name\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Approval_Path\" Type=\"Edm.Int32\" /><Property Name=\"SupplierCategory\" Type" +
                 "=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"fal" +
-                "se\" /><Property Name=\"AuxiliaryIndex2\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
-                "perty Name=\"AuxiliaryIndex3\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
-                "=\"AuxiliaryIndex4\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType" +
-                " Name=\"SalesOpportunities\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"N" +
-                "o\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Creation_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Cl" +
-                "osed\" Type=\"Edm.Boolean\" /><Property Name=\"Sales_Cycle_Code\" Type=\"Edm.String\" /" +
-                "><Property Name=\"Date_Closed\" Type=\"Edm.DateTime\" /><Property Name=\"Priority\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Ca" +
-                "lcd_Current_Value_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Chances_of_Success\" " +
-                "Type=\"Edm.Decimal\" /><Property Name=\"Completed\" Type=\"Edm.Decimal\" /><Property N" +
-                "ame=\"Contact_Name\" Type=\"Edm.String\" /><Property Name=\"Estimated_Closing_Date\" T" +
-                "ype=\"Edm.DateTime\" /><Property Name=\"Salesperson_Name\" Type=\"Edm.String\" /><Prop" +
-                "erty Name=\"Estimated_Value_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Contact_Com" +
-                "pany_Name\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"SalesOrdersBySales" +
-                "Person\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"AuxiliaryI" +
-                "ndex2\" /><PropertyRef Name=\"AuxiliaryIndex3\" /><PropertyRef Name=\"AuxiliaryIndex" +
-                "4\" /><PropertyRef Name=\"Document_No\" /><PropertyRef Name=\"Line_No\" /><PropertyRe" +
-                "f Name=\"SalesPersonCode\" /></Key><Property Name=\"ItemNo\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"ItemDescription\" Type=\"Edm.String\" /><Property Name=\"Document_No\" T" +
-                "ype=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /" +
-                "><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Di" +
-                "mension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"Posting_Date\" Type=\"Edm.DateT" +
-                "ime\" /><Property Name=\"CurrenyDescription\" Type=\"Edm.String\" /><Property Name=\"C" +
-                "urrency_Code\" Type=\"Edm.String\" /><Property Name=\"SalesPersonCode\" Type=\"Edm.Str" +
-                "ing\" Nullable=\"false\" /><Property Name=\"SalesPersonName\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
-                "e=\"AuxiliaryIndex2\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Auxilia" +
-                "ryIndex3\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex4\" " +
-                "Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"serviceitems" +
-                "\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Null" +
-                "able=\"false\" /><Property Name=\"Serial_No\" Type=\"Edm.String\" /><Property Name=\"Se" +
-                "rvice_Item_Group_Code\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Description_2\" Type=\"Edm.String\" /><Property Name=\"S" +
-                "tatus\" Type=\"Edm.String\" /><Property Name=\"Priority\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Customer_No\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Code\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Item_No\" Type=\"Edm.String\" /><Property Name=\"Unit_of" +
-                "_Measure_Code\" Type=\"Edm.String\" /><Property Name=\"Location_of_Service_Item\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Sales_Unit_Price\" Type=\"Edm.Decimal\" /><Propert" +
-                "y Name=\"Sales_Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Warranty_Starting_" +
-                "Date_Labor\" Type=\"Edm.DateTime\" /><Property Name=\"Warranty_Ending_Date_Labor\" Ty" +
-                "pe=\"Edm.DateTime\" /><Property Name=\"Warranty_Starting_Date_Parts\" Type=\"Edm.Date" +
-                "Time\" /><Property Name=\"Warranty_Ending_Date_Parts\" Type=\"Edm.DateTime\" /><Prope" +
-                "rty Name=\"Warranty_Parts\" Type=\"Edm.Decimal\" /><Property Name=\"Warranty_Labor\" T" +
-                "ype=\"Edm.Decimal\" /><Property Name=\"Response_Time_Hours\" Type=\"Edm.Decimal\" /><P" +
-                "roperty Name=\"Installation_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Sales_Dat" +
-                "e\" Type=\"Edm.DateTime\" /><Property Name=\"Last_Service_Date\" Type=\"Edm.DateTime\" " +
-                "/><Property Name=\"Default_Contract_Value\" Type=\"Edm.Decimal\" /><Property Name=\"D" +
-                "efault_Contract_Discount\" Type=\"Edm.Decimal\" /><Property Name=\"Vendor_No\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Vendor_Item_No\" Type=\"Edm.String\" /><Property Name" +
-                "=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Vendor_Item_Name\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Preferred_Resource\" Type=\"Edm.String\" /><Property Name=\"V" +
-                "ariant_Code\" Type=\"Edm.String\" /><Property Name=\"Service_Price_Group_Code\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Default_Contract_Cost\" Type=\"Edm.Decimal\" /><Prop" +
-                "erty Name=\"Search_Description\" Type=\"Edm.String\" /><Property Name=\"Sales_Serv_Sh" +
-                "pt_Document_No\" Type=\"Edm.String\" /><Property Name=\"Sales_Serv_Shpt_Line_No\" Typ" +
-                "e=\"Edm.Int32\" /><Property Name=\"Shipment_Type\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Type\" Type=\"Edm.String\" /><Property Name=\"Customer_Category\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Customer_Type\" Type=\"Edm.String\" /><Property Name=\"Company_R" +
-                "eg_No\" Type=\"Edm.String\" /><Property Name=\"ID_No\" Type=\"Edm.String\" /><Property " +
-                "Name=\"P_I_N\" Type=\"Edm.String\" /><Property Name=\"Title\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Captured_by\" Type=\"Edm.String\" /><Property Name=\"Created\" Type=\"Edm." +
-                "Boolean\" /><Property Name=\"Registration_Date\" Type=\"Edm.DateTime\" /><Property Na" +
-                "me=\"Created_By\" Type=\"Edm.String\" /><Property Name=\"Copyright_Title\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Copyright_Work_Category\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Copyright_Work_SubCategory\" Type=\"Edm.String\" /><Property Name=\"Copyright_" +
-                "Category_Description\" Type=\"Edm.String\" /><Property Name=\"Copyright_SubCategory_" +
-                "Desc\" Type=\"Edm.String\" /><Property Name=\"Date_of_Fixation_Reduction\" Type=\"Edm." +
-                "DateTime\" /><Property Name=\"Language\" Type=\"Edm.String\" /><Property Name=\"Agent_" +
-                "First_Name\" Type=\"Edm.String\" /><Property Name=\"Agent_Surname\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Agent_Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Agent_" +
-                "Address\" Type=\"Edm.String\" /><Property Name=\"Agent_Address_2\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Agent_City\" Type=\"Edm.String\" /><Property Name=\"Agent_Contact\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Agent_Phone_No\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"Agent_ID_No\" Type=\"Edm.String\" /><Property Name=\"Agent_P_I_N\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Author_First_Name\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Author_Agent_Surname\" Type=\"Edm.String\" /><Property Name=";
+                "se\" /></EntityType><EntityType Name=\"ProcurementRequestLines\"><Key><PropertyRef " +
+                "Name=\"Line_No\" /><PropertyRef Name=\"Requisition_No\" /></Key><Property Name=\"Requ" +
+                "isition_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=\"" +
+                "Edm.Int32\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"No\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_of_Measure\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Unit_Price\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Procurement_Plan\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Procurement_Plan_Item\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Budget_Line\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_1_Code\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Amount_LCY\" Type=\"Edm.Decimal\" /><Property Nam" +
+                "e=\"Select\" Type=\"Edm.Boolean\" /><Property Name=\"Request_Generated\" Type=\"Edm.Boo" +
+                "lean\" /><Property Name=\"Supplier_Category\" Type=\"Edm.String\" /><Property Name=\"V" +
+                "endor_No\" Type=\"Edm.String\" /><Property Name=\"Ordered\" Type=\"Edm.Boolean\" /><Pro" +
+                "perty Name=\"Order_Date\" Type=\"Edm.DateTime\" /><Property Nam";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart13 = "\"Author_Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Author_Address\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"Author_Address_2\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Author_City\" Type=\"Edm.String\" /><Property Name=\"Author_Contact\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Author_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Auth" +
-                "or_ID_No\" Type=\"Edm.String\" /><Property Name=\"Author_P_I_N\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Prod_Pub_Name\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_ID_N" +
-                "o_Company_Reg_No\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_P_I_N\" Type=\"Edm." +
-                "String\" /><Property Name=\"Assignment_License_Date\" Type=\"Edm.DateTime\" /><Proper" +
-                "ty Name=\"V1st_Country_of_Production\" Type=\"Edm.String\" /><Property Name=\"ISBN\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Production_Category\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Prod_Pub_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_Emai" +
-                "l\" Type=\"Edm.String\" /><Property Name=\"Applicant_Account\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Receipt_No\" Type=\"Edm.String\" /><Property Name=\"Receipt_Amount\" Ty" +
-                "pe=\"Edm.Decimal\" /><Property Name=\"Payemnt_Reference_No\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"No_of_Active_Contracts\" Type=\"Edm.Int32\" /><Property Name=\"Item_Des" +
-                "cription\" Type=\"Edm.String\" /><Property Name=\"Name\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Address\" Type=\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Phone_" +
-                "No\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Name\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Ship_to_Address\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Address_2" +
-                "\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Post_Code\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Ship_to_City\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Contact\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Ship_to_Phone_No\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Usage_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Usage_Amount\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Invoiced_Amount\" Type=\"Edm.Decimal\" /><Property Na" +
-                "me=\"Total_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Qty_Invoiced\" Typ" +
-                "e=\"Edm.Decimal\" /><Property Name=\"Resources_Used\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Parts_Used\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_Used\" Type=\"Edm.Dec" +
-                "imal\" /><Property Name=\"Vendor_Name\" Type=\"Edm.String\" /><Property Name=\"Comment" +
-                "\" Type=\"Edm.Boolean\" /><Property Name=\"Service_Item_Components\" Type=\"Edm.Boolea" +
-                "n\" /><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=\"Ship_to_County\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Contract_Cost\" Type=\"Edm.Decimal\" /><Proper" +
-                "ty Name=\"Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Countr" +
-                "y_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Name_2\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Ship_to_Name_2\" Type=\"Edm.String\" /><Property Name=\"Prepaid_Amoun" +
-                "t\" Type=\"Edm.Decimal\" /><Property Name=\"Service_Contracts\" Type=\"Edm.Boolean\" />" +
-                "<Property Name=\"Total_Qty_Consumed\" Type=\"Edm.Decimal\" /></EntityType><EntityTyp" +
-                "e Name=\"SupplierCategories\"><Key><PropertyRef Name=\"Category\" /><PropertyRef Nam" +
-                "e=\"Fiscal_Year\" /></Key><Property Name=\"Category\" Type=\"Edm.String\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"CategoryName\" Type=\"Edm.String\" /><Property Name=\"Fiscal_" +
-                "Year\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"TopCus" +
-                "tomerOverview\"><Key><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"Aux" +
-                "iliaryIndex2\" /><PropertyRef Name=\"No\" /></Key><Property Name=\"Name\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
-                "=\"Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Global_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Global_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Salesperson_Code\"" +
-                " Type=\"Edm.String\" /><Property Name=\"Sales_LCY\" Type=\"Edm.Decimal\" /><Property N" +
-                "ame=\"Profit_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"SalesPersonName\" Type=\"Edm" +
-                ".String\" /><Property Name=\"CountryRegionName\" Type=\"Edm.String\" /><Property Name" +
-                "=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Auxiliar" +
-                "yIndex2\" Type=\"Edm.String\" Nullable=\"false\" /></EntityType><EntityType Name=\"Tra" +
-                "nsportRequisition\"><Key><PropertyRef Name=\"Transport_Requisition_No\" /></Key><Pr" +
-                "operty Name=\"Transport_Requisition_No\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
-                "perty Name=\"Commencement\" Type=\"Edm.String\" /><Property Name=\"Destination\" Type=" +
-                "\"Edm.String\" /><Property Name=\"Vehicle_Allocated\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Driver_Allocated\" Type=\"Edm.String\" /><Property Name=\"Requested_By\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Date_of_Request\" Type=\"Edm.DateTime\" /><Property N" +
-                "ame=\"Vehicle_Allocated_by\" Type=\"Edm.String\" /><Property Name=\"Opening_Odometer_" +
-                "Reading\" Type=\"Edm.Decimal\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Date_of_Trip\" Type=\"Edm.DateTime\" /><Property Name=\"Purpose_of_Trip\" T" +
+            private const string ModelPart11 = "e=\"Activity_Type\" Type=\"Edm.String\" /><Property Name=\"Current_Budget\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Activity\" Type=\"Edm.String\" /></EntityType><EntityType " +
+                "Name=\"ProjectMembers\"><Key><PropertyRef Name=\"ImprestNo\" /><PropertyRef Name=\"Im" +
+                "prest_Memo_No\" /><PropertyRef Name=\"No\" /><PropertyRef Name=\"Work_Type\" /></Key>" +
+                "<Property Name=\"Type_of_Expense\" Type=\"Edm.String\" /><Property Name=\"Time_Period" +
+                "\" Type=\"Edm.Decimal\" /><Property Name=\"Imprest_Memo_No\" Type=\"Edm.String\" Nullab" +
+                "le=\"false\" /><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"Work_Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"Direct" +
+                "_Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Entitlement\" Type=\"Edm.De" +
+                "cimal\" /><Property Name=\"ImprestNo\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Requestor\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"PurchaseH" +
+                "eader\"><Key><PropertyRef Name=\"Document_Type\" /><PropertyRef Name=\"No\" /></Key><" +
+                "Property Name=\"Document_Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
+                "e=\"Buy_from_Vendor_No\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm.String\"" +
+                " Nullable=\"false\" /><Property Name=\"Pay_to_Vendor_No\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Pay_to_Name\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Name_2\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Pay_to_Address\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Pay_to_Address_2\" Type=\"Edm.String\" /><Property Name=\"Pay_to_City\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Pay_to_Contact\" Type=\"Edm.String\" /><Property Name=\"You" +
+                "r_Reference\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Code\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Ship_to_Name\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Nam" +
+                "e_2\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Address\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Ship_to_Address_2\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Cit" +
+                "y\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Contact\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Order_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Posting_Date\" Type" +
+                "=\"Edm.DateTime\" /><Property Name=\"Expected_Receipt_Date\" Type=\"Edm.DateTime\" /><" +
+                "Property Name=\"Posting_Description\" Type=\"Edm.String\" /><Property Name=\"Payment_" +
+                "Terms_Code\" Type=\"Edm.String\" /><Property Name=\"Due_Date\" Type=\"Edm.DateTime\" />" +
+                "<Property Name=\"Procurement_Type\" Type=\"Edm.String\" /><Property Name=\"Contract_N" +
+                "umber\" Type=\"Edm.String\" /><Property Name=\"Date_received\" Type=\"Edm.DateTime\" />" +
+                "<Property Name=\"Order_types\" Type=\"Edm.String\" /><Property Name=\"Reason_to_reope" +
+                "n\" Type=\"Edm.String\" /><Property Name=\"Reason_to_Cancel\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Order_Number\" Type=\"Edm.String\" /><Property Name=\"Committed\" Type=\"" +
+                "Edm.Boolean\" /><Property Name=\"CommittedBy\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Procurement_Plan\" Type=\"Edm.String\" /><Property Name=\"Procurement_Plan_Item\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Request_Ref_No\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Supplier_Type\" Type=\"Edm.String\" /><Property Name=\"Process_Type\" Type=\"Edm." +
+                "String\" /><Property Name=\"Purchase_Type\" Type=\"Edm.String\" /><Property Name=\"Req" +
+                "uisition_No\" Type=\"Edm.String\" /><Property Name=\"Ordered\" Type=\"Edm.Boolean\" /><" +
+                "Property Name=\"Test\" Type=\"Edm.String\" /><Property Name=\"Request_By_No\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Location_Code\" Type=\"Edm.String\" /><Property Name=\"D" +
+                "escription\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Division\" Type=\"Edm.String\" /><Property Name=\"Directorate_Code\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Department_Code\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Shortcut_Dimension_1_Code\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dim" +
+                "ension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Job\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Job_Task_No\" Type=\"Edm.String\" /><Property Name=\"Approved_Requisitio" +
+                "n_Amount\" Type=\"Edm.Decimal\" /></EntityType><EntityType Name=\"PurchaseLines\"><Ke" +
+                "y><PropertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"AuxiliaryIndex2\" /><P" +
+                "ropertyRef Name=\"AuxiliaryIndex3\" /><PropertyRef Name=\"AuxiliaryIndex4\" /><Prope" +
+                "rtyRef Name=\"Document_No\" /><PropertyRef Name=\"Document_Type\" /><PropertyRef Nam" +
+                "e=\"Line_No\" /></Key><Property Name=\"Document_Type\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Buy_from_Vendor_No\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Document_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=" +
+                "\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"No\" Type=\"Edm.String\" /><Property Name=\"Location_Code\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Expected_" +
+                "Receipt_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Description\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Description_2\" Type=\"Edm.String\" /><Property Name=\"Unit_of_" +
+                "Measure\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Outstanding_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_to_In" +
+                "voice\" Type=\"Edm.Decimal\" /><Property Name=\"Qty_to_Receive\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Direct_Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Cos" +
+                "t_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"VAT\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"Line_Discount\" Type=\"Edm.Decimal\" /><Property Name=\"Line_Discount_Amount\" " +
+                "Type=\"Edm.Decimal\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name" +
+                "=\"Amount_Including_VAT\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_Price_LCY\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Qty_Requested\" Type=\"Edm.Decimal\" /><Property " +
+                "Name=\"Item_Category\" Type=\"Edm.String\" /><Property Name=\"Item_Category_Code\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Procurement_Plan\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Procurement_Plan_Item\" Type=\"Edm.String\" /><Property Name=\"Line_Amount\" T" +
+                "ype=\"Edm.Decimal\" /><Property Name=\"BudgetDescription\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"ProcurementPlanDescription\" Type=\"Edm.String\" /><Property Name=\"Auxil" +
+                "iaryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex2" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex3\" Type=\"Ed" +
+                "m.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex4\" Type=\"Edm.String\" " +
+                "Nullable=\"false\" /></EntityType><EntityType Name=\"ReceiptAndPaymentTypes\"><Key><" +
+                "PropertyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable" +
+                "=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Appe" +
+                "ar_on_Imprest\" Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"receipts\"><Ke" +
+                "y><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" /><Property Name=\"Date\" Type=\"Edm.DateTime\" /><Property Name=\"Pay_Mode\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Cheque_No\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Cheque_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Amount_LCY\" Type=\"Edm.Deci" +
+                "mal\" /><Property Name=\"Bank_Code\" Type=\"Edm.String\" /><Property Name=\"Received_F" +
+                "rom\" Type=\"Edm.String\" /><Property Name=\"On_Behalf_Of\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Cashier\" Type=\"Edm.String\" /><Property Name=\"Posted\" Type=\"Edm.Boolea" +
+                "n\" /><Property Name=\"Posted_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Posted_T" +
+                "ime\" Type=\"Edm.String\" /><Property Name=\"Posted_By\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"No_Series\" Type=\"Edm.String\" /><Property Name=\"Currency_Code\" Type=\"Edm." +
+                "String\" /><Property Name=\"Global_Dimension_1_Code\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Global_Dimension_2_Code\" Type=\"Edm.String\" /><Property Name=\"Status\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Depot_Name\" Type=\"Edm.Strin";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart12 = "g\" /><Property Name=\"Department_Name\" Type=\"Edm.String\" /><Property Name=\"Being_P" +
+                "ayment_of\" Type=\"Edm.String\" /><Property Name=\"Payment_Reference\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"ID\" Type=\"Edm.String\" /><Property Name=\"Tel_No\" Type=\"Edm." +
+                "String\" /><Property Name=\"Document_Type\" Type=\"Edm.String\" /><Property Name=\"Dim" +
+                "ension_Set_ID\" Type=\"Edm.Int32\" /><Property Name=\"Posting_Date\" Type=\"Edm.DateTi" +
+                "me\" /><Property Name=\"Reason_for_Reversing\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Reversed\" Type=\"Edm.Boolean\" /><Property Name=\"Reversed_By\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Date_Reversed\" Type=\"Edm.DateTime\" /><Property Name=\"Time_Revers" +
+                "ed\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_1_Code\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Shortcut_Dimension_2_Code\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Fully_Allocated\" Type=\"Edm.Bo" +
+                "olean\" /><Property Name=\"Allocated_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"" +
+                "Fully_Allocated_Imprest\" Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"Res" +
+                "ources\"><Key><PropertyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"N" +
+                "ame\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"SalesDashboard\"><Key><Pr" +
+                "opertyRef Name=\"AuxiliaryIndex1\" /><PropertyRef Name=\"AuxiliaryIndex2\" /><Proper" +
+                "tyRef Name=\"AuxiliaryIndex3\" /><PropertyRef Name=\"AuxiliaryIndex4\" /><PropertyRe" +
+                "f Name=\"Entry_No\" /></Key><Property Name=\"Entry_No\" Type=\"Edm.Int32\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Document_No\" Type=\"Edm.String\" /><Property Name=\"Posting" +
+                "_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Entry_Type\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Dimension_Set_ID\" Ty" +
+                "pe=\"Edm.Int32\" /><Property Name=\"Sales_Amount_Actual\" Type=\"Edm.Decimal\" /><Prop" +
+                "erty Name=\"Sales_Amount_Expected\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_Amou" +
+                "nt_Actual\" Type=\"Edm.Decimal\" /><Property Name=\"Cost_Amount_Expected\" Type=\"Edm." +
+                "Decimal\" /><Property Name=\"CountryRegionName\" Type=\"Edm.String\" /><Property Name" +
+                "=\"CustomerName\" Type=\"Edm.String\" /><Property Name=\"Customer_Posting_Group\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Customer_Disc_Group\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Description\" Type=\"Edm.String" +
+                "\" /><Property Name=\"SalesPersonName\" Type=\"Edm.String\" /><Property Name=\"Auxilia" +
+                "ryIndex1\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex2\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex3\" Type=\"Edm." +
+                "String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex4\" Type=\"Edm.String\" Nu" +
+                "llable=\"false\" /></EntityType><EntityType Name=\"SalesOpportunities\"><Key><Proper" +
+                "tyRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /" +
+                "><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Creation_Date\"" +
+                " Type=\"Edm.DateTime\" /><Property Name=\"Closed\" Type=\"Edm.Boolean\" /><Property Na" +
+                "me=\"Sales_Cycle_Code\" Type=\"Edm.String\" /><Property Name=\"Date_Closed\" Type=\"Edm" +
+                ".DateTime\" /><Property Name=\"Priority\" Type=\"Edm.String\" /><Property Name=\"Statu" +
+                "s\" Type=\"Edm.String\" /><Property Name=\"Calcd_Current_Value_LCY\" Type=\"Edm.Decima" +
+                "l\" /><Property Name=\"Chances_of_Success\" Type=\"Edm.Decimal\" /><Property Name=\"Co" +
+                "mpleted\" Type=\"Edm.Decimal\" /><Property Name=\"Contact_Name\" Type=\"Edm.String\" />" +
+                "<Property Name=\"Estimated_Closing_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Sa" +
+                "lesperson_Name\" Type=\"Edm.String\" /><Property Name=\"Estimated_Value_LCY\" Type=\"E" +
+                "dm.Decimal\" /><Property Name=\"Contact_Company_Name\" Type=\"Edm.String\" /></Entity" +
+                "Type><EntityType Name=\"SalesOrdersBySalesPerson\"><Key><PropertyRef Name=\"Auxilia" +
+                "ryIndex1\" /><PropertyRef Name=\"AuxiliaryIndex2\" /><PropertyRef Name=\"AuxiliaryIn" +
+                "dex3\" /><PropertyRef Name=\"AuxiliaryIndex4\" /><PropertyRef Name=\"Document_No\" />" +
+                "<PropertyRef Name=\"Line_No\" /><PropertyRef Name=\"SalesPersonCode\" /></Key><Prope" +
+                "rty Name=\"ItemNo\" Type=\"Edm.String\" /><Property Name=\"ItemDescription\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Document_No\" Type=\"Edm.String\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Line_No\" Type=\"Edm.Int" +
+                "32\" Nullable=\"false\" /><Property Name=\"Dimension_Set_ID\" Type=\"Edm.Int32\" /><Pro" +
+                "perty Name=\"Posting_Date\" Type=\"Edm.DateTime\" /><Property Name=\"CurrenyDescripti" +
+                "on\" Type=\"Edm.String\" /><Property Name=\"Currency_Code\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"SalesPersonCode\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
+                "\"SalesPersonName\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm" +
+                ".String\" Nullable=\"false\" /><Property Name=\"AuxiliaryIndex2\" Type=\"Edm.String\" N" +
+                "ullable=\"false\" /><Property Name=\"AuxiliaryIndex3\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"AuxiliaryIndex4\" Type=\"Edm.String\" Nullable=\"false\" /></" +
+                "EntityType><EntityType Name=\"serviceitems\"><Key><PropertyRef Name=\"No\" /></Key><" +
+                "Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Serial_N" +
+                "o\" Type=\"Edm.String\" /><Property Name=\"Service_Item_Group_Code\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Description" +
+                "_2\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"Priority\" Type=\"Edm.String\" /><Property Name=\"Customer_No\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Ship_to_Code\" Type=\"Edm.String\" /><Property Name=\"Item_No\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Unit_of_Measure_Code\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Location_of_Service_Item\" Type=\"Edm.String\" /><Property Name=\"Sales_" +
+                "Unit_Price\" Type=\"Edm.Decimal\" /><Property Name=\"Sales_Unit_Cost\" Type=\"Edm.Deci" +
+                "mal\" /><Property Name=\"Warranty_Starting_Date_Labor\" Type=\"Edm.DateTime\" /><Prop" +
+                "erty Name=\"Warranty_Ending_Date_Labor\" Type=\"Edm.DateTime\" /><Property Name=\"War" +
+                "ranty_Starting_Date_Parts\" Type=\"Edm.DateTime\" /><Property Name=\"Warranty_Ending" +
+                "_Date_Parts\" Type=\"Edm.DateTime\" /><Property Name=\"Warranty_Parts\" Type=\"Edm.Dec" +
+                "imal\" /><Property Name=\"Warranty_Labor\" Type=\"Edm.Decimal\" /><Property Name=\"Res" +
+                "ponse_Time_Hours\" Type=\"Edm.Decimal\" /><Property Name=\"Installation_Date\" Type=\"" +
+                "Edm.DateTime\" /><Property Name=\"Sales_Date\" Type=\"Edm.DateTime\" /><Property Name" +
+                "=\"Last_Service_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Default_Contract_Valu" +
+                "e\" Type=\"Edm.Decimal\" /><Property Name=\"Default_Contract_Discount\" Type=\"Edm.Dec" +
+                "imal\" /><Property Name=\"Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Vendor_It" +
+                "em_No\" Type=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Vendor_Item_Name\" Type=\"Edm.String\" /><Property Name=\"Preferred_Resour" +
+                "ce\" Type=\"Edm.String\" /><Property Name=\"Variant_Code\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Service_Price_Group_Code\" Type=\"Edm.String\" /><Property Name=\"Default_" +
+                "Contract_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Search_Description\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Sales_Serv_Shpt_Document_No\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Sales_Serv_Shpt_Line_No\" Type=\"Edm.Int32\" /><Property Name=\"Shipmen" +
+                "t_Type\" Type=\"Edm.String\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Customer_Category\" Type=\"Edm.String\" /><Property Name=\"Customer_Type\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Company_Reg_No\" Type=\"Edm.String\" /><Property Na" +
+                "me=\"ID_No\" Type=\"Edm.String\" /><Property Name=\"P_I_N\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Title\" Type=\"Edm.String\" /><Property Name=\"Captured_by\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Created\" Type=\"Edm.Boolean\" /><Property Name=\"Registration" +
+                "_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Created_By\" Ty";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart13 = "pe=\"Edm.String\" /><Property Name=\"Copyright_Title\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Copyright_Work_Category\" Type=\"Edm.String\" /><Property Name=\"Copyright_Wor" +
+                "k_SubCategory\" Type=\"Edm.String\" /><Property Name=\"Copyright_Category_Descriptio" +
+                "n\" Type=\"Edm.String\" /><Property Name=\"Copyright_SubCategory_Desc\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Date_of_Fixation_Reduction\" Type=\"Edm.DateTime\" /><Proper" +
+                "ty Name=\"Language\" Type=\"Edm.String\" /><Property Name=\"Agent_First_Name\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Agent_Surname\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Agent_Middle_Name\" Type=\"Edm.String\" /><Property Name=\"Agent_Address\" Type=\"Edm." +
+                "String\" /><Property Name=\"Agent_Address_2\" Type=\"Edm.String\" /><Property Name=\"A" +
+                "gent_City\" Type=\"Edm.String\" /><Property Name=\"Agent_Contact\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Agent_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Agent_ID_N" +
+                "o\" Type=\"Edm.String\" /><Property Name=\"Agent_P_I_N\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Author_First_Name\" Type=\"Edm.String\" /><Property Name=\"Author_Agent_Surn" +
+                "ame\" Type=\"Edm.String\" /><Property Name=\"Author_Middle_Name\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Author_Address\" Type=\"Edm.String\" /><Property Name=\"Author_Addr" +
+                "ess_2\" Type=\"Edm.String\" /><Property Name=\"Author_City\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Author_Contact\" Type=\"Edm.String\" /><Property Name=\"Author_Phone_No\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Author_ID_No\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Author_P_I_N\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_Name\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Prod_Pub_ID_No_Company_Reg_No\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Prod_Pub_P_I_N\" Type=\"Edm.String\" /><Property Name=\"Assignment_Li" +
+                "cense_Date\" Type=\"Edm.DateTime\" /><Property Name=\"V1st_Country_of_Production\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"ISBN\" Type=\"Edm.String\" /><Property Name=\"Prod" +
+                "uction_Category\" Type=\"Edm.String\" /><Property Name=\"Prod_Pub_Phone_No\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Prod_Pub_Email\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Applicant_Account\" Type=\"Edm.String\" /><Property Name=\"Receipt_No\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Receipt_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Paye" +
+                "mnt_Reference_No\" Type=\"Edm.String\" /><Property Name=\"No_of_Active_Contracts\" Ty" +
+                "pe=\"Edm.Int32\" /><Property Name=\"Item_Description\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Address_2\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Contact\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Ship_to_Name\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Address\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Ship_to_Address_2\" Type=\"Edm.String\" /><Property Name=\"S" +
+                "hip_to_Post_Code\" Type=\"Edm.String\" /><Property Name=\"Ship_to_City\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Ship_to_Contact\" Type=\"Edm.String\" /><Property Name=\"Shi" +
+                "p_to_Phone_No\" Type=\"Edm.String\" /><Property Name=\"Usage_Cost\" Type=\"Edm.Decimal" +
+                "\" /><Property Name=\"Usage_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Invoiced_" +
+                "Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Quantity\" Type=\"Edm.Decimal\" " +
+                "/><Property Name=\"Total_Qty_Invoiced\" Type=\"Edm.Decimal\" /><Property Name=\"Resou" +
+                "rces_Used\" Type=\"Edm.Decimal\" /><Property Name=\"Parts_Used\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Cost_Used\" Type=\"Edm.Decimal\" /><Property Name=\"Vendor_Name\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Property Name=\"" +
+                "Service_Item_Components\" Type=\"Edm.Boolean\" /><Property Name=\"County\" Type=\"Edm." +
+                "String\" /><Property Name=\"Ship_to_County\" Type=\"Edm.String\" /><Property Name=\"Co" +
+                "ntract_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Country_Region_Code\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Ship_to_Country_Region_Code\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Name_2\" Type=\"Edm.String\" /><Property Name=\"Ship_to_Name_2\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Prepaid_Amount\" Type=\"Edm.Decimal\" /><Property Name=" +
+                "\"Service_Contracts\" Type=\"Edm.Boolean\" /><Property Name=\"Total_Qty_Consumed\" Typ" +
+                "e=\"Edm.Decimal\" /></EntityType><EntityType Name=\"SupplierCategories\"><Key><Prope" +
+                "rtyRef Name=\"Category\" /><PropertyRef Name=\"Fiscal_Year\" /></Key><Property Name=" +
+                "\"Category\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"CategoryName\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Fiscal_Year\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /></EntityType><EntityType Name=\"TopCustomerOverview\"><Key><PropertyRef Name=\"" +
+                "AuxiliaryIndex1\" /><PropertyRef Name=\"AuxiliaryIndex2\" /><PropertyRef Name=\"No\" " +
+                "/></Key><Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm." +
+                "String\" Nullable=\"false\" /><Property Name=\"Country_Region_Code\" Type=\"Edm.String" +
+                "\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_1" +
+                "_Code\" Type=\"Edm.String\" /><Property Name=\"Global_Dimension_2_Code\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Salesperson_Code\" Type=\"Edm.String\" /><Property Name=\"Sa" +
+                "les_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Profit_LCY\" Type=\"Edm.Decimal\" /><" +
+                "Property Name=\"SalesPersonName\" Type=\"Edm.String\" /><Property Name=\"CountryRegio" +
+                "nName\" Type=\"Edm.String\" /><Property Name=\"AuxiliaryIndex1\" Type=\"Edm.String\" Nu" +
+                "llable=\"false\" /><Property Name=\"AuxiliaryIndex2\" Type=\"Edm.String\" Nullable=\"fa" +
+                "lse\" /></EntityType><EntityType Name=\"TransportRequisition\"><Key><PropertyRef Na" +
+                "me=\"Transport_Requisition_No\" /></Key><Property Name=\"Transport_Requisition_No\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Commencement\" Type=\"Edm.Str" +
+                "ing\" /><Property Name=\"Destination\" Type=\"Edm.String\" /><Property Name=\"Vehicle_" +
+                "Allocated\" Type=\"Edm.String\" /><Property Name=\"Driver_Allocated\" Type=\"Edm.Strin" +
+                "g\" /><Property Name=\"Requested_By\" Type=\"Edm.String\" /><Property Name=\"Date_of_R" +
+                "equest\" Type=\"Edm.DateTime\" /><Property Name=\"Vehicle_Allocated_by\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Opening_Odometer_Reading\" Type=\"Edm.Decimal\" /><Property" +
+                " Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Date_of_Trip\" Type=\"Edm.DateT" +
+                "ime\" /><Property Name=\"Purpose_of_Trip\" Type=\"Edm.String\" /><Property Name=\"No_S" +
+                "eries\" Type=\"Edm.String\" /><Property Name=\"Comments\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Department\" Type=\"Edm.String\" /><Property Name=\"Driver_Name\" Type=\"Edm." +
+                "String\" /><Property Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Loaded_to_WorkTicket\" Type=\"Edm.Boolean\" /><Property Name=\"Time_out\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Time_In\" Type=\"Edm.String\" /><Property Name=\"Journ" +
+                "ey_Route\" Type=\"Edm.String\" /><Property Name=\"Time_Requested\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Closing_Odometer_Reading\" Type=\"Edm.Decimal\" /><Property Name=" +
+                "\"Work_Ticket_No\" Type=\"Edm.String\" /><Property Name=\"No_of_Days_Requested\" Type=" +
+                "\"Edm.Int32\" /><Property Name=\"Authorized_By\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Position\" Type=\"Edm.String\" /><Property Name=\"User_Id\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Added_On\" Type=\"Edm.DateTime\" /><Property Name=\"Employee_No\" Type=\"E" +
+                "dm.String\" /></EntityType><EntityType Name=\"TravelRequisitionStaff\"><Key><Proper" +
+                "tyRef Name=\"EntryNo\" /><PropertyRef Name=\"Req_No\" /></Key><Property Name=\"Req_No" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Employee_No\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Employee_Name\" Type=\"Edm.String\" /><Property Name=\"Posit" +
+                "ion\" Type=\"Edm.String\" /><Property Name=\"Daily_Work_Ticket\" Type=\"Edm.String\" />" +
+                "<Property Name=\"EntryNo\" Type=\"Edm.Int32\" Nullable=\"false\" /></EntityType><Entit" +
+                "yType Name=\"VacantPositions\"><Key><PropertyRef Name=\"Job_ID";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart14 = "\" /></Key><Property Name=\"Job_ID\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"Job_Description\" Type=\"Edm.String\" /><Property Name=\"No_of_Posts\" Type=\"Ed" +
+                "m.Int32\" /><Property Name=\"Position_Reporting_to\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Vacant_Positions\" Type=\"Edm.Int32\" /><Property Name=\"Score_code\" Type=\"Edm" +
+                ".String\" /><Property Name=\"Dimension_1\" Type=\"Edm.String\" /><Property Name=\"Dime" +
+                "nsion_2\" Type=\"Edm.String\" /><Property Name=\"Dimension_3\" Type=\"Edm.String\" /><P" +
+                "roperty Name=\"Dimension_4\" Type=\"Edm.String\" /><Property Name=\"Dimension_5\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Dimension_6\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Dimension_7\" Type=\"Edm.String\" /><Property Name=\"Dimension_8\" Type=\"Edm.String\"" +
+                " /><Property Name=\"No_of_Position\" Type=\"Edm.Int32\" /><Property Name=\"Objective\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Key_Position\" Type=\"Edm.Boolean\" /><Propert" +
+                "y Name=\"Category\" Type=\"Edm.String\" /><Property Name=\"Grade\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Primary_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"V2" +
+                "nd_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"V3nd_Skills_Category\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Management\" Type=\"Edm.Boolean\" /><Property Nam" +
+                "e=\"UserID\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Property Name=\"Date_Creat" +
+                "ed\" Type=\"Edm.DateTime\" /><Property Name=\"Supervisor_Manager\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Supervisor_Name\" Type=\"Edm.String\" /><Property Name=\"Is_Superv" +
+                "isor\" Type=\"Edm.Boolean\" /><Property Name=\"G_L_Account\" Type=\"Edm.String\" /><Pro" +
+                "perty Name=\"Branch_Name\" Type=\"Edm.String\" /><Property Name=\"Department\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Dept_Name\" Type=\"Edm.String\" /><Property Name=\"Acti" +
+                "vity_Code\" Type=\"Edm.String\" /><Property Name=\"Occupied_Positions\" Type=\"Edm.Int" +
+                "32\" /><Property Name=\"Total_Score\" Type=\"Edm.Decimal\" /><Property Name=\"Employee" +
+                "_Requisitions\" Type=\"Edm.Int32\" /></EntityType><EntityType Name=\"Vendors\"><Key><" +
+                "PropertyRef Name=\"customer_No\" /><PropertyRef Name=\"No\" /></Key><Property Name=\"" +
+                "No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\"" +
+                " /><Property Name=\"Search_Name\" Type=\"Edm.String\" /><Property Name=\"Name_2\" Type" +
+                "=\"Edm.String\" /><Property Name=\"Address\" Type=\"Edm.String\" /><Property Name=\"Add" +
+                "ress_2\" Type=\"Edm.String\" /><Property Name=\"City\" Type=\"Edm.String\" /><Property " +
+                "Name=\"Contact\" Type=\"Edm.String\" /><Property Name=\"Phone_No\" Type=\"Edm.String\" /" +
+                "><Property Name=\"Telex_No\" Type=\"Edm.String\" /><Property Name=\"Our_Account_No\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Territory_Code\" Type=\"Edm.String\" /><Property" +
+                " Name=\"Country_Region_Code\" Type=\"Edm.String\" /><Property Name=\"Blocked\" Type=\"E" +
+                "dm.String\" /><Property Name=\"Pay_to_Vendor_No\" Type=\"Edm.String\" /><Property Nam" +
+                "e=\"Priority\" Type=\"Edm.Int32\" /><Property Name=\"Payment_Method_Code\" Type=\"Edm.S" +
+                "tring\" /><Property Name=\"Last_Date_Modified\" Type=\"Edm.DateTime\" /><Property Nam" +
+                "e=\"Application_Method\" Type=\"Edm.String\" /><Property Name=\"Prices_Including_VAT\"" +
+                " Type=\"Edm.Boolean\" /><Property Name=\"Fax_No\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Telex_Answer_Back\" Type=\"Edm.String\" /><Property Name=\"VAT_Registration_No\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Gen_Bus_Posting_Group\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"Post_Code\" Type=\"Edm.String\" /><Property Name=\"County\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"E_Mail\" Type=\"Edm.String\" /><Property Name=\"Home_Page\" T" +
                 "ype=\"Edm.String\" /><Property Name=\"No_Series\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Comments\" Type=\"Edm.String\" /><Property Name=\"Department\" Type=\"Edm.String\" />" +
-                "<Property Name=\"Driver_Name\" Type=\"Edm.String\" /><Property Name=\"Responsibility_" +
-                "Center\" Type=\"Edm.String\" /><Property Name=\"Loaded_to_WorkTicket\" Type=\"Edm.Bool" +
-                "ean\" /><Property Name=\"Time_out\" Type=\"Edm.String\" /><Property Name=\"Time_In\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Journey_Route\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Time_Requested\" Type=\"Edm.String\" /><Property Name=\"Closing_Odometer_Readin" +
-                "g\" Type=\"Edm.Decimal\" /><Property Name=\"Work_Ticket_No\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"No_of_Days_Requested\" Type=\"Edm.Int32\" /><Property Name=\"Authorized_" +
-                "By\" Type=\"Edm.String\" /><Property Name=\"Position\" Type=\"Edm.String\" /><Property " +
-                "Name=\"User_Id\" Type=\"Edm.String\" /><Property Name=\"Added_On\" Type=\"Edm.DateTime\"" +
-                " /><Property Name=\"Employee_No\" Type=\"Edm.String\" /></EntityType><EntityType Nam" +
-                "e=\"TravelRequisitionStaff\"><Key><PropertyRef Name=\"EntryNo\" /><PropertyRef Name=" +
-                "\"Req_No\" /></Key><Property Name=\"Req_No\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
-                "roperty Name=\"Employee_No\" Type=\"Edm.String\" /><Property Name=\"Employee_Name\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Position\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Daily_Work_Ticket\" Type=\"Edm.String\" /><Property Name=\"EntryNo\" Type=\"Edm.Int32\"" +
-                " Nullable=\"false\" /></EntityType><EntityType Name=\"VacantPositions\"><Key><Proper" +
-                "tyRef Name=\"Job_ID\" /></Key><Property Name=\"Job_ID\" Type=\"Edm.String\" Nullable=\"" +
-                "false\" /><Property Name=\"Job_Description\" Type=\"Edm.String\" /><Property Name=\"No" +
-                "_of_Posts\" Type=\"Edm.Int32\" /><Property Name=\"Position_Reporting_to\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Vacant_Positions\" Type=\"Edm.Int32\" /><Property Name=\"Sc" +
-                "ore_code\" Type=\"Edm.String\" /><Property Name=\"Dimension_1\" Type=\"Edm.String\" /><" +
-                "Property Name=\"Dimension_2\" Type=\"Edm.String\" /><Property Name=\"Dimension_3\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Dimension_4\" Type=\"Edm.String\" /><Property Name" +
-                "=\"Dimension_5\" Type=\"Edm.String\" /><Property Name=\"Dimension_6\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Dimension_7\" Type=\"Edm.String\" /><Property Name=\"Dimension_8" +
-                "\" Type=\"Edm.String\" /><Property Name=\"No_of_Position\" Type=\"Edm.Int32\" /><Proper" +
-                "ty Name=\"Objective\" Type=\"Edm.String\" /><Property Name=\"Key_Position\" Type=\"Edm." +
-                "Boolean\" /><Property Name=\"Category\" Type=\"Edm.String\" /><Property Name=\"Grade\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Primary_Skills_Category\" Type=\"Edm.String\" /" +
-                "><Property Name=\"V2nd_Skills_Category\" Type=\"Edm.String\" />";
+                "=\"Tax_Area_Code\" Type=\"Edm.String\" /><Property Name=\"Tax_Liable\" Type=\"Edm.Boole" +
+                "an\" /><Property Name=\"VAT_Bus_Posting_Group\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Block_Payment_Tolerance\" Type=\"Edm.Boolean\" /><Property Name=\"IC_Partner_Code\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Prepayment\" Type=\"Edm.Decimal\" /><Property N" +
+                "ame=\"Partner_Type\" Type=\"Edm.String\" /><Property Name=\"Creditor_No\" Type=\"Edm.St" +
+                "ring\" /><Property Name=\"Preferred_Bank_Account_Code\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Cash_Flow_Payment_Terms_Code\" Type=\"Edm.String\" /><Property Name=\"Prima" +
+                "ry_Contact_No\" Type=\"Edm.String\" /><Property Name=\"Responsibility_Center\" Type=\"" +
+                "Edm.String\" /><Property Name=\"Location_Code\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Lead_Time_Calculation\" Type=\"Edm.String\" /><Property Name=\"Base_Calendar_Code\" " +
+                "Type=\"Edm.String\" /><Property Name=\"Document_Sending_Profile\" Type=\"Edm.String\" " +
+                "/><Property Name=\"Vendor_Type\" Type=\"Edm.String\" /><Property Name=\"PIN_Number\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Payroll_Pay_Mode\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Pays_tax\" Type=\"Edm.Boolean\" /><Property Name=\"Shortcut_Dimension_3_Cod" +
+                "e\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_4_Code\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"Shortcut_Dimension_5_Code\" Type=\"Edm.String\" /><Property N" +
+                "ame=\"Vendorname\" Type=\"Edm.String\" /><Property Name=\"Vendor_Credit_Limit_LCY\" Ty" +
+                "pe=\"Edm.Decimal\" /><Property Name=\"Requisition_Default_Vendor\" Type=\"Edm.Boolean" +
+                "\" /><Property Name=\"Vendor_Retention_Account\" Type=\"Edm.String\" /><Property Name" +
+                "=\"Retention\" Type=\"Edm.Boolean\" /><Property Name=\"Tel\" Type=\"Edm.String\" /><Prop" +
+                "erty Name=\"Email\" Type=\"Edm.String\" /><Property Name=\"Bank_Account_Number\" Type=" +
+                "\"Edm.String\" /><Property Name=\"Bank_Branch\" Type=\"Edm.String\" /><Property Name=\"" +
+                "Vendor_s_Bank\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><" +
+                "Property Name=\"Appointment_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Terminati" +
+                "on_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Comment\" Type=\"Edm.Boolean\" /><Pr" +
+                "operty Name=\"Balance\" Type=\"Edm.Decimal\" /><Property Name=\"Balance_LCY\" Type=\"Ed" +
+                "m.Decimal\" /><Property Name=\"Net_Change\" Type=\"Edm.Decimal\" /><Property Name=\"Ne" +
+                "t_Change_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Purchases_LCY\" Type=\"Edm.Deci" +
+                "mal\" /><Property Name=\"Inv_Discounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"P" +
+                "mt_Discounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Balance_Due\" Type=\"Edm.De" +
+                "cimal\" /><Property Name=\"Balance_Due_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"P" +
+                "ayments\" Type=\"Edm.Decimal\" /><Property Name=\"Invoice_Amounts\" Type=\"Edm.Decimal" +
+                "\" /><Property Name=\"Cr_Memo_Amounts\" Type=\"Edm.Decimal\" /><Property Name=\"Paymen" +
+                "ts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Inv_Amounts_LCY\" Type=\"Edm.Decimal\"" +
+                " /><Property Name=\"Cr_Memo_Amounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Fin" +
+                "_Charge_Memo_Amounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Outstanding_Order" +
+                "s\" Type=\"Edm.Decimal\" /><Property Name=\"Amt_Rcd_Not_Invoiced\" Type=\"Edm.Decimal\"" +
+                " /><Property Name=\"Debit_Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Credit_Amo" +
+                "unt\" Type=\"Edm.Decimal\" /><Property Name=\"Debit_Amount_LCY\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Credit_Amount_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Reminde" +
+                "r_Amounts\" Type=\"Edm.Decimal\" /><Property Name=\"Reminder_Amounts_LCY\" Type=\"Edm." +
+                "Decimal\" /><Property Name=\"Outstanding_Orders_LCY\" Type=\"Edm.Decimal\" /><Propert" +
+                "y Name=\"Amt_Rcd_Not_Invoiced_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Pmt_Disc_" +
+                "Tolerance_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Pmt_Tolerance_LCY\" Type=\"Edm" +
+                ".Decimal\" /><Property Name=\"Refunds\" Type=\"Edm.Decimal\" /><Property Name=\"Refund" +
+                "s_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Other_Amounts\" Type=\"Edm.Decimal\" />" +
+                "<Property Name=\"Other_Amounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Outstand" +
+                "ing_Invoices\" Type=\"Edm.Decimal\" /><Property Name=\"Outstanding_Invoices_LCY\" Typ" +
+                "e=\"Edm.Decimal\" /><Property Name=\"Pay_to_No_Of_Archived_Doc\" Type=\"Edm.Int32\" />" +
+                "<Property Name=\"Buy_from_No_Of_Archived_Doc\" Type=\"Edm.Int3";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart14 = "<Property Name=\"V3nd_Skills_Category\" Type=\"Edm.String\" /><Property Name=\"Managem" +
-                "ent\" Type=\"Edm.Boolean\" /><Property Name=\"UserID\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Responsibility_Center\" Type=\"E" +
-                "dm.String\" /><Property Name=\"Date_Created\" Type=\"Edm.DateTime\" /><Property Name=" +
-                "\"Supervisor_Manager\" Type=\"Edm.String\" /><Property Name=\"Supervisor_Name\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Is_Supervisor\" Type=\"Edm.Boolean\" /><Property Name" +
-                "=\"G_L_Account\" Type=\"Edm.String\" /><Property Name=\"Branch_Name\" Type=\"Edm.String" +
-                "\" /><Property Name=\"Department\" Type=\"Edm.String\" /><Property Name=\"Dept_Name\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"Activity_Code\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Occupied_Positions\" Type=\"Edm.Int32\" /><Property Name=\"Total_Score\" Type=\"" +
-                "Edm.Decimal\" /><Property Name=\"Employee_Requisitions\" Type=\"Edm.Int32\" /></Entit" +
-                "yType><EntityType Name=\"Vendors\"><Key><PropertyRef Name=\"customer_No\" /><Propert" +
-                "yRef Name=\"No\" /></Key><Property Name=\"No\" Type=\"Edm.String\" Nullable=\"false\" />" +
-                "<Property Name=\"Name\" Type=\"Edm.String\" /><Property Name=\"Search_Name\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Name_2\" Type=\"Edm.String\" /><Property Name=\"Address\" " +
-                "Type=\"Edm.String\" /><Property Name=\"Address_2\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"City\" Type=\"Edm.String\" /><Property Name=\"Contact\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Phone_No\" Type=\"Edm.String\" /><Property Name=\"Telex_No\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"Our_Account_No\" Type=\"Edm.String\" /><Property Name=\"Territ" +
-                "ory_Code\" Type=\"Edm.String\" /><Property Name=\"Country_Region_Code\" Type=\"Edm.Str" +
-                "ing\" /><Property Name=\"Blocked\" Type=\"Edm.String\" /><Property Name=\"Pay_to_Vendo" +
-                "r_No\" Type=\"Edm.String\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" /><Property" +
-                " Name=\"Payment_Method_Code\" Type=\"Edm.String\" /><Property Name=\"Last_Date_Modifi" +
-                "ed\" Type=\"Edm.DateTime\" /><Property Name=\"Application_Method\" Type=\"Edm.String\" " +
-                "/><Property Name=\"Prices_Including_VAT\" Type=\"Edm.Boolean\" /><Property Name=\"Fax" +
-                "_No\" Type=\"Edm.String\" /><Property Name=\"Telex_Answer_Back\" Type=\"Edm.String\" />" +
-                "<Property Name=\"VAT_Registration_No\" Type=\"Edm.String\" /><Property Name=\"Gen_Bus" +
-                "_Posting_Group\" Type=\"Edm.String\" /><Property Name=\"Post_Code\" Type=\"Edm.String\"" +
-                " /><Property Name=\"County\" Type=\"Edm.String\" /><Property Name=\"E_Mail\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Home_Page\" Type=\"Edm.String\" /><Property Name=\"No_Ser" +
-                "ies\" Type=\"Edm.String\" /><Property Name=\"Tax_Area_Code\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Tax_Liable\" Type=\"Edm.Boolean\" /><Property Name=\"VAT_Bus_Posting_Gro" +
-                "up\" Type=\"Edm.String\" /><Property Name=\"Block_Payment_Tolerance\" Type=\"Edm.Boole" +
-                "an\" /><Property Name=\"IC_Partner_Code\" Type=\"Edm.String\" /><Property Name=\"Prepa" +
-                "yment\" Type=\"Edm.Decimal\" /><Property Name=\"Partner_Type\" Type=\"Edm.String\" /><P" +
-                "roperty Name=\"Creditor_No\" Type=\"Edm.String\" /><Property Name=\"Preferred_Bank_Ac" +
-                "count_Code\" Type=\"Edm.String\" /><Property Name=\"Cash_Flow_Payment_Terms_Code\" Ty" +
-                "pe=\"Edm.String\" /><Property Name=\"Primary_Contact_No\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Responsibility_Center\" Type=\"Edm.String\" /><Property Name=\"Location_Co" +
-                "de\" Type=\"Edm.String\" /><Property Name=\"Lead_Time_Calculation\" Type=\"Edm.String\"" +
-                " /><Property Name=\"Base_Calendar_Code\" Type=\"Edm.String\" /><Property Name=\"Docum" +
-                "ent_Sending_Profile\" Type=\"Edm.String\" /><Property Name=\"Vendor_Type\" Type=\"Edm." +
-                "String\" /><Property Name=\"PIN_Number\" Type=\"Edm.String\" /><Property Name=\"Payrol" +
-                "l_Pay_Mode\" Type=\"Edm.String\" /><Property Name=\"Pays_tax\" Type=\"Edm.Boolean\" /><" +
-                "Property Name=\"Shortcut_Dimension_3_Code\" Type=\"Edm.String\" /><Property Name=\"Sh" +
-                "ortcut_Dimension_4_Code\" Type=\"Edm.String\" /><Property Name=\"Shortcut_Dimension_" +
-                "5_Code\" Type=\"Edm.String\" /><Property Name=\"Vendorname\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Vendor_Credit_Limit_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Requis" +
-                "ition_Default_Vendor\" Type=\"Edm.Boolean\" /><Property Name=\"Vendor_Retention_Acco" +
-                "unt\" Type=\"Edm.String\" /><Property Name=\"Retention\" Type=\"Edm.Boolean\" /><Proper" +
-                "ty Name=\"Tel\" Type=\"Edm.String\" /><Property Name=\"Email\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"Bank_Account_Number\" Type=\"Edm.String\" /><Property Name=\"Bank_Branc" +
-                "h\" Type=\"Edm.String\" /><Property Name=\"Vendor_s_Bank\" Type=\"Edm.String\" /><Prope" +
-                "rty Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Appointment_Date\" Type=\"Ed" +
-                "m.DateTime\" /><Property Name=\"Termination_Date\" Type=\"Edm.DateTime\" /><Property " +
-                "Name=\"Comment\" Type=\"Edm.Boolean\" /><Property Name=\"Balance\" Type=\"Edm.Decimal\" " +
-                "/><Property Name=\"Balance_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Net_Change\" " +
-                "Type=\"Edm.Decimal\" /><Property Name=\"Net_Change_LCY\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Purchases_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Inv_Discounts_LCY\"" +
-                " Type=\"Edm.Decimal\" /><Property Name=\"Pmt_Discounts_LCY\" Type=\"Edm.Decimal\" /><P" +
-                "roperty Name=\"Balance_Due\" Type=\"Edm.Decimal\" /><Property Name=\"Balance_Due_LCY\"" +
-                " Type=\"Edm.Decimal\" /><Property Name=\"Payments\" Type=\"Edm.Decimal\" /><Property N" +
-                "ame=\"Invoice_Amounts\" Type=\"Edm.Decimal\" /><Property Name=\"Cr_Memo_Amounts\" Type" +
-                "=\"Edm.Decimal\" /><Property Name=\"Payments_LCY\" Type=\"Edm.Decimal\" /><Property Na" +
-                "me=\"Inv_Amounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Cr_Memo_Amounts_LCY\" T" +
-                "ype=\"Edm.Decimal\" /><Property Name=\"Fin_Charge_Memo_Amounts_LCY\" Type=\"Edm.Decim" +
-                "al\" /><Property Name=\"Outstanding_Orders\" Type=\"Edm.Decimal\" /><Property Name=\"A" +
-                "mt_Rcd_Not_Invoiced\" Type=\"Edm.Decimal\" /><Property Name=\"Debit_Amount\" Type=\"Ed" +
-                "m.Decimal\" /><Property Name=\"Credit_Amount\" Type=\"Edm.Decimal\" /><Property Name=" +
-                "\"Debit_Amount_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Credit_Amount_LCY\" Type=" +
-                "\"Edm.Decimal\" /><Property Name=\"Reminder_Amounts\" Type=\"Edm.Decimal\" /><Property" +
-                " Name=\"Reminder_Amounts_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Outstanding_Or" +
-                "ders_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Amt_Rcd_Not_Invoiced_LCY\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Pmt_Disc_Tolerance_LCY\" Type=\"Edm.Decimal\" /><Prop" +
-                "erty Name=\"Pmt_Tolerance_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Refunds\" Type" +
-                "=\"Edm.Decimal\" /><Property Name=\"Refunds_LCY\" Type=\"Edm.Decimal\" /><Property Nam" +
-                "e=\"Other_Amounts\" Type=\"Edm.Decimal\" /><Property Name=\"Other_Amounts_LCY\" Type=\"" +
-                "Edm.Decimal\" /><Property Name=\"Outstanding_Invoices\" Type=\"Edm.Decimal\" /><Prope" +
-                "rty Name=\"Outstanding_Invoices_LCY\" Type=\"Edm.Decimal\" /><Property Name=\"Pay_to_" +
-                "No_Of_Archived_Doc\" Type=\"Edm.Int32\" /><Property Name=\"Buy_from_No_Of_Archived_D" +
-                "oc\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Pstd_Receipts\" Type=\"Edm.Int32\" /><" +
-                "Property Name=\"No_of_Pstd_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Pst" +
-                "d_Return_Shipments\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Pstd_Credit_Memos\" " +
-                "Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Orders\" Type=\"Edm.Int32\" /><Prop" +
-                "erty Name=\"Pay_to_No_of_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_o" +
-                "f_Return_Orders\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Credit_Memos\" T" +
-                "ype=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Pstd_Receipts\" Type=\"Edm.Int32\" /" +
-                "><Property Name=\"Pay_to_No_of_Pstd_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"" +
-                "Pay_to_No_of_Pstd_Return_S\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Pstd" +
-                "_Cr_Memos\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Quotes\" Type=\"Edm.Int32\" /><" +
-                "Property Name=\"No_of_Blanket_Orders\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Or" +
-                "ders\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Invoices\" Type=\"Edm.Int32\" /><Pro" +
-                "perty Name=\"No_of_Return_Orders\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Credit" +
-                "_Memos\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Order_Addr";
+            private const string ModelPart15 = "2\" /><Property Name=\"No_of_Pstd_Receipts\" Type=\"Edm.Int32\" /><Property Name=\"No_o" +
+                "f_Pstd_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Pstd_Return_Shipments\"" +
+                " Type=\"Edm.Int32\" /><Property Name=\"No_of_Pstd_Credit_Memos\" Type=\"Edm.Int32\" />" +
+                "<Property Name=\"Pay_to_No_of_Orders\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_N" +
+                "o_of_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Return_Orders\" Ty" +
+                "pe=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Credit_Memos\" Type=\"Edm.Int32\" /><" +
+                "Property Name=\"Pay_to_No_of_Pstd_Receipts\" Type=\"Edm.Int32\" /><Property Name=\"Pa" +
+                "y_to_No_of_Pstd_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Pstd_R" +
+                "eturn_S\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Pstd_Cr_Memos\" Type=\"Ed" +
+                "m.Int32\" /><Property Name=\"No_of_Quotes\" Type=\"Edm.Int32\" /><Property Name=\"No_o" +
+                "f_Blanket_Orders\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Orders\" Type=\"Edm.Int" +
+                "32\" /><Property Name=\"No_of_Invoices\" Type=\"Edm.Int32\" /><Property Name=\"No_of_R" +
+                "eturn_Orders\" Type=\"Edm.Int32\" /><Property Name=\"No_of_Credit_Memos\" Type=\"Edm.I" +
+                "nt32\" /><Property Name=\"No_of_Order_Addresses\" Type=\"Edm.Int32\" /><Property Name" +
+                "=\"Pay_to_No_of_Quotes\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Blanket_O" +
+                "rders\" Type=\"Edm.Int32\" /><Property Name=\"Total_Allowances\" Type=\"Edm.Decimal\" /" +
+                "><Property Name=\"Total_Deductions\" Type=\"Edm.Decimal\" /><Property Name=\"Cumm_PAY" +
+                "E\" Type=\"Edm.Decimal\" /><Property Name=\"Taxable_Income\" Type=\"Edm.Decimal\" /><Pr" +
+                "operty Name=\"Non_Cash_Benefit\" Type=\"Edm.Decimal\" /><Property Name=\"Bank_Name\" T" +
+                "ype=\"Edm.String\" /><Property Name=\"Bank_Branch_Name\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"customer_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Passw" +
+                "ord\" Type=\"Edm.String\" /><Property Name=\"Last_Login\" Type=\"Edm.DateTime\" /><Prop" +
+                "erty Name=\"userstatus\" Type=\"Edm.Int32\" /><Property Name=\"changedPassword\" Type=" +
+                "\"Edm.Int32\" /><Property Name=\"usertype\" Type=\"Edm.Int32\" /><Property Name=\"valid" +
+                "ated\" Type=\"Edm.Boolean\" /></EntityType><EntityType Name=\"WorkTypes\"><Key><Prope" +
+                "rtyRef Name=\"Code\" /></Key><Property Name=\"Code\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Category\"" +
+                " Type=\"Edm.String\" /></EntityType><EntityType Name=\"Pending_Po\"><Key><PropertyRe" +
+                "f Name=\"Document_No\" /><PropertyRef Name=\"Document_Type\" /><PropertyRef Name=\"Li" +
+                "ne_No\" /></Key><Property Name=\"Document_Type\" Type=\"Edm.String\" Nullable=\"false\"" +
+                " /><Property Name=\"Document_No\" Type=\"Edm.String\" Nullable=\"false\" /><Property N" +
+                "ame=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"No\" Type=\"Edm.String\" /><Property Name=\"Description\"" +
+                " Type=\"Edm.String\" /><Property Name=\"Expected_Receipt_Date\" Type=\"Edm.DateTime\" " +
+                "/><Property Name=\"Buy_from_Vendor_No\" Type=\"Edm.String\" /><Property Name=\"Curren" +
+                "cy_Code\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Decimal\" /><Pro" +
+                "perty Name=\"Outstanding_Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Unit_of_M" +
+                "easure_Code\" Type=\"Edm.String\" /><Property Name=\"Amount\" Type=\"Edm.Decimal\" /><P" +
+                "roperty Name=\"Direct_Unit_Cost\" Type=\"Edm.Decimal\" /><Property Name=\"Line_Discou" +
+                "nt_Percent\" Type=\"Edm.Decimal\" /><Property Name=\"ETag\" Type=\"Edm.String\" Concurr" +
+                "encyMode=\"Fixed\" /></EntityType><EntityType Name=\"Company\"><Key><PropertyRef Nam" +
+                "e=\"Name\" /></Key><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Nav" +
+                "igationProperty Name=\"ApprovalEntriesPage\" Relationship=\"NAV.Company_ApprovalEnt" +
+                "riesPage\" ToRole=\"ApprovalEntriesPage\" FromRole=\"Company\" /><NavigationProperty " +
+                "Name=\"powerbifinance\" Relationship=\"NAV.Company_powerbifinance\" ToRole=\"powerbif" +
+                "inance\" FromRole=\"Company\" /><NavigationProperty Name=\"AgendaSurportingDocuments" +
+                "\" Relationship=\"NAV.Company_AgendaSurportingDocuments\" ToRole=\"AgendaSurportingD" +
+                "ocuments\" FromRole=\"Company\" /><NavigationProperty Name=\"AgendaVoteItems\" Relati" +
+                "onship=\"NAV.Company_AgendaVoteItems\" ToRole=\"AgendaVoteItems\" FromRole=\"Company\"" +
+                " /><NavigationProperty Name=\"allBoards\" Relationship=\"NAV.Company_allBoards\" ToR" +
+                "ole=\"allBoards\" FromRole=\"Company\" /><NavigationProperty Name=\"ApprovalEntries\" " +
+                "Relationship=\"NAV.Company_ApprovalEntries\" ToRole=\"ApprovalEntries\" FromRole=\"Co" +
+                "mpany\" /><NavigationProperty Name=\"blogReplies\" Relationship=\"NAV.Company_blogRe" +
+                "plies\" ToRole=\"blogReplies\" FromRole=\"Company\" /><NavigationProperty Name=\"board" +
+                "Blog\" Relationship=\"NAV.Company_boardBlog\" ToRole=\"boardBlog\" FromRole=\"Company\"" +
+                " /><NavigationProperty Name=\"BoardComments\" Relationship=\"NAV.Company_BoardComme" +
+                "nts\" ToRole=\"BoardComments\" FromRole=\"Company\" /><NavigationProperty Name=\"board" +
+                "MeetingAttendance\" Relationship=\"NAV.Company_boardMeetingAttendance\" ToRole=\"boa" +
+                "rdMeetingAttendance\" FromRole=\"Company\" /><NavigationProperty Name=\"boardMeeting" +
+                "s\" Relationship=\"NAV.Company_boardMeetings\" ToRole=\"boardMeetings\" FromRole=\"Com" +
+                "pany\" /><NavigationProperty Name=\"Casuals\" Relationship=\"NAV.Company_Casuals\" To" +
+                "Role=\"Casuals\" FromRole=\"Company\" /><NavigationProperty Name=\"CommitteeBoardMemb" +
+                "ers\" Relationship=\"NAV.Company_CommitteeBoardMembers\" ToRole=\"CommitteeBoardMemb" +
+                "ers\" FromRole=\"Company\" /><NavigationProperty Name=\"committeeMeetings\" Relations" +
+                "hip=\"NAV.Company_committeeMeetings\" ToRole=\"committeeMeetings\" FromRole=\"Company" +
+                "\" /><NavigationProperty Name=\"Committees\" Relationship=\"NAV.Company_Committees\" " +
+                "ToRole=\"Committees\" FromRole=\"Company\" /><NavigationProperty Name=\"contacts\" Rel" +
+                "ationship=\"NAV.Company_contacts\" ToRole=\"contacts\" FromRole=\"Company\" /><Navigat" +
+                "ionProperty Name=\"Copyright_Files\" Relationship=\"NAV.Company_Copyright_Files\" To" +
+                "Role=\"Copyright_Files\" FromRole=\"Company\" /><NavigationProperty Name=\"CopyrightC" +
+                "ategories\" Relationship=\"NAV.Company_CopyrightCategories\" ToRole=\"CopyrightCateg" +
+                "ories\" FromRole=\"Company\" /><NavigationProperty Name=\"copyrightsetups\" Relations" +
+                "hip=\"NAV.Company_copyrightsetups\" ToRole=\"copyrightsetups\" FromRole=\"Company\" />" +
+                "<NavigationProperty Name=\"copyrightsubcategories\" Relationship=\"NAV.Company_copy" +
+                "rightsubcategories\" ToRole=\"copyrightsubcategories\" FromRole=\"Company\" /><Naviga" +
+                "tionProperty Name=\"CopyrightWorkCategories\" Relationship=\"NAV.Company_CopyrightW" +
+                "orkCategories\" ToRole=\"CopyrightWorkCategories\" FromRole=\"Company\" /><Navigation" +
+                "Property Name=\"CopyrightWorks\" Relationship=\"NAV.Company_CopyrightWorks\" ToRole=" +
+                "\"CopyrightWorks\" FromRole=\"Company\" /><NavigationProperty Name=\"Countries\" Relat" +
+                "ionship=\"NAV.Company_Countries\" ToRole=\"Countries\" FromRole=\"Company\" /><Navigat" +
+                "ionProperty Name=\"Customers\" Relationship=\"NAV.Company_Customers\" ToRole=\"Custom" +
+                "ers\" FromRole=\"Company\" /><NavigationProperty Name=\"emailvalidations\" Relationsh" +
+                "ip=\"NAV.Company_emailvalidations\" ToRole=\"emailvalidations\" FromRole=\"Company\" /" +
+                "><NavigationProperty Name=\"Employees\" Relationship=\"NAV.Company_Employees\" ToRol" +
+                "e=\"Employees\" FromRole=\"Company\" /><NavigationProperty Name=\"FundCode\" Relations" +
+                "hip=\"NAV.Company_FundCode\" ToRole=\"FundCode\" FromRole=\"Company\" /><NavigationPro" +
+                "perty Name=\"HrJobApplicants\" Relationship=\"NAV.Company_HrJobApplicants\" ToRole=\"" +
+                "HrJobApplicants\" FromRole=\"Company\" /><NavigationProperty Name=\"HRJobApplicants\"" +
+                " Relationship=\"NAV.Company_HRJobApplicants\" ToRole=\"HRJobApplicants\" FromRole=\"C" +
+                "ompany\" /><NavigationProperty Name=\"HRPortalUsers\" Relationship=\"NAV.Company_HRP" +
+                "ortalUsers\" ToRole=\"HRPortalUsers\" FromRole=\"Company\" /><NavigationProperty Name" +
+                "=\"ImprestLines\" Relationship=\"NAV.Company_ImprestLines\" ToRole=\"ImprestLines\" Fr" +
+                "omRole=\"Company\" /><NavigationProperty Name=\"ImprestMemo\" Relationship=\"NAV.Comp" +
+                "any_ImprestMemo\" ToRole=\"ImprestMemo\" FromRole=\"Company\" />";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart15 = "esses\" Type=\"Edm.Int32\" /><Property Name=\"Pay_to_No_of_Quotes\" Type=\"Edm.Int32\" /" +
-                "><Property Name=\"Pay_to_No_of_Blanket_Orders\" Type=\"Edm.Int32\" /><Property Name=" +
-                "\"Total_Allowances\" Type=\"Edm.Decimal\" /><Property Name=\"Total_Deductions\" Type=\"" +
-                "Edm.Decimal\" /><Property Name=\"Cumm_PAYE\" Type=\"Edm.Decimal\" /><Property Name=\"T" +
-                "axable_Income\" Type=\"Edm.Decimal\" /><Property Name=\"Non_Cash_Benefit\" Type=\"Edm." +
-                "Decimal\" /><Property Name=\"Bank_Name\" Type=\"Edm.String\" /><Property Name=\"Bank_B" +
-                "ranch_Name\" Type=\"Edm.String\" /><Property Name=\"customer_No\" Type=\"Edm.String\" N" +
-                "ullable=\"false\" /><Property Name=\"Password\" Type=\"Edm.String\" /><Property Name=\"" +
-                "Last_Login\" Type=\"Edm.DateTime\" /><Property Name=\"userstatus\" Type=\"Edm.Int32\" /" +
-                "><Property Name=\"changedPassword\" Type=\"Edm.Int32\" /><Property Name=\"usertype\" T" +
-                "ype=\"Edm.Int32\" /><Property Name=\"validated\" Type=\"Edm.Boolean\" /></EntityType><" +
-                "EntityType Name=\"WorkTypes\"><Key><PropertyRef Name=\"Code\" /></Key><Property Name" +
-                "=\"Code\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Category\" Type=\"Edm.String\" /></EntityType><Entity" +
-                "Type Name=\"Pending_Po\"><Key><PropertyRef Name=\"Document_No\" /><PropertyRef Name=" +
-                "\"Document_Type\" /><PropertyRef Name=\"Line_No\" /></Key><Property Name=\"Document_T" +
-                "ype\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Document_No\" Type=\"Edm" +
-                ".String\" Nullable=\"false\" /><Property Name=\"Line_No\" Type=\"Edm.Int32\" Nullable=\"" +
-                "false\" /><Property Name=\"Type\" Type=\"Edm.String\" /><Property Name=\"No\" Type=\"Edm" +
-                ".String\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Expe" +
-                "cted_Receipt_Date\" Type=\"Edm.DateTime\" /><Property Name=\"Buy_from_Vendor_No\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"Currency_Code\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"Quantity\" Type=\"Edm.Decimal\" /><Property Name=\"Outstanding_Quantity\" Type=\"E" +
-                "dm.Decimal\" /><Property Name=\"Unit_of_Measure_Code\" Type=\"Edm.String\" /><Propert" +
-                "y Name=\"Amount\" Type=\"Edm.Decimal\" /><Property Name=\"Direct_Unit_Cost\" Type=\"Edm" +
-                ".Decimal\" /><Property Name=\"Line_Discount_Percent\" Type=\"Edm.Decimal\" /><Propert" +
-                "y Name=\"ETag\" Type=\"Edm.String\" ConcurrencyMode=\"Fixed\" /></EntityType><EntityTy" +
-                "pe Name=\"Company\"><Key><PropertyRef Name=\"Name\" /></Key><Property Name=\"Name\" Ty" +
-                "pe=\"Edm.String\" Nullable=\"false\" /><NavigationProperty Name=\"ApprovalEntriesPage" +
-                "\" Relationship=\"NAV.Company_ApprovalEntriesPage\" ToRole=\"ApprovalEntriesPage\" Fr" +
-                "omRole=\"Company\" /><NavigationProperty Name=\"powerbifinance\" Relationship=\"NAV.C" +
-                "ompany_powerbifinance\" ToRole=\"powerbifinance\" FromRole=\"Company\" /><NavigationP" +
-                "roperty Name=\"AgendaSurportingDocuments\" Relationship=\"NAV.Company_AgendaSurport" +
-                "ingDocuments\" ToRole=\"AgendaSurportingDocuments\" FromRole=\"Company\" /><Navigatio" +
-                "nProperty Name=\"AgendaVoteItems\" Relationship=\"NAV.Company_AgendaVoteItems\" ToRo" +
-                "le=\"AgendaVoteItems\" FromRole=\"Company\" /><NavigationProperty Name=\"allBoards\" R" +
-                "elationship=\"NAV.Company_allBoards\" ToRole=\"allBoards\" FromRole=\"Company\" /><Nav" +
-                "igationProperty Name=\"ApprovalEntries\" Relationship=\"NAV.Company_ApprovalEntries" +
-                "\" ToRole=\"ApprovalEntries\" FromRole=\"Company\" /><NavigationProperty Name=\"BoardC" +
-                "omments\" Relationship=\"NAV.Company_BoardComments\" ToRole=\"BoardComments\" FromRol" +
-                "e=\"Company\" /><NavigationProperty Name=\"boardMeetingAttendance\" Relationship=\"NA" +
-                "V.Company_boardMeetingAttendance\" ToRole=\"boardMeetingAttendance\" FromRole=\"Comp" +
-                "any\" /><NavigationProperty Name=\"boardMeetings\" Relationship=\"NAV.Company_boardM" +
-                "eetings\" ToRole=\"boardMeetings\" FromRole=\"Company\" /><NavigationProperty Name=\"C" +
-                "asuals\" Relationship=\"NAV.Company_Casuals\" ToRole=\"Casuals\" FromRole=\"Company\" /" +
-                "><NavigationProperty Name=\"CommitteeBoardMembers\" Relationship=\"NAV.Company_Comm" +
-                "itteeBoardMembers\" ToRole=\"CommitteeBoardMembers\" FromRole=\"Company\" /><Navigati" +
-                "onProperty Name=\"committeeMeetings\" Relationship=\"NAV.Company_committeeMeetings\"" +
-                " ToRole=\"committeeMeetings\" FromRole=\"Company\" /><NavigationProperty Name=\"Commi" +
-                "ttees\" Relationship=\"NAV.Company_Committees\" ToRole=\"Committees\" FromRole=\"Compa" +
-                "ny\" /><NavigationProperty Name=\"contacts\" Relationship=\"NAV.Company_contacts\" To" +
-                "Role=\"contacts\" FromRole=\"Company\" /><NavigationProperty Name=\"Copyright_Files\" " +
-                "Relationship=\"NAV.Company_Copyright_Files\" ToRole=\"Copyright_Files\" FromRole=\"Co" +
-                "mpany\" /><NavigationProperty Name=\"CopyrightCategories\" Relationship=\"NAV.Compan" +
-                "y_CopyrightCategories\" ToRole=\"CopyrightCategories\" FromRole=\"Company\" /><Naviga" +
-                "tionProperty Name=\"copyrightsetups\" Relationship=\"NAV.Company_copyrightsetups\" T" +
-                "oRole=\"copyrightsetups\" FromRole=\"Company\" /><NavigationProperty Name=\"copyright" +
-                "subcategories\" Relationship=\"NAV.Company_copyrightsubcategories\" ToRole=\"copyrig" +
-                "htsubcategories\" FromRole=\"Company\" /><NavigationProperty Name=\"CopyrightWorkCat" +
-                "egories\" Relationship=\"NAV.Company_CopyrightWorkCategories\" ToRole=\"CopyrightWor" +
-                "kCategories\" FromRole=\"Company\" /><NavigationProperty Name=\"CopyrightWorks\" Rela" +
-                "tionship=\"NAV.Company_CopyrightWorks\" ToRole=\"CopyrightWorks\" FromRole=\"Company\"" +
-                " /><NavigationProperty Name=\"Countries\" Relationship=\"NAV.Company_Countries\" ToR" +
-                "ole=\"Countries\" FromRole=\"Company\" /><NavigationProperty Name=\"Customers\" Relati" +
-                "onship=\"NAV.Company_Customers\" ToRole=\"Customers\" FromRole=\"Company\" /><Navigati" +
-                "onProperty Name=\"emailvalidations\" Relationship=\"NAV.Company_emailvalidations\" T" +
-                "oRole=\"emailvalidations\" FromRole=\"Company\" /><NavigationProperty Name=\"Employee" +
-                "s\" Relationship=\"NAV.Company_Employees\" ToRole=\"Employees\" FromRole=\"Company\" />" +
-                "<NavigationProperty Name=\"FundCode\" Relationship=\"NAV.Company_FundCode\" ToRole=\"" +
-                "FundCode\" FromRole=\"Company\" /><NavigationProperty Name=\"HrJobApplicants\" Relati" +
-                "onship=\"NAV.Company_HrJobApplicants\" ToRole=\"HrJobApplicants\" FromRole=\"Company\"" +
-                " /><NavigationProperty Name=\"HRJobApplicants\" Relationship=\"NAV.Company_HRJobApp" +
-                "licants\" ToRole=\"HRJobApplicants\" FromRole=\"Company\" /><NavigationProperty Name=" +
-                "\"HRPortalUsers\" Relationship=\"NAV.Company_HRPortalUsers\" ToRole=\"HRPortalUsers\" " +
-                "FromRole=\"Company\" /><NavigationProperty Name=\"ImprestLines\" Relationship=\"NAV.C" +
-                "ompany_ImprestLines\" ToRole=\"ImprestLines\" FromRole=\"Company\" /><NavigationPrope" +
-                "rty Name=\"ImprestMemo\" Relationship=\"NAV.Company_ImprestMemo\" ToRole=\"ImprestMem" +
-                "o\" FromRole=\"Company\" /><NavigationProperty Name=\"InventoryPostingGroups\" Relati" +
-                "onship=\"NAV.Company_InventoryPostingGroups\" ToRole=\"InventoryPostingGroups\" From" +
-                "Role=\"Company\" /><NavigationProperty Name=\"ItemCategories\" Relationship=\"NAV.Com" +
-                "pany_ItemCategories\" ToRole=\"ItemCategories\" FromRole=\"Company\" /><NavigationPro" +
-                "perty Name=\"Items\" Relationship=\"NAV.Company_Items\" ToRole=\"Items\" FromRole=\"Com" +
-                "pany\" /><NavigationProperty Name=\"ItemSalesAndProfit\" Relationship=\"NAV.Company_" +
-                "ItemSalesAndProfit\" ToRole=\"ItemSalesAndProfit\" FromRole=\"Company\" /><Navigation" +
-                "Property Name=\"ItemSalesByCustomer\" Relationship=\"NAV.Company_ItemSalesByCustome" +
-                "r\" ToRole=\"ItemSalesByCustomer\" FromRole=\"Company\" /><NavigationProperty Name=\"J" +
-                "obApplicantHobies\" Relationship=\"NAV.Company_JobApplicantHobies\" ToRole=\"JobAppl" +
-                "icantHobies\" FromRole=\"Company\" /><NavigationProperty Name=\"JobApplicantQualific" +
-                "ations\" Relationship=\"NAV.Company_JobApplicantQualifications\" ToRole=\"JobApplica" +
-                "ntQualifications\" FromRole=\"Company\" /><NavigationProperty Name=\"JobApplicantRef" +
-                "erees\" Relationship=\"NAV.Company_JobApplicantReferees\" ToRole=\"JobApplicantRefer" +
-                "ees\" FromRole=\"Company\" /><NavigationProperty Name=\"JobRequirements\" Relationshi" +
-                "p=\"NAV.Company_JobRequirements\" ToRole=\"JobRequirements\" FromRole=\"Company\" /><N" +
-                "avigationProperty Name=\"JobResponsibilities\" Relationship=\"";
+            private const string ModelPart16 = "<NavigationProperty Name=\"InventoryPostingGroups\" Relationship=\"NAV.Company_Inven" +
+                "toryPostingGroups\" ToRole=\"InventoryPostingGroups\" FromRole=\"Company\" /><Navigat" +
+                "ionProperty Name=\"ItemCategories\" Relationship=\"NAV.Company_ItemCategories\" ToRo" +
+                "le=\"ItemCategories\" FromRole=\"Company\" /><NavigationProperty Name=\"Items\" Relati" +
+                "onship=\"NAV.Company_Items\" ToRole=\"Items\" FromRole=\"Company\" /><NavigationProper" +
+                "ty Name=\"ItemSalesAndProfit\" Relationship=\"NAV.Company_ItemSalesAndProfit\" ToRol" +
+                "e=\"ItemSalesAndProfit\" FromRole=\"Company\" /><NavigationProperty Name=\"ItemSalesB" +
+                "yCustomer\" Relationship=\"NAV.Company_ItemSalesByCustomer\" ToRole=\"ItemSalesByCus" +
+                "tomer\" FromRole=\"Company\" /><NavigationProperty Name=\"JobApplicantHobies\" Relati" +
+                "onship=\"NAV.Company_JobApplicantHobies\" ToRole=\"JobApplicantHobies\" FromRole=\"Co" +
+                "mpany\" /><NavigationProperty Name=\"JobApplicantQualifications\" Relationship=\"NAV" +
+                ".Company_JobApplicantQualifications\" ToRole=\"JobApplicantQualifications\" FromRol" +
+                "e=\"Company\" /><NavigationProperty Name=\"JobApplicantReferees\" Relationship=\"NAV." +
+                "Company_JobApplicantReferees\" ToRole=\"JobApplicantReferees\" FromRole=\"Company\" /" +
+                "><NavigationProperty Name=\"JobRequirements\" Relationship=\"NAV.Company_JobRequire" +
+                "ments\" ToRole=\"JobRequirements\" FromRole=\"Company\" /><NavigationProperty Name=\"J" +
+                "obResponsibilities\" Relationship=\"NAV.Company_JobResponsibilities\" ToRole=\"JobRe" +
+                "sponsibilities\" FromRole=\"Company\" /><NavigationProperty Name=\"jobs\" Relationshi" +
+                "p=\"NAV.Company_jobs\" ToRole=\"jobs\" FromRole=\"Company\" /><NavigationProperty Name" +
+                "=\"JobTask\" Relationship=\"NAV.Company_JobTask\" ToRole=\"JobTask\" FromRole=\"Company" +
+                "\" /><NavigationProperty Name=\"JobWorkingRelationships\" Relationship=\"NAV.Company" +
+                "_JobWorkingRelationships\" ToRole=\"JobWorkingRelationships\" FromRole=\"Company\" />" +
+                "<NavigationProperty Name=\"languages\" Relationship=\"NAV.Company_languages\" ToRole" +
+                "=\"languages\" FromRole=\"Company\" /><NavigationProperty Name=\"LeaveApplications\" R" +
+                "elationship=\"NAV.Company_LeaveApplications\" ToRole=\"LeaveApplications\" FromRole=" +
+                "\"Company\" /><NavigationProperty Name=\"LeaveTypes\" Relationship=\"NAV.Company_Leav" +
+                "eTypes\" ToRole=\"LeaveTypes\" FromRole=\"Company\" /><NavigationProperty Name=\"Locat" +
+                "ions\" Relationship=\"NAV.Company_Locations\" ToRole=\"Locations\" FromRole=\"Company\"" +
+                " /><NavigationProperty Name=\"MeetingAgenda\" Relationship=\"NAV.Company_MeetingAge" +
+                "nda\" ToRole=\"MeetingAgenda\" FromRole=\"Company\" /><NavigationProperty Name=\"My_Me" +
+                "etings\" Relationship=\"NAV.Company_My_Meetings\" ToRole=\"My_Meetings\" FromRole=\"Co" +
+                "mpany\" /><NavigationProperty Name=\"myCommitee\" Relationship=\"NAV.Company_myCommi" +
+                "tee\" ToRole=\"myCommitee\" FromRole=\"Company\" /><NavigationProperty Name=\"MyJobApp" +
+                "lications\" Relationship=\"NAV.Company_MyJobApplications\" ToRole=\"MyJobApplication" +
+                "s\" FromRole=\"Company\" /><NavigationProperty Name=\"OtherCosts\" Relationship=\"NAV." +
+                "Company_OtherCosts\" ToRole=\"OtherCosts\" FromRole=\"Company\" /><NavigationProperty" +
+                " Name=\"Payments\" Relationship=\"NAV.Company_Payments\" ToRole=\"Payments\" FromRole=" +
+                "\"Company\" /><NavigationProperty Name=\"payperiods\" Relationship=\"NAV.Company_payp" +
+                "eriods\" ToRole=\"payperiods\" FromRole=\"Company\" /><NavigationProperty Name=\"Porta" +
+                "lUsers\" Relationship=\"NAV.Company_PortalUsers\" ToRole=\"PortalUsers\" FromRole=\"Co" +
+                "mpany\" /><NavigationProperty Name=\"PositionsSupervised\" Relationship=\"NAV.Compan" +
+                "y_PositionsSupervised\" ToRole=\"PositionsSupervised\" FromRole=\"Company\" /><Naviga" +
+                "tionProperty Name=\"postcodes\" Relationship=\"NAV.Company_postcodes\" ToRole=\"postc" +
+                "odes\" FromRole=\"Company\" /><NavigationProperty Name=\"PrequalifiedSuppliers\" Rela" +
+                "tionship=\"NAV.Company_PrequalifiedSuppliers\" ToRole=\"PrequalifiedSuppliers\" From" +
+                "Role=\"Company\" /><NavigationProperty Name=\"ProcurementHeader\" Relationship=\"NAV." +
+                "Company_ProcurementHeader\" ToRole=\"ProcurementHeader\" FromRole=\"Company\" /><Navi" +
+                "gationProperty Name=\"ProcurementPlan\" Relationship=\"NAV.Company_ProcurementPlan\"" +
+                " ToRole=\"ProcurementPlan\" FromRole=\"Company\" /><NavigationProperty Name=\"Procure" +
+                "mentRequest\" Relationship=\"NAV.Company_ProcurementRequest\" ToRole=\"ProcurementRe" +
+                "quest\" FromRole=\"Company\" /><NavigationProperty Name=\"ProcurementRequestLines\" R" +
+                "elationship=\"NAV.Company_ProcurementRequestLines\" ToRole=\"ProcurementRequestLine" +
+                "s\" FromRole=\"Company\" /><NavigationProperty Name=\"ProjectMembers\" Relationship=\"" +
+                "NAV.Company_ProjectMembers\" ToRole=\"ProjectMembers\" FromRole=\"Company\" /><Naviga" +
+                "tionProperty Name=\"PurchaseHeader\" Relationship=\"NAV.Company_PurchaseHeader\" ToR" +
+                "ole=\"PurchaseHeader\" FromRole=\"Company\" /><NavigationProperty Name=\"PurchaseLine" +
+                "s\" Relationship=\"NAV.Company_PurchaseLines\" ToRole=\"PurchaseLines\" FromRole=\"Com" +
+                "pany\" /><NavigationProperty Name=\"ReceiptAndPaymentTypes\" Relationship=\"NAV.Comp" +
+                "any_ReceiptAndPaymentTypes\" ToRole=\"ReceiptAndPaymentTypes\" FromRole=\"Company\" /" +
+                "><NavigationProperty Name=\"receipts\" Relationship=\"NAV.Company_receipts\" ToRole=" +
+                "\"receipts\" FromRole=\"Company\" /><NavigationProperty Name=\"Resources\" Relationshi" +
+                "p=\"NAV.Company_Resources\" ToRole=\"Resources\" FromRole=\"Company\" /><NavigationPro" +
+                "perty Name=\"SalesDashboard\" Relationship=\"NAV.Company_SalesDashboard\" ToRole=\"Sa" +
+                "lesDashboard\" FromRole=\"Company\" /><NavigationProperty Name=\"SalesOpportunities\"" +
+                " Relationship=\"NAV.Company_SalesOpportunities\" ToRole=\"SalesOpportunities\" FromR" +
+                "ole=\"Company\" /><NavigationProperty Name=\"SalesOrdersBySalesPerson\" Relationship" +
+                "=\"NAV.Company_SalesOrdersBySalesPerson\" ToRole=\"SalesOrdersBySalesPerson\" FromRo" +
+                "le=\"Company\" /><NavigationProperty Name=\"serviceitems\" Relationship=\"NAV.Company" +
+                "_serviceitems\" ToRole=\"serviceitems\" FromRole=\"Company\" /><NavigationProperty Na" +
+                "me=\"SupplierCategories\" Relationship=\"NAV.Company_SupplierCategories\" ToRole=\"Su" +
+                "pplierCategories\" FromRole=\"Company\" /><NavigationProperty Name=\"TopCustomerOver" +
+                "view\" Relationship=\"NAV.Company_TopCustomerOverview\" ToRole=\"TopCustomerOverview" +
+                "\" FromRole=\"Company\" /><NavigationProperty Name=\"TransportRequisition\" Relations" +
+                "hip=\"NAV.Company_TransportRequisition\" ToRole=\"TransportRequisition\" FromRole=\"C" +
+                "ompany\" /><NavigationProperty Name=\"TravelRequisitionStaff\" Relationship=\"NAV.Co" +
+                "mpany_TravelRequisitionStaff\" ToRole=\"TravelRequisitionStaff\" FromRole=\"Company\"" +
+                " /><NavigationProperty Name=\"VacantPositions\" Relationship=\"NAV.Company_VacantPo" +
+                "sitions\" ToRole=\"VacantPositions\" FromRole=\"Company\" /><NavigationProperty Name=" +
+                "\"Vendors\" Relationship=\"NAV.Company_Vendors\" ToRole=\"Vendors\" FromRole=\"Company\"" +
+                " /><NavigationProperty Name=\"WorkTypes\" Relationship=\"NAV.Company_WorkTypes\" ToR" +
+                "ole=\"WorkTypes\" FromRole=\"Company\" /><NavigationProperty Name=\"Pending_Po\" Relat" +
+                "ionship=\"NAV.Company_Pending_Po\" ToRole=\"Pending_Po\" FromRole=\"Company\" /></Enti" +
+                "tyType><Association Name=\"Company_ApprovalEntriesPage\"><End Type=\"NAV.Company\" R" +
+                "ole=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.ApprovalEntriesPage\" Role=\"Appro" +
+                "valEntriesPage\" Multiplicity=\"*\" /></Association><Association Name=\"Company_powe" +
+                "rbifinance\"><End Type=\"NAV.powerbifinance\" Role=\"powerbifinance\" Multiplicity=\"*" +
+                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ass" +
+                "ociation Name=\"Company_AgendaSurportingDocuments\"><End Type=\"NAV.Company\" Role=\"" +
+                "Company\" Multiplicity=\"*\" /><End Type=\"NAV.AgendaSurportingDocuments\" Role=\"Agen" +
+                "daSurportingDocuments\" Multiplicity=\"*\" /></Association><Association Name=\"Compa" +
+                "ny_AgendaVoteItems\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><E" +
+                "nd Type=\"NAV.AgendaVoteItems\" Role=\"AgendaVoteItems\" Multiplicity=\"*\" /></Associ" +
+                "ation><Association Name=\"Company_allBoards\"><End Type=\"NAV.allBoards\" Role=\"allB" +
+                "oards\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Com";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart16 = "NAV.Company_JobResponsibilities\" ToRole=\"JobResponsibilities\" FromRole=\"Company\" " +
-                "/><NavigationProperty Name=\"jobs\" Relationship=\"NAV.Company_jobs\" ToRole=\"jobs\" " +
-                "FromRole=\"Company\" /><NavigationProperty Name=\"JobTask\" Relationship=\"NAV.Compan" +
-                "y_JobTask\" ToRole=\"JobTask\" FromRole=\"Company\" /><NavigationProperty Name=\"JobWo" +
-                "rkingRelationships\" Relationship=\"NAV.Company_JobWorkingRelationships\" ToRole=\"J" +
-                "obWorkingRelationships\" FromRole=\"Company\" /><NavigationProperty Name=\"languages" +
-                "\" Relationship=\"NAV.Company_languages\" ToRole=\"languages\" FromRole=\"Company\" /><" +
-                "NavigationProperty Name=\"LeaveApplications\" Relationship=\"NAV.Company_LeaveAppli" +
-                "cations\" ToRole=\"LeaveApplications\" FromRole=\"Company\" /><NavigationProperty Nam" +
-                "e=\"LeaveTypes\" Relationship=\"NAV.Company_LeaveTypes\" ToRole=\"LeaveTypes\" FromRol" +
-                "e=\"Company\" /><NavigationProperty Name=\"Locations\" Relationship=\"NAV.Company_Loc" +
-                "ations\" ToRole=\"Locations\" FromRole=\"Company\" /><NavigationProperty Name=\"Meetin" +
-                "gAgenda\" Relationship=\"NAV.Company_MeetingAgenda\" ToRole=\"MeetingAgenda\" FromRol" +
-                "e=\"Company\" /><NavigationProperty Name=\"My_Meetings\" Relationship=\"NAV.Company_M" +
-                "y_Meetings\" ToRole=\"My_Meetings\" FromRole=\"Company\" /><NavigationProperty Name=\"" +
-                "myCommitee\" Relationship=\"NAV.Company_myCommitee\" ToRole=\"myCommitee\" FromRole=\"" +
-                "Company\" /><NavigationProperty Name=\"MyJobApplications\" Relationship=\"NAV.Compan" +
-                "y_MyJobApplications\" ToRole=\"MyJobApplications\" FromRole=\"Company\" /><Navigation" +
-                "Property Name=\"OtherCosts\" Relationship=\"NAV.Company_OtherCosts\" ToRole=\"OtherCo" +
-                "sts\" FromRole=\"Company\" /><NavigationProperty Name=\"Payments\" Relationship=\"NAV." +
-                "Company_Payments\" ToRole=\"Payments\" FromRole=\"Company\" /><NavigationProperty Nam" +
-                "e=\"payperiods\" Relationship=\"NAV.Company_payperiods\" ToRole=\"payperiods\" FromRol" +
-                "e=\"Company\" /><NavigationProperty Name=\"PortalUsers\" Relationship=\"NAV.Company_P" +
-                "ortalUsers\" ToRole=\"PortalUsers\" FromRole=\"Company\" /><NavigationProperty Name=\"" +
-                "PositionsSupervised\" Relationship=\"NAV.Company_PositionsSupervised\" ToRole=\"Posi" +
-                "tionsSupervised\" FromRole=\"Company\" /><NavigationProperty Name=\"postcodes\" Relat" +
-                "ionship=\"NAV.Company_postcodes\" ToRole=\"postcodes\" FromRole=\"Company\" /><Navigat" +
-                "ionProperty Name=\"PrequalifiedSuppliers\" Relationship=\"NAV.Company_PrequalifiedS" +
-                "uppliers\" ToRole=\"PrequalifiedSuppliers\" FromRole=\"Company\" /><NavigationPropert" +
-                "y Name=\"ProcurementHeader\" Relationship=\"NAV.Company_ProcurementHeader\" ToRole=\"" +
-                "ProcurementHeader\" FromRole=\"Company\" /><NavigationProperty Name=\"ProcurementPla" +
-                "n\" Relationship=\"NAV.Company_ProcurementPlan\" ToRole=\"ProcurementPlan\" FromRole=" +
-                "\"Company\" /><NavigationProperty Name=\"ProcurementRequest\" Relationship=\"NAV.Comp" +
-                "any_ProcurementRequest\" ToRole=\"ProcurementRequest\" FromRole=\"Company\" /><Naviga" +
-                "tionProperty Name=\"ProcurementRequestLines\" Relationship=\"NAV.Company_Procuremen" +
-                "tRequestLines\" ToRole=\"ProcurementRequestLines\" FromRole=\"Company\" /><Navigation" +
-                "Property Name=\"ProjectMembers\" Relationship=\"NAV.Company_ProjectMembers\" ToRole=" +
-                "\"ProjectMembers\" FromRole=\"Company\" /><NavigationProperty Name=\"PurchaseHeader\" " +
-                "Relationship=\"NAV.Company_PurchaseHeader\" ToRole=\"PurchaseHeader\" FromRole=\"Comp" +
-                "any\" /><NavigationProperty Name=\"PurchaseLines\" Relationship=\"NAV.Company_Purcha" +
-                "seLines\" ToRole=\"PurchaseLines\" FromRole=\"Company\" /><NavigationProperty Name=\"R" +
-                "eceiptAndPaymentTypes\" Relationship=\"NAV.Company_ReceiptAndPaymentTypes\" ToRole=" +
-                "\"ReceiptAndPaymentTypes\" FromRole=\"Company\" /><NavigationProperty Name=\"receipts" +
-                "\" Relationship=\"NAV.Company_receipts\" ToRole=\"receipts\" FromRole=\"Company\" /><Na" +
-                "vigationProperty Name=\"Resources\" Relationship=\"NAV.Company_Resources\" ToRole=\"R" +
-                "esources\" FromRole=\"Company\" /><NavigationProperty Name=\"SalesDashboard\" Relatio" +
-                "nship=\"NAV.Company_SalesDashboard\" ToRole=\"SalesDashboard\" FromRole=\"Company\" />" +
-                "<NavigationProperty Name=\"SalesOpportunities\" Relationship=\"NAV.Company_SalesOpp" +
-                "ortunities\" ToRole=\"SalesOpportunities\" FromRole=\"Company\" /><NavigationProperty" +
-                " Name=\"SalesOrdersBySalesPerson\" Relationship=\"NAV.Company_SalesOrdersBySalesPer" +
-                "son\" ToRole=\"SalesOrdersBySalesPerson\" FromRole=\"Company\" /><NavigationProperty " +
-                "Name=\"serviceitems\" Relationship=\"NAV.Company_serviceitems\" ToRole=\"serviceitems" +
-                "\" FromRole=\"Company\" /><NavigationProperty Name=\"SupplierCategories\" Relationshi" +
-                "p=\"NAV.Company_SupplierCategories\" ToRole=\"SupplierCategories\" FromRole=\"Company" +
-                "\" /><NavigationProperty Name=\"TopCustomerOverview\" Relationship=\"NAV.Company_Top" +
-                "CustomerOverview\" ToRole=\"TopCustomerOverview\" FromRole=\"Company\" /><NavigationP" +
-                "roperty Name=\"TransportRequisition\" Relationship=\"NAV.Company_TransportRequisiti" +
-                "on\" ToRole=\"TransportRequisition\" FromRole=\"Company\" /><NavigationProperty Name=" +
-                "\"TravelRequisitionStaff\" Relationship=\"NAV.Company_TravelRequisitionStaff\" ToRol" +
-                "e=\"TravelRequisitionStaff\" FromRole=\"Company\" /><NavigationProperty Name=\"Vacant" +
-                "Positions\" Relationship=\"NAV.Company_VacantPositions\" ToRole=\"VacantPositions\" F" +
-                "romRole=\"Company\" /><NavigationProperty Name=\"Vendors\" Relationship=\"NAV.Company" +
-                "_Vendors\" ToRole=\"Vendors\" FromRole=\"Company\" /><NavigationProperty Name=\"WorkTy" +
-                "pes\" Relationship=\"NAV.Company_WorkTypes\" ToRole=\"WorkTypes\" FromRole=\"Company\" " +
-                "/><NavigationProperty Name=\"Pending_Po\" Relationship=\"NAV.Company_Pending_Po\" To" +
-                "Role=\"Pending_Po\" FromRole=\"Company\" /></EntityType><Association Name=\"Company_A" +
-                "pprovalEntriesPage\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><E" +
-                "nd Type=\"NAV.ApprovalEntriesPage\" Role=\"ApprovalEntriesPage\" Multiplicity=\"*\" />" +
-                "</Association><Association Name=\"Company_powerbifinance\"><End Type=\"NAV.powerbif" +
-                "inance\" Role=\"powerbifinance\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"C" +
-                "ompany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_AgendaSurpor" +
-                "tingDocuments\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Ty" +
-                "pe=\"NAV.AgendaSurportingDocuments\" Role=\"AgendaSurportingDocuments\" Multiplicity" +
-                "=\"*\" /></Association><Association Name=\"Company_AgendaVoteItems\"><End Type=\"NAV." +
-                "Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.AgendaVoteItems\" Role=" +
-                "\"AgendaVoteItems\" Multiplicity=\"*\" /></Association><Association Name=\"Company_al" +
-                "lBoards\"><End Type=\"NAV.allBoards\" Role=\"allBoards\" Multiplicity=\"*\" /><End Type" +
-                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
-                "=\"Company_ApprovalEntries\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"" +
-                "*\" /><End Type=\"NAV.ApprovalEntries\" Role=\"ApprovalEntries\" Multiplicity=\"*\" /><" +
-                "/Association><Association Name=\"Company_BoardComments\"><End Type=\"NAV.Company\" R" +
-                "ole=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.BoardComments\" Role=\"BoardCommen" +
-                "ts\" Multiplicity=\"*\" /></Association><Association Name=\"Company_boardMeetingAtte" +
-                "ndance\"><End Type=\"NAV.boardMeetingAttendance\" Role=\"boardMeetingAttendance\" Mul" +
-                "tiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Asso" +
-                "ciation><Association Name=\"Company_boardMeetings\"><End Type=\"NAV.boardMeetings\" " +
-                "Role=\"boardMeetings\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" M" +
-                "ultiplicity=\"*\" /></Association><Association Name=\"Company_Casuals\"><End Type=\"N" +
-                "AV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.Casuals\" Role=\"Casu" +
-                "als\" Multiplicity=\"*\" /></Association><Association Name=\"Company_CommitteeBoardM" +
-                "embers\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV" +
-                ".CommitteeBoardMembers\" Role=\"CommitteeBoardMembers\" Multiplicity=\"*\" /></Associ" +
-                "ation><Association Name=\"Company_committeeMeetings\"><End Type=\"NAV.committeeMeet" +
-                "ings\" Role=\"committeeMeetings\" Multiplicity=\"*\" /><End Type";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart17 = "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=" +
-                "\"Company_Committees\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><" +
-                "End Type=\"NAV.Committees\" Role=\"Committees\" Multiplicity=\"*\" /></Association><As" +
-                "sociation Name=\"Company_contacts\"><End Type=\"NAV.contacts\" Role=\"contacts\" Multi" +
+            private const string ModelPart17 = "pany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_ApprovalEntries" +
+                "\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.Appro" +
+                "valEntries\" Role=\"ApprovalEntries\" Multiplicity=\"*\" /></Association><Association" +
+                " Name=\"Company_blogReplies\"><End Type=\"NAV.blogReplies\" Role=\"blogReplies\" Multi" +
                 "plicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Associ" +
-                "ation><Association Name=\"Company_Copyright_Files\"><End Type=\"NAV.Copyright_Files" +
-                "\" Role=\"Copyright_Files\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Compan" +
-                "y\" Multiplicity=\"*\" /></Association><Association Name=\"Company_CopyrightCategori" +
-                "es\"><End Type=\"NAV.CopyrightCategories\" Role=\"CopyrightCategories\" Multiplicity=" +
-                "\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><A" +
-                "ssociation Name=\"Company_copyrightsetups\"><End Type=\"NAV.copyrightsetups\" Role=\"" +
-                "copyrightsetups\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multi" +
-                "plicity=\"*\" /></Association><Association Name=\"Company_copyrightsubcategories\"><" +
-                "End Type=\"NAV.copyrightsubcategories\" Role=\"copyrightsubcategories\" Multiplicity" +
-                "=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><" +
-                "Association Name=\"Company_CopyrightWorkCategories\"><End Type=\"NAV.CopyrightWorkC" +
-                "ategories\" Role=\"CopyrightWorkCategories\" Multiplicity=\"*\" /><End Type=\"NAV.Comp" +
-                "any\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_" +
-                "CopyrightWorks\"><End Type=\"NAV.CopyrightWorks\" Role=\"CopyrightWorks\" Multiplicit" +
-                "y=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association>" +
-                "<Association Name=\"Company_Countries\"><End Type=\"NAV.Countries\" Role=\"Countries\"" +
-                " Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></" +
-                "Association><Association Name=\"Company_Customers\"><End Type=\"NAV.Customers\" Role" +
-                "=\"Customers\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplic" +
-                "ity=\"*\" /></Association><Association Name=\"Company_emailvalidations\"><End Type=\"" +
-                "NAV.emailvalidations\" Role=\"emailvalidations\" Multiplicity=\"*\" /><End Type=\"NAV." +
-                "Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Comp" +
-                "any_Employees\"><End Type=\"NAV.Employees\" Role=\"Employees\" Multiplicity=\"*\" /><En" +
-                "d Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Associatio" +
-                "n Name=\"Company_FundCode\"><End Type=\"NAV.FundCode\" Role=\"FundCode\" Multiplicity=" +
-                "\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><A" +
-                "ssociation Name=\"Company_HrJobApplicants\"><End Type=\"NAV.HrJobApplicants\" Role=\"" +
-                "HrJobApplicants\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multi" +
-                "plicity=\"*\" /></Association><Association Name=\"Company_HRJobApplicants\"><End Typ" +
-                "e=\"NAV.HRJobApplicants\" Role=\"HRJobApplicants\" Multiplicity=\"*\" /><End Type=\"NAV" +
-                ".Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Com" +
-                "pany_HRPortalUsers\"><End Type=\"NAV.HRPortalUsers\" Role=\"HRPortalUsers\" Multiplic" +
-                "ity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Associatio" +
-                "n><Association Name=\"Company_ImprestLines\"><End Type=\"NAV.ImprestLines\" Role=\"Im" +
-                "prestLines\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplici" +
-                "ty=\"*\" /></Association><Association Name=\"Company_ImprestMemo\"><End Type=\"NAV.Im" +
-                "prestMemo\" Role=\"ImprestMemo\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"C" +
-                "ompany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_InventoryPos" +
-                "tingGroups\"><End Type=\"NAV.InventoryPostingGroups\" Role=\"InventoryPostingGroups\"" +
-                " Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></" +
-                "Association><Association Name=\"Company_ItemCategories\"><End Type=\"NAV.ItemCatego" +
-                "ries\" Role=\"ItemCategories\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Com" +
-                "pany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Items\"><End Ty" +
-                "pe=\"NAV.Items\" Role=\"Items\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Com" +
-                "pany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_ItemSalesAndPr" +
-                "ofit\"><End Type=\"NAV.ItemSalesAndProfit\" Role=\"ItemSalesAndProfit\" Multiplicity=" +
-                "\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><A" +
-                "ssociation Name=\"Company_ItemSalesByCustomer\"><End Type=\"NAV.ItemSalesByCustomer" +
-                "\" Role=\"ItemSalesByCustomer\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Co" +
-                "mpany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_JobApplicantH" +
-                "obies\"><End Type=\"NAV.JobApplicantHobies\" Role=\"JobApplicantHobies\" Multiplicity" +
-                "=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><" +
-                "Association Name=\"Company_JobApplicantQualifications\"><End Type=\"NAV.JobApplican" +
-                "tQualifications\" Role=\"JobApplicantQualifications\" Multiplicity=\"*\" /><End Type=" +
-                "\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=" +
-                "\"Company_JobApplicantReferees\"><End Type=\"NAV.JobApplicantReferees\" Role=\"JobApp" +
-                "licantReferees\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multip" +
-                "licity=\"*\" /></Association><Association Name=\"Company_JobRequirements\"><End Type" +
-                "=\"NAV.JobRequirements\" Role=\"JobRequirements\" Multiplicity=\"*\" /><End Type=\"NAV." +
-                "Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Comp" +
-                "any_JobResponsibilities\"><End Type=\"NAV.JobResponsibilities\" Role=\"JobResponsibi" +
-                "lities\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"" +
-                "*\" /></Association><Association Name=\"Company_jobs\"><End Type=\"NAV.jobs\" Role=\"j" +
-                "obs\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" " +
-                "/></Association><Association Name=\"Company_JobTask\"><End Type=\"NAV.JobTask\" Role" +
-                "=\"JobTask\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicit" +
-                "y=\"*\" /></Association><Association Name=\"Company_JobWorkingRelationships\"><End T" +
-                "ype=\"NAV.JobWorkingRelationships\" Role=\"JobWorkingRelationships\" Multiplicity=\"*" +
-                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ass" +
-                "ociation Name=\"Company_languages\"><End Type=\"NAV.languages\" Role=\"languages\" Mul" +
-                "tiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Asso" +
-                "ciation><Association Name=\"Company_LeaveApplications\"><End Type=\"NAV.LeaveApplic" +
-                "ations\" Role=\"LeaveApplications\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role" +
-                "=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_LeaveType" +
-                "s\"><End Type=\"NAV.LeaveTypes\" Role=\"LeaveTypes\" Multiplicity=\"*\" /><End Type=\"NA" +
-                "V.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Co" +
-                "mpany_Locations\"><End Type=\"NAV.Locations\" Role=\"Locations\" Multiplicity=\"*\" /><" +
-                "End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Associat" +
-                "ion Name=\"Company_MeetingAgenda\"><End Type=\"NAV.MeetingAgenda\" Role=\"MeetingAgen" +
-                "da\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /" +
-                "></Association><Association Name=\"Company_My_Meetings\"><End Type=\"NAV.My_Meeting" +
-                "s\" Role=\"My_Meetings\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" " +
-                "Multiplicity=\"*\" /></Association><Association Name=\"Company_myCommitee\"><End Typ" +
-                "e=\"NAV.myCommitee\" Role=\"myCommitee\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" " +
-                "Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_MyJob" +
-                "Applications\"><End Type=\"NAV.MyJobApplications\" Role=\"MyJobApplications\" Multipl" +
-                "icity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Associat" +
-                "ion><Association Name=\"Company_OtherCosts\"><End Type=\"NAV.OtherCosts\" Role=\"Othe" +
-                "rCosts\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Co";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart18 = "mpany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Payments\"><End" +
-                " Type=\"NAV.Payments\" Role=\"Payments\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" " +
-                "Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_paype" +
-                "riods\"><End Type=\"NAV.payperiods\" Role=\"payperiods\" Multiplicity=\"*\" /><End Type" +
-                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
-                "=\"Company_PortalUsers\"><End Type=\"NAV.PortalUsers\" Role=\"PortalUsers\" Multiplici" +
-                "ty=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association" +
-                "><Association Name=\"Company_PositionsSupervised\"><End Type=\"NAV.PositionsSupervi" +
-                "sed\" Role=\"PositionsSupervised\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=" +
-                "\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_postcodes\"" +
-                "><End Type=\"NAV.postcodes\" Role=\"postcodes\" Multiplicity=\"*\" /><End Type=\"NAV.Co" +
-                "mpany\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Compan" +
-                "y_PrequalifiedSuppliers\"><End Type=\"NAV.PrequalifiedSuppliers\" Role=\"Prequalifie" +
-                "dSuppliers\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplici" +
-                "ty=\"*\" /></Association><Association Name=\"Company_ProcurementHeader\"><End Type=\"" +
-                "NAV.ProcurementHeader\" Role=\"ProcurementHeader\" Multiplicity=\"*\" /><End Type=\"NA" +
-                "V.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Co" +
-                "mpany_ProcurementPlan\"><End Type=\"NAV.ProcurementPlan\" Role=\"ProcurementPlan\" Mu" +
-                "ltiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Ass" +
-                "ociation><Association Name=\"Company_ProcurementRequest\"><End Type=\"NAV.Procureme" +
-                "ntRequest\" Role=\"ProcurementRequest\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" " +
-                "Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Procu" +
-                "rementRequestLines\"><End Type=\"NAV.ProcurementRequestLines\" Role=\"ProcurementReq" +
-                "uestLines\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicit" +
-                "y=\"*\" /></Association><Association Name=\"Company_ProjectMembers\"><End Type=\"NAV." +
-                "ProjectMembers\" Role=\"ProjectMembers\" Multiplicity=\"*\" /><End Type=\"NAV.Company\"" +
-                " Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Purc" +
-                "haseHeader\"><End Type=\"NAV.PurchaseHeader\" Role=\"PurchaseHeader\" Multiplicity=\"*" +
-                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ass" +
-                "ociation Name=\"Company_PurchaseLines\"><End Type=\"NAV.PurchaseLines\" Role=\"Purcha" +
-                "seLines\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=" +
-                "\"*\" /></Association><Association Name=\"Company_ReceiptAndPaymentTypes\"><End Type" +
-                "=\"NAV.ReceiptAndPaymentTypes\" Role=\"ReceiptAndPaymentTypes\" Multiplicity=\"*\" /><" +
-                "End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Associat" +
-                "ion Name=\"Company_receipts\"><End Type=\"NAV.receipts\" Role=\"receipts\" Multiplicit" +
-                "y=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association>" +
-                "<Association Name=\"Company_Resources\"><End Type=\"NAV.Resources\" Role=\"Resources\"" +
-                " Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></" +
-                "Association><Association Name=\"Company_SalesDashboard\"><End Type=\"NAV.SalesDashb" +
-                "oard\" Role=\"SalesDashboard\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Com" +
-                "pany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_SalesOpportuni" +
-                "ties\"><End Type=\"NAV.SalesOpportunities\" Role=\"SalesOpportunities\" Multiplicity=" +
-                "\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><A" +
-                "ssociation Name=\"Company_SalesOrdersBySalesPerson\"><End Type=\"NAV.SalesOrdersByS" +
-                "alesPerson\" Role=\"SalesOrdersBySalesPerson\" Multiplicity=\"*\" /><End Type=\"NAV.Co" +
-                "mpany\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Compan" +
-                "y_serviceitems\"><End Type=\"NAV.serviceitems\" Role=\"serviceitems\" Multiplicity=\"*" +
-                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ass" +
-                "ociation Name=\"Company_SupplierCategories\"><End Type=\"NAV.SupplierCategories\" Ro" +
-                "le=\"SupplierCategories\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company" +
-                "\" Multiplicity=\"*\" /></Association><Association Name=\"Company_TopCustomerOvervie" +
-                "w\"><End Type=\"NAV.TopCustomerOverview\" Role=\"TopCustomerOverview\" Multiplicity=\"" +
-                "*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><As" +
-                "sociation Name=\"Company_TransportRequisition\"><End Type=\"NAV.TransportRequisitio" +
-                "n\" Role=\"TransportRequisition\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"" +
-                "Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_TravelRequi" +
-                "sitionStaff\"><End Type=\"NAV.TravelRequisitionStaff\" Role=\"TravelRequisitionStaff" +
+                "ation><Association Name=\"Company_boardBlog\"><End Type=\"NAV.boardBlog\" Role=\"boar" +
+                "dBlog\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*" +
+                "\" /></Association><Association Name=\"Company_BoardComments\"><End Type=\"NAV.Compa" +
+                "ny\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.BoardComments\" Role=\"BoardC" +
+                "omments\" Multiplicity=\"*\" /></Association><Association Name=\"Company_boardMeetin" +
+                "gAttendance\"><End Type=\"NAV.boardMeetingAttendance\" Role=\"boardMeetingAttendance" +
                 "\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><" +
-                "/Association><Association Name=\"Company_VacantPositions\"><End Type=\"NAV.VacantPo" +
-                "sitions\" Role=\"VacantPositions\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=" +
-                "\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Vendors\"><" +
-                "End Type=\"NAV.Vendors\" Role=\"Vendors\" Multiplicity=\"*\" /><End Type=\"NAV.Company\"" +
-                " Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Work" +
-                "Types\"><End Type=\"NAV.WorkTypes\" Role=\"WorkTypes\" Multiplicity=\"*\" /><End Type=\"" +
+                "/Association><Association Name=\"Company_boardMeetings\"><End Type=\"NAV.boardMeeti" +
+                "ngs\" Role=\"boardMeetings\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Compa" +
+                "ny\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Casuals\"><End Ty" +
+                "pe=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.Casuals\" Role=" +
+                "\"Casuals\" Multiplicity=\"*\" /></Association><Association Name=\"Company_CommitteeB" +
+                "oardMembers\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type" +
+                "=\"NAV.CommitteeBoardMembers\" Role=\"CommitteeBoardMembers\" Multiplicity=\"*\" /></A" +
+                "ssociation><Association Name=\"Company_committeeMeetings\"><End Type=\"NAV.committe" +
+                "eMeetings\" Role=\"committeeMeetings\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" R" +
+                "ole=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Commit" +
+                "tees\"><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><End Type=\"NAV.C" +
+                "ommittees\" Role=\"Committees\" Multiplicity=\"*\" /></Association><Association Name=" +
+                "\"Company_contacts\"><End Type=\"NAV.contacts\" Role=\"contacts\" Multiplicity=\"*\" /><" +
+                "End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Associat" +
+                "ion Name=\"Company_Copyright_Files\"><End Type=\"NAV.Copyright_Files\" Role=\"Copyrig" +
+                "ht_Files\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity" +
+                "=\"*\" /></Association><Association Name=\"Company_CopyrightCategories\"><End Type=\"" +
+                "NAV.CopyrightCategories\" Role=\"CopyrightCategories\" Multiplicity=\"*\" /><End Type" +
+                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
+                "=\"Company_copyrightsetups\"><End Type=\"NAV.copyrightsetups\" Role=\"copyrightsetups" +
+                "\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><" +
+                "/Association><Association Name=\"Company_copyrightsubcategories\"><End Type=\"NAV.c" +
+                "opyrightsubcategories\" Role=\"copyrightsubcategories\" Multiplicity=\"*\" /><End Typ" +
+                "e=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Nam" +
+                "e=\"Company_CopyrightWorkCategories\"><End Type=\"NAV.CopyrightWorkCategories\" Role" +
+                "=\"CopyrightWorkCategories\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Comp" +
+                "any\" Multiplicity=\"*\" /></Association><Association Name=\"Company_CopyrightWorks\"" +
+                "><End Type=\"NAV.CopyrightWorks\" Role=\"CopyrightWorks\" Multiplicity=\"*\" /><End Ty" +
+                "pe=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Na" +
+                "me=\"Company_Countries\"><End Type=\"NAV.Countries\" Role=\"Countries\" Multiplicity=\"" +
+                "*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><As" +
+                "sociation Name=\"Company_Customers\"><End Type=\"NAV.Customers\" Role=\"Customers\" Mu" +
+                "ltiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Ass" +
+                "ociation><Association Name=\"Company_emailvalidations\"><End Type=\"NAV.emailvalida" +
+                "tions\" Role=\"emailvalidations\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"" +
+                "Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Employees\">" +
+                "<End Type=\"NAV.Employees\" Role=\"Employees\" Multiplicity=\"*\" /><End Type=\"NAV.Com" +
+                "pany\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company" +
+                "_FundCode\"><End Type=\"NAV.FundCode\" Role=\"FundCode\" Multiplicity=\"*\" /><End Type" +
+                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
+                "=\"Company_HrJobApplicants\"><End Type=\"NAV.HrJobApplicants\" Role=\"HrJobApplicants" +
+                "\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><" +
+                "/Association><Association Name=\"Company_HRJobApplicants\"><End Type=\"NAV.HRJobApp" +
+                "licants\" Role=\"HRJobApplicants\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=" +
+                "\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_HRPortalUs" +
+                "ers\"><End Type=\"NAV.HRPortalUsers\" Role=\"HRPortalUsers\" Multiplicity=\"*\" /><End " +
+                "Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association " +
+                "Name=\"Company_ImprestLines\"><End Type=\"NAV.ImprestLines\" Role=\"ImprestLines\" Mul" +
+                "tiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Asso" +
+                "ciation><Association Name=\"Company_ImprestMemo\"><End Type=\"NAV.ImprestMemo\" Role" +
+                "=\"ImprestMemo\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multipl" +
+                "icity=\"*\" /></Association><Association Name=\"Company_InventoryPostingGroups\"><En" +
+                "d Type=\"NAV.InventoryPostingGroups\" Role=\"InventoryPostingGroups\" Multiplicity=\"" +
+                "*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><As" +
+                "sociation Name=\"Company_ItemCategories\"><End Type=\"NAV.ItemCategories\" Role=\"Ite" +
+                "mCategories\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplic" +
+                "ity=\"*\" /></Association><Association Name=\"Company_Items\"><End Type=\"NAV.Items\" " +
+                "Role=\"Items\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplic" +
+                "ity=\"*\" /></Association><Association Name=\"Company_ItemSalesAndProfit\"><End Type" +
+                "=\"NAV.ItemSalesAndProfit\" Role=\"ItemSalesAndProfit\" Multiplicity=\"*\" /><End Type" +
+                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
+                "=\"Company_ItemSalesByCustomer\"><End Type=\"NAV.ItemSalesByCustomer\" Role=\"ItemSal" +
+                "esByCustomer\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multipli" +
+                "city=\"*\" /></Association><Association Name=\"Company_JobApplicantHobies\"><End Typ" +
+                "e=\"NAV.JobApplicantHobies\" Role=\"JobApplicantHobies\" Multiplicity=\"*\" /><End Typ" +
+                "e=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Nam" +
+                "e=\"Company_JobApplicantQualifications\"><End Type=\"NAV.JobApplicantQualifications" +
+                "\" Role=\"JobApplicantQualifications\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" R" +
+                "ole=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_JobApp" +
+                "licantReferees\"><End Type=\"NAV.JobApplicantReferees\" Role=\"JobApplicantReferees\"" +
+                " Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></" +
+                "Association><Association Name=\"Company_JobRequirements\"><End Type=\"NAV.JobRequir" +
+                "ements\" Role=\"JobRequirements\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"" +
+                "Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_JobResponsi" +
+                "bilities\"><End Type=\"NAV.JobResponsibilities\" Role=\"JobResponsibilities\" Multipl" +
+                "icity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Associat" +
+                "ion><Association Name=\"Company_jobs\"><End Type=\"NAV.jobs\" Role=\"jobs\" Multiplici" +
+                "ty=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association" +
+                "><Association Name=\"Company_JobTask\"><End Type=\"NAV.JobTask\" Role=\"JobTask\" Mult" +
+                "iplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Assoc" +
+                "iation><Association Name=\"Company_JobWorkingRelationships\"><End Type=\"NAV.JobWor" +
+                "kingRelationships\" Role=\"JobWorkingRelationships\" Multiplic";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart18 = "ity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association" +
+                "><Association Name=\"Company_languages\"><End Type=\"NAV.languages\" Role=\"languages" +
+                "\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /><" +
+                "/Association><Association Name=\"Company_LeaveApplications\"><End Type=\"NAV.LeaveA" +
+                "pplications\" Role=\"LeaveApplications\" Multiplicity=\"*\" /><End Type=\"NAV.Company\"" +
+                " Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Leav" +
+                "eTypes\"><End Type=\"NAV.LeaveTypes\" Role=\"LeaveTypes\" Multiplicity=\"*\" /><End Typ" +
+                "e=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Nam" +
+                "e=\"Company_Locations\"><End Type=\"NAV.Locations\" Role=\"Locations\" Multiplicity=\"*" +
+                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ass" +
+                "ociation Name=\"Company_MeetingAgenda\"><End Type=\"NAV.MeetingAgenda\" Role=\"Meetin" +
+                "gAgenda\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=" +
+                "\"*\" /></Association><Association Name=\"Company_My_Meetings\"><End Type=\"NAV.My_Me" +
+                "etings\" Role=\"My_Meetings\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Comp" +
+                "any\" Multiplicity=\"*\" /></Association><Association Name=\"Company_myCommitee\"><En" +
+                "d Type=\"NAV.myCommitee\" Role=\"myCommitee\" Multiplicity=\"*\" /><End Type=\"NAV.Comp" +
+                "any\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_" +
+                "MyJobApplications\"><End Type=\"NAV.MyJobApplications\" Role=\"MyJobApplications\" Mu" +
+                "ltiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Ass" +
+                "ociation><Association Name=\"Company_OtherCosts\"><End Type=\"NAV.OtherCosts\" Role=" +
+                "\"OtherCosts\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplic" +
+                "ity=\"*\" /></Association><Association Name=\"Company_Payments\"><End Type=\"NAV.Paym" +
+                "ents\" Role=\"Payments\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" " +
+                "Multiplicity=\"*\" /></Association><Association Name=\"Company_payperiods\"><End Typ" +
+                "e=\"NAV.payperiods\" Role=\"payperiods\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" " +
+                "Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Porta" +
+                "lUsers\"><End Type=\"NAV.PortalUsers\" Role=\"PortalUsers\" Multiplicity=\"*\" /><End T" +
+                "ype=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association N" +
+                "ame=\"Company_PositionsSupervised\"><End Type=\"NAV.PositionsSupervised\" Role=\"Posi" +
+                "tionsSupervised\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multi" +
+                "plicity=\"*\" /></Association><Association Name=\"Company_postcodes\"><End Type=\"NAV" +
+                ".postcodes\" Role=\"postcodes\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Co" +
+                "mpany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_PrequalifiedS" +
+                "uppliers\"><End Type=\"NAV.PrequalifiedSuppliers\" Role=\"PrequalifiedSuppliers\" Mul" +
+                "tiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Asso" +
+                "ciation><Association Name=\"Company_ProcurementHeader\"><End Type=\"NAV.Procurement" +
+                "Header\" Role=\"ProcurementHeader\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role" +
+                "=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Procureme" +
+                "ntPlan\"><End Type=\"NAV.ProcurementPlan\" Role=\"ProcurementPlan\" Multiplicity=\"*\" " +
+                "/><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Assoc" +
+                "iation Name=\"Company_ProcurementRequest\"><End Type=\"NAV.ProcurementRequest\" Role" +
+                "=\"ProcurementRequest\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" " +
+                "Multiplicity=\"*\" /></Association><Association Name=\"Company_ProcurementRequestLi" +
+                "nes\"><End Type=\"NAV.ProcurementRequestLines\" Role=\"ProcurementRequestLines\" Mult" +
+                "iplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Assoc" +
+                "iation><Association Name=\"Company_ProjectMembers\"><End Type=\"NAV.ProjectMembers\"" +
+                " Role=\"ProjectMembers\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\"" +
+                " Multiplicity=\"*\" /></Association><Association Name=\"Company_PurchaseHeader\"><En" +
+                "d Type=\"NAV.PurchaseHeader\" Role=\"PurchaseHeader\" Multiplicity=\"*\" /><End Type=\"" +
                 "NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"" +
-                "Company_Pending_Po\"><End Type=\"NAV.Pending_Po\" Role=\"Pending_Po\" Multiplicity=\"*" +
-                "\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Ent" +
-                "ityContainer Name=\"NAV\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Appro" +
-                "valEntriesPage\" EntityType=\"NAV.ApprovalEntriesPage\" /><EntitySet Name=\"powerbif" +
-                "inance\" EntityType=\"NAV.powerbifinance\" /><EntitySet Name=\"AgendaSurportingDocum" +
-                "ents\" EntityType=\"NAV.AgendaSurportingDocuments\" /><EntitySet Name=\"AgendaVoteIt" +
-                "ems\" EntityType=\"NAV.AgendaVoteItems\" /><EntitySet Name=\"allBoards\" EntityType=\"" +
-                "NAV.allBoards\" /><EntitySet Name=\"ApprovalEntries\" EntityType=\"NAV.ApprovalEntri" +
-                "es\" /><EntitySet Name=\"BoardComments\" EntityType=\"NAV.BoardComments\" /><EntitySe" +
-                "t Name=\"boardMeetingAttendance\" EntityType=\"NAV.boardMeetingAttendance\" /><Entit" +
-                "ySet Name=\"boardMeetings\" EntityType=\"NAV.boardMeetings\" /><EntitySet Name=\"Casu" +
-                "als\" EntityType=\"NAV.Casuals\" /><EntitySet Name=\"CommitteeBoardMembers\" EntityTy" +
-                "pe=\"NAV.CommitteeBoardMembers\" /><EntitySet Name=\"committeeMeetings\" EntityType=" +
-                "\"NAV.committeeMeetings\" /><EntitySet Name=\"Committees\" EntityType=\"NAV.Committee" +
-                "s\" /><EntitySet Name=\"contacts\" EntityType=\"NAV.contacts\" /><EntitySet Name=\"Cop" +
-                "yright_Files\" EntityType=\"NAV.Copyright_Files\" /><EntitySet Name=\"CopyrightCateg" +
-                "ories\" EntityType=\"NAV.CopyrightCategories\" /><EntitySet Name=\"copyrightsetups\" " +
-                "EntityType=\"NAV.copyrightsetups\" /><EntitySet Name=\"copyrightsubcategories\" Enti" +
-                "tyType=\"NAV.copyrightsubcategories\" /><EntitySet Name=\"CopyrightWorkCategories\" " +
-                "EntityType=\"NAV.CopyrightWorkCategories\" /><EntitySet Name=\"CopyrightWorks\" Enti" +
-                "tyType=\"NAV.CopyrightWorks\" /><EntitySet Name=\"Countries\" EntityType=\"NAV.Countr" +
-                "ies\" /><EntitySet Name=\"Customers\" EntityType=\"NAV.Customers\" /><EntitySet Name=" +
-                "\"emailvalidations\" EntityType=\"NAV.emailvalidations\" /><EntitySet Name=\"Employee" +
-                "s\" EntityType=\"NAV.Employees\" /><EntitySet Name=\"FundCode\" EntityType=\"NAV.FundC" +
-                "ode\" /><EntitySet Name=\"HrJobApplicants\" EntityType=\"NAV.HrJobApplicants\" /><Ent" +
-                "itySet Name=\"HRJobApplicants\" EntityType=\"NAV.HRJobApplicants\" /><EntitySet Name" +
-                "=\"HRPortalUsers\" EntityType=\"NAV.HRPortalUsers\" /><EntitySet Name=\"ImprestLines\"" +
-                " EntityType=\"NAV.ImprestLines\" /><EntitySet Name=\"ImprestMemo\" EntityType=\"NAV.I" +
-                "mprestMemo\" /><EntitySet Name=\"InventoryPostingGroups\" Enti";
+                "Company_PurchaseLines\"><End Type=\"NAV.PurchaseLines\" Role=\"PurchaseLines\" Multip" +
+                "licity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Associa" +
+                "tion><Association Name=\"Company_ReceiptAndPaymentTypes\"><End Type=\"NAV.ReceiptAn" +
+                "dPaymentTypes\" Role=\"ReceiptAndPaymentTypes\" Multiplicity=\"*\" /><End Type=\"NAV.C" +
+                "ompany\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Compa" +
+                "ny_receipts\"><End Type=\"NAV.receipts\" Role=\"receipts\" Multiplicity=\"*\" /><End Ty" +
+                "pe=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Na" +
+                "me=\"Company_Resources\"><End Type=\"NAV.Resources\" Role=\"Resources\" Multiplicity=\"" +
+                "*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><As" +
+                "sociation Name=\"Company_SalesDashboard\"><End Type=\"NAV.SalesDashboard\" Role=\"Sal" +
+                "esDashboard\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplic" +
+                "ity=\"*\" /></Association><Association Name=\"Company_SalesOpportunities\"><End Type" +
+                "=\"NAV.SalesOpportunities\" Role=\"SalesOpportunities\" Multiplicity=\"*\" /><End Type" +
+                "=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name" +
+                "=\"Company_SalesOrdersBySalesPerson\"><End Type=\"NAV.SalesOrdersBySalesPerson\" Rol" +
+                "e=\"SalesOrdersBySalesPerson\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Co" +
+                "mpany\" Multiplicity=\"*\" /></Association><Association Name=\"Company_serviceitems\"" +
+                "><End Type=\"NAV.serviceitems\" Role=\"serviceitems\" Multiplicity=\"*\" /><End Type=\"" +
+                "NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"" +
+                "Company_SupplierCategories\"><End Type=\"NAV.SupplierCategories\" Role=\"SupplierCat" +
+                "egories\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=" +
+                "\"*\" /></Association><Association Name=\"Company_TopCustomerOverview\"><End Type=\"N" +
+                "AV.TopCustomerOverview\" Role=\"TopCustomerOverview\" Multiplicity=\"*\" /><End Type=" +
+                "\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><Association Name=" +
+                "\"Company_TransportRequisition\"><End Type=\"NAV.TransportRequisition\" Role=\"Transp" +
+                "ortRequisition\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multip" +
+                "licity=\"*\" /></Association><Association Name=\"Company_TravelRequisitionStaff\"><E" +
+                "nd Type=\"NAV.TravelRequisitionStaff\" Role=\"TravelRequisitionStaff\" Multiplicity=" +
+                "\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><A" +
+                "ssociation Name=\"Company_VacantPositions\"><End Type=\"NAV.VacantPositions\" Role=\"" +
+                "VacantPositions\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\" Multi" +
+                "plicity=\"*\" /></Association><Association Name=\"Company_Vendors\"><End Type=\"NAV.V" +
+                "endors\" Role=\"Vendors\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Role=\"Company\"" +
+                " Multiplicity=\"*\" /></Association><Association Name=\"Company_WorkTypes\"><End Typ" +
+                "e=\"NAV.WorkTypes\" Role=\"WorkTypes\" Multiplicity=\"*\" /><End Type=\"NAV.Company\" Ro" +
+                "le=\"Company\" Multiplicity=\"*\" /></Association><Association Name=\"Company_Pending" +
+                "_Po\"><End Type=\"NAV.Pending_Po\" Role=\"Pending_Po\" Multiplicity=\"*\" /><End Type=\"" +
+                "NAV.Company\" Role=\"Company\" Multiplicity=\"*\" /></Association><EntityContainer Na" +
+                "me=\"NAV\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"ApprovalEntriesPage\"" +
+                " EntityType=\"NAV.ApprovalEntriesPage\" /><EntitySet Name=\"powerbifinance\" EntityT" +
+                "ype=\"NAV.powerbifinance\" /><EntitySet Name=\"AgendaSurportingDocuments\" EntityTyp" +
+                "e=\"NAV.AgendaSurportingDocuments\" /><EntitySet Name=\"AgendaVoteItems\" EntityType" +
+                "=\"NAV.AgendaVoteItems\" /><EntitySet Name=\"allBoards\" EntityType=\"NAV.allBoards\" " +
+                "/><EntitySet Name=\"ApprovalEntries\" EntityType=\"NAV.Approva";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart19 = "tyType=\"NAV.InventoryPostingGroups\" /><EntitySet Name=\"ItemCategories\" EntityType" +
-                "=\"NAV.ItemCategories\" /><EntitySet Name=\"Items\" EntityType=\"NAV.Items\" /><Entity" +
-                "Set Name=\"ItemSalesAndProfit\" EntityType=\"NAV.ItemSalesAndProfit\" /><EntitySet N" +
-                "ame=\"ItemSalesByCustomer\" EntityType=\"NAV.ItemSalesByCustomer\" /><EntitySet Name" +
-                "=\"JobApplicantHobies\" EntityType=\"NAV.JobApplicantHobies\" /><EntitySet Name=\"Job" +
-                "ApplicantQualifications\" EntityType=\"NAV.JobApplicantQualifications\" /><EntitySe" +
-                "t Name=\"JobApplicantReferees\" EntityType=\"NAV.JobApplicantReferees\" /><EntitySet" +
-                " Name=\"JobRequirements\" EntityType=\"NAV.JobRequirements\" /><EntitySet Name=\"JobR" +
-                "esponsibilities\" EntityType=\"NAV.JobResponsibilities\" /><EntitySet Name=\"jobs\" E" +
-                "ntityType=\"NAV.jobs\" /><EntitySet Name=\"JobTask\" EntityType=\"NAV.JobTask\" /><Ent" +
-                "itySet Name=\"JobWorkingRelationships\" EntityType=\"NAV.JobWorkingRelationships\" /" +
-                "><EntitySet Name=\"languages\" EntityType=\"NAV.languages\" /><EntitySet Name=\"Leave" +
-                "Applications\" EntityType=\"NAV.LeaveApplications\" /><EntitySet Name=\"LeaveTypes\" " +
-                "EntityType=\"NAV.LeaveTypes\" /><EntitySet Name=\"Locations\" EntityType=\"NAV.Locati" +
-                "ons\" /><EntitySet Name=\"MeetingAgenda\" EntityType=\"NAV.MeetingAgenda\" /><EntityS" +
-                "et Name=\"My_Meetings\" EntityType=\"NAV.My_Meetings\" /><EntitySet Name=\"myCommitee" +
-                "\" EntityType=\"NAV.myCommitee\" /><EntitySet Name=\"MyJobApplications\" EntityType=\"" +
-                "NAV.MyJobApplications\" /><EntitySet Name=\"OtherCosts\" EntityType=\"NAV.OtherCosts" +
-                "\" /><EntitySet Name=\"Payments\" EntityType=\"NAV.Payments\" /><EntitySet Name=\"payp" +
-                "eriods\" EntityType=\"NAV.payperiods\" /><EntitySet Name=\"PortalUsers\" EntityType=\"" +
-                "NAV.PortalUsers\" /><EntitySet Name=\"PositionsSupervised\" EntityType=\"NAV.Positio" +
-                "nsSupervised\" /><EntitySet Name=\"postcodes\" EntityType=\"NAV.postcodes\" /><Entity" +
-                "Set Name=\"PrequalifiedSuppliers\" EntityType=\"NAV.PrequalifiedSuppliers\" /><Entit" +
-                "ySet Name=\"ProcurementHeader\" EntityType=\"NAV.ProcurementHeader\" /><EntitySet Na" +
-                "me=\"ProcurementPlan\" EntityType=\"NAV.ProcurementPlan\" /><EntitySet Name=\"Procure" +
-                "mentRequest\" EntityType=\"NAV.ProcurementRequest\" /><EntitySet Name=\"ProcurementR" +
-                "equestLines\" EntityType=\"NAV.ProcurementRequestLines\" /><EntitySet Name=\"Project" +
-                "Members\" EntityType=\"NAV.ProjectMembers\" /><EntitySet Name=\"PurchaseHeader\" Enti" +
-                "tyType=\"NAV.PurchaseHeader\" /><EntitySet Name=\"PurchaseLines\" EntityType=\"NAV.Pu" +
-                "rchaseLines\" /><EntitySet Name=\"ReceiptAndPaymentTypes\" EntityType=\"NAV.ReceiptA" +
-                "ndPaymentTypes\" /><EntitySet Name=\"receipts\" EntityType=\"NAV.receipts\" /><Entity" +
-                "Set Name=\"Resources\" EntityType=\"NAV.Resources\" /><EntitySet Name=\"SalesDashboar" +
-                "d\" EntityType=\"NAV.SalesDashboard\" /><EntitySet Name=\"SalesOpportunities\" Entity" +
-                "Type=\"NAV.SalesOpportunities\" /><EntitySet Name=\"SalesOrdersBySalesPerson\" Entit" +
-                "yType=\"NAV.SalesOrdersBySalesPerson\" /><EntitySet Name=\"serviceitems\" EntityType" +
-                "=\"NAV.serviceitems\" /><EntitySet Name=\"SupplierCategories\" EntityType=\"NAV.Suppl" +
-                "ierCategories\" /><EntitySet Name=\"TopCustomerOverview\" EntityType=\"NAV.TopCustom" +
-                "erOverview\" /><EntitySet Name=\"TransportRequisition\" EntityType=\"NAV.TransportRe" +
-                "quisition\" /><EntitySet Name=\"TravelRequisitionStaff\" EntityType=\"NAV.TravelRequ" +
-                "isitionStaff\" /><EntitySet Name=\"VacantPositions\" EntityType=\"NAV.VacantPosition" +
-                "s\" /><EntitySet Name=\"Vendors\" EntityType=\"NAV.Vendors\" /><EntitySet Name=\"WorkT" +
-                "ypes\" EntityType=\"NAV.WorkTypes\" /><EntitySet Name=\"Pending_Po\" EntityType=\"NAV." +
-                "Pending_Po\" /><EntitySet Name=\"Company\" EntityType=\"NAV.Company\" /><AssociationS" +
-                "et Name=\"Company_ApprovalEntriesPage_ApprovalEntriesPage\" Association=\"NAV.Compa" +
-                "ny_ApprovalEntriesPage\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"App" +
-                "rovalEntriesPage\" EntitySet=\"ApprovalEntriesPage\" /></AssociationSet><Associatio" +
-                "nSet Name=\"Company_powerbifinance_powerbifinance\" Association=\"NAV.Company_power" +
-                "bifinance\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"powerbifinance\" " +
-                "EntitySet=\"powerbifinance\" /></AssociationSet><AssociationSet Name=\"Company_Agen" +
-                "daSurportingDocuments_AgendaSurportingDocuments\" Association=\"NAV.Company_Agenda" +
-                "SurportingDocuments\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Agenda" +
-                "SurportingDocuments\" EntitySet=\"AgendaSurportingDocuments\" /></AssociationSet><A" +
-                "ssociationSet Name=\"Company_AgendaVoteItems_AgendaVoteItems\" Association=\"NAV.Co" +
-                "mpany_AgendaVoteItems\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Agen" +
-                "daVoteItems\" EntitySet=\"AgendaVoteItems\" /></AssociationSet><AssociationSet Name" +
-                "=\"Company_allBoards_allBoards\" Association=\"NAV.Company_allBoards\"><End Role=\"Co" +
-                "mpany\" EntitySet=\"Company\" /><End Role=\"allBoards\" EntitySet=\"allBoards\" /></Ass" +
-                "ociationSet><AssociationSet Name=\"Company_ApprovalEntries_ApprovalEntries\" Assoc" +
-                "iation=\"NAV.Company_ApprovalEntries\"><End Role=\"Company\" EntitySet=\"Company\" /><" +
-                "End Role=\"ApprovalEntries\" EntitySet=\"ApprovalEntries\" /></AssociationSet><Assoc" +
-                "iationSet Name=\"Company_BoardComments_BoardComments\" Association=\"NAV.Company_Bo" +
-                "ardComments\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"BoardComments\"" +
-                " EntitySet=\"BoardComments\" /></AssociationSet><AssociationSet Name=\"Company_boar" +
-                "dMeetingAttendance_boardMeetingAttendance\" Association=\"NAV.Company_boardMeeting" +
-                "Attendance\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"boardMeetingAtt" +
-                "endance\" EntitySet=\"boardMeetingAttendance\" /></AssociationSet><AssociationSet N" +
-                "ame=\"Company_boardMeetings_boardMeetings\" Association=\"NAV.Company_boardMeetings" +
-                "\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"boardMeetings\" EntitySet=" +
-                "\"boardMeetings\" /></AssociationSet><AssociationSet Name=\"Company_Casuals_Casuals" +
-                "\" Association=\"NAV.Company_Casuals\"><End Role=\"Company\" EntitySet=\"Company\" /><E" +
-                "nd Role=\"Casuals\" EntitySet=\"Casuals\" /></AssociationSet><AssociationSet Name=\"C" +
-                "ompany_CommitteeBoardMembers_CommitteeBoardMembers\" Association=\"NAV.Company_Com" +
-                "mitteeBoardMembers\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Committ" +
-                "eeBoardMembers\" EntitySet=\"CommitteeBoardMembers\" /></AssociationSet><Associatio" +
-                "nSet Name=\"Company_committeeMeetings_committeeMeetings\" Association=\"NAV.Company" +
-                "_committeeMeetings\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"committ" +
-                "eeMeetings\" EntitySet=\"committeeMeetings\" /></AssociationSet><AssociationSet Nam" +
-                "e=\"Company_Committees_Committees\" Association=\"NAV.Company_Committees\"><End Role" +
-                "=\"Company\" EntitySet=\"Company\" /><End Role=\"Committees\" EntitySet=\"Committees\" /" +
-                "></AssociationSet><AssociationSet Name=\"Company_contacts_contacts\" Association=\"" +
-                "NAV.Company_contacts\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"conta" +
-                "cts\" EntitySet=\"contacts\" /></AssociationSet><AssociationSet Name=\"Company_Copyr" +
-                "ight_Files_Copyright_Files\" Association=\"NAV.Company_Copyright_Files\"><End Role=" +
-                "\"Company\" EntitySet=\"Company\" /><End Role=\"Copyright_Files\" EntitySet=\"Copyright" +
-                "_Files\" /></AssociationSet><AssociationSet Name=\"Company_CopyrightCategories_Cop" +
-                "yrightCategories\" Association=\"NAV.Company_CopyrightCategories\"><End Role=\"Compa" +
-                "ny\" EntitySet=\"Company\" /><End Role=\"CopyrightCategories\" EntitySet=\"CopyrightCa" +
-                "tegories\" /></AssociationSet><AssociationSet Name=\"Company_copyrightsetups_copyr" +
-                "ightsetups\" Association=\"NAV.Company_copyrightsetups\"><End Role=\"Company\" Entity" +
-                "Set=\"Company\" /><End Role=\"copyrightsetups\" EntitySet=\"copyrightsetups\" /></Asso" +
-                "ciationSet><AssociationSet Name=\"Company_copyrightsubcategories_copyrightsubcate" +
-                "gories\" Association=\"NAV.Company_copyrightsubcategories\"><End Role=\"Company\" Ent" +
-                "itySet=\"Company\" /><End Role=\"copyrightsubcategories\" EntitySet=\"copyrightsubcat" +
-                "egories\" /></AssociationSet><AssociationSet Name=\"Company_C";
+            private const string ModelPart19 = "lEntries\" /><EntitySet Name=\"blogReplies\" EntityType=\"NAV.blogReplies\" /><EntityS" +
+                "et Name=\"boardBlog\" EntityType=\"NAV.boardBlog\" /><EntitySet Name=\"BoardComments\"" +
+                " EntityType=\"NAV.BoardComments\" /><EntitySet Name=\"boardMeetingAttendance\" Entit" +
+                "yType=\"NAV.boardMeetingAttendance\" /><EntitySet Name=\"boardMeetings\" EntityType=" +
+                "\"NAV.boardMeetings\" /><EntitySet Name=\"Casuals\" EntityType=\"NAV.Casuals\" /><Enti" +
+                "tySet Name=\"CommitteeBoardMembers\" EntityType=\"NAV.CommitteeBoardMembers\" /><Ent" +
+                "itySet Name=\"committeeMeetings\" EntityType=\"NAV.committeeMeetings\" /><EntitySet " +
+                "Name=\"Committees\" EntityType=\"NAV.Committees\" /><EntitySet Name=\"contacts\" Entit" +
+                "yType=\"NAV.contacts\" /><EntitySet Name=\"Copyright_Files\" EntityType=\"NAV.Copyrig" +
+                "ht_Files\" /><EntitySet Name=\"CopyrightCategories\" EntityType=\"NAV.CopyrightCateg" +
+                "ories\" /><EntitySet Name=\"copyrightsetups\" EntityType=\"NAV.copyrightsetups\" /><E" +
+                "ntitySet Name=\"copyrightsubcategories\" EntityType=\"NAV.copyrightsubcategories\" /" +
+                "><EntitySet Name=\"CopyrightWorkCategories\" EntityType=\"NAV.CopyrightWorkCategori" +
+                "es\" /><EntitySet Name=\"CopyrightWorks\" EntityType=\"NAV.CopyrightWorks\" /><Entity" +
+                "Set Name=\"Countries\" EntityType=\"NAV.Countries\" /><EntitySet Name=\"Customers\" En" +
+                "tityType=\"NAV.Customers\" /><EntitySet Name=\"emailvalidations\" EntityType=\"NAV.em" +
+                "ailvalidations\" /><EntitySet Name=\"Employees\" EntityType=\"NAV.Employees\" /><Enti" +
+                "tySet Name=\"FundCode\" EntityType=\"NAV.FundCode\" /><EntitySet Name=\"HrJobApplican" +
+                "ts\" EntityType=\"NAV.HrJobApplicants\" /><EntitySet Name=\"HRJobApplicants\" EntityT" +
+                "ype=\"NAV.HRJobApplicants\" /><EntitySet Name=\"HRPortalUsers\" EntityType=\"NAV.HRPo" +
+                "rtalUsers\" /><EntitySet Name=\"ImprestLines\" EntityType=\"NAV.ImprestLines\" /><Ent" +
+                "itySet Name=\"ImprestMemo\" EntityType=\"NAV.ImprestMemo\" /><EntitySet Name=\"Invent" +
+                "oryPostingGroups\" EntityType=\"NAV.InventoryPostingGroups\" /><EntitySet Name=\"Ite" +
+                "mCategories\" EntityType=\"NAV.ItemCategories\" /><EntitySet Name=\"Items\" EntityTyp" +
+                "e=\"NAV.Items\" /><EntitySet Name=\"ItemSalesAndProfit\" EntityType=\"NAV.ItemSalesAn" +
+                "dProfit\" /><EntitySet Name=\"ItemSalesByCustomer\" EntityType=\"NAV.ItemSalesByCust" +
+                "omer\" /><EntitySet Name=\"JobApplicantHobies\" EntityType=\"NAV.JobApplicantHobies\"" +
+                " /><EntitySet Name=\"JobApplicantQualifications\" EntityType=\"NAV.JobApplicantQual" +
+                "ifications\" /><EntitySet Name=\"JobApplicantReferees\" EntityType=\"NAV.JobApplican" +
+                "tReferees\" /><EntitySet Name=\"JobRequirements\" EntityType=\"NAV.JobRequirements\" " +
+                "/><EntitySet Name=\"JobResponsibilities\" EntityType=\"NAV.JobResponsibilities\" /><" +
+                "EntitySet Name=\"jobs\" EntityType=\"NAV.jobs\" /><EntitySet Name=\"JobTask\" EntityTy" +
+                "pe=\"NAV.JobTask\" /><EntitySet Name=\"JobWorkingRelationships\" EntityType=\"NAV.Job" +
+                "WorkingRelationships\" /><EntitySet Name=\"languages\" EntityType=\"NAV.languages\" /" +
+                "><EntitySet Name=\"LeaveApplications\" EntityType=\"NAV.LeaveApplications\" /><Entit" +
+                "ySet Name=\"LeaveTypes\" EntityType=\"NAV.LeaveTypes\" /><EntitySet Name=\"Locations\"" +
+                " EntityType=\"NAV.Locations\" /><EntitySet Name=\"MeetingAgenda\" EntityType=\"NAV.Me" +
+                "etingAgenda\" /><EntitySet Name=\"My_Meetings\" EntityType=\"NAV.My_Meetings\" /><Ent" +
+                "itySet Name=\"myCommitee\" EntityType=\"NAV.myCommitee\" /><EntitySet Name=\"MyJobApp" +
+                "lications\" EntityType=\"NAV.MyJobApplications\" /><EntitySet Name=\"OtherCosts\" Ent" +
+                "ityType=\"NAV.OtherCosts\" /><EntitySet Name=\"Payments\" EntityType=\"NAV.Payments\" " +
+                "/><EntitySet Name=\"payperiods\" EntityType=\"NAV.payperiods\" /><EntitySet Name=\"Po" +
+                "rtalUsers\" EntityType=\"NAV.PortalUsers\" /><EntitySet Name=\"PositionsSupervised\" " +
+                "EntityType=\"NAV.PositionsSupervised\" /><EntitySet Name=\"postcodes\" EntityType=\"N" +
+                "AV.postcodes\" /><EntitySet Name=\"PrequalifiedSuppliers\" EntityType=\"NAV.Prequali" +
+                "fiedSuppliers\" /><EntitySet Name=\"ProcurementHeader\" EntityType=\"NAV.Procurement" +
+                "Header\" /><EntitySet Name=\"ProcurementPlan\" EntityType=\"NAV.ProcurementPlan\" /><" +
+                "EntitySet Name=\"ProcurementRequest\" EntityType=\"NAV.ProcurementRequest\" /><Entit" +
+                "ySet Name=\"ProcurementRequestLines\" EntityType=\"NAV.ProcurementRequestLines\" /><" +
+                "EntitySet Name=\"ProjectMembers\" EntityType=\"NAV.ProjectMembers\" /><EntitySet Nam" +
+                "e=\"PurchaseHeader\" EntityType=\"NAV.PurchaseHeader\" /><EntitySet Name=\"PurchaseLi" +
+                "nes\" EntityType=\"NAV.PurchaseLines\" /><EntitySet Name=\"ReceiptAndPaymentTypes\" E" +
+                "ntityType=\"NAV.ReceiptAndPaymentTypes\" /><EntitySet Name=\"receipts\" EntityType=\"" +
+                "NAV.receipts\" /><EntitySet Name=\"Resources\" EntityType=\"NAV.Resources\" /><Entity" +
+                "Set Name=\"SalesDashboard\" EntityType=\"NAV.SalesDashboard\" /><EntitySet Name=\"Sal" +
+                "esOpportunities\" EntityType=\"NAV.SalesOpportunities\" /><EntitySet Name=\"SalesOrd" +
+                "ersBySalesPerson\" EntityType=\"NAV.SalesOrdersBySalesPerson\" /><EntitySet Name=\"s" +
+                "erviceitems\" EntityType=\"NAV.serviceitems\" /><EntitySet Name=\"SupplierCategories" +
+                "\" EntityType=\"NAV.SupplierCategories\" /><EntitySet Name=\"TopCustomerOverview\" En" +
+                "tityType=\"NAV.TopCustomerOverview\" /><EntitySet Name=\"TransportRequisition\" Enti" +
+                "tyType=\"NAV.TransportRequisition\" /><EntitySet Name=\"TravelRequisitionStaff\" Ent" +
+                "ityType=\"NAV.TravelRequisitionStaff\" /><EntitySet Name=\"VacantPositions\" EntityT" +
+                "ype=\"NAV.VacantPositions\" /><EntitySet Name=\"Vendors\" EntityType=\"NAV.Vendors\" /" +
+                "><EntitySet Name=\"WorkTypes\" EntityType=\"NAV.WorkTypes\" /><EntitySet Name=\"Pendi" +
+                "ng_Po\" EntityType=\"NAV.Pending_Po\" /><EntitySet Name=\"Company\" EntityType=\"NAV.C" +
+                "ompany\" /><AssociationSet Name=\"Company_ApprovalEntriesPage_ApprovalEntriesPage\"" +
+                " Association=\"NAV.Company_ApprovalEntriesPage\"><End Role=\"Company\" EntitySet=\"Co" +
+                "mpany\" /><End Role=\"ApprovalEntriesPage\" EntitySet=\"ApprovalEntriesPage\" /></Ass" +
+                "ociationSet><AssociationSet Name=\"Company_powerbifinance_powerbifinance\" Associa" +
+                "tion=\"NAV.Company_powerbifinance\"><End Role=\"Company\" EntitySet=\"Company\" /><End" +
+                " Role=\"powerbifinance\" EntitySet=\"powerbifinance\" /></AssociationSet><Associatio" +
+                "nSet Name=\"Company_AgendaSurportingDocuments_AgendaSurportingDocuments\" Associat" +
+                "ion=\"NAV.Company_AgendaSurportingDocuments\"><End Role=\"Company\" EntitySet=\"Compa" +
+                "ny\" /><End Role=\"AgendaSurportingDocuments\" EntitySet=\"AgendaSurportingDocuments" +
+                "\" /></AssociationSet><AssociationSet Name=\"Company_AgendaVoteItems_AgendaVoteIte" +
+                "ms\" Association=\"NAV.Company_AgendaVoteItems\"><End Role=\"Company\" EntitySet=\"Com" +
+                "pany\" /><End Role=\"AgendaVoteItems\" EntitySet=\"AgendaVoteItems\" /></AssociationS" +
+                "et><AssociationSet Name=\"Company_allBoards_allBoards\" Association=\"NAV.Company_a" +
+                "llBoards\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"allBoards\" Entity" +
+                "Set=\"allBoards\" /></AssociationSet><AssociationSet Name=\"Company_ApprovalEntries" +
+                "_ApprovalEntries\" Association=\"NAV.Company_ApprovalEntries\"><End Role=\"Company\" " +
+                "EntitySet=\"Company\" /><End Role=\"ApprovalEntries\" EntitySet=\"ApprovalEntries\" />" +
+                "</AssociationSet><AssociationSet Name=\"Company_blogReplies_blogReplies\" Associat" +
+                "ion=\"NAV.Company_blogReplies\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
+                "e=\"blogReplies\" EntitySet=\"blogReplies\" /></AssociationSet><AssociationSet Name=" +
+                "\"Company_boardBlog_boardBlog\" Association=\"NAV.Company_boardBlog\"><End Role=\"Com" +
+                "pany\" EntitySet=\"Company\" /><End Role=\"boardBlog\" EntitySet=\"boardBlog\" /></Asso" +
+                "ciationSet><AssociationSet Name=\"Company_BoardComments_BoardComments\" Associatio" +
+                "n=\"NAV.Company_BoardComments\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
+                "e=\"BoardComments\" EntitySet=\"BoardComments\" /></AssociationSet><AssociationSet N" +
+                "ame=\"Company_boardMeetingAttendance_boardMeetingAttendance\" Association=\"NAV.Com" +
+                "pany_boardMeetingAttendance\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role" +
+                "=\"boardMeetingAttendance\" EntitySet=\"boardMeetingAttendance\" /></AssociationSet>" +
+                "<AssociationSet Name=\"Company_boardMeetings_boardMeetings\" ";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart20 = "opyrightWorkCategories_CopyrightWorkCategories\" Association=\"NAV.Company_Copyrigh" +
-                "tWorkCategories\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"CopyrightW" +
-                "orkCategories\" EntitySet=\"CopyrightWorkCategories\" /></AssociationSet><Associati" +
-                "onSet Name=\"Company_CopyrightWorks_CopyrightWorks\" Association=\"NAV.Company_Copy" +
-                "rightWorks\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"CopyrightWorks\"" +
-                " EntitySet=\"CopyrightWorks\" /></AssociationSet><AssociationSet Name=\"Company_Cou" +
-                "ntries_Countries\" Association=\"NAV.Company_Countries\"><End Role=\"Company\" Entity" +
-                "Set=\"Company\" /><End Role=\"Countries\" EntitySet=\"Countries\" /></AssociationSet><" +
-                "AssociationSet Name=\"Company_Customers_Customers\" Association=\"NAV.Company_Custo" +
-                "mers\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Customers\" EntitySet=" +
-                "\"Customers\" /></AssociationSet><AssociationSet Name=\"Company_emailvalidations_em" +
-                "ailvalidations\" Association=\"NAV.Company_emailvalidations\"><End Role=\"Company\" E" +
-                "ntitySet=\"Company\" /><End Role=\"emailvalidations\" EntitySet=\"emailvalidations\" /" +
-                "></AssociationSet><AssociationSet Name=\"Company_Employees_Employees\" Association" +
-                "=\"NAV.Company_Employees\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Em" +
-                "ployees\" EntitySet=\"Employees\" /></AssociationSet><AssociationSet Name=\"Company_" +
-                "FundCode_FundCode\" Association=\"NAV.Company_FundCode\"><End Role=\"Company\" Entity" +
-                "Set=\"Company\" /><End Role=\"FundCode\" EntitySet=\"FundCode\" /></AssociationSet><As" +
-                "sociationSet Name=\"Company_HrJobApplicants_HrJobApplicants\" Association=\"NAV.Com" +
-                "pany_HrJobApplicants\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"HrJob" +
-                "Applicants\" EntitySet=\"HrJobApplicants\" /></AssociationSet><AssociationSet Name=" +
-                "\"Company_HRJobApplicants_HRJobApplicants\" Association=\"NAV.Company_HRJobApplican" +
-                "ts\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"HRJobApplicants\" Entity" +
-                "Set=\"HRJobApplicants\" /></AssociationSet><AssociationSet Name=\"Company_HRPortalU" +
-                "sers_HRPortalUsers\" Association=\"NAV.Company_HRPortalUsers\"><End Role=\"Company\" " +
-                "EntitySet=\"Company\" /><End Role=\"HRPortalUsers\" EntitySet=\"HRPortalUsers\" /></As" +
-                "sociationSet><AssociationSet Name=\"Company_ImprestLines_ImprestLines\" Associatio" +
-                "n=\"NAV.Company_ImprestLines\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role" +
-                "=\"ImprestLines\" EntitySet=\"ImprestLines\" /></AssociationSet><AssociationSet Name" +
-                "=\"Company_ImprestMemo_ImprestMemo\" Association=\"NAV.Company_ImprestMemo\"><End Ro" +
-                "le=\"Company\" EntitySet=\"Company\" /><End Role=\"ImprestMemo\" EntitySet=\"ImprestMem" +
-                "o\" /></AssociationSet><AssociationSet Name=\"Company_InventoryPostingGroups_Inven" +
-                "toryPostingGroups\" Association=\"NAV.Company_InventoryPostingGroups\"><End Role=\"C" +
-                "ompany\" EntitySet=\"Company\" /><End Role=\"InventoryPostingGroups\" EntitySet=\"Inve" +
-                "ntoryPostingGroups\" /></AssociationSet><AssociationSet Name=\"Company_ItemCategor" +
-                "ies_ItemCategories\" Association=\"NAV.Company_ItemCategories\"><End Role=\"Company\"" +
-                " EntitySet=\"Company\" /><End Role=\"ItemCategories\" EntitySet=\"ItemCategories\" /><" +
-                "/AssociationSet><AssociationSet Name=\"Company_Items_Items\" Association=\"NAV.Comp" +
-                "any_Items\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Items\" EntitySet" +
-                "=\"Items\" /></AssociationSet><AssociationSet Name=\"Company_ItemSalesAndProfit_Ite" +
-                "mSalesAndProfit\" Association=\"NAV.Company_ItemSalesAndProfit\"><End Role=\"Company" +
-                "\" EntitySet=\"Company\" /><End Role=\"ItemSalesAndProfit\" EntitySet=\"ItemSalesAndPr" +
-                "ofit\" /></AssociationSet><AssociationSet Name=\"Company_ItemSalesByCustomer_ItemS" +
-                "alesByCustomer\" Association=\"NAV.Company_ItemSalesByCustomer\"><End Role=\"Company" +
-                "\" EntitySet=\"Company\" /><End Role=\"ItemSalesByCustomer\" EntitySet=\"ItemSalesByCu" +
-                "stomer\" /></AssociationSet><AssociationSet Name=\"Company_JobApplicantHobies_JobA" +
-                "pplicantHobies\" Association=\"NAV.Company_JobApplicantHobies\"><End Role=\"Company\"" +
-                " EntitySet=\"Company\" /><End Role=\"JobApplicantHobies\" EntitySet=\"JobApplicantHob" +
-                "ies\" /></AssociationSet><AssociationSet Name=\"Company_JobApplicantQualifications" +
-                "_JobApplicantQualifications\" Association=\"NAV.Company_JobApplicantQualifications" +
-                "\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobApplicantQualification" +
-                "s\" EntitySet=\"JobApplicantQualifications\" /></AssociationSet><AssociationSet Nam" +
-                "e=\"Company_JobApplicantReferees_JobApplicantReferees\" Association=\"NAV.Company_J" +
-                "obApplicantReferees\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobApp" +
-                "licantReferees\" EntitySet=\"JobApplicantReferees\" /></AssociationSet><Association" +
-                "Set Name=\"Company_JobRequirements_JobRequirements\" Association=\"NAV.Company_JobR" +
-                "equirements\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobRequirement" +
-                "s\" EntitySet=\"JobRequirements\" /></AssociationSet><AssociationSet Name=\"Company_" +
-                "JobResponsibilities_JobResponsibilities\" Association=\"NAV.Company_JobResponsibil" +
-                "ities\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobResponsibilities\"" +
-                " EntitySet=\"JobResponsibilities\" /></AssociationSet><AssociationSet Name=\"Compan" +
-                "y_jobs_jobs\" Association=\"NAV.Company_jobs\"><End Role=\"Company\" EntitySet=\"Compa" +
-                "ny\" /><End Role=\"jobs\" EntitySet=\"jobs\" /></AssociationSet><AssociationSet Name=" +
-                "\"Company_JobTask_JobTask\" Association=\"NAV.Company_JobTask\"><End Role=\"Company\" " +
-                "EntitySet=\"Company\" /><End Role=\"JobTask\" EntitySet=\"JobTask\" /></AssociationSet" +
-                "><AssociationSet Name=\"Company_JobWorkingRelationships_JobWorkingRelationships\" " +
-                "Association=\"NAV.Company_JobWorkingRelationships\"><End Role=\"Company\" EntitySet=" +
-                "\"Company\" /><End Role=\"JobWorkingRelationships\" EntitySet=\"JobWorkingRelationshi" +
-                "ps\" /></AssociationSet><AssociationSet Name=\"Company_languages_languages\" Associ" +
-                "ation=\"NAV.Company_languages\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
-                "e=\"languages\" EntitySet=\"languages\" /></AssociationSet><AssociationSet Name=\"Com" +
-                "pany_LeaveApplications_LeaveApplications\" Association=\"NAV.Company_LeaveApplicat" +
-                "ions\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"LeaveApplications\" En" +
-                "titySet=\"LeaveApplications\" /></AssociationSet><AssociationSet Name=\"Company_Lea" +
-                "veTypes_LeaveTypes\" Association=\"NAV.Company_LeaveTypes\"><End Role=\"Company\" Ent" +
-                "itySet=\"Company\" /><End Role=\"LeaveTypes\" EntitySet=\"LeaveTypes\" /></Association" +
-                "Set><AssociationSet Name=\"Company_Locations_Locations\" Association=\"NAV.Company_" +
-                "Locations\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Locations\" Entit" +
-                "ySet=\"Locations\" /></AssociationSet><AssociationSet Name=\"Company_MeetingAgenda_" +
-                "MeetingAgenda\" Association=\"NAV.Company_MeetingAgenda\"><End Role=\"Company\" Entit" +
-                "ySet=\"Company\" /><End Role=\"MeetingAgenda\" EntitySet=\"MeetingAgenda\" /></Associa" +
-                "tionSet><AssociationSet Name=\"Company_My_Meetings_My_Meetings\" Association=\"NAV." +
-                "Company_My_Meetings\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"My_Mee" +
-                "tings\" EntitySet=\"My_Meetings\" /></AssociationSet><AssociationSet Name=\"Company_" +
-                "myCommitee_myCommitee\" Association=\"NAV.Company_myCommitee\"><End Role=\"Company\" " +
-                "EntitySet=\"Company\" /><End Role=\"myCommitee\" EntitySet=\"myCommitee\" /></Associat" +
-                "ionSet><AssociationSet Name=\"Company_MyJobApplications_MyJobApplications\" Associ" +
-                "ation=\"NAV.Company_MyJobApplications\"><End Role=\"Company\" EntitySet=\"Company\" />" +
-                "<End Role=\"MyJobApplications\" EntitySet=\"MyJobApplications\" /></AssociationSet><" +
-                "AssociationSet Name=\"Company_OtherCosts_OtherCosts\" Association=\"NAV.Company_Oth" +
-                "erCosts\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"OtherCosts\" Entity" +
-                "Set=\"OtherCosts\" /></AssociationSet><AssociationSet Name=\"Company_Payments_Payme" +
-                "nts\" Association=\"NAV.Company_Payments\"><End Role=\"Company\" EntitySet=\"Company\" " +
-                "/><End Role=\"Payments\" EntitySet=\"Payments\" /></Association";
+            private const string ModelPart20 = "Association=\"NAV.Company_boardMeetings\"><End Role=\"Company\" EntitySet=\"Company\" /" +
+                "><End Role=\"boardMeetings\" EntitySet=\"boardMeetings\" /></AssociationSet><Associa" +
+                "tionSet Name=\"Company_Casuals_Casuals\" Association=\"NAV.Company_Casuals\"><End Ro" +
+                "le=\"Company\" EntitySet=\"Company\" /><End Role=\"Casuals\" EntitySet=\"Casuals\" /></A" +
+                "ssociationSet><AssociationSet Name=\"Company_CommitteeBoardMembers_CommitteeBoard" +
+                "Members\" Association=\"NAV.Company_CommitteeBoardMembers\"><End Role=\"Company\" Ent" +
+                "itySet=\"Company\" /><End Role=\"CommitteeBoardMembers\" EntitySet=\"CommitteeBoardMe" +
+                "mbers\" /></AssociationSet><AssociationSet Name=\"Company_committeeMeetings_commit" +
+                "teeMeetings\" Association=\"NAV.Company_committeeMeetings\"><End Role=\"Company\" Ent" +
+                "itySet=\"Company\" /><End Role=\"committeeMeetings\" EntitySet=\"committeeMeetings\" /" +
+                "></AssociationSet><AssociationSet Name=\"Company_Committees_Committees\" Associati" +
+                "on=\"NAV.Company_Committees\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=" +
+                "\"Committees\" EntitySet=\"Committees\" /></AssociationSet><AssociationSet Name=\"Com" +
+                "pany_contacts_contacts\" Association=\"NAV.Company_contacts\"><End Role=\"Company\" E" +
+                "ntitySet=\"Company\" /><End Role=\"contacts\" EntitySet=\"contacts\" /></AssociationSe" +
+                "t><AssociationSet Name=\"Company_Copyright_Files_Copyright_Files\" Association=\"NA" +
+                "V.Company_Copyright_Files\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"" +
+                "Copyright_Files\" EntitySet=\"Copyright_Files\" /></AssociationSet><AssociationSet " +
+                "Name=\"Company_CopyrightCategories_CopyrightCategories\" Association=\"NAV.Company_" +
+                "CopyrightCategories\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Copyri" +
+                "ghtCategories\" EntitySet=\"CopyrightCategories\" /></AssociationSet><AssociationSe" +
+                "t Name=\"Company_copyrightsetups_copyrightsetups\" Association=\"NAV.Company_copyri" +
+                "ghtsetups\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"copyrightsetups\"" +
+                " EntitySet=\"copyrightsetups\" /></AssociationSet><AssociationSet Name=\"Company_co" +
+                "pyrightsubcategories_copyrightsubcategories\" Association=\"NAV.Company_copyrights" +
+                "ubcategories\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"copyrightsubc" +
+                "ategories\" EntitySet=\"copyrightsubcategories\" /></AssociationSet><AssociationSet" +
+                " Name=\"Company_CopyrightWorkCategories_CopyrightWorkCategories\" Association=\"NAV" +
+                ".Company_CopyrightWorkCategories\"><End Role=\"Company\" EntitySet=\"Company\" /><End" +
+                " Role=\"CopyrightWorkCategories\" EntitySet=\"CopyrightWorkCategories\" /></Associat" +
+                "ionSet><AssociationSet Name=\"Company_CopyrightWorks_CopyrightWorks\" Association=" +
+                "\"NAV.Company_CopyrightWorks\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role" +
+                "=\"CopyrightWorks\" EntitySet=\"CopyrightWorks\" /></AssociationSet><AssociationSet " +
+                "Name=\"Company_Countries_Countries\" Association=\"NAV.Company_Countries\"><End Role" +
+                "=\"Company\" EntitySet=\"Company\" /><End Role=\"Countries\" EntitySet=\"Countries\" /><" +
+                "/AssociationSet><AssociationSet Name=\"Company_Customers_Customers\" Association=\"" +
+                "NAV.Company_Customers\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Cust" +
+                "omers\" EntitySet=\"Customers\" /></AssociationSet><AssociationSet Name=\"Company_em" +
+                "ailvalidations_emailvalidations\" Association=\"NAV.Company_emailvalidations\"><End" +
+                " Role=\"Company\" EntitySet=\"Company\" /><End Role=\"emailvalidations\" EntitySet=\"em" +
+                "ailvalidations\" /></AssociationSet><AssociationSet Name=\"Company_Employees_Emplo" +
+                "yees\" Association=\"NAV.Company_Employees\"><End Role=\"Company\" EntitySet=\"Company" +
+                "\" /><End Role=\"Employees\" EntitySet=\"Employees\" /></AssociationSet><AssociationS" +
+                "et Name=\"Company_FundCode_FundCode\" Association=\"NAV.Company_FundCode\"><End Role" +
+                "=\"Company\" EntitySet=\"Company\" /><End Role=\"FundCode\" EntitySet=\"FundCode\" /></A" +
+                "ssociationSet><AssociationSet Name=\"Company_HrJobApplicants_HrJobApplicants\" Ass" +
+                "ociation=\"NAV.Company_HrJobApplicants\"><End Role=\"Company\" EntitySet=\"Company\" /" +
+                "><End Role=\"HrJobApplicants\" EntitySet=\"HrJobApplicants\" /></AssociationSet><Ass" +
+                "ociationSet Name=\"Company_HRJobApplicants_HRJobApplicants\" Association=\"NAV.Comp" +
+                "any_HRJobApplicants\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"HRJobA" +
+                "pplicants\" EntitySet=\"HRJobApplicants\" /></AssociationSet><AssociationSet Name=\"" +
+                "Company_HRPortalUsers_HRPortalUsers\" Association=\"NAV.Company_HRPortalUsers\"><En" +
+                "d Role=\"Company\" EntitySet=\"Company\" /><End Role=\"HRPortalUsers\" EntitySet=\"HRPo" +
+                "rtalUsers\" /></AssociationSet><AssociationSet Name=\"Company_ImprestLines_Imprest" +
+                "Lines\" Association=\"NAV.Company_ImprestLines\"><End Role=\"Company\" EntitySet=\"Com" +
+                "pany\" /><End Role=\"ImprestLines\" EntitySet=\"ImprestLines\" /></AssociationSet><As" +
+                "sociationSet Name=\"Company_ImprestMemo_ImprestMemo\" Association=\"NAV.Company_Imp" +
+                "restMemo\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ImprestMemo\" Enti" +
+                "tySet=\"ImprestMemo\" /></AssociationSet><AssociationSet Name=\"Company_InventoryPo" +
+                "stingGroups_InventoryPostingGroups\" Association=\"NAV.Company_InventoryPostingGro" +
+                "ups\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"InventoryPostingGroups" +
+                "\" EntitySet=\"InventoryPostingGroups\" /></AssociationSet><AssociationSet Name=\"Co" +
+                "mpany_ItemCategories_ItemCategories\" Association=\"NAV.Company_ItemCategories\"><E" +
+                "nd Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ItemCategories\" EntitySet=\"It" +
+                "emCategories\" /></AssociationSet><AssociationSet Name=\"Company_Items_Items\" Asso" +
+                "ciation=\"NAV.Company_Items\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=" +
+                "\"Items\" EntitySet=\"Items\" /></AssociationSet><AssociationSet Name=\"Company_ItemS" +
+                "alesAndProfit_ItemSalesAndProfit\" Association=\"NAV.Company_ItemSalesAndProfit\"><" +
+                "End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ItemSalesAndProfit\" EntitySe" +
+                "t=\"ItemSalesAndProfit\" /></AssociationSet><AssociationSet Name=\"Company_ItemSale" +
+                "sByCustomer_ItemSalesByCustomer\" Association=\"NAV.Company_ItemSalesByCustomer\"><" +
+                "End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ItemSalesByCustomer\" EntityS" +
+                "et=\"ItemSalesByCustomer\" /></AssociationSet><AssociationSet Name=\"Company_JobApp" +
+                "licantHobies_JobApplicantHobies\" Association=\"NAV.Company_JobApplicantHobies\"><E" +
+                "nd Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobApplicantHobies\" EntitySet" +
+                "=\"JobApplicantHobies\" /></AssociationSet><AssociationSet Name=\"Company_JobApplic" +
+                "antQualifications_JobApplicantQualifications\" Association=\"NAV.Company_JobApplic" +
+                "antQualifications\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobAppli" +
+                "cantQualifications\" EntitySet=\"JobApplicantQualifications\" /></AssociationSet><A" +
+                "ssociationSet Name=\"Company_JobApplicantReferees_JobApplicantReferees\" Associati" +
+                "on=\"NAV.Company_JobApplicantReferees\"><End Role=\"Company\" EntitySet=\"Company\" />" +
+                "<End Role=\"JobApplicantReferees\" EntitySet=\"JobApplicantReferees\" /></Associatio" +
+                "nSet><AssociationSet Name=\"Company_JobRequirements_JobRequirements\" Association=" +
+                "\"NAV.Company_JobRequirements\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
+                "e=\"JobRequirements\" EntitySet=\"JobRequirements\" /></AssociationSet><AssociationS" +
+                "et Name=\"Company_JobResponsibilities_JobResponsibilities\" Association=\"NAV.Compa" +
+                "ny_JobResponsibilities\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Job" +
+                "Responsibilities\" EntitySet=\"JobResponsibilities\" /></AssociationSet><Associatio" +
+                "nSet Name=\"Company_jobs_jobs\" Association=\"NAV.Company_jobs\"><End Role=\"Company\"" +
+                " EntitySet=\"Company\" /><End Role=\"jobs\" EntitySet=\"jobs\" /></AssociationSet><Ass" +
+                "ociationSet Name=\"Company_JobTask_JobTask\" Association=\"NAV.Company_JobTask\"><En" +
+                "d Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobTask\" EntitySet=\"JobTask\" /" +
+                "></AssociationSet><AssociationSet Name=\"Company_JobWorkingRelationships_JobWorki" +
+                "ngRelationships\" Association=\"NAV.Company_JobWorkingRelatio";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart21 = "Set><AssociationSet Name=\"Company_payperiods_payperiods\" Association=\"NAV.Company" +
-                "_payperiods\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"payperiods\" En" +
-                "titySet=\"payperiods\" /></AssociationSet><AssociationSet Name=\"Company_PortalUser" +
-                "s_PortalUsers\" Association=\"NAV.Company_PortalUsers\"><End Role=\"Company\" EntityS" +
-                "et=\"Company\" /><End Role=\"PortalUsers\" EntitySet=\"PortalUsers\" /></AssociationSe" +
-                "t><AssociationSet Name=\"Company_PositionsSupervised_PositionsSupervised\" Associa" +
-                "tion=\"NAV.Company_PositionsSupervised\"><End Role=\"Company\" EntitySet=\"Company\" /" +
-                "><End Role=\"PositionsSupervised\" EntitySet=\"PositionsSupervised\" /></Association" +
-                "Set><AssociationSet Name=\"Company_postcodes_postcodes\" Association=\"NAV.Company_" +
-                "postcodes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"postcodes\" Entit" +
-                "ySet=\"postcodes\" /></AssociationSet><AssociationSet Name=\"Company_PrequalifiedSu" +
-                "ppliers_PrequalifiedSuppliers\" Association=\"NAV.Company_PrequalifiedSuppliers\"><" +
-                "End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"PrequalifiedSuppliers\" Entit" +
-                "ySet=\"PrequalifiedSuppliers\" /></AssociationSet><AssociationSet Name=\"Company_Pr" +
-                "ocurementHeader_ProcurementHeader\" Association=\"NAV.Company_ProcurementHeader\"><" +
-                "End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ProcurementHeader\" EntitySet" +
-                "=\"ProcurementHeader\" /></AssociationSet><AssociationSet Name=\"Company_Procuremen" +
-                "tPlan_ProcurementPlan\" Association=\"NAV.Company_ProcurementPlan\"><End Role=\"Comp" +
-                "any\" EntitySet=\"Company\" /><End Role=\"ProcurementPlan\" EntitySet=\"ProcurementPla" +
-                "n\" /></AssociationSet><AssociationSet Name=\"Company_ProcurementRequest_Procureme" +
-                "ntRequest\" Association=\"NAV.Company_ProcurementRequest\"><End Role=\"Company\" Enti" +
-                "tySet=\"Company\" /><End Role=\"ProcurementRequest\" EntitySet=\"ProcurementRequest\" " +
-                "/></AssociationSet><AssociationSet Name=\"Company_ProcurementRequestLines_Procure" +
-                "mentRequestLines\" Association=\"NAV.Company_ProcurementRequestLines\"><End Role=\"C" +
-                "ompany\" EntitySet=\"Company\" /><End Role=\"ProcurementRequestLines\" EntitySet=\"Pro" +
-                "curementRequestLines\" /></AssociationSet><AssociationSet Name=\"Company_ProjectMe" +
-                "mbers_ProjectMembers\" Association=\"NAV.Company_ProjectMembers\"><End Role=\"Compan" +
-                "y\" EntitySet=\"Company\" /><End Role=\"ProjectMembers\" EntitySet=\"ProjectMembers\" /" +
-                "></AssociationSet><AssociationSet Name=\"Company_PurchaseHeader_PurchaseHeader\" A" +
-                "ssociation=\"NAV.Company_PurchaseHeader\"><End Role=\"Company\" EntitySet=\"Company\" " +
-                "/><End Role=\"PurchaseHeader\" EntitySet=\"PurchaseHeader\" /></AssociationSet><Asso" +
-                "ciationSet Name=\"Company_PurchaseLines_PurchaseLines\" Association=\"NAV.Company_P" +
-                "urchaseLines\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"PurchaseLines" +
-                "\" EntitySet=\"PurchaseLines\" /></AssociationSet><AssociationSet Name=\"Company_Rec" +
-                "eiptAndPaymentTypes_ReceiptAndPaymentTypes\" Association=\"NAV.Company_ReceiptAndP" +
-                "aymentTypes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ReceiptAndPaym" +
-                "entTypes\" EntitySet=\"ReceiptAndPaymentTypes\" /></AssociationSet><AssociationSet " +
-                "Name=\"Company_receipts_receipts\" Association=\"NAV.Company_receipts\"><End Role=\"C" +
-                "ompany\" EntitySet=\"Company\" /><End Role=\"receipts\" EntitySet=\"receipts\" /></Asso" +
-                "ciationSet><AssociationSet Name=\"Company_Resources_Resources\" Association=\"NAV.C" +
-                "ompany_Resources\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Resources" +
-                "\" EntitySet=\"Resources\" /></AssociationSet><AssociationSet Name=\"Company_SalesDa" +
-                "shboard_SalesDashboard\" Association=\"NAV.Company_SalesDashboard\"><End Role=\"Comp" +
-                "any\" EntitySet=\"Company\" /><End Role=\"SalesDashboard\" EntitySet=\"SalesDashboard\"" +
-                " /></AssociationSet><AssociationSet Name=\"Company_SalesOpportunities_SalesOpport" +
-                "unities\" Association=\"NAV.Company_SalesOpportunities\"><End Role=\"Company\" Entity" +
-                "Set=\"Company\" /><End Role=\"SalesOpportunities\" EntitySet=\"SalesOpportunities\" />" +
-                "</AssociationSet><AssociationSet Name=\"Company_SalesOrdersBySalesPerson_SalesOrd" +
-                "ersBySalesPerson\" Association=\"NAV.Company_SalesOrdersBySalesPerson\"><End Role=\"" +
-                "Company\" EntitySet=\"Company\" /><End Role=\"SalesOrdersBySalesPerson\" EntitySet=\"S" +
-                "alesOrdersBySalesPerson\" /></AssociationSet><AssociationSet Name=\"Company_servic" +
-                "eitems_serviceitems\" Association=\"NAV.Company_serviceitems\"><End Role=\"Company\" " +
-                "EntitySet=\"Company\" /><End Role=\"serviceitems\" EntitySet=\"serviceitems\" /></Asso" +
-                "ciationSet><AssociationSet Name=\"Company_SupplierCategories_SupplierCategories\" " +
-                "Association=\"NAV.Company_SupplierCategories\"><End Role=\"Company\" EntitySet=\"Comp" +
-                "any\" /><End Role=\"SupplierCategories\" EntitySet=\"SupplierCategories\" /></Associa" +
-                "tionSet><AssociationSet Name=\"Company_TopCustomerOverview_TopCustomerOverview\" A" +
-                "ssociation=\"NAV.Company_TopCustomerOverview\"><End Role=\"Company\" EntitySet=\"Comp" +
-                "any\" /><End Role=\"TopCustomerOverview\" EntitySet=\"TopCustomerOverview\" /></Assoc" +
-                "iationSet><AssociationSet Name=\"Company_TransportRequisition_TransportRequisitio" +
-                "n\" Association=\"NAV.Company_TransportRequisition\"><End Role=\"Company\" EntitySet=" +
-                "\"Company\" /><End Role=\"TransportRequisition\" EntitySet=\"TransportRequisition\" />" +
-                "</AssociationSet><AssociationSet Name=\"Company_TravelRequisitionStaff_TravelRequ" +
-                "isitionStaff\" Association=\"NAV.Company_TravelRequisitionStaff\"><End Role=\"Compan" +
-                "y\" EntitySet=\"Company\" /><End Role=\"TravelRequisitionStaff\" EntitySet=\"TravelReq" +
-                "uisitionStaff\" /></AssociationSet><AssociationSet Name=\"Company_VacantPositions_" +
-                "VacantPositions\" Association=\"NAV.Company_VacantPositions\"><End Role=\"Company\" E" +
-                "ntitySet=\"Company\" /><End Role=\"VacantPositions\" EntitySet=\"VacantPositions\" /><" +
-                "/AssociationSet><AssociationSet Name=\"Company_Vendors_Vendors\" Association=\"NAV." +
-                "Company_Vendors\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Vendors\" E" +
-                "ntitySet=\"Vendors\" /></AssociationSet><AssociationSet Name=\"Company_WorkTypes_Wo" +
-                "rkTypes\" Association=\"NAV.Company_WorkTypes\"><End Role=\"Company\" EntitySet=\"Comp" +
-                "any\" /><End Role=\"WorkTypes\" EntitySet=\"WorkTypes\" /></AssociationSet><Associati" +
-                "onSet Name=\"Company_Pending_Po_Pending_Po\" Association=\"NAV.Company_Pending_Po\">" +
-                "<End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Pending_Po\" EntitySet=\"Pend" +
-                "ing_Po\" /></AssociationSet></EntityContainer></Schema></edmx:DataServices></edmx" +
-                ":Edmx>";
+            private const string ModelPart21 = "nships\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"JobWorkingRelationsh" +
+                "ips\" EntitySet=\"JobWorkingRelationships\" /></AssociationSet><AssociationSet Name" +
+                "=\"Company_languages_languages\" Association=\"NAV.Company_languages\"><End Role=\"Co" +
+                "mpany\" EntitySet=\"Company\" /><End Role=\"languages\" EntitySet=\"languages\" /></Ass" +
+                "ociationSet><AssociationSet Name=\"Company_LeaveApplications_LeaveApplications\" A" +
+                "ssociation=\"NAV.Company_LeaveApplications\"><End Role=\"Company\" EntitySet=\"Compan" +
+                "y\" /><End Role=\"LeaveApplications\" EntitySet=\"LeaveApplications\" /></Association" +
+                "Set><AssociationSet Name=\"Company_LeaveTypes_LeaveTypes\" Association=\"NAV.Compan" +
+                "y_LeaveTypes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"LeaveTypes\" E" +
+                "ntitySet=\"LeaveTypes\" /></AssociationSet><AssociationSet Name=\"Company_Locations" +
+                "_Locations\" Association=\"NAV.Company_Locations\"><End Role=\"Company\" EntitySet=\"C" +
+                "ompany\" /><End Role=\"Locations\" EntitySet=\"Locations\" /></AssociationSet><Associ" +
+                "ationSet Name=\"Company_MeetingAgenda_MeetingAgenda\" Association=\"NAV.Company_Mee" +
+                "tingAgenda\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"MeetingAgenda\" " +
+                "EntitySet=\"MeetingAgenda\" /></AssociationSet><AssociationSet Name=\"Company_My_Me" +
+                "etings_My_Meetings\" Association=\"NAV.Company_My_Meetings\"><End Role=\"Company\" En" +
+                "titySet=\"Company\" /><End Role=\"My_Meetings\" EntitySet=\"My_Meetings\" /></Associat" +
+                "ionSet><AssociationSet Name=\"Company_myCommitee_myCommitee\" Association=\"NAV.Com" +
+                "pany_myCommitee\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"myCommitee" +
+                "\" EntitySet=\"myCommitee\" /></AssociationSet><AssociationSet Name=\"Company_MyJobA" +
+                "pplications_MyJobApplications\" Association=\"NAV.Company_MyJobApplications\"><End " +
+                "Role=\"Company\" EntitySet=\"Company\" /><End Role=\"MyJobApplications\" EntitySet=\"My" +
+                "JobApplications\" /></AssociationSet><AssociationSet Name=\"Company_OtherCosts_Oth" +
+                "erCosts\" Association=\"NAV.Company_OtherCosts\"><End Role=\"Company\" EntitySet=\"Com" +
+                "pany\" /><End Role=\"OtherCosts\" EntitySet=\"OtherCosts\" /></AssociationSet><Associ" +
+                "ationSet Name=\"Company_Payments_Payments\" Association=\"NAV.Company_Payments\"><En" +
+                "d Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Payments\" EntitySet=\"Payments\"" +
+                " /></AssociationSet><AssociationSet Name=\"Company_payperiods_payperiods\" Associa" +
+                "tion=\"NAV.Company_payperiods\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
+                "e=\"payperiods\" EntitySet=\"payperiods\" /></AssociationSet><AssociationSet Name=\"C" +
+                "ompany_PortalUsers_PortalUsers\" Association=\"NAV.Company_PortalUsers\"><End Role=" +
+                "\"Company\" EntitySet=\"Company\" /><End Role=\"PortalUsers\" EntitySet=\"PortalUsers\" " +
+                "/></AssociationSet><AssociationSet Name=\"Company_PositionsSupervised_PositionsSu" +
+                "pervised\" Association=\"NAV.Company_PositionsSupervised\"><End Role=\"Company\" Enti" +
+                "tySet=\"Company\" /><End Role=\"PositionsSupervised\" EntitySet=\"PositionsSupervised" +
+                "\" /></AssociationSet><AssociationSet Name=\"Company_postcodes_postcodes\" Associat" +
+                "ion=\"NAV.Company_postcodes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=" +
+                "\"postcodes\" EntitySet=\"postcodes\" /></AssociationSet><AssociationSet Name=\"Compa" +
+                "ny_PrequalifiedSuppliers_PrequalifiedSuppliers\" Association=\"NAV.Company_Prequal" +
+                "ifiedSuppliers\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Prequalifie" +
+                "dSuppliers\" EntitySet=\"PrequalifiedSuppliers\" /></AssociationSet><AssociationSet" +
+                " Name=\"Company_ProcurementHeader_ProcurementHeader\" Association=\"NAV.Company_Pro" +
+                "curementHeader\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"Procurement" +
+                "Header\" EntitySet=\"ProcurementHeader\" /></AssociationSet><AssociationSet Name=\"C" +
+                "ompany_ProcurementPlan_ProcurementPlan\" Association=\"NAV.Company_ProcurementPlan" +
+                "\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ProcurementPlan\" EntitySe" +
+                "t=\"ProcurementPlan\" /></AssociationSet><AssociationSet Name=\"Company_Procurement" +
+                "Request_ProcurementRequest\" Association=\"NAV.Company_ProcurementRequest\"><End Ro" +
+                "le=\"Company\" EntitySet=\"Company\" /><End Role=\"ProcurementRequest\" EntitySet=\"Pro" +
+                "curementRequest\" /></AssociationSet><AssociationSet Name=\"Company_ProcurementReq" +
+                "uestLines_ProcurementRequestLines\" Association=\"NAV.Company_ProcurementRequestLi" +
+                "nes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ProcurementRequestLine" +
+                "s\" EntitySet=\"ProcurementRequestLines\" /></AssociationSet><AssociationSet Name=\"" +
+                "Company_ProjectMembers_ProjectMembers\" Association=\"NAV.Company_ProjectMembers\">" +
+                "<End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"ProjectMembers\" EntitySet=\"" +
+                "ProjectMembers\" /></AssociationSet><AssociationSet Name=\"Company_PurchaseHeader_" +
+                "PurchaseHeader\" Association=\"NAV.Company_PurchaseHeader\"><End Role=\"Company\" Ent" +
+                "itySet=\"Company\" /><End Role=\"PurchaseHeader\" EntitySet=\"PurchaseHeader\" /></Ass" +
+                "ociationSet><AssociationSet Name=\"Company_PurchaseLines_PurchaseLines\" Associati" +
+                "on=\"NAV.Company_PurchaseLines\"><End Role=\"Company\" EntitySet=\"Company\" /><End Ro" +
+                "le=\"PurchaseLines\" EntitySet=\"PurchaseLines\" /></AssociationSet><AssociationSet " +
+                "Name=\"Company_ReceiptAndPaymentTypes_ReceiptAndPaymentTypes\" Association=\"NAV.Co" +
+                "mpany_ReceiptAndPaymentTypes\"><End Role=\"Company\" EntitySet=\"Company\" /><End Rol" +
+                "e=\"ReceiptAndPaymentTypes\" EntitySet=\"ReceiptAndPaymentTypes\" /></AssociationSet" +
+                "><AssociationSet Name=\"Company_receipts_receipts\" Association=\"NAV.Company_recei" +
+                "pts\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"receipts\" EntitySet=\"r" +
+                "eceipts\" /></AssociationSet><AssociationSet Name=\"Company_Resources_Resources\" A" +
+                "ssociation=\"NAV.Company_Resources\"><End Role=\"Company\" EntitySet=\"Company\" /><En" +
+                "d Role=\"Resources\" EntitySet=\"Resources\" /></AssociationSet><AssociationSet Name" +
+                "=\"Company_SalesDashboard_SalesDashboard\" Association=\"NAV.Company_SalesDashboard" +
+                "\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"SalesDashboard\" EntitySet" +
+                "=\"SalesDashboard\" /></AssociationSet><AssociationSet Name=\"Company_SalesOpportun" +
+                "ities_SalesOpportunities\" Association=\"NAV.Company_SalesOpportunities\"><End Role" +
+                "=\"Company\" EntitySet=\"Company\" /><End Role=\"SalesOpportunities\" EntitySet=\"Sales" +
+                "Opportunities\" /></AssociationSet><AssociationSet Name=\"Company_SalesOrdersBySal" +
+                "esPerson_SalesOrdersBySalesPerson\" Association=\"NAV.Company_SalesOrdersBySalesPe" +
+                "rson\"><End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"SalesOrdersBySalesPer" +
+                "son\" EntitySet=\"SalesOrdersBySalesPerson\" /></AssociationSet><AssociationSet Nam" +
+                "e=\"Company_serviceitems_serviceitems\" Association=\"NAV.Company_serviceitems\"><En" +
+                "d Role=\"Company\" EntitySet=\"Company\" /><End Role=\"serviceitems\" EntitySet=\"servi" +
+                "ceitems\" /></AssociationSet><AssociationSet Name=\"Company_SupplierCategories_Sup" +
+                "plierCategories\" Association=\"NAV.Company_SupplierCategories\"><End Role=\"Company" +
+                "\" EntitySet=\"Company\" /><End Role=\"SupplierCategories\" EntitySet=\"SupplierCatego" +
+                "ries\" /></AssociationSet><AssociationSet Name=\"Company_TopCustomerOverview_TopCu" +
+                "stomerOverview\" Association=\"NAV.Company_TopCustomerOverview\"><End Role=\"Company" +
+                "\" EntitySet=\"Company\" /><End Role=\"TopCustomerOverview\" EntitySet=\"TopCustomerOv" +
+                "erview\" /></AssociationSet><AssociationSet Name=\"Company_TransportRequisition_Tr" +
+                "ansportRequisition\" Association=\"NAV.Company_TransportRequisition\"><End Role=\"Co" +
+                "mpany\" EntitySet=\"Company\" /><End Role=\"TransportRequisition\" EntitySet=\"Transpo" +
+                "rtRequisition\" /></AssociationSet><AssociationSet Name=\"Company_TravelRequisitio" +
+                "nStaff_TravelRequisitionStaff\" Association=\"NAV.Company_TravelRequisitionStaff\">" +
+                "<End Role=\"Company\" EntitySet=\"Company\" /><End Role=\"TravelRequisitionStaff\" Ent" +
+                "itySet=\"TravelRequisitionStaff\" /></AssociationSet><AssociationSet Name=\"Company" +
+                "_VacantPositions_VacantPositions\" Association=\"NAV.Company_";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart22 = @"VacantPositions""><End Role=""Company"" EntitySet=""Company"" /><End Role=""VacantPositions"" EntitySet=""VacantPositions"" /></AssociationSet><AssociationSet Name=""Company_Vendors_Vendors"" Association=""NAV.Company_Vendors""><End Role=""Company"" EntitySet=""Company"" /><End Role=""Vendors"" EntitySet=""Vendors"" /></AssociationSet><AssociationSet Name=""Company_WorkTypes_WorkTypes"" Association=""NAV.Company_WorkTypes""><End Role=""Company"" EntitySet=""Company"" /><End Role=""WorkTypes"" EntitySet=""WorkTypes"" /></AssociationSet><AssociationSet Name=""Company_Pending_Po_Pending_Po"" Association=""NAV.Company_Pending_Po""><End Role=""Company"" EntitySet=""Company"" /><End Role=""Pending_Po"" EntitySet=""Pending_Po"" /></AssociationSet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
-                return string.Concat(ModelPart0, ModelPart1, ModelPart2, ModelPart3, ModelPart4, ModelPart5, ModelPart6, ModelPart7, ModelPart8, ModelPart9, ModelPart10, ModelPart11, ModelPart12, ModelPart13, ModelPart14, ModelPart15, ModelPart16, ModelPart17, ModelPart18, ModelPart19, ModelPart20, ModelPart21);
+                return string.Concat(ModelPart0, ModelPart1, ModelPart2, ModelPart3, ModelPart4, ModelPart5, ModelPart6, ModelPart7, ModelPart8, ModelPart9, ModelPart10, ModelPart11, ModelPart12, ModelPart13, ModelPart14, ModelPart15, ModelPart16, ModelPart17, ModelPart18, ModelPart19, ModelPart20, ModelPart21, ModelPart22);
             }
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             public static global::Microsoft.Data.Edm.IEdmModel GetInstance()
@@ -6293,6 +6362,408 @@ namespace Nacosti_.oData
         private global::System.Nullable<bool> _Related_to_Change;
         partial void OnRelated_to_ChangeChanging(global::System.Nullable<bool> value);
         partial void OnRelated_to_ChangeChanged();
+    }
+    /// <summary>
+    /// There are no comments for NAV.blogReplies in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Blog_Id
+    /// Entry_Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Blog_Id", "Entry_Id")]
+    public partial class blogReplies
+    {
+        /// <summary>
+        /// Create a new blogReplies object.
+        /// </summary>
+        /// <param name="entry_Id">Initial value of Entry_Id.</param>
+        /// <param name="blog_Id">Initial value of Blog_Id.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static blogReplies CreateblogReplies(int entry_Id, int blog_Id)
+        {
+            blogReplies blogReplies = new blogReplies();
+            blogReplies.Entry_Id = entry_Id;
+            blogReplies.Blog_Id = blog_Id;
+            return blogReplies;
+        }
+        /// <summary>
+        /// There are no comments for Property Entry_Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Entry_Id
+        {
+            get
+            {
+                return this._Entry_Id;
+            }
+            set
+            {
+                this.OnEntry_IdChanging(value);
+                this._Entry_Id = value;
+                this.OnEntry_IdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Entry_Id;
+        partial void OnEntry_IdChanging(int value);
+        partial void OnEntry_IdChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Reply in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Blog_Reply
+        {
+            get
+            {
+                return this._Blog_Reply;
+            }
+            set
+            {
+                this.OnBlog_ReplyChanging(value);
+                this._Blog_Reply = value;
+                this.OnBlog_ReplyChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Blog_Reply;
+        partial void OnBlog_ReplyChanging(string value);
+        partial void OnBlog_ReplyChanged();
+        /// <summary>
+        /// There are no comments for Property Replier_Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Replier_Name
+        {
+            get
+            {
+                return this._Replier_Name;
+            }
+            set
+            {
+                this.OnReplier_NameChanging(value);
+                this._Replier_Name = value;
+                this.OnReplier_NameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Replier_Name;
+        partial void OnReplier_NameChanging(string value);
+        partial void OnReplier_NameChanged();
+        /// <summary>
+        /// There are no comments for Property Replier_DirNo in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Replier_DirNo
+        {
+            get
+            {
+                return this._Replier_DirNo;
+            }
+            set
+            {
+                this.OnReplier_DirNoChanging(value);
+                this._Replier_DirNo = value;
+                this.OnReplier_DirNoChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Replier_DirNo;
+        partial void OnReplier_DirNoChanging(string value);
+        partial void OnReplier_DirNoChanged();
+        /// <summary>
+        /// There are no comments for Property Date_Replied in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> Date_Replied
+        {
+            get
+            {
+                return this._Date_Replied;
+            }
+            set
+            {
+                this.OnDate_RepliedChanging(value);
+                this._Date_Replied = value;
+                this.OnDate_RepliedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _Date_Replied;
+        partial void OnDate_RepliedChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnDate_RepliedChanged();
+        /// <summary>
+        /// There are no comments for Property Time_Replied in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Time_Replied
+        {
+            get
+            {
+                return this._Time_Replied;
+            }
+            set
+            {
+                this.OnTime_RepliedChanging(value);
+                this._Time_Replied = value;
+                this.OnTime_RepliedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Time_Replied;
+        partial void OnTime_RepliedChanging(string value);
+        partial void OnTime_RepliedChanged();
+        /// <summary>
+        /// There are no comments for Property BlogIdCode in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> BlogIdCode
+        {
+            get
+            {
+                return this._BlogIdCode;
+            }
+            set
+            {
+                this.OnBlogIdCodeChanging(value);
+                this._BlogIdCode = value;
+                this.OnBlogIdCodeChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _BlogIdCode;
+        partial void OnBlogIdCodeChanging(global::System.Nullable<int> value);
+        partial void OnBlogIdCodeChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Body in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Blog_Body
+        {
+            get
+            {
+                return this._Blog_Body;
+            }
+            set
+            {
+                this.OnBlog_BodyChanging(value);
+                this._Blog_Body = value;
+                this.OnBlog_BodyChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Blog_Body;
+        partial void OnBlog_BodyChanging(string value);
+        partial void OnBlog_BodyChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Title in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Blog_Title
+        {
+            get
+            {
+                return this._Blog_Title;
+            }
+            set
+            {
+                this.OnBlog_TitleChanging(value);
+                this._Blog_Title = value;
+                this.OnBlog_TitleChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Blog_Title;
+        partial void OnBlog_TitleChanging(string value);
+        partial void OnBlog_TitleChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Blog_Id
+        {
+            get
+            {
+                return this._Blog_Id;
+            }
+            set
+            {
+                this.OnBlog_IdChanging(value);
+                this._Blog_Id = value;
+                this.OnBlog_IdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Blog_Id;
+        partial void OnBlog_IdChanging(int value);
+        partial void OnBlog_IdChanged();
+    }
+    /// <summary>
+    /// There are no comments for NAV.boardBlog in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Blog_Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Blog_Id")]
+    public partial class boardBlog
+    {
+        /// <summary>
+        /// Create a new boardBlog object.
+        /// </summary>
+        /// <param name="blog_Id">Initial value of Blog_Id.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static boardBlog CreateboardBlog(int blog_Id)
+        {
+            boardBlog boardBlog = new boardBlog();
+            boardBlog.Blog_Id = blog_Id;
+            return boardBlog;
+        }
+        /// <summary>
+        /// There are no comments for Property Blog_Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Blog_Id
+        {
+            get
+            {
+                return this._Blog_Id;
+            }
+            set
+            {
+                this.OnBlog_IdChanging(value);
+                this._Blog_Id = value;
+                this.OnBlog_IdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Blog_Id;
+        partial void OnBlog_IdChanging(int value);
+        partial void OnBlog_IdChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Title in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Blog_Title
+        {
+            get
+            {
+                return this._Blog_Title;
+            }
+            set
+            {
+                this.OnBlog_TitleChanging(value);
+                this._Blog_Title = value;
+                this.OnBlog_TitleChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Blog_Title;
+        partial void OnBlog_TitleChanging(string value);
+        partial void OnBlog_TitleChanged();
+        /// <summary>
+        /// There are no comments for Property Blog_Body in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Blog_Body
+        {
+            get
+            {
+                return this._Blog_Body;
+            }
+            set
+            {
+                this.OnBlog_BodyChanging(value);
+                this._Blog_Body = value;
+                this.OnBlog_BodyChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Blog_Body;
+        partial void OnBlog_BodyChanging(string value);
+        partial void OnBlog_BodyChanged();
+        /// <summary>
+        /// There are no comments for Property Created_ByDirNo in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Created_ByDirNo
+        {
+            get
+            {
+                return this._Created_ByDirNo;
+            }
+            set
+            {
+                this.OnCreated_ByDirNoChanging(value);
+                this._Created_ByDirNo = value;
+                this.OnCreated_ByDirNoChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Created_ByDirNo;
+        partial void OnCreated_ByDirNoChanging(string value);
+        partial void OnCreated_ByDirNoChanged();
+        /// <summary>
+        /// There are no comments for Property Date_Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> Date_Created
+        {
+            get
+            {
+                return this._Date_Created;
+            }
+            set
+            {
+                this.OnDate_CreatedChanging(value);
+                this._Date_Created = value;
+                this.OnDate_CreatedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _Date_Created;
+        partial void OnDate_CreatedChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnDate_CreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Created_ByDirName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Created_ByDirName
+        {
+            get
+            {
+                return this._Created_ByDirName;
+            }
+            set
+            {
+                this.OnCreated_ByDirNameChanging(value);
+                this._Created_ByDirName = value;
+                this.OnCreated_ByDirNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Created_ByDirName;
+        partial void OnCreated_ByDirNameChanging(string value);
+        partial void OnCreated_ByDirNameChanged();
+        /// <summary>
+        /// There are no comments for Property Time_Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Time_Created
+        {
+            get
+            {
+                return this._Time_Created;
+            }
+            set
+            {
+                this.OnTime_CreatedChanging(value);
+                this._Time_Created = value;
+                this.OnTime_CreatedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Time_Created;
+        partial void OnTime_CreatedChanging(string value);
+        partial void OnTime_CreatedChanged();
     }
     /// <summary>
     /// There are no comments for NAV.BoardComments in the schema.
@@ -47861,6 +48332,46 @@ namespace Nacosti_.oData
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Collections.ObjectModel.Collection<ApprovalEntries> _ApprovalEntries = new global::System.Collections.ObjectModel.Collection<ApprovalEntries>();
+        /// <summary>
+        /// There are no comments for blogReplies in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Collections.ObjectModel.Collection<blogReplies> blogReplies
+        {
+            get
+            {
+                return this._blogReplies;
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    this._blogReplies = value;
+                }
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Collections.ObjectModel.Collection<blogReplies> _blogReplies = new global::System.Collections.ObjectModel.Collection<blogReplies>();
+        /// <summary>
+        /// There are no comments for boardBlog in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Collections.ObjectModel.Collection<boardBlog> boardBlog
+        {
+            get
+            {
+                return this._boardBlog;
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    this._boardBlog = value;
+                }
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Collections.ObjectModel.Collection<boardBlog> _boardBlog = new global::System.Collections.ObjectModel.Collection<boardBlog>();
         /// <summary>
         /// There are no comments for BoardComments in the schema.
         /// </summary>

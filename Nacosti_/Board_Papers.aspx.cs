@@ -50,7 +50,7 @@ namespace Nacosti_
                 {
                     //If Root Node, add to TreeView.
                     treeView1.Nodes.Add(directoryNode);
-                    treeView1.CollapseAll();
+                    treeView1.CollapseAll(); //start Parent Tree folder collapsed
                 }
                 else
                 {
@@ -73,7 +73,7 @@ namespace Nacosti_
                 }
 
                 PopulateTreeView(directory, directoryNode);
-                directoryNode.SelectAction = TreeNodeSelectAction.None;
+                directoryNode.SelectAction = TreeNodeSelectAction.None; //Make Parent node Directory unclickable
             }
         }
 

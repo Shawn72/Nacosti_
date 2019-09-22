@@ -44,7 +44,7 @@ namespace Nacosti_
                             "<td >{5}</td>" + 
                             "<td>{6}</td>" + 
                             "<td>{7}</td>" +
-                            "</tr>", count, meeting.No, meeting.Title, Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy"), meeting.Start_time, Convert.ToDateTime(meeting.End_Date).ToString("dd/MM/yyyy"), meeting.End_time, meeting.Venue_Location);
+                            "</tr>", count, meeting.No, meeting.No, Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy"), meeting.Start_time, Convert.ToDateTime(meeting.End_Date).ToString("dd/MM/yyyy"), meeting.End_time, meeting.Venue_Location);
                     } 
                 }
             }

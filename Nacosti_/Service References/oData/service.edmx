@@ -125,6 +125,34 @@
         <Property Name="Number_of_Rejected_Requests" Type="Edm.Int32" />
         <Property Name="Related_to_Change" Type="Edm.Boolean" />
       </EntityType>
+      <EntityType Name="blogReplies">
+        <Key>
+          <PropertyRef Name="Blog_Id" />
+          <PropertyRef Name="Entry_Id" />
+        </Key>
+        <Property Name="Entry_Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Blog_Reply" Type="Edm.String" />
+        <Property Name="Replier_Name" Type="Edm.String" />
+        <Property Name="Replier_DirNo" Type="Edm.String" />
+        <Property Name="Date_Replied" Type="Edm.DateTime" />
+        <Property Name="Time_Replied" Type="Edm.String" />
+        <Property Name="BlogIdCode" Type="Edm.Int32" />
+        <Property Name="Blog_Body" Type="Edm.String" />
+        <Property Name="Blog_Title" Type="Edm.String" />
+        <Property Name="Blog_Id" Type="Edm.Int32" Nullable="false" />
+      </EntityType>
+      <EntityType Name="boardBlog">
+        <Key>
+          <PropertyRef Name="Blog_Id" />
+        </Key>
+        <Property Name="Blog_Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Blog_Title" Type="Edm.String" />
+        <Property Name="Blog_Body" Type="Edm.String" />
+        <Property Name="Created_ByDirNo" Type="Edm.String" />
+        <Property Name="Date_Created" Type="Edm.DateTime" />
+        <Property Name="Created_ByDirName" Type="Edm.String" />
+        <Property Name="Time_Created" Type="Edm.String" />
+      </EntityType>
       <EntityType Name="BoardComments">
         <Key>
           <PropertyRef Name="EntryNo" />
@@ -2462,6 +2490,8 @@
         <NavigationProperty Name="AgendaVoteItems" Relationship="NAV.Company_AgendaVoteItems" ToRole="AgendaVoteItems" FromRole="Company" />
         <NavigationProperty Name="allBoards" Relationship="NAV.Company_allBoards" ToRole="allBoards" FromRole="Company" />
         <NavigationProperty Name="ApprovalEntries" Relationship="NAV.Company_ApprovalEntries" ToRole="ApprovalEntries" FromRole="Company" />
+        <NavigationProperty Name="blogReplies" Relationship="NAV.Company_blogReplies" ToRole="blogReplies" FromRole="Company" />
+        <NavigationProperty Name="boardBlog" Relationship="NAV.Company_boardBlog" ToRole="boardBlog" FromRole="Company" />
         <NavigationProperty Name="BoardComments" Relationship="NAV.Company_BoardComments" ToRole="BoardComments" FromRole="Company" />
         <NavigationProperty Name="boardMeetingAttendance" Relationship="NAV.Company_boardMeetingAttendance" ToRole="boardMeetingAttendance" FromRole="Company" />
         <NavigationProperty Name="boardMeetings" Relationship="NAV.Company_boardMeetings" ToRole="boardMeetings" FromRole="Company" />
@@ -2560,6 +2590,14 @@
       <Association Name="Company_ApprovalEntries">
         <End Type="NAV.Company" Role="Company" Multiplicity="*" />
         <End Type="NAV.ApprovalEntries" Role="ApprovalEntries" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_blogReplies">
+        <End Type="NAV.blogReplies" Role="blogReplies" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_boardBlog">
+        <End Type="NAV.boardBlog" Role="boardBlog" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
       </Association>
       <Association Name="Company_BoardComments">
         <End Type="NAV.Company" Role="Company" Multiplicity="*" />
@@ -2864,6 +2902,8 @@
         <EntitySet Name="AgendaVoteItems" EntityType="NAV.AgendaVoteItems" />
         <EntitySet Name="allBoards" EntityType="NAV.allBoards" />
         <EntitySet Name="ApprovalEntries" EntityType="NAV.ApprovalEntries" />
+        <EntitySet Name="blogReplies" EntityType="NAV.blogReplies" />
+        <EntitySet Name="boardBlog" EntityType="NAV.boardBlog" />
         <EntitySet Name="BoardComments" EntityType="NAV.BoardComments" />
         <EntitySet Name="boardMeetingAttendance" EntityType="NAV.boardMeetingAttendance" />
         <EntitySet Name="boardMeetings" EntityType="NAV.boardMeetings" />
@@ -2962,6 +3002,14 @@
         <AssociationSet Name="Company_ApprovalEntries_ApprovalEntries" Association="NAV.Company_ApprovalEntries">
           <End Role="Company" EntitySet="Company" />
           <End Role="ApprovalEntries" EntitySet="ApprovalEntries" />
+        </AssociationSet>
+        <AssociationSet Name="Company_blogReplies_blogReplies" Association="NAV.Company_blogReplies">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="blogReplies" EntitySet="blogReplies" />
+        </AssociationSet>
+        <AssociationSet Name="Company_boardBlog_boardBlog" Association="NAV.Company_boardBlog">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="boardBlog" EntitySet="boardBlog" />
         </AssociationSet>
         <AssociationSet Name="Company_BoardComments_BoardComments" Association="NAV.Company_BoardComments">
           <End Role="Company" EntitySet="Company" />

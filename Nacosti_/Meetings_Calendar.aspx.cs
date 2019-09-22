@@ -42,7 +42,7 @@ namespace Nacosti_
                         mySchemeet +=
                             "<tr>" +
                             $"<td>{count}</td>" +
-                            $"<td><a href = 'Meeting_Board.aspx?meeting={meeting.No}'>{meeting.Title}</a></td>" +
+                            $"<td><a href = 'Meeting_Board.aspx?meeting={meeting.No}'>{meeting.No}</a></td>" +
                             $"<td>{meeting.Meeting_group}</td>" +
                             $"<td>{Convert.ToDateTime(meeting.Start_date):dd/MM/yyyy}</td>" +
                             $"<td>{meeting.Start_time}</td>" +

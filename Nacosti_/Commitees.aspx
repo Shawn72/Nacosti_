@@ -18,7 +18,7 @@
                             <%
                                 var odataconn = WsConfig.ReturnNavObj();
                                 int count1 = 0;
-                                var committeeDetails = odataconn.Committees.ToList();
+                                var committeeDetails = odataconn.Committees.ToList().OrderByDescending(r=>r.Description);
                                 foreach (var committeeDetail in committeeDetails)
                                 {
                                     count1++;

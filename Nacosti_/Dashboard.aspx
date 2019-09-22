@@ -44,7 +44,7 @@
 					                %>
 					                    <tr>
                                             <td><%=counter1 %></td>
-					                        <td><a href="Meeting_Board.aspx?meeting=<% =meeting.No %>"><% =meeting.Title %></a></td>
+					                        <td><a href="Meeting_Board.aspx?meeting=<% =meeting.No %>"><% =meeting.No %></a></td>
 					                        <td><% =meeting.Meeting_group %></td>
 					                        <td><% =Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy") %></td>
 					                        <td><% =meeting.Start_time %></td>
@@ -120,7 +120,7 @@
                                     %>
                                         <tr>
                                             <td><%=counter %></td>
-                                            <td><a href="Meeting_Committee.aspx?meeting=<% =meeting.No %>"><% =meeting.Title %></a></td>
+                                            <td><a href="Meeting_Committee.aspx?meeting=<% =meeting.No %>"><% =meeting.No %></a></td>
                                             <td><% =meeting.Meeting_group %></td>
                                             <td><% =Convert.ToDateTime(meeting.Start_date).ToString("dd/MM/yyyy") %></td>
                                             <td><% =meeting.Start_time %></td>

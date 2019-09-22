@@ -111,23 +111,14 @@
 							        <div class="hr hr-8 dotted"></div>
 
 							        <div class="profile-user-info">
-								        <div class="profile-info-row">
+								       <%-- <div class="profile-info-row">
 									        <div class="profile-info-name"> Website </div>
 
 									        <div class="profile-info-value">
 										        <a href="#" target="_blank">www.alexdoe.com</a>
 									        </div>
-								        </div>
+								        </div>--%>
 
-								        <div class="profile-info-row">
-									        <div class="profile-info-name">
-										        <i class="middle ace-icon fa fa-facebook-square bigger-150 blue"></i>
-									        </div>
-
-									        <div class="profile-info-value">
-										        <a href="#">Find me on Facebook</a>
-									        </div>
-								        </div>
 
 								       
 							        </div>
