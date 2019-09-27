@@ -93,9 +93,7 @@
       </element>
       <element name="FnMeetingsToday">
         <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="directorNo" type="string" />
-          </sequence>
+          <sequence />
         </complexType>
       </element>
       <element name="FnMeetingsToday_Result">
@@ -199,6 +197,80 @@
           </sequence>
         </complexType>
       </element>
+      <element name="FnResetPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="dirNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmMeeting">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmStatus" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmMeeting_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnMeetConfStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dirCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnMeetConfStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCountBoardMeetings">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCountBoardMeetings_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCountCommitteeMeetings">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="meetingCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCountCommitteeMeetings_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
     </schema>
   </types>
   <message name="FnLogin">
@@ -279,6 +351,36 @@
   <message name="FnInsertBlogReply_Result">
     <part name="parameters" element="tns:FnInsertBlogReply_Result" />
   </message>
+  <message name="FnResetPassword">
+    <part name="parameters" element="tns:FnResetPassword" />
+  </message>
+  <message name="FnResetPassword_Result">
+    <part name="parameters" element="tns:FnResetPassword_Result" />
+  </message>
+  <message name="FnConfirmMeeting">
+    <part name="parameters" element="tns:FnConfirmMeeting" />
+  </message>
+  <message name="FnConfirmMeeting_Result">
+    <part name="parameters" element="tns:FnConfirmMeeting_Result" />
+  </message>
+  <message name="FnMeetConfStatus">
+    <part name="parameters" element="tns:FnMeetConfStatus" />
+  </message>
+  <message name="FnMeetConfStatus_Result">
+    <part name="parameters" element="tns:FnMeetConfStatus_Result" />
+  </message>
+  <message name="FnCountBoardMeetings">
+    <part name="parameters" element="tns:FnCountBoardMeetings" />
+  </message>
+  <message name="FnCountBoardMeetings_Result">
+    <part name="parameters" element="tns:FnCountBoardMeetings_Result" />
+  </message>
+  <message name="FnCountCommitteeMeetings">
+    <part name="parameters" element="tns:FnCountCommitteeMeetings" />
+  </message>
+  <message name="FnCountCommitteeMeetings_Result">
+    <part name="parameters" element="tns:FnCountCommitteeMeetings_Result" />
+  </message>
   <portType name="PortalCodeunit_Port">
     <operation name="FnLogin">
       <input name="FnLogin" message="tns:FnLogin" />
@@ -331,6 +433,26 @@
     <operation name="FnInsertBlogReply">
       <input name="FnInsertBlogReply" message="tns:FnInsertBlogReply" />
       <output name="FnInsertBlogReply_Result" message="tns:FnInsertBlogReply_Result" />
+    </operation>
+    <operation name="FnResetPassword">
+      <input name="FnResetPassword" message="tns:FnResetPassword" />
+      <output name="FnResetPassword_Result" message="tns:FnResetPassword_Result" />
+    </operation>
+    <operation name="FnConfirmMeeting">
+      <input name="FnConfirmMeeting" message="tns:FnConfirmMeeting" />
+      <output name="FnConfirmMeeting_Result" message="tns:FnConfirmMeeting_Result" />
+    </operation>
+    <operation name="FnMeetConfStatus">
+      <input name="FnMeetConfStatus" message="tns:FnMeetConfStatus" />
+      <output name="FnMeetConfStatus_Result" message="tns:FnMeetConfStatus_Result" />
+    </operation>
+    <operation name="FnCountBoardMeetings">
+      <input name="FnCountBoardMeetings" message="tns:FnCountBoardMeetings" />
+      <output name="FnCountBoardMeetings_Result" message="tns:FnCountBoardMeetings_Result" />
+    </operation>
+    <operation name="FnCountCommitteeMeetings">
+      <input name="FnCountCommitteeMeetings" message="tns:FnCountCommitteeMeetings" />
+      <output name="FnCountCommitteeMeetings_Result" message="tns:FnCountCommitteeMeetings_Result" />
     </operation>
   </portType>
   <binding name="PortalCodeunit_Binding" type="tns:PortalCodeunit_Port">
@@ -452,10 +574,55 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
+    <operation name="FnResetPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnResetPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnResetPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnResetPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmMeeting">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnConfirmMeeting" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmMeeting">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmMeeting_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnMeetConfStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnMeetConfStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnMeetConfStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnMeetConfStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCountBoardMeetings">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnCountBoardMeetings" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCountBoardMeetings">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCountBoardMeetings_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCountCommitteeMeetings">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnCountCommitteeMeetings" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCountCommitteeMeetings">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCountCommitteeMeetings_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
   </binding>
   <service name="PortalCodeunit">
     <port name="PortalCodeunit_Port" binding="tns:PortalCodeunit_Binding">
-      <address location="http://41.89.63.250:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <address location="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
     </port>
   </service>
 </definitions>

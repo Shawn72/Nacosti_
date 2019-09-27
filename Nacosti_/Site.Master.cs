@@ -47,7 +47,18 @@ namespace Nacosti_
 
             Page.PreLoad += master_Page_PreLoad;
         }
-
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            var wsconnection = WsConfig.ObjNav;
+            if (Session["directorNo"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                meettoday.InnerText = wsconnection.FnMeetingsToday().ToString();
+            }
+        }
         protected void master_Page_PreLoad(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -73,10 +84,7 @@ namespace Nacosti_
             }
         }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+     
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {

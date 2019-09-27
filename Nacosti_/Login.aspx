@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <title>Login - NACOSTI</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet"   type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
@@ -36,10 +37,12 @@
 								    <input class="form-control floating" type="password" id="txtPassword" runat="server"/>
 								</div>
 								<div class="form-group text-center">
-									<asp:Button runat="server" CssClass="btn btn-primary btn-block account-btn" ID="btnLogin" Text="Login" OnClick="btnLogin_OnClick"></asp:Button>
+								    <span  class="btn btn-primary btn-block account-btn">
+								          <i class="fas fa-sign-in-alt"></i>&nbsp;<asp:Button runat="server"  ID="btnLogin" style="background-color: #01af58; border: none" Text="Login" OnClick="btnLogin_OnClick"></asp:Button>
+								    </span>
 								</div>
 								<div class="text-center">
-									<a href="#">Forgot your password?</a>
+									<a href="ResetPassword.aspx">Forgot your password?</a>
 								</div>
 						    <div class="text-center">
 						        <p><% =DateTime.Now.Year%> -Powered By&nbsp;<a href="http://www.dynasoft.co.ke/" target="_blank">Dynasoft Business Solutions</a></p>

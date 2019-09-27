@@ -5,7 +5,7 @@
     <div class="page-wrapper">
         <div class="content container-fluid">
             <div class="panel panel-default">
-                <div class="panel-heading">My Committees</div>
+                <div class="panel-heading">Boards</div>
                 <div class="panel-body">
                     <div class="table-responsive">
                     <table class="table table-striped custom-table m-b-0 datatable">

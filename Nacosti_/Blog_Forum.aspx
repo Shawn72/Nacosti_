@@ -34,8 +34,8 @@
                     <span class="btn btn-success pull-left btn-sm">
                         <i class="fa fa-save"></i>&nbsp; <asp:Button runat="server" ID="btnSaveForum"  style="background: none;border: 0" Text="Save Forum" OnClick="btnSaveForum_OnClick"></asp:Button>
                     </span> 
+                    <br/>
                 </div>
-                <br/>
                <br/>
                 
                 <div class="mb-3">

@@ -14,6 +14,7 @@ namespace Nacosti_
             Session["name"] = "";
             Session["directorNo"] = "";
             Session.Abandon();
+            Session.Clear();
             Response.Redirect("Login.aspx");
         }
     }

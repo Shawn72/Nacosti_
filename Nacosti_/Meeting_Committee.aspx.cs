@@ -24,6 +24,7 @@ namespace Nacosti_
                     if (string.IsNullOrEmpty(Meetingcode))
                         throw new Exception();
                     LoadMeetingsDocs(Meetingcode);
+                    MeetingConfState();
                     Pastornot = (string)Session["pastOrpresent"];
                 }
                 catch (Exception)
@@ -155,6 +156,52 @@ namespace Nacosti_
             commentfeedback.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "</div>";
             txtareaComment.Text = "";
             LoadMeetingsDocs(Meetingcode);
+        }
+
+        protected void MeetingConfState()
+        {
+            try
+            {
+                var dirNumber = Session["directorNo"].ToString();
+                var status = WsConfig.ObjNav.FnMeetConfStatus(Meetingcode, dirNumber);
+                meetConf.InnerHtml = "<div>Your current meeting confirmation: <strong>" + status + "</strong> </div>";
+            }
+            catch (Exception)
+            {
+
+                ////ignore exception
+            }
+        }
+
+        protected void ddlAttendMeetorNot_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            _ConfirmMeetingAttendance();
+        }
+
+        public void _ConfirmMeetingAttendance()
+        {
+            try
+            {
+                var dirNumber = Session["directorNo"].ToString();
+                var myOption = Convert.ToInt32(ddlAttendMeetorNot.SelectedValue);
+                if (ddlAttendMeetorNot.SelectedIndex != 0)
+                {
+                    var status = WsConfig.ObjNav.FnConfirmMeeting(Meetingcode, dirNumber, myOption);
+                    var info = status.Split('*');
+                    commentfeedback.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "</div>";
+                    MeetingConfState();
+                }
+                else
+                {
+                    commentfeedback.InnerHtml = "<div class='alert alert-danger'>Please select a valid Option </div>";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                commentfeedback.InnerHtml = "<div class='alert alert-danger'>" + ex.Message + "</div>";
+            }
+
         }
     }
 }

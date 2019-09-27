@@ -31,6 +31,24 @@ namespace Nacosti_ {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl commentfeedback;
         
         /// <summary>
+        /// meetConf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl meetConf;
+        
+        /// <summary>
+        /// ddlAttendMeetorNot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlAttendMeetorNot;
+        
+        /// <summary>
         /// txtareaComment control.
         /// </summary>
         /// <remarks>

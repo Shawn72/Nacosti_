@@ -22,10 +22,9 @@ namespace Nacosti_
                 try
                 {
                     Meetingcode = Request.QueryString["meeting"];
-                    if (string.IsNullOrEmpty(Meetingcode))
-                        throw new Exception();
                     LoadMeetingsDocs(Meetingcode);
-                   // Session["pastOrpresent"] = "notpastmeeting";
+                    MeetingConfState();
+                    // Session["pastOrpresent"] = "notpastmeeting";
                     Pastornot = (string)Session["pastOrpresent"];
                 }
                 catch (Exception)
@@ -36,9 +35,8 @@ namespace Nacosti_
                 {
                     feedback.InnerHtml = (string) Session["feedback"];
                     Session["feedback"] = null;
-
                 }
-            }
+              }
             else
             {
                 Response.Redirect("Login.aspx");
@@ -143,10 +141,10 @@ namespace Nacosti_
         protected void btnSaveComment_OnClick(object sender, EventArgs e)
         {
           //  meetingcode = Request.QueryString["meeting"];
-            var director = (String)Session["directorNo"];
+            var director = (string)Session["directorNo"];
             string myComment = txtareaComment.Text.Trim();
 
-            if (String.IsNullOrWhiteSpace(myComment))
+            if (string.IsNullOrWhiteSpace(myComment))
             {
                 commentfeedback.InnerHtml =
                     "<div class='alert alert-danger'>You can't save empty comment, write something!</div>";
@@ -157,6 +155,53 @@ namespace Nacosti_
             commentfeedback.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "</div>";
             txtareaComment.Text = "";
             LoadMeetingsDocs(Meetingcode);
+           
+        }
+
+        protected void MeetingConfState()
+        {
+            try
+            {
+                var dirNumber = Session["directorNo"].ToString();
+                var status = WsConfig.ObjNav.FnMeetConfStatus(Meetingcode, dirNumber);
+                meetConf.InnerHtml ="<div>Your current meeting confirmation: <strong>"+ status + "</strong> </div>" ;
+            }
+            catch (Exception)
+            {
+
+                ////ignore exception
+            }
+        }
+
+        protected void ddlAttendMeetorNot_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            _ConfirmMeetingAttendance();
+        }
+
+        public void _ConfirmMeetingAttendance()
+        {
+            try
+            {
+                var dirNumber = Session["directorNo"].ToString();
+                var myOption = Convert.ToInt32(ddlAttendMeetorNot.SelectedValue);
+                if (ddlAttendMeetorNot.SelectedIndex!=0)
+                {
+                    var status = WsConfig.ObjNav.FnConfirmMeeting(Meetingcode, dirNumber, myOption);
+                    var info = status.Split('*');
+                    commentfeedback.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "</div>";
+                    MeetingConfState();
+                }
+                else
+                {
+                    commentfeedback.InnerHtml = "<div class='alert alert-danger'>Please select a valid Option </div>";
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                commentfeedback.InnerHtml = "<div class='alert alert-danger'>" + ex.Message + "</div>";
+            }
+
         }
     }
 }

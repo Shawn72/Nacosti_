@@ -157,40 +157,46 @@
                 </div>
             </div>
         </div>
+         <div class="panel panel-table">
+			<div class="panel-heading">
+				<h3 class="panel-title"> Key Nacosti Documents</h3>
+			</div>
+			<div class="panel-body">
+				<hr />
+				<asp:TreeView ID="treeView1" runat="server" ImageSet="XPFileExplorer" NodeIndent="15" >
+					<HoverNodeStyle Font-Underline="True" ForeColor="#6666AA"  />
+					<NodeStyle Font-Names="Corbel" Font-Size="12pt" ForeColor="Black" HorizontalPadding="2px"
+					            NodeSpacing="0px" VerticalPadding="2px" ></NodeStyle>
+					<ParentNodeStyle Font-Bold="False" />
+					<SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px"
+					                    VerticalPadding="0px"  />
+				</asp:TreeView>
+                <hr/>
+                <div class="panel-footer"></div>
+                        
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-table">
-					<div class="panel-heading">
-						<h3 class="panel-title">Meetings Document</h3>
-					</div>
-					<div class="panel-body">
-						<div class="table-responsive">	
+					<%--	<div class="table-responsive">	
                              <asp:GridView ID="gridViewImportantUploads" runat="server" CssClass="table table-striped custom-table m-b-0" GridLines="None" AutoGenerateColumns="false" EmptyDataText = "No files available!">
-                        <Columns>
-                            <asp:BoundField DataField="Text" HeaderText="Important Documents" />
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lnkDownload" Text = "Download" CommandArgument = '<%# Eval("Value") %>' runat="server" OnClick = "DownloadFile" ></asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                                <Columns>
+                                    <asp:BoundField DataField="Text" HeaderText="Important Documents" />
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lnkDownload" Text = "Download" CommandArgument = '<%# Eval("Value") %>' runat="server" OnClick = "DownloadFile" ></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lnkViewDoc" runat ="server" Text = "View" CommandArgument = '<%# Eval("Value") %>' OnClick = "lnkViewDoc_OnClick" AutoPostBack ="True"></asp:LinkButton>
-                                </ItemTemplate> 
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lnkViewDoc" runat ="server" Text = "View" CommandArgument = '<%# Eval("Value") %>' OnClick = "lnkViewDoc_OnClick" AutoPostBack ="True"></asp:LinkButton>
+                                        </ItemTemplate> 
 
-                            </asp:TemplateField>
-                        </Columns>
-                    </asp:GridView>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+					    </div>--%>
 					</div>
-					</div>
-					<div class="panel-footer">
-						<a href="#" class="text-primary">View all Documents</a>
-					</div>
-				</div>
+				
             </div>
-        </div>
 	</div>
 				
 </div>

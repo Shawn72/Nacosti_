@@ -312,6 +312,8 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Meetings_FilterbyCode.aspx" />
+    <Content Include="Meetings_Summary.aspx" />
     <Content Include="Meeting_Board.aspx" />
     <Content Include="Meetings_Calendar.aspx" />
     <Content Include="Meetings_Past.aspx" />
@@ -323,6 +325,7 @@
     <Content Include="Payslip.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="registerBoard.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="Resolutions_Pdf.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -500,6 +503,20 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Meetings_FilterbyCode.aspx.cs">
+      <DependentUpon>Meetings_FilterbyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings_FilterbyCode.aspx.designer.cs">
+      <DependentUpon>Meetings_FilterbyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings_Summary.aspx.cs">
+      <DependentUpon>Meetings_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings_Summary.aspx.designer.cs">
+      <DependentUpon>Meetings_Summary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Meeting_Board.aspx.cs">
       <DependentUpon>Meeting_Board.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -584,6 +601,13 @@
     <Compile Include="registerBoard.aspx.designer.cs">
       <DependentUpon>registerBoard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Resolutions_Pdf.aspx.cs">
       <DependentUpon>Resolutions_Pdf.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -642,7 +666,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="BoardPapers\2019DirTest\" />
-    <Folder Include="Documents\" />
+    <Folder Include="BoardPapers\2ndTestDir\dirInsideTest\" />
+    <Folder Include="Documents\Key Nacosti Documents\" />
     <Folder Include="Downloads\P9\" />
     <Folder Include="images\" />
     <Folder Include="MeetingsDocs\NACOSTI\Board Meeting Card\" />
@@ -655,10 +680,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://41.89.63.250:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit">
+    <WebReferenceUrl Include="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\webPortal\</RelPath>
-      <UpdateFromURL>http://41.89.63.250:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit</UpdateFromURL>
+      <UpdateFromURL>http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

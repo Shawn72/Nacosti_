@@ -26,7 +26,7 @@ namespace Nacosti_.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://41.89.63.250:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit")]
         public string Nacosti__webPortal_PortalCodeunit {
             get {
                 return ((string)(this["Nacosti__webPortal_PortalCodeunit"]));

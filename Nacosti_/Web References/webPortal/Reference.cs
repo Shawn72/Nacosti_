@@ -55,6 +55,16 @@ namespace Nacosti_.webPortal {
         
         private System.Threading.SendOrPostCallback FnInsertBlogReplyOperationCompleted;
         
+        private System.Threading.SendOrPostCallback FnResetPasswordOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnConfirmMeetingOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnMeetConfStatusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnCountBoardMeetingsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnCountCommitteeMeetingsOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -131,6 +141,21 @@ namespace Nacosti_.webPortal {
         
         /// <remarks/>
         public event FnInsertBlogReplyCompletedEventHandler FnInsertBlogReplyCompleted;
+        
+        /// <remarks/>
+        public event FnResetPasswordCompletedEventHandler FnResetPasswordCompleted;
+        
+        /// <remarks/>
+        public event FnConfirmMeetingCompletedEventHandler FnConfirmMeetingCompleted;
+        
+        /// <remarks/>
+        public event FnMeetConfStatusCompletedEventHandler FnMeetConfStatusCompleted;
+        
+        /// <remarks/>
+        public event FnCountBoardMeetingsCompletedEventHandler FnCountBoardMeetingsCompleted;
+        
+        /// <remarks/>
+        public event FnCountCommitteeMeetingsCompletedEventHandler FnCountCommitteeMeetingsCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnLogin", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnLogin_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -325,24 +350,22 @@ namespace Nacosti_.webPortal {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnMeetingsToday", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnMeetingsToday_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public int FnMeetingsToday(string directorNo) {
-            object[] results = this.Invoke("FnMeetingsToday", new object[] {
-                        directorNo});
+        public int FnMeetingsToday() {
+            object[] results = this.Invoke("FnMeetingsToday", new object[0]);
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void FnMeetingsTodayAsync(string directorNo) {
-            this.FnMeetingsTodayAsync(directorNo, null);
+        public void FnMeetingsTodayAsync() {
+            this.FnMeetingsTodayAsync(null);
         }
         
         /// <remarks/>
-        public void FnMeetingsTodayAsync(string directorNo, object userState) {
+        public void FnMeetingsTodayAsync(object userState) {
             if ((this.FnMeetingsTodayOperationCompleted == null)) {
                 this.FnMeetingsTodayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnMeetingsTodayOperationCompleted);
             }
-            this.InvokeAsync("FnMeetingsToday", new object[] {
-                        directorNo}, this.FnMeetingsTodayOperationCompleted, userState);
+            this.InvokeAsync("FnMeetingsToday", new object[0], this.FnMeetingsTodayOperationCompleted, userState);
         }
         
         private void OnFnMeetingsTodayOperationCompleted(object arg) {
@@ -551,6 +574,164 @@ namespace Nacosti_.webPortal {
             if ((this.FnInsertBlogReplyCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.FnInsertBlogReplyCompleted(this, new FnInsertBlogReplyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnResetPassword", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnResetPassword_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnResetPassword(string dirNo, string newPassword) {
+            object[] results = this.Invoke("FnResetPassword", new object[] {
+                        dirNo,
+                        newPassword});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnResetPasswordAsync(string dirNo, string newPassword) {
+            this.FnResetPasswordAsync(dirNo, newPassword, null);
+        }
+        
+        /// <remarks/>
+        public void FnResetPasswordAsync(string dirNo, string newPassword, object userState) {
+            if ((this.FnResetPasswordOperationCompleted == null)) {
+                this.FnResetPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnResetPasswordOperationCompleted);
+            }
+            this.InvokeAsync("FnResetPassword", new object[] {
+                        dirNo,
+                        newPassword}, this.FnResetPasswordOperationCompleted, userState);
+        }
+        
+        private void OnFnResetPasswordOperationCompleted(object arg) {
+            if ((this.FnResetPasswordCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnResetPasswordCompleted(this, new FnResetPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnConfirmMeeting", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnConfirmMeeting_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnConfirmMeeting(string meetingNo, string dirNo, int confirmStatus) {
+            object[] results = this.Invoke("FnConfirmMeeting", new object[] {
+                        meetingNo,
+                        dirNo,
+                        confirmStatus});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnConfirmMeetingAsync(string meetingNo, string dirNo, int confirmStatus) {
+            this.FnConfirmMeetingAsync(meetingNo, dirNo, confirmStatus, null);
+        }
+        
+        /// <remarks/>
+        public void FnConfirmMeetingAsync(string meetingNo, string dirNo, int confirmStatus, object userState) {
+            if ((this.FnConfirmMeetingOperationCompleted == null)) {
+                this.FnConfirmMeetingOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnConfirmMeetingOperationCompleted);
+            }
+            this.InvokeAsync("FnConfirmMeeting", new object[] {
+                        meetingNo,
+                        dirNo,
+                        confirmStatus}, this.FnConfirmMeetingOperationCompleted, userState);
+        }
+        
+        private void OnFnConfirmMeetingOperationCompleted(object arg) {
+            if ((this.FnConfirmMeetingCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnConfirmMeetingCompleted(this, new FnConfirmMeetingCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnMeetConfStatus", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnMeetConfStatus_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnMeetConfStatus(string meetCode, string dirCode) {
+            object[] results = this.Invoke("FnMeetConfStatus", new object[] {
+                        meetCode,
+                        dirCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnMeetConfStatusAsync(string meetCode, string dirCode) {
+            this.FnMeetConfStatusAsync(meetCode, dirCode, null);
+        }
+        
+        /// <remarks/>
+        public void FnMeetConfStatusAsync(string meetCode, string dirCode, object userState) {
+            if ((this.FnMeetConfStatusOperationCompleted == null)) {
+                this.FnMeetConfStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnMeetConfStatusOperationCompleted);
+            }
+            this.InvokeAsync("FnMeetConfStatus", new object[] {
+                        meetCode,
+                        dirCode}, this.FnMeetConfStatusOperationCompleted, userState);
+        }
+        
+        private void OnFnMeetConfStatusOperationCompleted(object arg) {
+            if ((this.FnMeetConfStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnMeetConfStatusCompleted(this, new FnMeetConfStatusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnCountBoardMeetings", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnCountBoardMeetings_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public int FnCountBoardMeetings(string meetingCode) {
+            object[] results = this.Invoke("FnCountBoardMeetings", new object[] {
+                        meetingCode});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnCountBoardMeetingsAsync(string meetingCode) {
+            this.FnCountBoardMeetingsAsync(meetingCode, null);
+        }
+        
+        /// <remarks/>
+        public void FnCountBoardMeetingsAsync(string meetingCode, object userState) {
+            if ((this.FnCountBoardMeetingsOperationCompleted == null)) {
+                this.FnCountBoardMeetingsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnCountBoardMeetingsOperationCompleted);
+            }
+            this.InvokeAsync("FnCountBoardMeetings", new object[] {
+                        meetingCode}, this.FnCountBoardMeetingsOperationCompleted, userState);
+        }
+        
+        private void OnFnCountBoardMeetingsOperationCompleted(object arg) {
+            if ((this.FnCountBoardMeetingsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnCountBoardMeetingsCompleted(this, new FnCountBoardMeetingsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnCountCommitteeMeetings", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", ResponseElementName="FnCountCommitteeMeetings_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public int FnCountCommitteeMeetings(string meetingCode) {
+            object[] results = this.Invoke("FnCountCommitteeMeetings", new object[] {
+                        meetingCode});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnCountCommitteeMeetingsAsync(string meetingCode) {
+            this.FnCountCommitteeMeetingsAsync(meetingCode, null);
+        }
+        
+        /// <remarks/>
+        public void FnCountCommitteeMeetingsAsync(string meetingCode, object userState) {
+            if ((this.FnCountCommitteeMeetingsOperationCompleted == null)) {
+                this.FnCountCommitteeMeetingsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnCountCommitteeMeetingsOperationCompleted);
+            }
+            this.InvokeAsync("FnCountCommitteeMeetings", new object[] {
+                        meetingCode}, this.FnCountCommitteeMeetingsOperationCompleted, userState);
+        }
+        
+        private void OnFnCountCommitteeMeetingsOperationCompleted(object arg) {
+            if ((this.FnCountCommitteeMeetingsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnCountCommitteeMeetingsCompleted(this, new FnCountCommitteeMeetingsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -907,6 +1088,136 @@ namespace Nacosti_.webPortal {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnResetPasswordCompletedEventHandler(object sender, FnResetPasswordCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnResetPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnResetPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnConfirmMeetingCompletedEventHandler(object sender, FnConfirmMeetingCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnConfirmMeetingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnConfirmMeetingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnMeetConfStatusCompletedEventHandler(object sender, FnMeetConfStatusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnMeetConfStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnMeetConfStatusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnCountBoardMeetingsCompletedEventHandler(object sender, FnCountBoardMeetingsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnCountBoardMeetingsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnCountBoardMeetingsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void FnCountCommitteeMeetingsCompletedEventHandler(object sender, FnCountCommitteeMeetingsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnCountCommitteeMeetingsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnCountCommitteeMeetingsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

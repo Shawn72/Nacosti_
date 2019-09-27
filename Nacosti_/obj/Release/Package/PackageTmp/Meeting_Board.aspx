@@ -11,7 +11,7 @@
                  var meetingDetails = odataconn.boardMeetings.Where(r => r.No == meetingCode).ToList().OrderByDescending(m=>m.Start_date);
                  foreach (var meeting in meetingDetails)
                  {%>
-         <h3 style="width: 100%; text-align: center;"><strong> MEETING: <% =meeting.Title.ToUpper() %></strong></h3> <hr/>
+         <h3 style="width: 100%; text-align: center;"><strong> MEETING: <% =meeting.No.ToUpper() %></strong></h3> <hr/>
          <div runat="server" id="feedback"></div>
            <div style="max-height: 200px; overflow-y: scroll;">
               <div class="row form-group">
@@ -78,16 +78,32 @@
           <div class="panel panel-outline card-info">
             <div class="panel-header">
               <h4 class="panel-title">
-               <strong>Meeting Comments (Max Characters: 250)</strong> 
+               <strong>Meeting Actions</strong> 
               </h4>
             </div>
             <!-- /.card-header -->
             <div class="panel-body">
-               <%-- <input type="text" runat="server" id="inputtest" name="inputtest" class="form-control" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"/>
-               --%> 
               <div class="mb-3">
-              <div id="commentfeedback" runat="server"></div>
-                <br/>
+                  <div id="commentfeedback" runat="server"></div>
+                  <br/>
+                  <div class="form-group" style="background-color: aquamarine">
+                      <div  id="meetConf"  runat="server"></div>
+                    </div>
+                   <br/>
+                  <div class="form-group">
+                      <strong>Are you Attending this meeting?</strong>
+                       <asp:DropDownList runat="server" ID="ddlAttendMeetorNot" CssClass="form-control" OnSelectedIndexChanged="ddlAttendMeetorNot_OnSelectedIndexChanged" AutoPostBack="True">
+                          <asp:ListItem Value="0">--Select your Response--</asp:ListItem>
+                          <asp:ListItem Value="1">Confirm Attendance</asp:ListItem>
+                          <asp:ListItem Value="2">Apologetic Decline</asp:ListItem>
+                      </asp:DropDownList>
+                  </div>
+              </div>
+               <br/>
+                 
+              <div class="mb-3">
+                  <strong>Comments (Max Characters: 250)</strong> 
+                <br />
                   <label id="lblCharleftTextarea" title=""></label>
                 <br/>
                   <asp:TextBox runat="server" placeholder="please input your comment here" TextMode="MultiLine" ID="txtareaComment" 
@@ -181,7 +197,52 @@
                         </table>
                       </div>
                  </div>
-            </div>                
+            </div>   
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4> Meeting Inattendance</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table m-b-0 datatable">
+                                <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Member Name</th>
+                                    <th>Attendance Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                                <% if (Pastornot=="pastmeeting")
+                                   {%>
+
+                                    <%
+                                        int attcounter = 0;
+                                        var meetingAttendance = odataconn.inAttendances.Where(r => r.Meeting_Code == meetCode).ToList().OrderByDescending(m=>m.Meeting_Date);
+                                        foreach (var attendee in meetingAttendance)
+                                        {
+                                            attcounter++; %>
+                                        <tr>
+                                            <td><% =attcounter.ToString() %></td>
+                                            <td><% =attendee.Member_Name %></td>
+                                            <td><% =attendee.Attendance %></td>
+                                        </tr>
+
+                    
+                                    <% } %>
+                       
+                                <%}
+                                   else
+                                   {%>
+                                    <tr>
+                                        <td class="alert alert-danger" colspan="3">Meeting is not past yet!</td>
+                                    </tr>
+                                <%} %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>             
 
             </div>
           </div>

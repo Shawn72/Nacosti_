@@ -85,7 +85,7 @@
 									        <div class="profile-info-name"> Email Address </div>
 
 									        <div class="profile-info-value">
-										        <span><%=detail.Email %></span>
+										        <span><%=detail.E_Mail %></span>
 									        </div>
 								        </div>
 

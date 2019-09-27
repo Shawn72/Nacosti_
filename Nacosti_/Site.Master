@@ -27,6 +27,7 @@
 <body>
  <form runat="server" enctype="multipart/form-data" >
     <asp:ScriptManager runat="server"></asp:ScriptManager>
+     <% var wsconnection = WsConfig.ObjNav; %>
     <div class="main-wrapper">
         <div class="header">
                 <div class="header-left">
@@ -70,15 +71,33 @@
 							<li class="active"><a href="Dashboard.aspx"><i class="glyphicon glyphicon-home"></i> <span>Dashboard</span></a></li>
 						    <li><a href="Board.aspx"><i class="fas fa-scroll"></i>&nbsp;<span>Board</span></a></li>
 						    <li><a href="Commitees.aspx"><i class="fas fa-scroll"></i>&nbsp;<span>Committee</span></a></li>
-                            <li><a href="Meetings_Schedule.aspx"><i class="fas fa-calendar"></i>&nbsp;<span>Scheduled Meetings</span></a></li>
-						    <li><a href="Meetings_Calendar.aspx"><i class="fas fa-calendar"></i>&nbsp;<span>Calendar of Meetings</span></a></li>
-                            <li><a href="Meetings_Today.aspx"><i class="fas fa-calendar"></i>&nbsp;<span>Meetings Today</span> <%--<span class="badge bg-primary pull-right"><%= Convert.ToInt32(wsconnection.FnMeetingsToday(Session["directorNo"].ToString())) %></span>--%> </a></li>
-							<li><a href="Meetings_Upcoming.aspx"><i class="fas fa-business-time"></i>&nbsp;<span>Upcoming Meetings</span></a></li>
-							<li><a href="Meetings_Past.aspx"><i class="fas fa-history"></i>&nbsp;<span>Past Meetings</span> </a></li>
+                            
+						    <li class="submenu">
+						        <a href="#"><i class="fas fa-calendar-check"></i> <span> All Meetings</span> <span class="menu-arrow"></span></a>
+						        <ul style="display: none;">
+						            <li><a href="Meetings_Schedule.aspx"><i class="fas fa-calendar-day"></i>&nbsp;<span>Scheduled Meetings</span></a></li>
+						            <li><a href="Meetings_Calendar.aspx"><i class="fas fa-calendar-day"></i>&nbsp;<span>Calendar of Meetings</span></a></li>
+                                    <li><a href="Meetings_Today.aspx"><i class="fas fa-calendar-day"></i>&nbsp;<span>Meetings Today</span> <span class="badge bg-primary pull-right" id= "meettoday" runat="server"></span> </a></li>
+							        <li><a href="Meetings_Upcoming.aspx"><i class="fas fa-business-time"></i>&nbsp;<span>Upcoming Meetings</span></a></li>
+							        <li><a href="Meetings_Past.aspx"><i class="fas fa-history"></i>&nbsp;<span>Past Meetings</span> </a></li>
+                                </ul>
+						    </li>
+                            
+                           
 						    <li><a href="Board_Papers.aspx"><i class="fas fa-file-pdf-o"></i>&nbsp;<span>Board Documents</span> </a></li>
 						    <li><a href="Board_Resolutions.aspx"><i class="fas fa-gavel"></i>&nbsp;<span>Board Resolutions</span></a></li>
 						    <li><a href="Blog_Forum.aspx"><i class="fas fa-comments"></i>&nbsp;<span>Board Forums</span> </a></li>
-						    <li><a href="#"><i class="fas fa-receipt"></i>&nbsp;<span>P9 Report</span> </a></li>
+						    
+						    <li class="submenu">
+						        <a href="#"><i class="fa fa-folder fa-fw"></i> <span> See Reports</span> <span class="menu-arrow"></span></a>
+						        <ul style="display: none;">
+						            <li><a href="#"><i class="fas fa-receipt"></i>&nbsp;<span>P9 Report</span> </a></li>
+						            <li><a href="Meetings_Summary.aspx"><i class="fas fa-business-time"></i>&nbsp;&nbsp;<span>Meetings Summary</span></a></li> 
+						        </ul>
+						    </li>
+						 
+                            <li><a href="https://outlook.office365.com/" target="_blank"> <i class="fas fa-mail-bulk"></i>&nbsp;<span>O365</span> </a></li>
+						   
 						</ul>
 					</div>
                 </div>

@@ -42,7 +42,7 @@
                     <br/>
 
                     <% 
-                        var forumReplies = odataconn.blogReplies.Where(r=>r.Blog_Id==blogId).ToList().OrderByDescending(m=>m.Date_Replied);
+                        var forumReplies = odataconn.blogReplies.Where(r=>r.Blog_Id==blogId).ToList().OrderByDescending(m=>m.Entry_Id);
                        
                         if (!forumReplies.Any())
                         { %>
@@ -64,10 +64,29 @@
                                 <%foreach (var onereply in forumReplies)
                                   { %>
                                     <div class="row mb-3">
-                                       <div class="pull-left">
-                                            <span class="user-img"><img class="img-circle" src="assets/img/avatar.png" width="40" alt="username"></span><%= onereply.Replier_Name %>
+                                        
+                                       <% if (onereply.Replier_DirNo.Equals(Session["directorNo"]))
+                                          { %>
+                                       <div  style="padding-left: 0;">
+                                            <div class="pull-left">
+                                            <span class="user-img"><img class="img-circle" src="assets/img/avatar.png" width="30" alt="username"></span><%= onereply.Replier_Name %>
                                         </div>
-                                        <div class="pull-right"><%= onereply.Blog_Reply %></div> 
+                                        <div class="pull-right" style="font-style: italic"><%= onereply.Blog_Reply %></div> 
+
+                                       </div>
+                                        <% }
+                                          else
+                                          { %>
+                                        <div style="padding-left: 5em;">
+                                           
+                                            <div class="pull-left">
+                                                <span class="user-img"><img class="img-circle" src="assets/img/avatar.png" width="30" alt="username"></span><%= onereply.Replier_Name %>
+                                            </div>
+                                            <div class="pull-right"><%= onereply.Blog_Reply %></div> 
+                                       </div>
+                                        <% } %>
+
+                                      
                                     </div>
                                 <hr/>
                                    <br/>

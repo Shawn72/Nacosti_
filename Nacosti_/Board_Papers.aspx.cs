@@ -70,6 +70,7 @@ namespace Nacosti_
                         NavigateUrl = (new Uri(Server.MapPath("~/"))).MakeRelativeUri(new Uri(file.FullName)).ToString()
                     };
                     directoryNode.ChildNodes.Add(fileNode);
+                    directoryNode.CollapseAll();
                 }
 
                 PopulateTreeView(directory, directoryNode);
