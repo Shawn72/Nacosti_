@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nacosti_", "Nacosti_\Nacosti_.csproj", "{BFFBBD12-EFDC-45CA-A7A4-276806FB723F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NacostiUniTests", "NacostiUniTests\NacostiUniTests.csproj", "{20702E47-4E98-4E3B-9AB3-0381B292B8FD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{BFFBBD12-EFDC-45CA-A7A4-276806FB723F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFFBBD12-EFDC-45CA-A7A4-276806FB723F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFFBBD12-EFDC-45CA-A7A4-276806FB723F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20702E47-4E98-4E3B-9AB3-0381B292B8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20702E47-4E98-4E3B-9AB3-0381B292B8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20702E47-4E98-4E3B-9AB3-0381B292B8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20702E47-4E98-4E3B-9AB3-0381B292B8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

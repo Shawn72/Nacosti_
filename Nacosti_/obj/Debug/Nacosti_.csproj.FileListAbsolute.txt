@@ -118,5 +118,6 @@ E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\bin
 E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\bin\ru\System.Spatial.resources.dll
 E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\bin\zh-Hans\System.Spatial.resources.dll
 E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\bin\zh-Hant\System.Spatial.resources.dll
+E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\obj\Debug\Nacosti_.csprojResolveAssemblyReference.cache
 E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\obj\Debug\Nacosti_.dll
 E:\CodingLil'God\WebPortals\GIT_PortalProjects\Nacosti_GIT\Nacosti_\Nacosti_\obj\Debug\Nacosti_.pdb

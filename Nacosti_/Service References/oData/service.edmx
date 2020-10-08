@@ -546,6 +546,14 @@
         <Property Name="Sick_Leave_Acc" Type="Edm.Decimal" />
         <Property Name="Leave_Outstanding_Bal" Type="Edm.Decimal" />
       </EntityType>
+      <EntityType Name="FiscalYears">
+        <Key>
+          <PropertyRef Name="Code" />
+        </Key>
+        <Property Name="Code" Type="Edm.String" Nullable="false" />
+        <Property Name="Starting_Date" Type="Edm.DateTime" />
+        <Property Name="Ending_Date" Type="Edm.DateTime" />
+      </EntityType>
       <EntityType Name="FundCode">
         <Key>
           <PropertyRef Name="Code" />
@@ -1697,7 +1705,12 @@
       <EntityType Name="ProcurementRequest">
         <Key>
           <PropertyRef Name="AuxiliaryIndex1" />
+          <PropertyRef Name="AuxiliaryIndex2" />
+          <PropertyRef Name="AuxiliaryIndex3" />
+          <PropertyRef Name="AuxiliaryIndex4" />
+          <PropertyRef Name="Category" />
           <PropertyRef Name="No" />
+          <PropertyRef Name="Vendor_No" />
         </Key>
         <Property Name="No" Type="Edm.String" Nullable="false" />
         <Property Name="Title" Type="Edm.String" />
@@ -1708,28 +1721,24 @@
         <Property Name="Procurement_Method" Type="Edm.String" />
         <Property Name="No_Series" Type="Edm.String" />
         <Property Name="Process_Type" Type="Edm.String" />
-        <Property Name="Procurement_Plan_Item" Type="Edm.Int32" />
+        <Property Name="Procurement_Plan_Item" Type="Edm.String" />
         <Property Name="Global_Dimension_1_Code" Type="Edm.String" />
         <Property Name="Global_Dimension_2_Code" Type="Edm.String" />
         <Property Name="Tender_Opening_Date" Type="Edm.DateTime" />
         <Property Name="Tender_Status" Type="Edm.String" />
         <Property Name="Tender_Closing_Date" Type="Edm.DateTime" />
         <Property Name="Addedum" Type="Edm.String" />
-        <Property Name="SiteView" Type="Edm.DateTime" />
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Return_Date" Type="Edm.DateTime" />
         <Property Name="Return_Time" Type="Edm.String" />
         <Property Name="Tender_Type" Type="Edm.String" />
         <Property Name="Document_No" Type="Edm.String" />
         <Property Name="Extended_Date" Type="Edm.DateTime" />
-        <Property Name="Currency_Code" Type="Edm.String" />
         <Property Name="Tender_Amount" Type="Edm.Decimal" />
         <Property Name="Validity_Period" Type="Edm.String" />
         <Property Name="Issued_Date" Type="Edm.DateTime" />
         <Property Name="Closed" Type="Edm.Boolean" />
         <Property Name="RFQ_Sent" Type="Edm.Boolean" />
-        <Property Name="Vendor_No" Type="Edm.String" />
-        <Property Name="Generate_Multiple_LPO" Type="Edm.Boolean" />
         <Property Name="Tender_Committee" Type="Edm.String" />
         <Property Name="Minutes_Path" Type="Edm.String" />
         <Property Name="Evaluation_Started" Type="Edm.Boolean" />
@@ -1742,9 +1751,7 @@
         <Property Name="minutesafterproceedtoaward" Type="Edm.String" />
         <Property Name="Awarded" Type="Edm.Boolean" />
         <Property Name="Select_Bidder_Vendor_No" Type="Edm.String" />
-        <Property Name="NoSeries" Type="Edm.String" />
         <Property Name="Evaluation_Admin" Type="Edm.String" />
-        <Property Name="Mandatory_started" Type="Edm.Boolean" />
         <Property Name="Mandatory_in_progress" Type="Edm.Boolean" />
         <Property Name="Technical_in_Progress" Type="Edm.Boolean" />
         <Property Name="Financial_in_Progress" Type="Edm.Boolean" />
@@ -1776,7 +1783,13 @@
         <Property Name="Selected_Bidder_Name" Type="Edm.String" />
         <Property Name="Approval_Path" Type="Edm.Int32" />
         <Property Name="SupplierCategory" Type="Edm.String" />
+        <Property Name="Category" Type="Edm.String" Nullable="false" />
+        <Property Name="E_mail" Type="Edm.String" />
+        <Property Name="Vendor_No" Type="Edm.String" Nullable="false" />
         <Property Name="AuxiliaryIndex1" Type="Edm.String" Nullable="false" />
+        <Property Name="AuxiliaryIndex2" Type="Edm.String" Nullable="false" />
+        <Property Name="AuxiliaryIndex3" Type="Edm.String" Nullable="false" />
+        <Property Name="AuxiliaryIndex4" Type="Edm.String" Nullable="false" />
       </EntityType>
       <EntityType Name="ProcurementRequestLines">
         <Key>
@@ -2203,12 +2216,123 @@
       </EntityType>
       <EntityType Name="SupplierCategories">
         <Key>
+          <PropertyRef Name="Category_Code" />
+        </Key>
+        <Property Name="Category_Code" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SupplyCategoryHeader">
+        <Key>
           <PropertyRef Name="Category" />
           <PropertyRef Name="Fiscal_Year" />
         </Key>
-        <Property Name="Category" Type="Edm.String" Nullable="false" />
-        <Property Name="CategoryName" Type="Edm.String" />
         <Property Name="Fiscal_Year" Type="Edm.String" Nullable="false" />
+        <Property Name="Category" Type="Edm.String" Nullable="false" />
+        <Property Name="Category_Name" Type="Edm.String" />
+        <Property Name="No_of_Prequalified_Suppliers" Type="Edm.Int32" />
+      </EntityType>
+      <EntityType Name="TenderApps">
+        <Key>
+          <PropertyRef Name="AuxiliaryIndex1" />
+          <PropertyRef Name="AuxiliaryIndex2" />
+          <PropertyRef Name="Ref_No" />
+        </Key>
+        <Property Name="Ref_No" Type="Edm.String" Nullable="false" />
+        <Property Name="Category" Type="Edm.String" />
+        <Property Name="Fiscal_Year" Type="Edm.String" />
+        <Property Name="Selected" Type="Edm.Boolean" />
+        <Property Name="Pre_Qualified" Type="Edm.Boolean" />
+        <Property Name="Tender_Amount" Type="Edm.Decimal" />
+        <Property Name="Bid_Security_Amount" Type="Edm.Decimal" />
+        <Property Name="No_of_Copies_Submitted" Type="Edm.Decimal" />
+        <Property Name="Bid_Expiry_Date" Type="Edm.DateTime" />
+        <Property Name="Proceed_to_Tech_Evaluation" Type="Edm.Boolean" />
+        <Property Name="Fixed_Asset_No" Type="Edm.String" />
+        <Property Name="Cheque_No" Type="Edm.String" />
+        <Property Name="Response" Type="Edm.String" />
+        <Property Name="Technical_Marks_Awarded" Type="Edm.Decimal" />
+        <Property Name="Financial_Marks_Awarded" Type="Edm.Decimal" />
+        <Property Name="Successful" Type="Edm.Boolean" />
+        <Property Name="Supplier" Type="Edm.String" />
+        <Property Name="Vendor_No" Type="Edm.String" />
+        <Property Name="Title" Type="Edm.String" />
+        <Property Name="AuxiliaryIndex1" Type="Edm.String" Nullable="false" />
+        <Property Name="AuxiliaryIndex2" Type="Edm.String" Nullable="false" />
+      </EntityType>
+      <EntityType Name="Tenders">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" />
+        <Property Name="Title" Type="Edm.String" />
+        <Property Name="Requisition_No" Type="Edm.String" />
+        <Property Name="Procurement_Plan_No" Type="Edm.String" />
+        <Property Name="Creation_Date" Type="Edm.DateTime" />
+        <Property Name="User_ID" Type="Edm.String" />
+        <Property Name="Procurement_Method" Type="Edm.String" />
+        <Property Name="No_Series" Type="Edm.String" />
+        <Property Name="Process_Type" Type="Edm.String" />
+        <Property Name="Procurement_Plan_Item" Type="Edm.String" />
+        <Property Name="Global_Dimension_1_Code" Type="Edm.String" />
+        <Property Name="Global_Dimension_2_Code" Type="Edm.String" />
+        <Property Name="Tender_Opening_Date" Type="Edm.DateTime" />
+        <Property Name="Tender_Status" Type="Edm.String" />
+        <Property Name="Tender_Closing_Date" Type="Edm.DateTime" />
+        <Property Name="Addedum" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Return_Date" Type="Edm.DateTime" />
+        <Property Name="Return_Time" Type="Edm.String" />
+        <Property Name="Tender_Type" Type="Edm.String" />
+        <Property Name="Document_No" Type="Edm.String" />
+        <Property Name="Extended_Date" Type="Edm.DateTime" />
+        <Property Name="Tender_Amount" Type="Edm.Decimal" />
+        <Property Name="Validity_Period" Type="Edm.String" />
+        <Property Name="Issued_Date" Type="Edm.DateTime" />
+        <Property Name="Closed" Type="Edm.Boolean" />
+        <Property Name="RFQ_Sent" Type="Edm.Boolean" />
+        <Property Name="Tender_Committee" Type="Edm.String" />
+        <Property Name="Minutes_Path" Type="Edm.String" />
+        <Property Name="Evaluation_Started" Type="Edm.Boolean" />
+        <Property Name="Technical_started" Type="Edm.Boolean" />
+        <Property Name="Financial_Started" Type="Edm.Boolean" />
+        <Property Name="Technical_Score" Type="Edm.Int32" />
+        <Property Name="Financial_Score" Type="Edm.Int32" />
+        <Property Name="Award_Started" Type="Edm.Boolean" />
+        <Property Name="minutesbeforeproceedtoaward" Type="Edm.String" />
+        <Property Name="minutesafterproceedtoaward" Type="Edm.String" />
+        <Property Name="Awarded" Type="Edm.Boolean" />
+        <Property Name="Select_Bidder_Vendor_No" Type="Edm.String" />
+        <Property Name="Evaluation_Admin" Type="Edm.String" />
+        <Property Name="Mandatory_in_progress" Type="Edm.Boolean" />
+        <Property Name="Technical_in_Progress" Type="Edm.Boolean" />
+        <Property Name="Financial_in_Progress" Type="Edm.Boolean" />
+        <Property Name="Awarding_in_Progress" Type="Edm.Boolean" />
+        <Property Name="LPO_Generated" Type="Edm.Boolean" />
+        <Property Name="Current_Budget" Type="Edm.String" />
+        <Property Name="TOR_Attached" Type="Edm.Boolean" />
+        <Property Name="TOR_File_Name" Type="Edm.String" />
+        <Property Name="Quotation_Pending_Opening" Type="Edm.Boolean" />
+        <Property Name="Opening_Person_1" Type="Edm.String" />
+        <Property Name="Opening_Person_2" Type="Edm.String" />
+        <Property Name="Opening_Person_3" Type="Edm.String" />
+        <Property Name="Asigned_User" Type="Edm.String" />
+        <Property Name="Quotation_Evaluation" Type="Edm.Boolean" />
+        <Property Name="In_Financial" Type="Edm.Boolean" />
+        <Property Name="In_Technical" Type="Edm.Boolean" />
+        <Property Name="In_Award" Type="Edm.Boolean" />
+        <Property Name="Pending_LPO" Type="Edm.Boolean" />
+        <Property Name="Minutes_File" Type="Edm.String" />
+        <Property Name="Quotation_Finished" Type="Edm.Boolean" />
+        <Property Name="Technical_Minutes" Type="Edm.String" />
+        <Property Name="Does_Not_Require_TOR" Type="Edm.Boolean" />
+        <Property Name="Justification_Memo" Type="Edm.String" />
+        <Property Name="Direct" Type="Edm.Boolean" />
+        <Property Name="No_of_Tender_Documents" Type="Edm.Int32" />
+        <Property Name="Procurement_Amount" Type="Edm.Decimal" />
+        <Property Name="Approval_Status" Type="Edm.Int32" />
+        <Property Name="Successful_Bidder" Type="Edm.String" />
+        <Property Name="Selected_Bidder_Name" Type="Edm.String" />
+        <Property Name="Approval_Path" Type="Edm.Int32" />
       </EntityType>
       <EntityType Name="TopCustomerOverview">
         <Key>
@@ -2340,6 +2464,7 @@
         <Property Name="Country_Region_Code" Type="Edm.String" />
         <Property Name="Blocked" Type="Edm.String" />
         <Property Name="Pay_to_Vendor_No" Type="Edm.String" />
+        <Property Name="Primary_Contact_No" Type="Edm.String" />
         <Property Name="E_Mail" Type="Edm.String" />
         <Property Name="Email" Type="Edm.String" />
         <Property Name="Comment" Type="Edm.Boolean" />
@@ -2413,6 +2538,7 @@
         <NavigationProperty Name="Customers" Relationship="NAV.Company_Customers" ToRole="Customers" FromRole="Company" />
         <NavigationProperty Name="emailvalidations" Relationship="NAV.Company_emailvalidations" ToRole="emailvalidations" FromRole="Company" />
         <NavigationProperty Name="Employees" Relationship="NAV.Company_Employees" ToRole="Employees" FromRole="Company" />
+        <NavigationProperty Name="FiscalYears" Relationship="NAV.Company_FiscalYears" ToRole="FiscalYears" FromRole="Company" />
         <NavigationProperty Name="FundCode" Relationship="NAV.Company_FundCode" ToRole="FundCode" FromRole="Company" />
         <NavigationProperty Name="HrJobApplicants" Relationship="NAV.Company_HrJobApplicants" ToRole="HrJobApplicants" FromRole="Company" />
         <NavigationProperty Name="HRJobApplicants" Relationship="NAV.Company_HRJobApplicants" ToRole="HRJobApplicants" FromRole="Company" />
@@ -2463,6 +2589,9 @@
         <NavigationProperty Name="SalesOrdersBySalesPerson" Relationship="NAV.Company_SalesOrdersBySalesPerson" ToRole="SalesOrdersBySalesPerson" FromRole="Company" />
         <NavigationProperty Name="serviceitems" Relationship="NAV.Company_serviceitems" ToRole="serviceitems" FromRole="Company" />
         <NavigationProperty Name="SupplierCategories" Relationship="NAV.Company_SupplierCategories" ToRole="SupplierCategories" FromRole="Company" />
+        <NavigationProperty Name="SupplyCategoryHeader" Relationship="NAV.Company_SupplyCategoryHeader" ToRole="SupplyCategoryHeader" FromRole="Company" />
+        <NavigationProperty Name="TenderApps" Relationship="NAV.Company_TenderApps" ToRole="TenderApps" FromRole="Company" />
+        <NavigationProperty Name="Tenders" Relationship="NAV.Company_Tenders" ToRole="Tenders" FromRole="Company" />
         <NavigationProperty Name="TopCustomerOverview" Relationship="NAV.Company_TopCustomerOverview" ToRole="TopCustomerOverview" FromRole="Company" />
         <NavigationProperty Name="TransportRequisition" Relationship="NAV.Company_TransportRequisition" ToRole="TransportRequisition" FromRole="Company" />
         <NavigationProperty Name="TravelRequisitionStaff" Relationship="NAV.Company_TravelRequisitionStaff" ToRole="TravelRequisitionStaff" FromRole="Company" />
@@ -2573,6 +2702,10 @@
       </Association>
       <Association Name="Company_Employees">
         <End Type="NAV.Employees" Role="Employees" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_FiscalYears">
+        <End Type="NAV.FiscalYears" Role="FiscalYears" Multiplicity="*" />
         <End Type="NAV.Company" Role="Company" Multiplicity="*" />
       </Association>
       <Association Name="Company_FundCode">
@@ -2775,6 +2908,18 @@
         <End Type="NAV.SupplierCategories" Role="SupplierCategories" Multiplicity="*" />
         <End Type="NAV.Company" Role="Company" Multiplicity="*" />
       </Association>
+      <Association Name="Company_SupplyCategoryHeader">
+        <End Type="NAV.SupplyCategoryHeader" Role="SupplyCategoryHeader" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_TenderApps">
+        <End Type="NAV.TenderApps" Role="TenderApps" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
+      <Association Name="Company_Tenders">
+        <End Type="NAV.Tenders" Role="Tenders" Multiplicity="*" />
+        <End Type="NAV.Company" Role="Company" Multiplicity="*" />
+      </Association>
       <Association Name="Company_TopCustomerOverview">
         <End Type="NAV.TopCustomerOverview" Role="TopCustomerOverview" Multiplicity="*" />
         <End Type="NAV.Company" Role="Company" Multiplicity="*" />
@@ -2830,6 +2975,7 @@
         <EntitySet Name="Customers" EntityType="NAV.Customers" />
         <EntitySet Name="emailvalidations" EntityType="NAV.emailvalidations" />
         <EntitySet Name="Employees" EntityType="NAV.Employees" />
+        <EntitySet Name="FiscalYears" EntityType="NAV.FiscalYears" />
         <EntitySet Name="FundCode" EntityType="NAV.FundCode" />
         <EntitySet Name="HrJobApplicants" EntityType="NAV.HrJobApplicants" />
         <EntitySet Name="HRJobApplicants" EntityType="NAV.HRJobApplicants" />
@@ -2880,6 +3026,9 @@
         <EntitySet Name="SalesOrdersBySalesPerson" EntityType="NAV.SalesOrdersBySalesPerson" />
         <EntitySet Name="serviceitems" EntityType="NAV.serviceitems" />
         <EntitySet Name="SupplierCategories" EntityType="NAV.SupplierCategories" />
+        <EntitySet Name="SupplyCategoryHeader" EntityType="NAV.SupplyCategoryHeader" />
+        <EntitySet Name="TenderApps" EntityType="NAV.TenderApps" />
+        <EntitySet Name="Tenders" EntityType="NAV.Tenders" />
         <EntitySet Name="TopCustomerOverview" EntityType="NAV.TopCustomerOverview" />
         <EntitySet Name="TransportRequisition" EntityType="NAV.TransportRequisition" />
         <EntitySet Name="TravelRequisitionStaff" EntityType="NAV.TravelRequisitionStaff" />
@@ -2991,6 +3140,10 @@
         <AssociationSet Name="Company_Employees_Employees" Association="NAV.Company_Employees">
           <End Role="Company" EntitySet="Company" />
           <End Role="Employees" EntitySet="Employees" />
+        </AssociationSet>
+        <AssociationSet Name="Company_FiscalYears_FiscalYears" Association="NAV.Company_FiscalYears">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="FiscalYears" EntitySet="FiscalYears" />
         </AssociationSet>
         <AssociationSet Name="Company_FundCode_FundCode" Association="NAV.Company_FundCode">
           <End Role="Company" EntitySet="Company" />
@@ -3191,6 +3344,18 @@
         <AssociationSet Name="Company_SupplierCategories_SupplierCategories" Association="NAV.Company_SupplierCategories">
           <End Role="Company" EntitySet="Company" />
           <End Role="SupplierCategories" EntitySet="SupplierCategories" />
+        </AssociationSet>
+        <AssociationSet Name="Company_SupplyCategoryHeader_SupplyCategoryHeader" Association="NAV.Company_SupplyCategoryHeader">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="SupplyCategoryHeader" EntitySet="SupplyCategoryHeader" />
+        </AssociationSet>
+        <AssociationSet Name="Company_TenderApps_TenderApps" Association="NAV.Company_TenderApps">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="TenderApps" EntitySet="TenderApps" />
+        </AssociationSet>
+        <AssociationSet Name="Company_Tenders_Tenders" Association="NAV.Company_Tenders">
+          <End Role="Company" EntitySet="Company" />
+          <End Role="Tenders" EntitySet="Tenders" />
         </AssociationSet>
         <AssociationSet Name="Company_TopCustomerOverview_TopCustomerOverview" Association="NAV.Company_TopCustomerOverview">
           <End Role="Company" EntitySet="Company" />

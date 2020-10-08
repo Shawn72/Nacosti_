@@ -622,7 +622,7 @@
   </binding>
   <service name="PortalCodeunit">
     <port name="PortalCodeunit_Port" binding="tns:PortalCodeunit_Binding">
-      <address location="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%20Training/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <address location="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
     </port>
   </service>
 </definitions>

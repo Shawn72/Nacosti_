@@ -361,10 +361,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Service References\oData\Reference.datasvcmap">
+    <Content Include="Service References\oData\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
     <Content Include="Site.Master" />
     <Content Include="ViewMeetingDocs.aspx" />
     <Content Include="ViewMeetingsDocs_General.aspx" />
@@ -377,7 +377,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
-    <None Include="Service References\oData\service.edmx" />
+    <Content Include="Service References\oData\service.edmx" />
     <None Include="Web References\webPortal\PortalCodeunit.wsdl" />
     <None Include="Web References\webPortal\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -680,10 +680,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit">
+    <WebReferenceUrl Include="http://41.89.63.253:8047/NACOSTI/WS/NACOSTI/Codeunit/PortalCodeunit">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\webPortal\</RelPath>
-      <UpdateFromURL>http://41.89.63.253:8047/NACOSTI/WS/NACOSTI%2520Training/Codeunit/PortalCodeunit</UpdateFromURL>
+      <UpdateFromURL>http://41.89.63.253:8047/NACOSTI/WS/NACOSTI/Codeunit/PortalCodeunit</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
